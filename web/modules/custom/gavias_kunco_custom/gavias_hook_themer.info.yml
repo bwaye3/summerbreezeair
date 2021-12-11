@@ -1,0 +1,6 @@
+type: module
+name : Gavias Kunco Themer
+description : Gavias Kunco Themer
+package: gavias
+core_version_requirement: ^8.8 || ^9
+project: 'gavias_hook_themer'
