@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '4cd50df9e1171f6c014f70847f06e854c9eda21c',
+        'reference' => '0f9ac2a776c7597197d4436d9b31fb8592a57369',
         'name' => 'drupal/legacy-project',
         'dev' => true,
     ),
@@ -248,6 +248,15 @@
             'install_path' => __DIR__ . '/../../web/modules/contrib/address',
             'aliases' => array(),
             'reference' => '8.x-1.9',
+            'dev_requirement' => false,
+        ),
+        'drupal/addtoany' => array(
+            'pretty_version' => '1.15.0',
+            'version' => '1.15.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/addtoany',
+            'aliases' => array(),
+            'reference' => '8.x-1.15',
             'dev_requirement' => false,
         ),
         'drupal/admin_toolbar' => array(
@@ -951,7 +960,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '4cd50df9e1171f6c014f70847f06e854c9eda21c',
+            'reference' => '0f9ac2a776c7597197d4436d9b31fb8592a57369',
             'dev_requirement' => false,
         ),
         'drupal/link' => array(

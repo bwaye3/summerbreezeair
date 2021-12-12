@@ -17,6 +17,7 @@
     "require": {
         "composer/installers": "^1.9",
         "drupal/address": "^1.9",
+        "drupal/addtoany": "^1.15",
         "drupal/admin_toolbar": "^3.0",
         "drupal/back_to_top": "^2.0",
         "drupal/block_class": "^1.3",
