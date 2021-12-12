@@ -1,0 +1,119 @@
+{#
+/**
+ * @file
+ *
+ * Default product template.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapper.
+ * - product: The rendered product fields.
+ *   Use 'product' to print them all, or print a subset such as
+ *   'product.title'. Use the following code to exclude the
+ *   printing of a given field:
+ *   @code
+ *   {{ product|without('title') }}
+ *   @endcode
+ * - product_entity: The product entity.
+ * - product_url: The product URL.
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% if view_mode == 'featured_campaign' %}
+  <div class="campaign-block featured-campaign clearfix">      
+   <div class="campaign-block-inner">
+      <div class="left">
+        <div class="image lightGallery">
+          {{ product.field_campaign_images }}
+          {% if video_link %}
+            <a class="video-link popup-video" href="{{ video_link }}"><i class="fa fa-video-camera"></i></a>
+          {% endif %}
+        </div>
+      </div>
+      <div class="right">
+        <div class="campaign-content">   
+          <div class="campaign-info"><h4 class="title"><a href="{{ product_url }}" rel="bookmark">{{ title }}</a></h4></div> 
+          <div class="campaign-info"><div class="summary"> {{product.body}}</div></div>
+          <div class="funded">
+            <div class="progress">
+              <div class="progress-bar" data-progress-animation="{{funded}}%">
+                <span class="percentage">{{ funded_label }}%</span>
+              </div>
+            </div>
+          </div>
+          <div class="content-raised"><span class="raised">{{raised}}</span> {{'Raised'|t}} / <span class="goal">{{ product.field_campaign_goal}}</span> {{'Goal'|t}} / <span class="days"><span class="text-theme">{{ days_left }}</span> {{'Days left'|t}} </span></div>
+          <div class="content-action"><a class="btn-theme" href="{{ product_url }}">{{ 'Donate now'|t }}</a></div> 
+        </div>
+      </div>  
+   </div>
+</div>
+{% else %}
+
+<article{{ attributes}}>
+  <div class="campaign-block campaign-single">
+    <div class="image campaign-images lightGallery">
+      {% if product.field_campaign_images %}
+        {{ product.field_campaign_images }} 
+      {% endif %}
+      {% if video_link %}
+          <a class="video-link popup-video" href="{{ video_link }}"><i class="fa fa-video-camera"></i></a>
+      {% endif %}
+    </div>
+    <div class="campaign-content">
+      <div class="content-inner">
+        <div class="funded">
+          <div class="progress">
+             <div class="progress-bar" data-progress-animation="{{funded}}%">
+                <span class="percentage"><span></span><b>{{ funded }}%</b></span>
+             </div>
+          </div>
+        </div>
+      </div>   
+      <div class="content-raised"><span class="raised">{{raised}}</span> {{'Current'|t}} / <span class="goal">{{ product.field_campaign_goal}}</span> {{'Target'|t}} / <span class="days"><span class="text-theme">{{ days_left }}</span></span> {{'Days To Go'|t}} <span class="button-donation"><a class="btn btn-theme" href="#" data-toggle="modal" data-target="#popup-add-to-cart">{{'Donation now'|t}}</a></span></div>
+    </div>
+    <div class="campaign-content-inner">
+      {{ title_prefix }}
+         <h1{{ title_attributes.addClass('post-title') }}>{{ product.title }}</h1>
+      {{ title_suffix }}         
+      
+      <div class="clearfix">
+        <div id="popup-add-to-cart" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header clearfix">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body clearfix">
+                <div class="funded">
+                  <div class="pieChart" data-bar-color="#FFA600" data-bar-width="150" data-percent="{{funded}}">
+                      <span>{{funded}}%</span>  
+                  </div>
+                </div>
+                <div class="add-to-cart-content-inner">
+                  {{product.variation_price|raw}}
+                  {{product.variations|raw}}
+                </div>  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+       
+      <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
+        {{- product|without('field_campaign_goal','field_campaign_start', 'field_campaign_time', 'taxonomy_catalog', 'field_campaign_images', 'comment', 'field_campaign_video', 'variation_price', 'variations' ,'field_campaign_category' , 'field_campaign_featured') -}}
+      </div>
+    
+      <div class="post-categories margin-top-20">{{ product.field_campaign_category }}</div>
+
+      {% if product.comment %}
+        <div id="node-single-comment">
+          {{ product.comment }}
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+</article>
+{% endif %}

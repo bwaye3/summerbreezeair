@@ -1,0 +1,967 @@
+.campaign-block{
+   margin-bottom: 30px;
+   @include transition(all 0.35s);
+   .image{
+      position: relative;
+      &:after{
+         content: '';
+         @include size(100%, 100%);
+         background: rgba(0, 0, 0, 0.5);
+         position: absolute;
+         top: 0;
+         left: 0;
+         z-index: 9;
+         @include opacity(0);
+         @include transition(all 0.35s);
+      }
+      .action-donate{
+         position: absolute;
+         padding: 8px 16px;
+         border: 1px solid rgba(255, 255, 255, 0.6);
+         top: 50%;
+         left: 50%;
+         margin-left: -60px;
+         margin-top: -18px;
+         z-index: 11;
+         color: $white;
+         text-transform: uppercase;
+         font-weight: 600;
+         font-size: 12px;
+         @include transition(all 0.35s);
+         @include opacity(0);
+         &:hover{
+            background: $theme-color;
+            border-color: $theme-color;
+         }
+      }
+      .funded{
+         width: 100%;
+         position: absolute;
+         left: 0;
+         bottom: 0;
+         z-index: 11;
+         background: rgba(255, 255, 255, 0.92);
+         @include border-radius(50%);
+         text-align: center;
+         .progress{
+            margin-bottom: 0;
+         }
+         span{
+            font-size: 18px;
+            font-weight: 600;
+            font-family: $font-second; 
+            color: $theme-color;
+            text-align: center;
+         }
+         canvas{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+         }
+      }
+      .icon-expand{
+         position: absolute;
+         top: 15px;
+         right: 15px;
+         color: rgba(255, 255, 255, 0.8);
+         z-index: 11;
+         font-size: 18px;
+      }
+      .video-link{
+         position: absolute;
+         top: 15px;
+         right: 45px;
+         color: rgba(255, 255, 255, 0.8);
+         z-index: 11;
+         font-size: 18px; 
+      }
+   }
+   .campaign-content{
+      position: relative;
+      padding: 5px 25px 0;
+      background: $white;
+      border: 1px solid $border-color;
+      border-top: 0;
+      .content-inner{
+         position: relative;
+         min-height: 145px;
+      }
+      .title{
+         margin-bottom: 5px;
+         a{
+            line-height: 22px;
+            font-size: 16px;
+            display: inline-block;
+         }
+      }
+      .content-raised{
+         padding: 10px 0 12px;
+         border-bottom: 1px solid $border-color;    
+         color: #8e8e8e;    
+         @include transition(all 0.35s);
+         > div{
+            float: left;
+            text-align: center;
+            line-height: 1.3;
+            position: relative;
+            min-height: 36px;
+            &:after{
+               content: '';
+               @include size(1px, auto);
+               position: absolute;
+               top: 0;
+               bottom: 0;
+               right: 0;
+               z-index: 1;
+               background: $border-color;
+            }
+            &:last-child{
+               &:after{
+                  display: none;
+               }
+            }
+             &.raised, &.goal{
+               width: 35%;
+            }
+            &.funded{
+               font-size: 24px;
+               font-family: $font-second;
+               padding-top: 3px;
+               width: 30%;
+               color: $theme-color;
+            }
+            .title{
+               font-size: 12px;
+               text-transform: uppercase;
+               font-family: $font-second;
+            }
+            .value{
+               font-weight: 600;
+            }
+         }
+      }
+      .summary{
+         > div{
+            padding: 5px 0 10px;
+            max-height: 88px;
+         }
+      }
+      .days{
+         position: relative;
+         font-size: 14px;
+      }
+      .content-action{
+         padding: 10px 0;
+         @include clearfix();
+         border-top: 1px solid $border-color;
+         text-align: center;
+         font-weight: 500;
+         font-family: $font-second;
+      }
+   }
+   
+   &.v2{
+      .campaign-content{
+         padding-top: 10px; 
+      }
+      .funded{
+         @include size(100%, auto);
+         background: none;
+         @include border-radius(0);
+         bottom: 0;
+         left: 0;
+         margin-left: 0;
+      }
+   }
+   &:hover{
+      @include box-shadow(0px 4px 26px 3px rgba(0, 0, 0, 0.1));
+      .image{
+         &:after{
+            @include opacity(1);
+         }
+         .action-donate{
+            @include opacity(1);
+         }
+      }
+      .campaign-content .content-raised{
+         color: $text-color;
+      }
+   }
+}
+
+.campaign-block-2{
+   margin-bottom: 35px;
+   @include transition(all 0.35s);
+   .image{
+      position: relative;
+      &:after{
+         content: '';
+         @include size(100%, 100%);
+         background: rgba(0, 0, 0, 0.4);
+         position: absolute;
+         top: 0;
+         left: 0;
+         z-index: 9;
+         @include opacity(0);
+         @include transition(all 0.35s);
+      }
+      .funded{
+         width: 100%;
+         position: absolute;
+         left: 0;
+         bottom: 0;
+         z-index: 15;
+         background: rgba(255, 255, 255, 0.92);
+         @include border-radius(50%);
+         text-align: center;
+         .progress{
+            margin-bottom: 0;
+         }
+         span{
+            font-size: 18px;
+            font-weight: 600;
+            font-family: $font-second; 
+            color: $theme-color;
+            text-align: center;
+         }
+         canvas{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+         }
+      }
+      .icon-expand{
+         position: absolute;
+         top: 15px;
+         right: 15px;
+         color: rgba(255, 255, 255, 0.8);
+         z-index: 11;
+         font-size: 18px;
+      }
+      .video-link{
+         position: absolute;
+         top: 15px;
+         right: 45px;
+         color: rgba(255, 255, 255, 0.8);
+         z-index: 11;
+         font-size: 18px; 
+      }
+      .title{
+         background: linear-gradient(to bottom,transparent 0,rgba(0,0,0,.82) 100%);
+         background: -webkit-linear-gradient(to bottom,transparent 0,rgba(0,0,0,.82) 100%);
+         background: -ms-linear-gradient(to bottom,transparent 0,rgba(0,0,0,.82) 100%);
+         display: block!important;
+         visibility: visible!important;
+         padding: 20px;
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         width: 100%;
+         z-index: 12;
+         line-height: 20px;
+         a{
+            color: $white;
+         }
+      }
+      .funded{
+         .percentage{
+            display: none;
+         }
+      }
+      .campaign-time{
+         position: absolute;
+         top: 10px;
+         left: 10px;
+         padding: 0 10px;
+         background: $theme-color;
+         color: $white;
+         @include border-radius(5px);
+         @include opacity(0.6);
+         @include transition(all 0.35s);
+         font-size: 14px;
+         z-index: 99;
+      }
+   }
+   .campaign-content{
+      position: relative;
+      padding: 5px 0 0;
+      background: none;
+      border-top: 0;
+      .content-inner{
+         position: relative;
+         overflow: hidden;
+      }
+      .content-raised{
+         margin-top: 5px;
+         .raised{
+            color: #1db3e7;
+            font-size: 16px;
+            font-weight: 500;
+         }
+         .goal{
+            color: $theme-color;
+            font-size: 16px;
+            font-weight: 500;
+         }
+         .funded-percentage{
+            background: $theme-color;
+            @include border-radius(5px);
+            color: $white;
+            display: inline-block;
+            font-size: 12px;
+            padding: 0 5px;
+            line-height: 18px;
+            position: relative;
+            top: -1px;
+            margin-left: 3px;
+         }
+      }
+      .days{
+         position: relative;
+         font-size: 14px;
+      }
+      .content-action{
+         margin: 0;
+         @include clearfix();
+         line-height: 1;
+         a{
+            color: $theme-color;
+            font-weight: 600;
+            font-size: 16px;
+            text-transform: capitalize;
+         }
+      }
+   }
+   &:hover{
+      .image{
+         &:after{
+            @include opacity(1);
+         }
+      }
+      .campaign-time{
+         @include opacity(1);
+      }
+   }
+}
+
+
+.campaigns-grid-1{
+   .campaign-block{
+      margin-bottom: 30px;
+      .funded{
+         top: 50%;
+         margin-top: -40px;
+         bottom: auto;
+      }
+      .title{
+         margin: 0;
+      }
+      .campaign-content{
+         padding: 30px 20px 20px;
+      }
+      .content-action{
+         position: absolute;
+         top: 110%;
+         left: 0;
+         width: 100%;
+         background: $theme-color;
+         z-index: 9;
+         margin: 0;
+         @include opacity(0);
+         @include transition(all 0.35s);
+         a{ 
+            width: 100%;
+            text-align: center;
+            color: $white;
+            font-family: $font-family-base;
+            font-size: 20px;
+            padding: 5px 0;
+            &:after{
+               display: none;
+            }
+         }
+         .days{
+            display: none;
+         }
+      }
+      &:hover{
+         .content-action{
+            top: 100%;
+            @include opacity(1);
+         }
+      }
+   }
+   .views-view-grid{
+      > .row{
+         &:last-child{
+            .campaign-block{
+               margin-bottom: 0;
+            }
+         }
+      }
+   }
+}
+
+.campaigns-tabs{
+   .carousel-nav{
+      margin-bottom: 30px;
+      margin: 10px auto 30px;
+      max-width: 980px;
+      .slick-slide{
+         padding: 0 10px;
+         .link-campaign{
+            text-align: center;
+            display: block;
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            @include box-shadow(0px 0px 5px 1px rgba(0, 0, 0, 0.1));
+            background: $white;
+            &:hover{
+               cursor: pointer;
+            }
+         }
+         &.slick-center{
+            .link-campaign{
+               color: $white;
+               background: $theme-color;
+            }
+         }
+      }
+   }
+}
+
+.campaigns-list{
+   .campaign-block{
+      margin-bottom: 30px;
+      padding: 20px;
+      background: $white;
+      @include clearfix();
+      .image{
+         width: 35%;
+         float: left;
+         @media(max-width: 600px){
+            width: 100%;
+            padding: 0;
+         }
+         .funded{
+            top: 50%;
+            margin-top: -40px;
+         }
+      }
+      .campaign-content{
+         width: 65%;
+         float: left;
+         padding: 0 0 0 45px;
+         @media(max-width: 600px){
+            width: 100%;
+            padding: 0;
+         }
+      }
+   }
+}
+
+.campaign-single{
+   -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+   .campaign-content{
+      border: none;
+      padding: 0;
+      .content-inner{
+         height: auto;
+         min-height: auto;
+      }
+      .funded{
+         margin-top: 0;
+         .progress{
+            margin-bottom: 20px;
+         }
+      }
+      .content-raised{
+         @include clearfix();
+         line-height: 40px;
+         padding: 8px 0 20px;
+         span, .raised{
+            font-size: 18px;
+            font-weight: 600;
+         }
+         .button-donation{
+            float: right;
+            line-height: 24px;
+         }
+      }
+   }
+   .campaign-content-inner{
+      margin-top: 20px;
+      .post-title{
+         font-size: 26px;
+         font-weight: 400;
+         margin-top: 5px;
+      }
+   }
+   #popup-add-to-cart{ 
+      .modal-body{
+         padding: 30px;
+         .expired{
+            padding-top: 50px;
+            font-size: 24px;
+         }
+      }
+      .form-item{
+         margin-bottom: 10px;
+         padding-left: 10px;
+         position: relative;
+         .ajax-progress-throbber{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 99;
+            background: rgba(255, 255, 255, 0.9);
+            @include size(100%, 100%);
+         }
+         input[type=radio]{
+            @include opacity(0);
+            &:hover{
+               cursor: pointer;
+            }
+            &:checked ~ label {
+               color: $theme-color;
+               &:before{
+                  border-color: $theme-color;
+               }
+            }
+         }
+         label{
+            &.option{
+               position: relative;
+               margin-left: 10px;
+               text-transform: capitalize;
+               font-size: 15px;
+               line-height: 18px;
+               @include transition(all 0.35s);
+               &:hover{
+                  cursor: pointer;
+               }
+               &:after{
+                  content: "";
+                  background: $white;
+                  position: absolute;
+                  left: -29px;
+                  top: 1px;
+                  @include size(18px, 18px);
+                  @include border-radius(50%);
+               }
+               &:before{
+                  content: "";
+                  position: absolute;
+                  left: -32px;
+                  top: -2px;
+                  @include size(24px, 24px);
+                  @include border-radius(50%);
+                  border: 3px solid $border-color;
+                  @include transition(all 0.35s);
+               }
+            }
+         }
+      }
+      .funded{
+         float: left;
+         margin-top: 30px;
+      }
+      .add-to-cart-content-inner{
+         padding-left: 190px;
+         .field--name-price{
+            padding-left: 10px;
+            float: left;
+            width: 100%;
+            line-height: 1;
+            > div{
+               float: left;
+            }
+            .field__item{
+               color: $theme-color;
+               margin-left: 5px;
+            }
+         }
+         .field--name-variations{
+            float: left;
+            width: 100%;
+            legend{
+               margin-bottom: 10px;
+            }
+         }
+      }
+   }
+   .post-categories{
+      @include clearfix(); 
+      .field__item a{
+         font-weight: 600;
+         padding: 2px 20px;
+         background: #f5f5f5;
+         display: inline-block;
+         @include border-radius(5px);
+         float: left;
+         margin-right: 15px;
+         border: 1px solid $border-color;
+         &:hover, &:focus{
+            background: $theme-color;
+            border-color: $theme-color;
+            color: $white;
+         }
+      }
+   }
+}
+
+.related-campaigns{
+   .campaign-block{
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid $border-color;
+      
+      .campaign-content{
+         padding: 0;
+      }
+      .content-action{
+         display: none;
+      }
+      .content-raised{
+         display: none;
+      }
+      &:last-child{
+         border-bottom: none;
+         margin-bottom: 0;
+      }
+   }
+}
+
+.quick-cart{
+   position: fixed;
+   bottom: 0;
+   right: 0;
+   z-index: 9;
+   background: $white;
+   @include transition(all 0.35s);
+   @include translateY(100%);
+   .block{
+      margin-bottom: 0;
+      .block-title{
+         margin: 0;
+         padding: 0;
+         span{
+            color: $black!important;
+         }
+      }
+   } 
+   .title{
+      @include size(80px, 40px);
+      text-align: center;
+      line-height: 40px;
+      position: absolute;
+      right: 0;
+      bottom: 100%;
+      z-index: 11;
+      @include box-shadow(-2px 0px 2px 1px rgba(0, 0, 0, 0.1));
+      font-size: 18px;
+      background: $theme-color;
+      font-size: 14px;
+      .icon{
+         margin-right: 6px;
+         font-size: 16px;
+      }
+      a{
+         color: $white!important;
+         display: block;
+      }
+      &:hover{
+         cursor: pointer;
+      }
+   }
+   .content-inner{
+      @include box-shadow(0px 0px 10px 3px rgba(0, 0, 0, 0.1));
+      background: #f4f4f4;
+      padding: 10px 15px 15px;
+      max-width: 320px;
+      position: relative;
+      z-index: 1;
+   }
+   .product-description{
+      padding: 0!important;
+   }
+   .cart-block--contents{
+      position: relative!important;
+      width: 320px;
+      max-width: 100%;
+      display: block!important;
+      .cart-block--contents__items{
+        position: relative;
+      }
+      .cart-block--contents__inner{
+         padding: 0;
+         overflow: hidden;
+      }
+      table{
+         margin-bottom: 5px;
+      }
+      .cart-block--contents__links{
+         background: #f4f4f4;
+         padding: 15px 0 8px;
+         text-align: center;
+         a{
+            text-transform: uppercase;
+            font-weight: 600;
+            color: $white;
+            font-size: 12px;
+            background: $theme-color;
+            padding: 8px 20px;
+            @include border-radius(30px);
+            &:hover{
+               background: $white;
+               color: $theme-color;
+            }
+         }
+      }
+   }
+   .cart-block--summary{
+      color: $theme-color!important;
+      .cart-block--summary__icon{
+         display: none;
+      }
+   }
+   &.open{
+      @include translateY(0);
+   }
+}  
+
+.cart-form{
+   table{
+      thead{
+         @media(max-width: 550px){
+            display: none;
+         }
+      }
+      tr{
+         @media(max-width: 550px){
+            border-bottom: 1px solid $border-color;
+         }
+         td{
+            @media(max-width: 550px){
+               width: 100%;
+               display: block;
+               text-align: center;
+               padding: 5px 15px;
+               border: none;
+            }
+            &.views-field-edit-quantity{
+               text-align: center;
+               input{
+                  text-align: center;
+               }
+            }
+            &.views-field-remove-button{
+               text-align: center;
+               input{
+                  background: none;
+                  color: $theme-color;
+                  padding: 5px;
+               }
+            }
+         }
+      }
+   }
+}
+
+.layout-checkout-form{
+   margin-bottom: 30px;
+   .checkout-pane-payment-information{
+      div[class*='form-item']{
+         &:not(.js-form-type-radio):not(.js-form-type-checkbox){
+            margin-bottom: 10px;
+            width: 100%;
+            float: left;
+            display: block;
+            label{
+               display: block;
+               width: 100%;
+               float: left;
+            }
+            input, select{
+               width: 100%;
+               float: left;
+            }
+         }
+         &.js-form-type-radio{
+            line-height: 1;
+            margin-bottom: 5px;
+         }
+      }
+      div[id*='edit-payment-information-payment-method']{
+         margin-bottom: 15px;
+         legend{
+            margin-bottom: 10px;
+         }
+      }
+   }
+   .credit-card-form{
+      .form-item{
+         width: auto!important;
+         float: left;
+         margin-bottom: 5px;
+         margin-right: 15px;
+         input, select{
+            margin-top: 0;
+            line-height: 21px;
+         }
+      }
+      .credit-card-form__expiration{
+        display: inline-block;
+        float: left;
+      }
+   } 
+  .form-item-payment-information-add-payment-method-billing-information-copy-to-address-book{
+    float: left;
+    width: 100%;
+  }
+}
+
+.profile-form,.commerce-payment-method-add-form{
+   div[class*='form-item']{
+      &:not(.js-form-type-radio):not(.js-form-type-checkbox){
+         margin-bottom: 10px;
+         width: 100%;
+         float: left;
+         display: block;
+         label{
+            display: block;
+            width: 100%;
+            float: left;
+         }
+         input, select{
+            width: 100%;
+            float: left;
+         }
+      }
+      &.js-form-type-radio{
+         line-height: 1;
+         margin-bottom: 5px;
+      }
+   }
+   .credit-card-form{
+      .form-item{
+         width: auto!important;
+         float: left;
+         margin-bottom: 5px;
+         margin-right: 15px;
+         input, select{
+            margin-top: 0;
+            line-height: 21px;
+         }
+      }
+      .credit-card-form__expiration{
+         display: inline-block;
+         float: left;
+      }
+   }
+}
+ 
+.views-profiles{
+   .views-col{
+      margin-top: 15px;
+      padding-bottom: 15px;
+      position: relative;
+      &:after{
+         content: '';
+         position: absolute;
+         left: 15px;
+         right: 15px;
+         bottom: 0;
+         z-index: 1;
+         border-bottom: 1px solid $border-color;
+      }
+   }
+}
+
+.path-user{
+   .customer-information{
+      float: left;
+      width: 100%;
+      border-bottom: 1px solid $border-color;
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      > div{
+         float: left;
+         &.field--name-mail{
+            width: 33%;
+            @media(max-width: $screen-xs-max){
+               width: 100%;
+            }
+         }
+         &.customer-billing{
+            width: 67%;
+            @media(max-width: $screen-xs-max){
+               width: 100%;
+            }
+         }
+         .field__label{
+            width: 100%;
+            float: left;
+            font-weight: 600;
+            font-family: $font-second;
+         }
+         .field__item{
+            float: left;
+            width: 100%;
+         }
+         &.customer-billing{
+            .address{
+               margin: 0;
+               span{
+                  margin-right: 6px;
+                  padding-right: 8px;
+                  position: relative;
+                  display: inline-block;
+                  &:after{
+                     content: '';
+                     @include size(1px, 15px);
+                     position: absolute;
+                     top: 6px;
+                     right: 0;
+                     z-index: 1;
+                     background: rgba(0, 0, 0, 0.2);
+                  }
+                  &:last-child{
+                     &:after{
+                        display: none;
+                     }
+                  }
+               }
+               br{
+                  display: none;
+               }
+            }
+         }
+      }
+   }
+   .order-information{
+      float: left;
+      width: 100%;
+      > .field{
+         float: left;
+         margin-right: 20px;
+         width: 30%;
+         @media(max-width: 300px){
+            width: 100%;
+         }
+         .field__label{
+            font-weight: 600;
+            color: $black;
+         }
+         &.field--name-order-items, &.field--name-total-price{ 
+            width: 100%;
+            margin-top: 20px;
+            margin-right: 0;
+         }
+      }
+   }
+}
