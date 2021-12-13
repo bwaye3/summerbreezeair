@@ -459,6 +459,21 @@ a.topbar-inner {
     margin: 0 2rem !important;
   }
 
+  .coupon.coupon-promoted.gva-view {
+    margin: 0 0 0 15px;
+  }
+
+  .node--type-coupon .layout.layout--twocol-section.layout--twocol-section--33-67 {
+    margin: 0 0 80px 0 !important;
+  }
+
+  .coupon.coupon-promoted.gva-view .row {
+    margin-right: -30px;
+  }
+
+  .frontpage .coupon.coupon-promoted.gva-view {
+    margin: 0 50px 0 15px !important;
+  }
 }
 
 .layout.layout--twocol-section.layout--twocol-section--33-67::before {
