@@ -31,6 +31,7 @@
         "drupal/core-recommended": "^9.1",
         "drupal/ctools": "^3.5",
         "drupal/devel": "^4.1",
+        "drupal/draggableviews": "^2.0",
         "drupal/entity": "^1.2",
         "drupal/entity_reference_revisions": "^1.9",
         "drupal/entity_type_clone": "^1.6",

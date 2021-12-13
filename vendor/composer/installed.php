@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '0f9ac2a776c7597197d4436d9b31fb8592a57369',
+        'reference' => 'da2111868c3c2c025c0b8efea58ac8f7e8289cc1',
         'name' => 'drupal/legacy-project',
         'dev' => true,
     ),
@@ -741,6 +741,15 @@
             'reference' => '4.1.2',
             'dev_requirement' => false,
         ),
+        'drupal/draggableviews' => array(
+            'pretty_version' => '2.0.1',
+            'version' => '2.0.1.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/draggableviews',
+            'aliases' => array(),
+            'reference' => '2.0.1',
+            'dev_requirement' => false,
+        ),
         'drupal/dynamic_page_cache' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -960,7 +969,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '0f9ac2a776c7597197d4436d9b31fb8592a57369',
+            'reference' => 'da2111868c3c2c025c0b8efea58ac8f7e8289cc1',
             'dev_requirement' => false,
         ),
         'drupal/link' => array(
