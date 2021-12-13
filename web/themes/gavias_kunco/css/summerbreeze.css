@@ -1,0 +1,430 @@
+.path-coupons .breadcrumbs {
+  display: none;
+}
+
+#block-sortcoupons .gva_menu > li > a {
+  color: #000 !important;
+  background: #9bcb33;
+  padding: 1rem 3rem;
+  margin: 2rem 0;
+  border: 1px solid #000;
+}
+a.tabledrag-handle .handle {
+  width: 30px;
+  height: 30px;
+}
+
+.more-link a {
+  background: #9bcb33 !important;
+  color: #000 !important;
+}
+
+.more-link a:hover {
+  background: #000 !important;
+  color: #9bcb33 !important;
+}
+
+#custom-heading .widget.gsc-heading.style-1 {
+  padding-bottom: 60px;
+}
+
+.column-style-3 {
+  padding: 0 60px 0 60px;
+}
+
+.gbb-row .bb-inner {
+  padding-top: 0;
+  padding-bottom: 70px;
+}
+
+span.a2a_svg.a2a_s__default.a2a_s_print {
+  margin: 0 2rem 0 0;
+  background-color: green !important;
+  font-size: 3rem !important;
+  height: 35px !important;
+  width: 35px !important;
+}
+
+.col.cal-btn {
+  margin: 1.5rem 0 0;
+}
+
+.coupon .card, .card-dotted-line {
+  border: 2px dashed #ccc;
+  min-height: 790px;
+}
+
+.coupon-promoted .card-dotted-line {
+  border: 2px dashed #ccc;
+  min-height: auto;
+}
+
+.path-coupon .container .container {
+  width: inherit !important;
+}
+
+.margin-bottom-coupon {
+  margin: 0 0 5rem;
+}
+
+.node--type-coupon div#content {
+  margin: 80px 0 0;
+}
+
+.coupon.coupon-promoted .card-dotted-line::before {
+  top: -27px;
+  left: -30px;
+  font-size: 3rem;
+}
+
+.fa.fa-calendar {
+  margin: 0 .5rem 1rem .5rem;
+}
+
+#front-coupon .coupon .card,
+#front-coupon .card-dotted-line {
+  border: 2px dashed #000;
+  background: #fff;
+}
+
+#front-coupon .card-dotted-line::before {
+  display: none;
+}
+
+#front-coupon .card-dotted-line {
+  min-height: auto !important;
+}
+
+#block-views-block-coupon-block-1 .card-dotted-line::before {
+  display: none;
+}
+
+.field.field--name-field-date.field--type-datetime.field--label-inline {
+  margin: 0 0 2rem;
+  font-weight: bold;
+}
+
+small.text-muted {
+  font-size: 1rem;
+  line-height: 1.3;
+}
+.text-success {
+  color: #468847;
+  font-weight: bold;
+}
+
+.layout__region.layout__region--first {
+  padding: 0 2rem 0;
+}
+
+.layout__region.layout__region--second {
+  padding: 2rem;
+}
+
+.coupon-padding {
+  padding: 2rem 0;
+}
+
+.coupon-padding-bottom {
+  padding: 0 0 3rem;
+}
+
+.layout.layout--twocol-section.layout--twocol-section--33-67 {
+  max-width: 50%;
+  border: 2px dashed #ccc;
+  margin: 0 0 80px;
+}
+
+.layout.layout--twocol-section.layout--twocol-section--33-67 img {
+  border: 0;
+  vertical-align: top;
+  max-width: 100%;
+  height: auto;
+  padding: 3rem 0 0;
+}
+
+.block-layout-builder span,
+span .block-layout-builder {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.card-title {
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  line-height: 1.1;
+}
+
+.card-body {
+  margin: 0 2rem;
+}
+
+.coupon img {
+  border: 0;
+  vertical-align: top;
+  max-width: 100%;
+  height: auto;
+  padding: 1rem 1rem 0 1rem;
+}
+
+.coupon .card::before,
+.card-dotted-line::before,
+.layout.layout--twocol-section.layout--twocol-section--33-67::before {
+  content: '\f0c4';
+  display: inline-block;
+  font-size: 2rem;
+  font-family: 'FontAwesome';
+  /* margin: 0 5px 0 0; */
+  text-rendering: auto;
+  position: absolute;
+  color: #000 !important;
+  top: -20px;
+  left: -10px;
+}
+
+.topbar-inner a,
+a.topbar-inner {
+  color: #bbb;
+}
+
+.widget.gsc-block-drupal.remove-margin-on {
+  margin-top: 1rem;
+}
+
+.testimonial-node-v1 .content-inner .title {
+  color: #9bcb33 !important;
+}
+
+.testimonial .owl-carousel .owl-dots .owl-dot.active,
+.testimonial .widget.gsc-heading.style-1 .title::before {
+  background: #9bcb33 !important;
+}
+
+.widget.gsc-heading.style-1 .title::before {
+  background: #9bcb33 !important;
+}
+
+#custom-heading .widget.gsc-heading.style-1 {
+  padding-bottom: 0;
+}
+
+#change-button a.gsc-button,
+#change-button .gsc-button a {
+  padding: 2rem 3rem !important;
+  width: 100% !important;
+  line-height: 1.4 !important;
+}
+
+#change-button a.gsc-button:hover,
+#change-button .gsc-button a:hover {
+  background: #3475cb !important;
+}
+
+.footer .footer-center {
+  margin: 40px 0 0;
+}
+
+.testimonial-node-v1 .content-inner .title {
+  color: #9bcb33 !important;
+}
+
+.footer .footer-center {
+  margin: 10px 0 0;
+}
+
+.breadcrumb-content-inner .gva-breadcrumb-content .gva-block-breadcrumb .breadcrumb-style {
+  padding: 3rem;
+  margin-bottom: 45px;
+  margin-top: 1rem;
+}
+
+.gv-icon-8:before {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#block-gavias-kunco-searchform .container-inline div {
+  display: inherit !important;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+
+.card > hr {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.card > .list-group {
+  border-top: inherit;
+  border-bottom: inherit;
+}
+
+.card > .list-group:first-child {
+  border-top-width: 0;
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
+}
+
+.card > .list-group:last-child {
+  border-bottom-width: 0;
+  border-bottom-right-radius: calc(0.25rem - 1px);
+  border-bottom-left-radius: calc(0.25rem - 1px);
+}
+
+.card > .card-header + .list-group,
+.card > .list-group + .card-footer {
+  border-top: 0;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  padding: 1rem 1rem;
+}
+
+.card-title {
+  margin-bottom: 0.5rem;
+}
+
+.card-subtitle {
+  margin-top: -0.25rem;
+  margin-bottom: 0;
+}
+
+.card-text:last-child {
+  margin-bottom: 0;
+}
+
+.card-link:hover {
+  text-decoration: none;
+}
+
+.card-link + .card-link {
+  margin-left: 1rem;
+}
+
+.card-header {
+  padding: 0.5rem 1rem;
+  margin-bottom: 0;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+.card-header:first-child {
+  border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+}
+
+.card-footer {
+  padding: 0.5rem 1rem;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+.card-footer:last-child {
+  border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
+}
+
+.card-header-tabs {
+  margin-right: -0.5rem;
+  margin-bottom: -0.5rem;
+  margin-left: -0.5rem;
+  border-bottom: 0;
+}
+
+.card-header-pills {
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.card-img-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  border-radius: calc(0.25rem - 1px);
+}
+
+.card-img,
+.card-img-top,
+.card-img-bottom {
+  width: 100%;
+}
+
+.card-img,
+.card-img-top {
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
+}
+
+.card-img,
+.card-img-bottom {
+  border-bottom-right-radius: calc(0.25rem - 1px);
+  border-bottom-left-radius: calc(0.25rem - 1px);
+}
+
+.card-group > .card {
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 576px) {
+  .card-group {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .card-group > .card {
+    flex: 1 0 0%;
+    margin-bottom: 0;
+  }
+  .card-group > .card + .card {
+    margin-left: 0;
+    border-left: 0;
+  }
+  .card-group > .card:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .card-group > .card:not(:last-child) .card-img-top,
+  .card-group > .card:not(:last-child) .card-header {
+    border-top-right-radius: 0;
+  }
+  .card-group > .card:not(:last-child) .card-img-bottom,
+  .card-group > .card:not(:last-child) .card-footer {
+    border-bottom-right-radius: 0;
+  }
+  .card-group > .card:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .card-group > .card:not(:first-child) .card-img-top,
+  .card-group > .card:not(:first-child) .card-header {
+    border-top-left-radius: 0;
+  }
+  .card-group > .card:not(:first-child) .card-img-bottom,
+  .card-group > .card:not(:first-child) .card-footer {
+    border-bottom-left-radius: 0;
+  }
+
+
+}
+
+@media (min-width: 576px) {
+  #search-block-form input[type*="search"] {
+    width: 190px !important;
+  }
+
+}
+
+@media (max-width: 991px) {
+  .breadcrumb-content-inner .gva-breadcrumb-content .gva-block-breadcrumb .breadcrumb-style {
+    min-height: 1000px;
+  }
+}

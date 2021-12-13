@@ -42,6 +42,7 @@
         "drupal/imce": "^2.4",
         "drupal/inline_entity_form": "1.0.0-rc9",
         "drupal/ludwig": "^1.7",
+        "drupal/masquerade": "^2.0@beta",
         "drupal/pathauto": "^1.8",
         "drupal/profile": "^1.2",
         "drupal/quick_node_clone": "^1.14",
@@ -70,6 +71,9 @@
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
+            },
+            "file-mapping": {
+                "[web-root]/.htaccess": false
             }
         },
         "installer-paths": {

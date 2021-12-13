@@ -235,7 +235,7 @@ a.disable {
 }
 @media (max-width: 991px) {
   .breadcrumb-content-inner .gva-breadcrumb-content .gva-block-breadcrumb .breadcrumb-style {
-    min-height: 300px;
+    min-height: 100px;
   }
 }
 .breadcrumb-content-inner .gva-breadcrumb-content .gva-block-breadcrumb.text-white *, .breadcrumb-content-inner .gva-breadcrumb-content .gva-block-breadcrumb.text-white .page-title, .breadcrumb-content-inner .gva-breadcrumb-content .gva-block-breadcrumb.text-light *, .breadcrumb-content-inner .gva-breadcrumb-content .gva-block-breadcrumb.text-light .page-title {
@@ -10226,11 +10226,11 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
     display: none;
   }
   .gva-offcanvas-mobile .gva-navigation .gva_menu > li ul.menu.sub-menu li a {
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 16px;
+    line-height: 30px;
     padding-top: 0 !important;
     padding-bottom: 0 !important;
-    color: #999999 !important;
+    color: #000 !important;
   }
   .gva-offcanvas-mobile .gva-navigation .gva_menu > li ul.menu.sub-menu li a:hover {
     color: #3375CB !important;
@@ -10275,6 +10275,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
   .gva-offcanvas-mobile .gva-navigation .gva_menu li a .icaret:before {
     position: absolute;
     font-family: 'gva-icon';
+    font-weight: bold;
     content: '\e900';
     text-transform: inherit;
     left: 50%;
@@ -12415,4 +12416,11 @@ a.topbar-inner {
   .card-group > .card:not(:first-child) .card-footer {
     border-bottom-left-radius: 0;
   }
+}
+
+@media (min-width: 576px) {
+  #search-block-form input[type*="search"] {
+    width: 190px !important;
+  }
+
 }

@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'da2111868c3c2c025c0b8efea58ac8f7e8289cc1',
+        'reference' => 'ee80ddf503b101b056d707384faea465a8741fb2',
         'name' => 'drupal/legacy-project',
         'dev' => true,
     ),
@@ -969,7 +969,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'da2111868c3c2c025c0b8efea58ac8f7e8289cc1',
+            'reference' => 'ee80ddf503b101b056d707384faea465a8741fb2',
             'dev_requirement' => false,
         ),
         'drupal/link' => array(
@@ -991,6 +991,15 @@
             'install_path' => __DIR__ . '/../../web/modules/contrib/ludwig',
             'aliases' => array(),
             'reference' => '8.x-1.8',
+            'dev_requirement' => false,
+        ),
+        'drupal/masquerade' => array(
+            'pretty_version' => '2.0.0-beta4',
+            'version' => '2.0.0.0-beta4',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/masquerade',
+            'aliases' => array(),
+            'reference' => '8.x-2.0-beta4',
             'dev_requirement' => false,
         ),
         'drupal/media' => array(
