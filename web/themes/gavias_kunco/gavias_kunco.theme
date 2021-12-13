@@ -26,9 +26,9 @@ function gavias_kunco_preprocess_page(&$variables) {
   $variables['sticky_menu'] = theme_get_setting('sticky_menu');
 
   $variables['preloader'] = theme_get_setting('preloader');
- 
+
   $variables['theme_path'] = $base_url . '/' . $theme_path;
-  
+
   $variables['footer_first_size'] = theme_get_setting('footer_first_size');
   $variables['footer_second_size'] = theme_get_setting('footer_second_size');
   $variables['footer_third_size'] = theme_get_setting('footer_third_size');
@@ -43,7 +43,7 @@ function gavias_kunco_preprocess_page(&$variables) {
   if(isset($variables['gva_header']) && $variables['gva_header'] && $variables['gva_header']!='_none' ){
     $header = $variables['gva_header'];
   }
-  
+
   if(file_exists($theme_path . '/templates/page/' . trim($header) . '.html.twig')){
     $variables['header_skin'] = $variables['directory'] . '/templates/page/' . trim($header) . '.html.twig';
   }else{
@@ -69,6 +69,25 @@ function gavias_kunco_preprocess_html(&$variables) {
   global $theme, $base_url;
   global $parent_root;
 
+  // Get currently active user and his roles.
+
+  $account = \Drupal::currentUser();
+
+  $roles = $account->getRoles();
+
+  // The getRoles() method will return us the machine names, so there is no need
+
+  // to process roles names additionally. However, I suggest prefixing the names
+
+  // with "role-", so it's more obvious.
+
+  foreach ($roles as $role) {
+
+    $variables['attributes']['class'][] = 'role-' . $role;
+
+  }
+
+
   $theme_path = drupal_get_path('theme', 'gavias_kunco');
 
   if(theme_get_setting('enable_panel') == '1' ){
@@ -77,7 +96,7 @@ function gavias_kunco_preprocess_html(&$variables) {
     if(strpos($current_url, '?')){
        $current_url .= '&';
     }
-    else{ 
+    else{
        $current_url .= '?';
     }
     $variables['current_url'] = $current_url;
@@ -102,7 +121,7 @@ function gavias_kunco_preprocess_html(&$variables) {
 
   ob_start();
   $json = \Drupal::config('gaviasthemer.settings')->get('gavias_customize');
-  
+
   if(!$json){
     if(file_exists($theme_path . '/css/customize.json')){
       $json = file_get_contents($theme_path . '/css/customize.json');
@@ -117,16 +136,16 @@ function gavias_kunco_preprocess_html(&$variables) {
 
   $variables['customize_styles'] = $customize_styles;
 
-  //Form customize 
+  //Form customize
   $user = \Drupal::currentUser();
 
   if(theme_get_setting('enable_customize') == 1 &&  \Drupal::moduleHandler()->moduleExists('gaviasthemer') && ($user->hasPermission('administer gavias_customize') || $user->hasPermission('administer gavias_customize preview')) ){
     $url_customize_save = Url::fromRoute('gaviasthemer.admin.customize_save', array(), array('absolute' => TRUE))->toString();
-    $variables['#attached']['drupalSettings']['gavias_customize']['save'] = $url_customize_save;  
+    $variables['#attached']['drupalSettings']['gavias_customize']['save'] = $url_customize_save;
     $url_customize_preview = Url::fromRoute('gaviasthemer.admin.customize_preview', array(), array('absolute' => TRUE))->toString();
-    $variables['#attached']['drupalSettings']['gavias_customize']['preview'] = $url_customize_preview;  
+    $variables['#attached']['drupalSettings']['gavias_customize']['preview'] = $url_customize_preview;
     $variables['#attached']['library'][] = 'gaviasthemer/customize';
- 
+
     $variables['#attached']['drupalSettings']['gavias_customize']['json'] = $json;
 
     $variables['addon_template'] = '';
@@ -151,7 +170,7 @@ function gavias_kunco_preprocess_html(&$variables) {
     }
     $variables['current_url'] = $current_url;
   }
-  
+
   //---- End customize gavias themer ---
 
   $skin = 'default';
@@ -211,7 +230,7 @@ function gavias_kunco_preprocess_block(&$variables) {
     $tmp_logo = theme_get_setting('logo');
     $variables['setting_logo'] = $tmp_logo['use_default'];
   }
-} 
+}
 
 function gavias_kunco_preprocess_block__system_breadcrumb_block(&$variables){
   $styles = array();
@@ -220,7 +239,7 @@ function gavias_kunco_preprocess_block__system_breadcrumb_block(&$variables){
   $bg_position = 'center center';
   $bg_repeat = 'no-repeat';
   $text_style = 'text-light';
-  
+
   if (!empty($variables['elements']['#id'])) {
     $block = Block::load($variables['elements']['#id']);
     if($variables['plugin_id'] == 'system_breadcrumb_block'){
@@ -263,7 +282,7 @@ function gavias_kunco_preprocess_block__system_breadcrumb_block(&$variables){
   $title = '';
   if ($route = $request->attributes->get(\Symfony\Cmf\Component\Routing\RouteObjectInterface::ROUTE_OBJECT)) {
     $title = \Drupal::service('title_resolver')->getTitle($request, $route);
-  } 
+  }
    $variables['breadcrumb_title'] = $title;
 }
 
@@ -320,7 +339,7 @@ function gavias_kunco_theme_suggestions_page_alter(array &$suggestions, array $v
           array_splice($suggestions, 1, 0, 'page__layout__' . $layout);
         }else{
           array_splice($suggestions, 1, 0, 'page__node__' . $node->getType());
-        } 
+        }
       }else{
         array_splice($suggestions, 1, 0, 'page__node__' . $node->getType());
       }
@@ -331,8 +350,8 @@ function gavias_kunco_theme_suggestions_page_alter(array &$suggestions, array $v
 }
 
 function gavias_kunco_theme_suggestions_field_alter(&$suggestions, $variables) {
-  $suggestions[] = 'field__' . 
-  $variables['element']['#field_name'] . '__' . 
+  $suggestions[] = 'field__' .
+  $variables['element']['#field_name'] . '__' .
   $variables['element']['#view_mode'];
 }
 
@@ -343,6 +362,5 @@ function gavias_kunco_preprocess_views_view(&$variables){
       $variables['attributes']['class'][] = "view-page";
     }
 }
-
 
 

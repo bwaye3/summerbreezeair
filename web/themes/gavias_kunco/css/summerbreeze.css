@@ -1,3 +1,12 @@
+
+.role-coupon_editor #page-main-content {
+  min-height: 360px;
+  padding: 0 0 100px;
+}
+
+.role-coupon_editor .vertical-tabs {
+  display: none;
+}
 .path-coupons .breadcrumbs {
   display: none;
 }
@@ -60,7 +69,7 @@ span.a2a_svg.a2a_s__default.a2a_s_print {
 }
 
 .path-coupon .container .container {
-  width: inherit !important;
+  width: 90% !important;
 }
 
 .margin-bottom-coupon {
@@ -247,6 +256,11 @@ a.topbar-inner {
   display: inherit !important;
 }
 
+.node--type-coupon .layout.layout--twocol-section.layout--twocol-section--33-67 {
+  max-width: 100% !important;
+  margin: 0 5rem !important;
+}
+
 .card {
   position: relative;
   display: flex;
@@ -421,10 +435,33 @@ a.topbar-inner {
     width: 190px !important;
   }
 
+  .layout.layout--twocol-section.layout--twocol-section--33-67 {
+    max-width: 100%;
+    border: 2px dashed #ccc;
+    margin: 0 0 80px;
+  }
+
 }
 
 @media (max-width: 991px) {
   .breadcrumb-content-inner .gva-breadcrumb-content .gva-block-breadcrumb .breadcrumb-style {
     min-height: 1000px;
   }
+}
+
+@media (max-width: 576px) {
+  #search-block-form input[type*="search"] {
+    width: 190px !important;
+  }
+
+  .node--type-coupon .layout.layout--twocol-section.layout--twocol-section--33-67 {
+    max-width: 100% !important;
+    margin: 0 2rem !important;
+  }
+
+}
+
+.layout.layout--twocol-section.layout--twocol-section--33-67::before {
+  top: -17px !important;
+  left: 55px !important;
 }
