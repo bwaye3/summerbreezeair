@@ -6921,7 +6921,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 .container .container {
   width: 100% !important;
   padding-left: 0 !important;
-  padding-right: 0 !important;
+  padding-right: 0;
 }
 
 .bb-container.full-screen {
