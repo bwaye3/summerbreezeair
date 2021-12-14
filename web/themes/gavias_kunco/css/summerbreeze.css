@@ -480,3 +480,7 @@ a.topbar-inner {
   top: -17px !important;
   left: 55px !important;
 }
+
+.g-recaptcha {
+  margin: 0 0 3rem;
+}
