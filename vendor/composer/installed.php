@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '3b40d742fc44bd09d451aaf701be6e0279b80e5e',
+        'reference' => '911e57ad40537704fc9789853be66525f1cb3da7',
         'name' => 'drupal/legacy-project',
         'dev' => true,
     ),
@@ -969,7 +969,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '3b40d742fc44bd09d451aaf701be6e0279b80e5e',
+            'reference' => '911e57ad40537704fc9789853be66525f1cb3da7',
             'dev_requirement' => false,
         ),
         'drupal/link' => array(
@@ -1147,6 +1147,15 @@
             'install_path' => __DIR__ . '/../../web/modules/contrib/recaptcha',
             'aliases' => array(),
             'reference' => '8.x-3.0',
+            'dev_requirement' => false,
+        ),
+        'drupal/redirect' => array(
+            'pretty_version' => '1.7.0',
+            'version' => '1.7.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/redirect',
+            'aliases' => array(),
+            'reference' => '8.x-1.7',
             'dev_requirement' => false,
         ),
         'drupal/responsive_image' => array(

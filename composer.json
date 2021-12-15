@@ -48,6 +48,7 @@
         "drupal/profile": "^1.2",
         "drupal/quick_node_clone": "^1.14",
         "drupal/recaptcha": "^3.0",
+        "drupal/redirect": "^1.7",
         "drupal/state_machine": "^1.0",
         "drupal/token": "^1.9",
         "drupal/tvi": "^1.0@RC",
