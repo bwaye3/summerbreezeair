@@ -39,7 +39,7 @@ _sql
 #/autoload.php
 #/composer.lock
 #/web/index.php
-#/web/robots.txt
+/web/robots.txt
 #/web/update.php
 #/web/web.config
 /example.gitignore
