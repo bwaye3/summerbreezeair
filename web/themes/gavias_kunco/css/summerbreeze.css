@@ -420,6 +420,10 @@ h1, .h1 {
 div#block-gaviassliderlayersavings {
   margin: 0 0 40px !important;
 }
+
+#backtotop {
+ background-size: 60px 60px;
+}
 /*********/
 /*********/
 /*********/

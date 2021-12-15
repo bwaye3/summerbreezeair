@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '360df52d21b070a2bea28ef139be0e82c8988526',
+        'reference' => '1f1dfe66a49dacbb0b2750d633c5bc7e6172cf8b',
         'name' => 'drupal/legacy-project',
         'dev' => true,
     ),
@@ -969,7 +969,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '360df52d21b070a2bea28ef139be0e82c8988526',
+            'reference' => '1f1dfe66a49dacbb0b2750d633c5bc7e6172cf8b',
             'dev_requirement' => false,
         ),
         'drupal/link' => array(
@@ -977,6 +977,15 @@
             'replaced' => array(
                 0 => '9.3.0',
             ),
+        ),
+        'drupal/livechat' => array(
+            'pretty_version' => '3.0.0',
+            'version' => '3.0.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/livechat',
+            'aliases' => array(),
+            'reference' => '8.x-3.0',
+            'dev_requirement' => false,
         ),
         'drupal/locale' => array(
             'dev_requirement' => false,
