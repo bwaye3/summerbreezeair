@@ -1,4 +1,4 @@
-
+/* Style Override */
 .role-coupon_editor #page-main-content {
   min-height: 360px;
   padding: 0 0 100px;
@@ -7,6 +7,7 @@
 .role-coupon_editor .vertical-tabs {
   display: none;
 }
+
 .path-coupons .breadcrumbs {
   display: none;
 }
@@ -18,6 +19,7 @@
   margin: 2rem 0;
   border: 1px solid #000;
 }
+
 a.tabledrag-handle .handle {
   width: 30px;
   height: 30px;
@@ -38,7 +40,7 @@ a.tabledrag-handle .handle {
 }
 
 .column-style-3 {
-  padding: 0;
+  padding: 0 !important;
 }
 
 span.a2a_svg.a2a_s__default.a2a_s_print {
@@ -72,7 +74,7 @@ span.a2a_svg.a2a_s__default.a2a_s_print {
 }
 
 .node--type-coupon div#content {
-  margin: 80px 0 0;
+  margin: 3rem 0 0;
 }
 
 .coupon.coupon-promoted .card-dotted-line::before {
@@ -144,7 +146,7 @@ small.text-muted {
   vertical-align: top;
   max-width: 100%;
   height: auto;
-  padding: 3rem 0 0;
+  padding: 4rem 4rem 0 4rem !important;
 }
 
 .block-layout-builder span,
@@ -168,12 +170,11 @@ span .block-layout-builder {
   vertical-align: top;
   max-width: 100%;
   height: auto;
-  padding: 1rem 1rem 0 1rem;
+  padding: 2rem 2rem 0 2rem;
 }
 
 .coupon .card::before,
-.card-dotted-line::before,
-.layout.layout--twocol-section.layout--twocol-section--33-67::before {
+.card-dotted-line::before {
   content: '\f0c4';
   display: inline-block;
   font-size: 2rem;
@@ -252,17 +253,12 @@ a.topbar-inner {
   margin: 0 5rem !important;
 }
 
-.layout.layout--twocol-section.layout--twocol-section--33-67::before {
-  top: -17px !important;
-  left: 55px !important;
-}
-
 .g-recaptcha {
   margin: 0 0 3rem;
 }
 
 .footer {
-  margin: 40px 0 0;
+  margin: 80px 0 0;
 }
 
 .path-coupons .coupon.coupon-promoted.gva-view {
@@ -282,23 +278,135 @@ a.topbar-inner {
 }
 
 .gbb-row .bb-inner {
-  padding-top: 0;
+  padding-top: 0 !important;
   padding-bottom: 70px;
 }
-
 
 .sidebar .block-menu ul li a:hover,
 .sidebar .block-menu ul li a:focus,
 .sidebar .block-menu ul li a:active {
   color: #fff !important;
-  background: #3375CB;
+  background: #3375cb;
 }
 
 #change-button a.gsc-button:hover,
 #change-button .gsc-button a:hover {
-  background: #3475cb!important;
+  background: #3475cb !important;
   color: #fff;
 }
+
+.heading-padding {
+  padding: 5rem 0 0;
+}
+
+.layout.layout--twocol-section.layout--twocol-section--33-67 .block .block-title > span {
+  font-size: 1.5rem;
+  margin: 2rem 0 0;
+}
+
+.layout.layout--twocol-section.layout--twocol-section--33-67 .block .block-title {
+  margin: 0 0 5px;
+  padding: 0 0 3px;
+}
+
+.layout.layout--twocol-section.layout--twocol-section--33-67 .field__label {
+  display: contents;
+  font-size: 1.1rem;
+}
+
+.layout.layout--twocol-section.layout--twocol-section--33-67 .field--type-datetime .field__item:before {
+  content: "\f073";
+  font-family: 'FontAwesome';
+  color: #ccc;
+  margin: 0 10px 0 0;
+}
+
+.block.block-addtoany.block-addtoany-block.no-title {
+  margin: 3rem 0 2rem 5rem;
+}
+
+.node--type-coupon #header,
+.node--type-coupon #footer {
+  display: none;
+}
+
+.node--type-coupon .node--view-mode-full .field--type-text-with-summary p {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+
+.testimonial .title {
+  text-shadow: 3px 1px 8px rgba(0,0,0,0.2);
+}
+
+.testimonial-node-v1 .quote {
+  font-size: 2rem !important;
+  line-height: 1.4 !important;
+  color: #262626 !important;
+  text-align: center;
+  text-shadow: 3px 1px 8px rgba(0,0,0,0.2);
+}
+
+.node--type-coupon .main.main-page {
+  margin: 0;
+}
+
+.node--type-coupon .layout.layout--twocol-section.layout--twocol-section--33-67 img {
+  max-width: 300px !important;
+  margin: 0 !important;
+}
+
+.coupon .card::before {
+  content: '\f0c4';
+  display: inline-block;
+  font-size: 2rem;
+  font-family: 'FontAwesome';
+  text-rendering: auto;
+  position: absolute;
+  color: #000 !important;
+  top: -20px;
+  left: -10px;
+}
+
+.node--type-coupon .layout.layout--twocol-section.layout--twocol-section--33-67::before {
+  content: '\f0c4';
+  display: inline-block;
+  font-size: 2rem;
+  font-family: 'FontAwesome';
+  text-rendering: auto;
+  position: absolute;
+  color: #000 !important;
+  top: -18px !important;
+  left: 55px !important;
+}
+
+.coupon-promoted .card-dotted-line::before {
+  content: '\f0c4';
+  display: inline-block;
+  font-size: 2rem !important;
+  font-family: 'FontAwesome';
+  text-rendering: auto;
+  position: absolute;
+  color: #000 !important;
+  top: -18px !important;
+  left: -25px !important;
+}
+
+.gbb-row.gsc-equal-height.bg-size-cover .gsc-box-color .box-content {
+  text-align: center;
+  background: #0000000d;
+  border-radius: 20px;
+}
+
+h1, .h1 {
+  font-size: 2.5rem !important;
+}
+
+/*********/
+/*********/
+/*********/
 
 /* Import Bootstrap 4 Cards*/
 .card {
@@ -526,48 +634,4 @@ a.topbar-inner {
     margin: 0;
     padding-left: 0;
   }
-}
-
-.column-style-3 {
-  padding: 0 !important;
-}
-
-.gbb-row .bb-inner {
-  padding-top: 0 !important;
-  padding-bottom: 70px;
-}
-
-.heading-padding {
-  padding: 5rem 0 0;
-}
-
-.layout.layout--twocol-section.layout--twocol-section--33-67 .block .block-title > span {
-  font-size: 1.5rem;
-  margin: 2rem 0 0;
-}
-
-
-.layout.layout--twocol-section.layout--twocol-section--33-67 .block .block-title {
-  margin: 0 0 5px;
-  padding: 0 0 3px;
-}
-
-.layout.layout--twocol-section.layout--twocol-section--33-67 .field__label {
-  display: contents;
-  font-size: 1.1rem;
-}
-
-.layout.layout--twocol-section.layout--twocol-section--33-67  .field--type-datetime  .field__item:before {
-  content: "\f073";
-  font-family: 'FontAwesome';
-  color: #ccc;
-  margin: 0 10px 0 0;
-}
-
-.block.block-addtoany.block-addtoany-block.no-title {
-  margin: 3rem 0 2rem 5rem;
-}
-
-.footer {
-  margin: 80px 0 0;
 }

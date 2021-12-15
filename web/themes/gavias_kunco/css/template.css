@@ -12191,20 +12191,6 @@ span .block-layout-builder {
   padding: 1rem 1rem 0 1rem;
 }
 
-.coupon .card::before,
-.layout.layout--twocol-section.layout--twocol-section--33-67::before {
-  content: '\f0c4';
-  display: inline-block;
-  font-size: 2rem;
-  font-family: 'FontAwesome';
-  /* margin: 0 5px 0 0; */
-  text-rendering: auto;
-  position: absolute;
-  color: #000 !important;
-  top: -20px;
-  left: -10px;
-}
-
 .topbar-inner a,
 a.topbar-inner {
   color: #bbb;
