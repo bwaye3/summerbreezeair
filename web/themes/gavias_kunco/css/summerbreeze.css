@@ -408,6 +408,15 @@ h1, .h1 {
   padding: 2rem 4rem;
 }
 
+.img-padding img {
+  padding: 2rem 4rem;
+}
+
+.gsc-custom-box p {
+  font-size: 14px !important;
+  line-height: 1.9 !important;
+}
+
 /*********/
 /*********/
 /*********/
