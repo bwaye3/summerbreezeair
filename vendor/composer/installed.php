@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'a71d7d12fd5ff3277dc212571ce643e4da2a11b5',
+        'reference' => '3df7badc86f64f37b4b69019b6d8527d63fea8f8',
         'name' => 'drupal/legacy-project',
         'dev' => true,
     ),
@@ -969,7 +969,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'a71d7d12fd5ff3277dc212571ce643e4da2a11b5',
+            'reference' => '3df7badc86f64f37b4b69019b6d8527d63fea8f8',
             'dev_requirement' => false,
         ),
         'drupal/link' => array(
@@ -1304,6 +1304,15 @@
             'replaced' => array(
                 0 => '9.3.0',
             ),
+        ),
+        'drupal/video_embed_field' => array(
+            'pretty_version' => '2.4.0',
+            'version' => '2.4.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/video_embed_field',
+            'aliases' => array(),
+            'reference' => '8.x-2.4',
+            'dev_requirement' => false,
         ),
         'drupal/views' => array(
             'dev_requirement' => false,
