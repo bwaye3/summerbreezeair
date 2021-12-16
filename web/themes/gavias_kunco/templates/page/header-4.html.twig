@@ -1,10 +1,10 @@
 <header id="header" class="header-v4">
-
+  
   {% if page.topbar %}
     <div class="topbar">
       <div class="topbar-inner">
         <div class="container">
-          <div class="content">{{ page.topbar }}</div>
+          <div class="content">{{ page.topbar }}</div> 
         </div>
       </div>
     </div>
@@ -13,7 +13,7 @@
   {% set class_sticky = '' %}
   {% if sticky_menu == 1 %}
     {% set class_sticky = 'gv-sticky-menu' %}
-  {% endif %}
+  {% endif %}  
 
   <div class="header-main">
     <div class="container">
@@ -22,19 +22,19 @@
           <div class="col-md-3 col-sm-3 col-xs-12 branding">
             {% if demo_logo == 'enable' %}
               <a href="{{ path('<front>') }}" class="site-branding-logo"><img src="{{theme_path}}/images/logo-4.png" alt="home"/></a>
-            {% else %}
+            {% else %}  
               {% if page.branding %}
                 {{ page.branding }}
               {% endif %}
-            {% endif %}
+            {% endif %}  
           </div>
           <div class="col-md-9 col-sm-9 col-xs-12">
             {% if page.header_right %}
               {{ page.header_right }}
             {% endif %}
-          </div>
+          </div>  
       </div>
-    </div>
+    </div>  
   </div>
 
   <div class="main-menu {{ class_sticky }}">
@@ -57,17 +57,17 @@
                       <div class="icon"><a><span class="zmdi zmdi-more"></span></a></div>
                       <div class="content-inner">
                         {{ page.quick_menu }}
-                      </div>
+                      </div>  
                     </div>
-                  {% endif %}
-
+                  {% endif %} 
+                            
                   {% if page.offcanvas %}
                     <div class="after-offcanvas hidden">
                       {{ page.offcanvas }}
                     </div>
                  {% endif %}
                 </div>
-
+                  
                 <div id="menu-bar" class="menu-bar hidden-lg hidden-md">
                   <span class="one"></span>
                   <span class="two"></span>
@@ -76,7 +76,7 @@
 
                  {% if link_donation is not empty %}
                  <div class="header-action">
-                  <a href="{{link_donation}}" class="btn-theme">{{ 'Contact'|t }}</a>
+                  <a href="{{link_donation}}" class="btn-theme">{{ 'Donate Now'|t }}</a>
                 </div>
                 {% endif %}
 

@@ -46,21 +46,11 @@
     </div>
   </div>
 
-  {% if page.after_footer %}
-    <div class="copyright">
-      <div class="container">
-        <div class="copyright-inner">
-          {{ page.after_footer }}
-        </div>
-      </div>
-    </div>
-  {% endif %}
-
   {% if page.copyright %}
     <div class="copyright">
       <div class="container">
         <div class="copyright-inner">
-            {{ page.copyright }}
+          {{ page.copyright }}
           <div class="text-center">
             © Copyright {{ 'now'|date('Y') }}. All Rights Reserved.
           </div>

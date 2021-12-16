@@ -1,0 +1,47 @@
+name: 'Features Kunco'
+description: 'Features Kunco - Import content type, field, view ... for Kunco theme.'
+type: module
+core_version_requirement: ^8.8 || ^9
+dependencies:
+  - address
+  - block
+  - block_content
+  - block_visibility_groups
+  - comment
+  - commerce
+  - commerce_checkout
+  - commerce_payment
+  - commerce_payment_example
+  - commerce_paypal
+  - commerce_price
+  - commerce_product
+  - commerce_store
+  - contact
+  - ctools
+  - datetime
+  - field
+  - file
+  - gavias_content_builder
+  - gavias_view
+  - gavias_views_magazine
+  - gaviasthemer
+  - image
+  - imce
+  - menu_ui
+  - node
+  - options
+  - path
+  - pathauto
+  - profile
+  - rdf
+  - simplenews
+  - system
+  - taxonomy
+  - text
+  - user
+  - views
+  - views_infinite_scroll
+  - admin_toolbar
+  - config_update
+  - features
+version: 9.x
