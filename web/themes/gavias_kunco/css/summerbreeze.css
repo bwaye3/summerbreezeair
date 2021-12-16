@@ -424,6 +424,15 @@ div#block-gaviassliderlayersavings {
 #backtotop {
  background-size: 60px 60px;
 }
+
+a.gsc-button.medium {
+  width: 100% !important;
+}
+
+a.gsc-button.medium:hover {
+  background: #3375CB !important;
+  color: #fff !important;
+}
 /*********/
 /*********/
 /*********/
