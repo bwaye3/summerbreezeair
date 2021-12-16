@@ -433,6 +433,32 @@ a.gsc-button.medium:hover {
   background: #3375CB !important;
   color: #fff !important;
 }
+
+.frontpage span.a2a_svg.a2a_s__default.a2a_s_print {
+  display: none;
+}
+
+#block-gaviassliderlayerresidentialservices {
+  margin: 0 0 60px 0 !important;
+  padding-top: 0 !important;
+}
+
+.frontpage .a2a_svg.a2a_s__default.a2a_s_print {
+  display: none !important;
+}
+
+.copyright a:hover {
+  color: #fff;
+}
+
+.text-center.small-text {
+  font-size: 1.2rem;
+}
+
+.action a.link:hover {
+  color: #ffffff !important;
+  background: #3375CB !important;
+}
 /*********/
 /*********/
 /*********/
