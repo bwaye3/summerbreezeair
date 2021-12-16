@@ -459,6 +459,15 @@ a.gsc-button.medium:hover {
   color: #ffffff !important;
   background: #3375CB !important;
 }
+
+.team-contact,
+.team-education {
+  display: none;
+}
+
+.team-block .team-content {
+  bottom: 0 !important;
+}
 /*********/
 /*********/
 /*********/
