@@ -34,7 +34,7 @@ a.tabledrag-handle .handle {
 
 .more-link a:hover {
   background: #3a4f5e !important;
-  color:  #fff !important;
+  color: #fff !important;
 }
 
 #custom-heading .widget.gsc-heading.style-1 {
@@ -336,7 +336,7 @@ a.topbar-inner {
 
 
 .testimonial .title {
-  text-shadow: 3px 1px 8px rgba(0,0,0,0.2);
+  text-shadow: 3px 1px 8px rgba(0, 0, 0, 0.2);
 }
 
 .testimonial-node-v1 .quote {
@@ -344,7 +344,7 @@ a.topbar-inner {
   line-height: 1.4 !important;
   color: #262626 !important;
   text-align: center;
-  text-shadow: 3px 1px 8px rgba(0,0,0,0.2);
+  text-shadow: 3px 1px 8px rgba(0, 0, 0, 0.2);
 }
 
 .node--type-coupon .main.main-page {
@@ -420,7 +420,7 @@ div#block-gaviassliderlayersavings {
 }
 
 #backtotop {
- background-size: 60px 60px;
+  background-size: 60px 60px;
 }
 
 a.gsc-button.medium {
@@ -428,7 +428,7 @@ a.gsc-button.medium {
 }
 
 a.gsc-button.medium:hover {
-  background: #3375CB !important;
+  background: #3375cb !important;
   color: #fff !important;
 }
 
@@ -454,8 +454,8 @@ a.gsc-button.medium:hover {
 }
 
 .action a.link:hover {
-  color: #ffffff !important;
-  background: #3375CB !important;
+  color: #fff !important;
+  background: #3375cb !important;
 }
 
 .team-contact,
