@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '1f1dfe66a49dacbb0b2750d633c5bc7e6172cf8b',
+        'reference' => '734886a782815ad3a2db348f429d0ec579337c9b',
         'name' => 'drupal/legacy-project',
         'dev' => true,
     ),
@@ -733,12 +733,12 @@
             ),
         ),
         'drupal/devel' => array(
-            'pretty_version' => '4.1.2',
-            'version' => '4.1.2.0',
+            'pretty_version' => '4.1.3',
+            'version' => '4.1.3.0',
             'type' => 'drupal-module',
             'install_path' => __DIR__ . '/../../web/modules/contrib/devel',
             'aliases' => array(),
-            'reference' => '4.1.2',
+            'reference' => '4.1.3',
             'dev_requirement' => false,
         ),
         'drupal/draggableviews' => array(
@@ -969,7 +969,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '1f1dfe66a49dacbb0b2750d633c5bc7e6172cf8b',
+            'reference' => '734886a782815ad3a2db348f429d0ec579337c9b',
             'dev_requirement' => false,
         ),
         'drupal/link' => array(
@@ -1149,6 +1149,15 @@
             'reference' => '8.x-3.0',
             'dev_requirement' => false,
         ),
+        'drupal/redirect' => array(
+            'pretty_version' => '1.7.0',
+            'version' => '1.7.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/redirect',
+            'aliases' => array(),
+            'reference' => '8.x-1.7',
+            'dev_requirement' => false,
+        ),
         'drupal/responsive_image' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -1296,6 +1305,15 @@
                 0 => '9.3.0',
             ),
         ),
+        'drupal/video_embed_field' => array(
+            'pretty_version' => '2.4.0',
+            'version' => '2.4.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/video_embed_field',
+            'aliases' => array(),
+            'reference' => '8.x-2.4',
+            'dev_requirement' => false,
+        ),
         'drupal/views' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -1339,12 +1357,12 @@
             'dev_requirement' => false,
         ),
         'drush/drush' => array(
-            'pretty_version' => '10.6.1',
-            'version' => '10.6.1.0',
+            'pretty_version' => '10.6.2',
+            'version' => '10.6.2.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../drush/drush',
             'aliases' => array(),
-            'reference' => 'd36bca3322555a6f94edc94439873afcde2bbe90',
+            'reference' => '0a570a16ec63259eb71195aba5feab532318b337',
             'dev_requirement' => false,
         ),
         'egulias/email-validator' => array(
@@ -1610,12 +1628,12 @@
             ),
         ),
         'psy/psysh' => array(
-            'pretty_version' => 'v0.11.0',
-            'version' => '0.11.0.0',
+            'pretty_version' => 'v0.10.12',
+            'version' => '0.10.12.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../psy/psysh',
             'aliases' => array(),
-            'reference' => 'c9a85cd388afde68721d304bbb3257a068f5ab05',
+            'reference' => 'a0d9981aa07ecfcbea28e4bfa868031cca121e7d',
             'dev_requirement' => false,
         ),
         'ralouphie/getallheaders' => array(
