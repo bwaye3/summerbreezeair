@@ -3180,7 +3180,7 @@ body.maintenance-page {
   margin-top: 0;
   font-size: 20px;
   line-height: 24px;
-  color: #9BCB33 !important;
+  color: #3375cb !important;
   font-family: "Poppins", sans-serif;
 }
 
@@ -12200,15 +12200,15 @@ a.topbar-inner {
   margin-top: 1rem;
 }
 .testimonial-node-v1 .content-inner .title {
-  color: #9BCB33 !important;
+  color: #3375cb !important;
 }
 .testimonial .owl-carousel .owl-dots .owl-dot.active,
 .testimonial .widget.gsc-heading.style-1 .title::before {
-  background: #9BCB33 !important;
+  background: #3375cb !important;
 }
 
 .widget.gsc-heading.style-1 .title::before {
-  background: #9BCB33 !important;
+  background: #3375cb !important;
 }
 
 #custom-heading .widget.gsc-heading.style-1 {
@@ -12232,7 +12232,7 @@ a.topbar-inner {
 }
 
 .testimonial-node-v1 .content-inner .title {
-  color: #9BCB33 !important;
+  color: #3375cb !important;
 }
 
 .footer .footer-center {

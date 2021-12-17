@@ -43,7 +43,7 @@ History
 
 #block-sortcoupons .gva_menu > li > a {
   color: #000 !important;
-  background: #9bcb33;
+  background: #3375cb;
   padding: 1rem 3rem;
   margin: 2rem 0;
   border: 1px solid #000;
@@ -61,10 +61,6 @@ a.tabledrag-handle .handle {
   padding: .5rem 3rem !important;
 }
 
-.more-link a:hover {
-  background: #3a4f5e !important;
-  color: #fff !important;
-}
 
 #custom-heading .widget.gsc-heading.style-1 {
   padding-bottom: 60px;
@@ -228,16 +224,20 @@ a.topbar-inner {
 }
 
 .testimonial-node-v1 .content-inner .title {
-  color: #9bcb33 !important;
+  color: #3375cb !important
 }
 
 .testimonial .owl-carousel .owl-dots .owl-dot.active,
 .testimonial .widget.gsc-heading.style-1 .title::before {
-  background: #9bcb33 !important;
+  background: #cc8500 !important
 }
 
 .widget.gsc-heading.style-1 .title::before {
-  background: #9bcb33 !important;
+  background: #cc8500 !important;
+}
+
+.widget.gsc-heading.style-1 .title::before {
+  background: #cc8500 !important;
 }
 
 #custom-heading .widget.gsc-heading.style-1 {
@@ -257,7 +257,7 @@ a.topbar-inner {
 }
 
 .testimonial-node-v1 .content-inner .title {
-  color: #9bcb33 !important;
+  color: #3375cb !important;
 }
 
 .footer .footer-center {
@@ -514,6 +514,31 @@ a.gsc-button.medium:hover {
   margin: 4rem 0 0;
 }
 
+.gavias_sliderlayer .btn-slide a,
+#gavias_slider_single .btn-slide a {
+  background: #3375cb;
+  color: #fff;
+  -webkit-box-shadow: 0 1px 0 0 #fff;
+  box-shadow: 0 1px 0 0 #fff;
+}
+
+
+.more-link a {
+  background: #000 !important;
+  color: #fff !important;
+  border: 1px solid #000 !important;
+  padding: .5rem 3rem !important;
+}
+
+.more-link a {
+  background: #3a4f5e !important;
+  color: #fff !important;
+}
+
+.more-link a:hover {
+  background: #cc8500 !important;
+  color: #fff !important;
+}
 /*********/
 /*********/
 /*********/
@@ -744,4 +769,69 @@ a.gsc-button.medium:hover {
     margin: 0;
     padding-left: 0;
   }
+}
+
+
+
+.gsc-image-content.skin-v2 .image img {
+  width: 100% !important;
+}
+
+/* testimonial custom */
+.owl-carousel .owl-dots {
+  float: right!important;
+  width: 50%!important;
+  margin: 0 -16% !important;
+}
+
+.testimonial-node-v1 {
+  text-align: left !important;
+  max-width: 60% !important;
+  margin: 0 0 0 auto !important;
+  padding-bottom: 20px !important;
+}
+
+.testimonial .widget.gsc-heading .title {
+  text-align: right !important;
+  margin: 0 20% 0 auto !important;
+}
+
+.testimonial .widget.gsc-heading.style-1 .title::before {
+  left: 83% !important;
+  margin-left: 0 !important;
+}
+
+.testimonial-node-v1 .quote {
+  font-size: 1.7rem !important;
+  line-height: 1.9 !important;
+}
+.text-shadow {
+  text-shadow: 2px 1px 18px rgba(0, 0, 0, 0.15) !important
+}
+
+
+@media (max-width: 576px) {
+  .testimonial-node-v1 {
+    text-align: center !important;;
+    max-width: 980px !important;;
+    margin: 0 auto !important;;
+    padding-bottom: 20px !important;;
+  }
+
+  .testimonial .widget.gsc-heading .title {
+    text-align: center !important;
+    margin: 0 !important;
+  }
+
+  .testimonial .widget.gsc-heading.style-1 .title::before {
+    left: 44% !important;
+  }
+
+  .widget.gsc-call-to-action.button-left .content {
+    padding-left: 0 !important;
+  }
+}
+
+#footer .button-green.a2a_button_print {
+  display: none !important;
 }

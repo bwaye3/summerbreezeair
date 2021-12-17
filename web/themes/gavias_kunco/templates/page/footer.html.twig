@@ -46,23 +46,16 @@
     </div>
   </div>
 
-  {% if page.after_footer %}
-    <div class="copyright">
-      <div class="container">
-        <div class="copyright-inner">
-          {{ page.after_footer }}
-        </div>
-      </div>
-    </div>
-  {% endif %}
-
   {% if page.copyright %}
     <div class="copyright">
       <div class="container">
         <div class="copyright-inner">
-            {{ page.copyright }}
+          {{ page.copyright }}
           <div class="text-center">
             © Copyright {{ 'now'|date('Y') }}. All Rights Reserved.
+          </div>
+          <div class="text-center small-text">
+            <a href="https://wayedesigngroup.com" target="_blank">Designed and Developed by WDg</a>
           </div>
         </div>
       </div>
