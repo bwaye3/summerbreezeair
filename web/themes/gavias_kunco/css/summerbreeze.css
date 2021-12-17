@@ -1,4 +1,33 @@
-/* Style Override */
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Marketplace
+Explore
+
+@bwaye3
+bwaye3
+/
+summerbreezeair
+Public
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+summerbreezeair/web/themes/gavias_kunco/css/summerbreeze.css
+
+Bradley Waye clean css
+Latest commit 2ee826c 17 minutes ago
+History
+0 contributors
+718 lines (591 sloc)  13.2 KB
+
+  /* Style Override */
 .role-coupon_editor #page-main-content {
   min-height: 360px;
   padding: 0 0 100px;
@@ -26,13 +55,15 @@ a.tabledrag-handle .handle {
 }
 
 .more-link a {
-  background: #9bcb33 !important;
-  color: #000 !important;
+  background: #000 !important;
+  color: #fff !important;
+  border: 1px solid #000 !important;
+  padding: .5rem 3rem !important;
 }
 
 .more-link a:hover {
-  background: #000 !important;
-  color: #9bcb33 !important;
+  background: #3a4f5e !important;
+  color: #fff !important;
 }
 
 #custom-heading .widget.gsc-heading.style-1 {
@@ -269,10 +300,6 @@ a.topbar-inner {
   padding-right: 0;
 }
 
-.main.main-page {
-  margin: 4rem 0 0 0;
-}
-
 .frontpage .main.main-page {
   margin: 0;
 }
@@ -338,7 +365,7 @@ a.topbar-inner {
 
 
 .testimonial .title {
-  text-shadow: 3px 1px 8px rgba(0,0,0,0.2);
+  text-shadow: 3px 1px 8px rgba(0, 0, 0, 0.2);
 }
 
 .testimonial-node-v1 .quote {
@@ -346,7 +373,7 @@ a.topbar-inner {
   line-height: 1.4 !important;
   color: #262626 !important;
   text-align: center;
-  text-shadow: 3px 1px 8px rgba(0,0,0,0.2);
+  text-shadow: 3px 1px 8px rgba(0, 0, 0, 0.2);
 }
 
 .node--type-coupon .main.main-page {
@@ -422,8 +449,71 @@ div#block-gaviassliderlayersavings {
 }
 
 #backtotop {
- background-size: 60px 60px;
+  background-size: 60px 60px;
 }
+
+a.gsc-button.medium {
+  width: 100% !important;
+}
+
+a.gsc-button.medium:hover {
+  background: #3375cb !important;
+  color: #fff !important;
+}
+
+.frontpage span.a2a_svg.a2a_s__default.a2a_s_print {
+  display: none;
+}
+
+#block-gaviassliderlayerresidentialservices {
+  margin: 0 0 60px 0 !important;
+  padding-top: 0 !important;
+}
+
+.frontpage .a2a_svg.a2a_s__default.a2a_s_print {
+  display: none !important;
+}
+
+.copyright a:hover {
+  color: #fff;
+}
+
+.text-center.small-text {
+  font-size: 1.2rem;
+}
+
+.action a.link:hover {
+  color: #fff !important;
+  background: #3375cb !important;
+}
+
+.team-contact,
+.team-education {
+  display: none;
+}
+
+.team-block .team-content {
+  bottom: 0 !important;
+}
+
+
+.node--type-article .breadcrumbs,
+.post-block .post-comment,
+.node-detail .post-meta {
+  display: none !important;
+}
+
+.node-detail .post-title {
+  margin-top: 10px;
+  margin-bottom: 2rem !important;
+  font-size: 3rem !important;
+}
+
+.node--type-article .video-embed-field-responsive-video {
+  position: relative;
+  margin: 4rem 0 0;
+}
+
 /*********/
 /*********/
 /*********/
@@ -655,4 +745,3 @@ div#block-gaviassliderlayersavings {
     padding-left: 0;
   }
 }
-
