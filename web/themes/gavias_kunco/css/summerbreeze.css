@@ -805,6 +805,21 @@ a.gsc-button.medium:hover {
   font-size: 1.7rem !important;
   line-height: 1.9 !important;
 }
+
+.testimonial .widget.gsc-heading .title {
+  text-align: center !important;
+  padding: 0 0 0 55% !important;
+}
+
+.testimonial .owl-carousel .owl-dots .owl-dot.active,
+.testimonial .widget.gsc-heading.style-1 .title::before {
+  bottom: -10px;
+}
+
+.testimonial-node-v1 .quote {
+  padding-top: 30px;
+}
+
 .text-shadow {
   text-shadow: 2px 1px 18px rgba(0, 0, 0, 0.15) !important
 }
@@ -834,4 +849,92 @@ a.gsc-button.medium:hover {
 
 #footer .button-green.a2a_button_print {
   display: none !important;
+}
+
+.widget.gsc-icon-box .highlight_content .title {
+  font-size: 3rem !important;
+  color: #000;
+  margin-bottom: 3px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+
+.gva-view-onefour .node__content.clearfix,
+.four-coupon {
+  background: #fff;
+  border: 1px solid #f7f7f7;
+  border-radius: 20px;
+  padding: 2rem;
+  -webkit-box-shadow: 2px 3px 7px 3px rgba(0,0,0,0.10);
+  box-shadow: 2px 3px 7px 3px rgba(0,0,0,0.10);
+}
+
+.four-coupon .views-field.views-field-title {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.1;
+  margin: 2rem 0 1rem;
+}
+
+.gva-view-onefour .node--view-mode-full p {
+  padding: 2rem;
+}
+
+
+.node-readmore {
+  background: #3375CB;
+  color: #fff !important;
+  overflow: hidden;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0 18px;
+  position: relative;
+  display: inline-block;
+  line-height: 38px;
+  z-index: 1;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  margin: 2rem 0 0 0;
+}
+
+.node-readmore:hover {
+  background: #cc8500 !important;
+  color: #000 !important;
+}
+
+.node-readmore a:hover {
+  color: #000 !important;
+}
+
+
+.gva-view-onefour .field.field--name-field-date.field--type-datetime.field--label-hidden.field__item::before,
+.four-coupon .views-field.views-field-field-date::before {
+  content: "\f073" " Expires";
+  font-family: 'FontAwesome';
+  color: #ccc;
+  margin: 0 10px 0 0;
+  font-size: 1.4rem;
+}
+
+.gva-view-onefour .field.field--name-field-date.field--type-datetime.field--label-hidden.field__item,
+.four-coupon .views-field.views-field-field-date {
+  font-weight: bold;
+  margin: 0 0 0 2rem;
+  font-size: 1.4rem;
+}
+
+.gva-view-onefour .field.field--name-body.field--type-text-with-summary.field--label-hidden.field__item {
+  margin: 2rem;
 }
