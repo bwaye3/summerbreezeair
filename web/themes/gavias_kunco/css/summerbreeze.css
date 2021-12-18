@@ -918,7 +918,6 @@ a.gsc-button.medium:hover {
   color: #000 !important;
 }
 
-
 .gva-view-onefour .field.field--name-field-date.field--type-datetime.field--label-hidden.field__item::before,
 .four-coupon .views-field.views-field-field-date::before {
   content: "\f073" " Expires";
@@ -937,4 +936,35 @@ a.gsc-button.medium:hover {
 
 .gva-view-onefour .field.field--name-body.field--type-text-with-summary.field--label-hidden.field__item {
   margin: 2rem;
+}
+
+.tp-caption.medium_light_black.text-shadow.slide-style-1.skrollable.skrollable-between {
+  text-shadow: 1px 2px 7px rgba(0,0,0,.5) !important;
+}
+
+.widget.gsc-icon-box.text-light .title {
+  margin: 4rem 0 0 !important;
+}
+
+.frontpage span.a2a_svg.a2a_s__default.a2a_s_print {
+  display: none;
+}
+
+.tp-caption.medium_light_black.text-shadow.slide-style-1.skrollable.skrollable-between {
+  text-shadow: 1px 2px 7px rgba(0,0,0,.5) !important;
+}
+
+#maintenance ul li {
+  list-style: disclosure-closed !important;
+  color: #33a9e4 !important;
+}
+#maintenance .widget.gsc-heading.style-1 .title::before {
+  background: #fff !important;
+}
+
+#maintenance ul {
+  margin: 0;
+  padding-left: 2rem;
+  line-height: 2.25;
+  font-size: 1.5rem;
 }
