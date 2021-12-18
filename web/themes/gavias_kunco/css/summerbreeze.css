@@ -956,7 +956,7 @@ a.gsc-button.medium:hover {
 
 #maintenance ul li {
   list-style: disclosure-closed !important;
-  color: #33a9e4 !important;
+
 }
 #maintenance .widget.gsc-heading.style-1 .title::before {
   background: #fff !important;
@@ -967,4 +967,24 @@ a.gsc-button.medium:hover {
   padding-left: 2rem;
   line-height: 2.25;
   font-size: 1.5rem;
+}
+
+.text-white h3,
+.text-white li,
+.text-white p,
+.text-white {
+  color: #fff !important;
+}
+
+#maintenance ul li::marker {
+  color: #33a9e4;
+  lighting-color:  #33a9e4 !important;
+}
+
+.widget.gsc-icon-box .highlight_content .desc p {
+  margin: 3rem 0;
+}
+
+.testimonial-node-v1 .quote {
+  margin: 3rem 0 0;
 }
