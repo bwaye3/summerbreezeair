@@ -3173,14 +3173,16 @@ body.maintenance-page {
   color: #bbbbbb;
   font-size: 15px;
 }
+
 .testimonial-node-v1 .content-inner {
   text-align: center;
 }
+
 .testimonial-node-v1 .content-inner .title {
   margin-top: 0;
   font-size: 20px;
   line-height: 24px;
-  color: #3375cb !important;
+  color: #3375cb;
   font-family: "Poppins", sans-serif;
 }
 
@@ -12198,9 +12200,7 @@ a.topbar-inner {
 .widget.gsc-block-drupal.remove-margin-on {
   margin-top: 1rem;
 }
-.testimonial-node-v1 .content-inner .title {
-  color: #3375cb !important;
-}
+
 .testimonial .owl-carousel .owl-dots .owl-dot.active,
 .testimonial .widget.gsc-heading.style-1 .title::before {
   background: #3375cb !important;
@@ -12228,10 +12228,6 @@ a.topbar-inner {
 
 .footer .footer-center {
   margin: 40px 0 0;
-}
-
-.testimonial-node-v1 .content-inner .title {
-  color: #3375cb !important;
 }
 
 .footer .footer-center {

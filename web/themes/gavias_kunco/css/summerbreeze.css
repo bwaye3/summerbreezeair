@@ -539,6 +539,148 @@ a.gsc-button.medium:hover {
   background: #cc8500 !important;
   color: #fff !important;
 }
+
+#footer .button-green.a2a_button_print {
+  display: none !important;
+}
+
+.widget.gsc-icon-box .highlight_content .title {
+  font-size: 3rem !important;
+  color: #000;
+  margin-bottom: 3px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+
+.gva-view-onefour .node__content.clearfix,
+.four-coupon {
+  background: #fff;
+  border: 1px solid #f7f7f7;
+  border-radius: 20px;
+  padding: 2rem;
+  -webkit-box-shadow: 2px 3px 7px 3px rgba(0,0,0,0.10);
+  box-shadow: 2px 3px 7px 3px rgba(0,0,0,0.10);
+}
+
+.four-coupon .views-field.views-field-title {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.1;
+  margin: 2rem 0 1rem;
+}
+
+.gva-view-onefour .node--view-mode-full p {
+  padding: 2rem;
+}
+
+.node-readmore {
+  background: #3375CB;
+  color: #fff !important;
+  overflow: hidden;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0 18px;
+  position: relative;
+  display: inline-block;
+  line-height: 38px;
+  z-index: 1;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  margin: 2rem 0 0 0;
+}
+
+.node-readmore:hover {
+  background: #cc8500 !important;
+  color: #000 !important;
+}
+
+.node-readmore a:hover {
+  color: #000 !important;
+}
+
+.gva-view-onefour .field.field--name-field-date.field--type-datetime.field--label-hidden.field__item::before,
+.four-coupon .views-field.views-field-field-date::before {
+  content: "\f073" " Expires";
+  font-family: 'FontAwesome';
+  color: #ccc;
+  margin: 0 10px 0 0;
+  font-size: 1.4rem;
+}
+
+.gva-view-onefour .field.field--name-field-date.field--type-datetime.field--label-hidden.field__item,
+.four-coupon .views-field.views-field-field-date {
+  font-weight: bold;
+  margin: 0 0 0 2rem;
+  font-size: 1.4rem;
+}
+
+.gva-view-onefour .field.field--name-body.field--type-text-with-summary.field--label-hidden.field__item {
+  margin: 2rem;
+}
+
+.tp-caption.medium_light_black.text-shadow.slide-style-1.skrollable.skrollable-between {
+  text-shadow: 1px 2px 7px rgba(0,0,0,.5) !important;
+}
+
+.widget.gsc-icon-box.text-light .title {
+  margin: 4rem 0 0 !important;
+}
+
+.frontpage span.a2a_svg.a2a_s__default.a2a_s_print {
+  display: none;
+}
+
+.tp-caption.medium_light_black.text-shadow.slide-style-1.skrollable.skrollable-between {
+  text-shadow: 1px 2px 7px rgba(0,0,0,.5) !important;
+}
+
+#maintenance ul li {
+  list-style: disclosure-closed !important;
+
+}
+#maintenance .widget.gsc-heading.style-1 .title::before {
+  background: #fff !important;
+}
+
+#maintenance ul {
+  margin: 0;
+  padding-left: 2rem;
+  line-height: 2.25;
+  font-size: 1.5rem;
+}
+
+.text-white h3,
+.text-white li,
+.text-white p,
+.text-white {
+  color: #fff !important;
+}
+
+#maintenance ul li::marker {
+  color: #33a9e4;
+  lighting-color:  #33a9e4 !important;
+}
+
+.widget.gsc-icon-box .highlight_content .desc p {
+  margin: 3rem 0;
+}
+
+.testimonial-node-v1 .quote {
+  margin: 3rem 0 0;
+}
+
 /*********/
 /*********/
 /*********/
@@ -845,146 +987,45 @@ a.gsc-button.medium:hover {
   .widget.gsc-call-to-action.button-left .content {
     padding-left: 0 !important;
   }
-}
 
-#footer .button-green.a2a_button_print {
-  display: none !important;
-}
+  .testimonial .widget.gsc-heading .title {
+    text-align: center !important;
+    padding: 0 !important;
+  }
 
-.widget.gsc-icon-box .highlight_content .title {
-  font-size: 3rem !important;
-  color: #000;
-  margin-bottom: 3px;
-  font-weight: 500;
-  font-family: "Poppins", sans-serif;
-}
+  .testimonial.bg-size-cover {
+    background-position: inherit !important;
+    background-size: inherit !important;
+    -webkit-background-size: inherit;
+    -moz-background-size: inherit;
+   -o-background-size: inherit;
+  }
 
-.gva-view-onefour .node__content.clearfix,
-.four-coupon {
-  background: #fff;
-  border: 1px solid #f7f7f7;
-  border-radius: 20px;
-  padding: 2rem;
-  -webkit-box-shadow: 2px 3px 7px 3px rgba(0,0,0,0.10);
-  box-shadow: 2px 3px 7px 3px rgba(0,0,0,0.10);
-}
+  .testimonial-content {
+    background: rgba(0,0,0, 0.4);
+    padding: 1rem 2rem;
+    margin: 3rem 0 0;
+    border-radius: 20px;
+  }
 
-.four-coupon .views-field.views-field-title {
-  font-size: 2rem;
-  font-weight: bold;
-  line-height: 1.1;
-  margin: 2rem 0 1rem;
-}
+  .testimonial-content .quote{
+    color: #fff !important;
+  }
 
-.gva-view-onefour .node--view-mode-full p {
-  padding: 2rem;
-}
+  .testimonial .widget.gsc-heading .title {
+    color: #fff !important;
+    text-shadow: 2px 1px 8px rgba(0, 0, 0, 1) !important
+  }
 
+  .testimonial .column-content-inner {
+    margin: 50px 0 0;
+  }
 
-.node-readmore {
-  background: #3375CB;
-  color: #fff !important;
-  overflow: hidden;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  font-size: 14px;
-  font-weight: 500;
-  padding: 0 18px;
-  position: relative;
-  display: inline-block;
-  line-height: 38px;
-  z-index: 1;
-  letter-spacing: 0.5px;
-  border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  text-transform: capitalize;
-  font-family: "Poppins", sans-serif;
-  border: none;
-  margin: 2rem 0 0 0;
-}
-
-.node-readmore:hover {
-  background: #cc8500 !important;
-  color: #000 !important;
-}
-
-.node-readmore a:hover {
-  color: #000 !important;
-}
-
-.gva-view-onefour .field.field--name-field-date.field--type-datetime.field--label-hidden.field__item::before,
-.four-coupon .views-field.views-field-field-date::before {
-  content: "\f073" " Expires";
-  font-family: 'FontAwesome';
-  color: #ccc;
-  margin: 0 10px 0 0;
-  font-size: 1.4rem;
-}
-
-.gva-view-onefour .field.field--name-field-date.field--type-datetime.field--label-hidden.field__item,
-.four-coupon .views-field.views-field-field-date {
-  font-weight: bold;
-  margin: 0 0 0 2rem;
-  font-size: 1.4rem;
-}
-
-.gva-view-onefour .field.field--name-body.field--type-text-with-summary.field--label-hidden.field__item {
-  margin: 2rem;
-}
-
-.tp-caption.medium_light_black.text-shadow.slide-style-1.skrollable.skrollable-between {
-  text-shadow: 1px 2px 7px rgba(0,0,0,.5) !important;
-}
-
-.widget.gsc-icon-box.text-light .title {
-  margin: 4rem 0 0 !important;
-}
-
-.frontpage span.a2a_svg.a2a_s__default.a2a_s_print {
-  display: none;
-}
-
-.tp-caption.medium_light_black.text-shadow.slide-style-1.skrollable.skrollable-between {
-  text-shadow: 1px 2px 7px rgba(0,0,0,.5) !important;
-}
-
-#maintenance ul li {
-  list-style: disclosure-closed !important;
+  .testimonial-node-v1 .content-inner .title {
+    color: #fff!important;
+  }
 
 }
-#maintenance .widget.gsc-heading.style-1 .title::before {
-  background: #fff !important;
-}
 
-#maintenance ul {
-  margin: 0;
-  padding-left: 2rem;
-  line-height: 2.25;
-  font-size: 1.5rem;
-}
 
-.text-white h3,
-.text-white li,
-.text-white p,
-.text-white {
-  color: #fff !important;
-}
 
-#maintenance ul li::marker {
-  color: #33a9e4;
-  lighting-color:  #33a9e4 !important;
-}
-
-.widget.gsc-icon-box .highlight_content .desc p {
-  margin: 3rem 0;
-}
-
-.testimonial-node-v1 .quote {
-  margin: 3rem 0 0;
-}
