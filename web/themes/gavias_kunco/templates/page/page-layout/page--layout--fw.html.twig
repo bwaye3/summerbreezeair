@@ -6,7 +6,7 @@
 #}
 <div class="body-page gva-body-page">
    {% include header_skin %}
-	
+
 	{% if page.breadcrumbs %}
 		<div class="breadcrumbs">
 			{{ page.breadcrumbs }}
@@ -14,13 +14,13 @@
 	{% endif %}
 
 	<div role="main" class="main main-page">
-	
+
 		<div class="clearfix"></div>
 		{% if page.slideshow_content %}
 			<div class="slideshow_content area">
 				{{ page.slideshow_content }}
 			</div>
-		{% endif %}	
+		{% endif %}
 
 		{% if page.help %}
 			<div class="help gav-help-region">
@@ -31,7 +31,7 @@
 				</div>
 			</div>
 		{% endif %}
-		
+
 		<div class="clearfix"></div>
 		{% if page.before_content %}
 			<div class="before_content area">
@@ -44,9 +44,9 @@
 				</div>
 			</div>
 		{% endif %}
-		
+
 		<div class="clearfix"></div>
-		
+
 		<div id="content" class="content content-full">
 			<div class="container-full">
 				{% include directory ~ '/templates/page/main-no-sidebar.html.twig' %}
@@ -61,17 +61,16 @@
 			</div>
 		{% endif %}
 
-		{% if page.after_content %}
-			<div class="area after-content">
-				<div class="container">
-	          	<div class="content-inner">
-						 {{ page.after_content }}
-	          	</div>
-        		</div>
-			</div>
-		{% endif %}
-		
-	</div>
+    {% if page.after_content %}
+      <div class="area after-content">
+        <div class="container-fluid">
+          {{ page.after_content }}
+        </div>
+      </div>
+    {% endif %}
+
+
+  </div>
 
 </div>
 

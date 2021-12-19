@@ -974,6 +974,11 @@ a.gsc-button.medium:hover {
   text-shadow: 1px 2px 7px rgba(0,0,0,.5) !important;
 }
 
+.tp-caption.text.text-black.text-center.text-shadow.slide-style-2.skrollable.skrollable-after,
+.text-shadow {
+  text-shadow: 1px 2px 7px rgba(0,0,0,.5) !important;
+}
+
 @media (max-width: 576px) {
   .testimonial-node-v1 {
     text-align: center !important;;
@@ -1029,10 +1034,43 @@ a.gsc-button.medium:hover {
   }
 
   .testimonial-node-v1 .content-inner .title {
-    color: #fff!important;
+    color: #fff !important;
   }
 
 }
 
+.area.after-content .container-fluid {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
 
+.area.after-content .gbb-row .bb-inner {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
 
+.cityLink {
+  font-size: 14px;
+  line-height: 1.2;
+  color: #fff;
+  margin: 0 0 0 15px;
+}
+
+#sb-map .text-size-medium {
+  font-size: inherit;
+  line-height: 1.5 !important;
+  font-weight: 300;
+}
+#sb-map .widget.gsc-heading.style-1 {
+  padding-bottom: 30px;
+}
+
+.footer {
+  margin: 0;
+}
+
+.map-footer .block-title {
+  color: #fff !important;
+  margin: 0 0 20px 15px !important;
+  font-size: 18px !important;
+}
