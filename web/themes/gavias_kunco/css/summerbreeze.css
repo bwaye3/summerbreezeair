@@ -966,6 +966,13 @@ a.gsc-button.medium:hover {
   text-shadow: 2px 1px 18px rgba(0, 0, 0, 0.15) !important
 }
 
+.frontpage span.a2a_svg.a2a_s__default.a2a_s_print {
+  display: none;
+}
+
+.tp-caption.medium_light_black.text-shadow.slide-style-1.skrollable.skrollable-between {
+  text-shadow: 1px 2px 7px rgba(0,0,0,.5) !important;
+}
 
 @media (max-width: 576px) {
   .testimonial-node-v1 {
