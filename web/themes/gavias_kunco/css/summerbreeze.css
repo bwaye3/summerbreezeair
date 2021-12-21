@@ -1074,3 +1074,8 @@ a.gsc-button.medium:hover {
   margin: 0 0 20px 15px !important;
   font-size: 18px !important;
 }
+
+#block-gavias-kunco-topbar a {
+  color: #fff !important;
+  text-decoration: none;
+}
