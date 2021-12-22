@@ -5,11 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-<<<<<<< HEAD
-        'reference' => '734886a782815ad3a2db348f429d0ec579337c9b',
-=======
-        'reference' => '3df7badc86f64f37b4b69019b6d8527d63fea8f8',
->>>>>>> master
+        'reference' => 'e7fc803c12f463c38f0409619b334d696b4b4a36',
         'name' => 'drupal/legacy-project',
         'dev' => true,
     ),
@@ -973,11 +969,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-<<<<<<< HEAD
-            'reference' => '734886a782815ad3a2db348f429d0ec579337c9b',
-=======
-            'reference' => '3df7badc86f64f37b4b69019b6d8527d63fea8f8',
->>>>>>> master
+            'reference' => 'e7fc803c12f463c38f0409619b334d696b4b4a36',
             'dev_requirement' => false,
         ),
         'drupal/link' => array(
@@ -1178,6 +1170,24 @@
                 0 => '9.3.0',
             ),
         ),
+        'drupal/rules' => array(
+            'pretty_version' => '3.0.0-alpha7',
+            'version' => '3.0.0.0-alpha7',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/rules',
+            'aliases' => array(),
+            'reference' => '8.x-3.0-alpha7',
+            'dev_requirement' => false,
+        ),
+        'drupal/rules_webform' => array(
+            'pretty_version' => '3.0.1',
+            'version' => '3.0.1.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/rules_webform',
+            'aliases' => array(),
+            'reference' => '3.0.1',
+            'dev_requirement' => false,
+        ),
         'drupal/search' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -1301,6 +1311,15 @@
             'reference' => '8.x-1.0-rc4',
             'dev_requirement' => false,
         ),
+        'drupal/typed_data' => array(
+            'pretty_version' => '1.0.0-beta1',
+            'version' => '1.0.0.0-beta1',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/typed_data',
+            'aliases' => array(),
+            'reference' => '8.x-1.0-beta1',
+            'dev_requirement' => false,
+        ),
         'drupal/update' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -1342,6 +1361,15 @@
             'replaced' => array(
                 0 => '9.3.0',
             ),
+        ),
+        'drupal/webform' => array(
+            'pretty_version' => '6.1.2',
+            'version' => '6.1.2.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/webform',
+            'aliases' => array(),
+            'reference' => '6.1.2',
+            'dev_requirement' => false,
         ),
         'drupal/workflows' => array(
             'dev_requirement' => false,

@@ -1109,3 +1109,202 @@ a.gsc-button.medium:hover {
 
 }
 
+.form-wrapper {
+  background: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  margin: 0 0 3rem;
+}
+
+fieldset {
+  padding: 2rem !important;
+  margin: 0 0 4rem;
+}
+
+legend {
+  border-bottom: transparent !important;
+  margin-bottom: 0 !important;
+}
+
+legend {
+  font-size: 2em;
+  line-height: inherit;
+  color: #262626;
+  font-weight: bold;
+}
+
+#webform-submission-hvac-troubleshooter-add-form {
+  margin: 0 0 80px;
+}
+
+.form-item .js-form-type-radio  {
+  margin: 10px;
+}
+
+.form-item .js-form-type-radio  input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+.form-item .js-form-type-radio  label {
+  display: inline-block;
+  background: #616364;
+  color: #fff;
+  overflow: hidden;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0 18px;
+  position: relative;
+  line-height: 38px;
+  z-index: 1;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  text-transform: capitalize;
+  font-family: "Poppins",sans-serif;
+  border: none;
+}
+
+.form-item .js-form-type-radio label:hover {
+  background-color: #208a20;
+}
+
+.form-item .js-form-type-radio  input[type="radio"]:focus + label {
+  border: 2px solid #444;
+}
+
+.form-item .js-form-type-radio input[type="radio"]:checked + label {
+  display: inline-block;
+  background: #3375CB;
+  color: #fff;
+  overflow: hidden;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0 18px;
+  position: relative;
+  display: inline-block;
+  line-height: 38px;
+  z-index: 1;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  text-transform: capitalize;
+  font-family: "Poppins",sans-serif;
+  border: none;
+}
+
+#edit-actions, .webform-actions {
+  background: #fff !important;
+  border: transparent !important;
+  margin: 0 0 80px 3rem !important;
+}
+
+#edit-actions-reset,
+.webform-button--reset,
+.webform-button--reset input[type='submit'] {
+  margin: 3rem 0 0 !important;
+  color: #fff!important;
+  background: #cc8500!important;
+  padding: .2rem 4rem!important;
+}
+
+#edit-actions-reset:hover,
+.webform-button--reset:hover {
+  background: #3375cb;
+}
+
+#xxxedit-expert-care,
+#\#edit-expert-care,
+#edit-expert-3,
+.expert-care {
+  color: #fff;
+  padding: 2rem;
+  background: #3375cb;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+#xxxedit-expert-care .btn-theme,
+#\#edit-expert-care .btn-theme,
+.expert-care .btn-theme {
+  border: 1px solid #fff;
+}
+
+#xxxedit-expert-care h3,
+#\#edit-expert-care h3,
+.expert-care h3 {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+#edit-awesome,
+#edit-awesome2,
+#edit-awesome-3,
+#edit-awesome-4,
+#edit-awesome-5,
+#edit-awesome-6,
+#edit-awesome-7,
+.awesome-style {
+  padding: 2rem;
+  background: #3375cb;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  color: #fff;
+}
+
+#edit-awesome h3,
+#edit-awesome2 h3,
+#edit-awesome-3 h3,
+#edit-awesome-4 h3,
+#edit-awesome-5 h3,
+#edit-awesome-6 h3,
+#edit-awesome-7 h3,
+.awesome-style h3 {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.breadcrumb-content-inner .gva-breadcrumb-content .breadcrumb-links nav.breadcrumb li {
+  color: #fff !important;
+}
+.breadcrumb-content-inner .gva-breadcrumb-content .breadcrumb-links nav.breadcrumb li a:hover {
+  color: #fff !important;
+}
+
+.position-sticky {
+  margin: 18rem 0 0 1rem;
+}
+.warning {
+  color: #c7ff00;
+  margin: 0 0 4rem;
+  font-size: 1.5rem;
+}
+
+#edit-warning-1 h3 {
+  color: #c7ff00;
+  font-size: 4rem;
+}
+
+#block-contactblock .form-wrapper {
+  background: none;
+  border: none;
+  border-radius: 0;
+  margin: 0;
+}
