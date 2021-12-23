@@ -1283,3 +1283,39 @@ legend {
   border-bottom: 5px solid #ccc;
   margin: 0 0 40px;
 }
+
+#edit-contact-information .js-form-item.form-item {
+  display: grid;
+}
+
+.js-form-item.form-item.js-form-type-date.form-item-requested-service-date.js-form-item-requested-service-date {
+  margin: 0 0 2rem;
+}
+
+
+.area.after-content .block {
+  margin-bottom: 0 !important;
+}
+
+#block-gaviascontentbuilderserviceforms .column-style-1 {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 5rem 0 3rem 2rem;
+}
+
+.center-button a {
+  text-align: center !important;
+}
+
+.gbb-row.gsc-equal-height > .bb-inner > .bb-container > .row > .row-wrapper .column-content-inner {
+  position: relative;
+  margin: 0 auto;
+}
+
+#block-gaviascontentbuilderserviceforms .col-xs-6,
+#block-gaviascontentbuilderserviceforms .col-sm-6,
+#block-gaviascontentbuilderserviceforms .col-md-6,
+#block-gaviascontentbuilderserviceforms .col-lg-6  {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
