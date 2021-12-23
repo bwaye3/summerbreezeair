@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '934e55ebe89c57469a6b42c3b4b2b22f635cbde8',
+        'reference' => '715fe80665ab8532ea457a9668f128e3a61600da',
         'name' => 'drupal/legacy-project',
         'dev' => true,
     ),
@@ -319,15 +319,6 @@
                 0 => '9.3.0',
             ),
         ),
-        'drupal/block_class' => array(
-            'pretty_version' => '1.3.0',
-            'version' => '1.3.0.0',
-            'type' => 'drupal-module',
-            'install_path' => __DIR__ . '/../../web/modules/contrib/block_class',
-            'aliases' => array(),
-            'reference' => '8.x-1.3',
-            'dev_requirement' => false,
-        ),
         'drupal/block_content' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -476,15 +467,6 @@
             'replaced' => array(
                 0 => '9.3.0',
             ),
-        ),
-        'drupal/config_update' => array(
-            'pretty_version' => '1.7.0',
-            'version' => '1.7.0.0',
-            'type' => 'drupal-module',
-            'install_path' => __DIR__ . '/../../web/modules/contrib/config_update',
-            'aliases' => array(),
-            'reference' => '8.x-1.7',
-            'dev_requirement' => false,
         ),
         'drupal/contact' => array(
             'dev_requirement' => false,
@@ -786,24 +768,6 @@
             'reference' => '8.x-1.9',
             'dev_requirement' => false,
         ),
-        'drupal/entity_type_clone' => array(
-            'pretty_version' => '1.7.0',
-            'version' => '1.7.0.0',
-            'type' => 'drupal-module',
-            'install_path' => __DIR__ . '/../../web/modules/contrib/entity_type_clone',
-            'aliases' => array(),
-            'reference' => '8.x-1.7',
-            'dev_requirement' => false,
-        ),
-        'drupal/features' => array(
-            'pretty_version' => '3.12.0',
-            'version' => '3.12.0.0',
-            'type' => 'drupal-module',
-            'install_path' => __DIR__ . '/../../web/modules/contrib/features',
-            'aliases' => array(),
-            'reference' => '8.x-3.12',
-            'dev_requirement' => false,
-        ),
         'drupal/field' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -969,7 +933,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '934e55ebe89c57469a6b42c3b4b2b22f635cbde8',
+            'reference' => '715fe80665ab8532ea457a9668f128e3a61600da',
             'dev_requirement' => false,
         ),
         'drupal/link' => array(
@@ -1126,15 +1090,6 @@
             'install_path' => __DIR__ . '/../../web/modules/contrib/profile',
             'aliases' => array(),
             'reference' => '8.x-1.3',
-            'dev_requirement' => false,
-        ),
-        'drupal/quick_node_clone' => array(
-            'pretty_version' => '1.14.0',
-            'version' => '1.14.0.0',
-            'type' => 'drupal-module',
-            'install_path' => __DIR__ . '/../../web/modules/contrib/quick_node_clone',
-            'aliases' => array(),
-            'reference' => '8.x-1.14',
             'dev_requirement' => false,
         ),
         'drupal/quickedit' => array(
@@ -1310,15 +1265,6 @@
             'replaced' => array(
                 0 => '9.3.0',
             ),
-        ),
-        'drupal/tvi' => array(
-            'pretty_version' => '1.0.0-rc4',
-            'version' => '1.0.0.0-RC4',
-            'type' => 'drupal-module',
-            'install_path' => __DIR__ . '/../../web/modules/contrib/tvi',
-            'aliases' => array(),
-            'reference' => '8.x-1.0-rc4',
-            'dev_requirement' => false,
         ),
         'drupal/typed_data' => array(
             'pretty_version' => '1.0.0-beta1',
