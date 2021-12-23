@@ -1,33 +1,4 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
-
-@bwaye3
-bwaye3
-/
-summerbreezeair
-Public
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-summerbreezeair/web/themes/gavias_kunco/css/summerbreeze.css
-
-Bradley Waye clean css
-Latest commit 2ee826c 17 minutes ago
-History
-0 contributors
-718 lines (591 sloc)  13.2 KB
-
-  /* Style Override */
+/* Style Override */
 .role-coupon_editor #page-main-content {
   min-height: 360px;
   padding: 0 0 100px;
@@ -558,8 +529,8 @@ a.gsc-button.medium:hover {
   border: 1px solid #f7f7f7;
   border-radius: 20px;
   padding: 2rem;
-  -webkit-box-shadow: 2px 3px 7px 3px rgba(0,0,0,0.10);
-  box-shadow: 2px 3px 7px 3px rgba(0,0,0,0.10);
+  -webkit-box-shadow: 2px 3px 7px 3px rgba(0, 0, 0, 0.10);
+  box-shadow: 2px 3px 7px 3px rgba(0, 0, 0, 0.10);
 }
 
 .four-coupon .views-field.views-field-title {
@@ -574,7 +545,7 @@ a.gsc-button.medium:hover {
 }
 
 .node-readmore {
-  background: #3375CB;
+  background: #3375cb;
   color: #fff !important;
   overflow: hidden;
   -webkit-transition: all 0.3s;
@@ -631,7 +602,7 @@ a.gsc-button.medium:hover {
 }
 
 .tp-caption.medium_light_black.text-shadow.slide-style-1.skrollable.skrollable-between {
-  text-shadow: 1px 2px 7px rgba(0,0,0,.5) !important;
+  text-shadow: 1px 2px 7px rgba(0, 0, 0, .5) !important;
 }
 
 .widget.gsc-icon-box.text-light .title {
@@ -643,7 +614,7 @@ a.gsc-button.medium:hover {
 }
 
 .tp-caption.medium_light_black.text-shadow.slide-style-1.skrollable.skrollable-between {
-  text-shadow: 1px 2px 7px rgba(0,0,0,.5) !important;
+  text-shadow: 1px 2px 7px rgba(0, 0, 0, .5) !important;
 }
 
 #maintenance ul li {
@@ -670,7 +641,7 @@ a.gsc-button.medium:hover {
 
 #maintenance ul li::marker {
   color: #33a9e4;
-  lighting-color:  #33a9e4 !important;
+  lighting-color: #33a9e4 !important;
 }
 
 .widget.gsc-icon-box .highlight_content .desc p {
@@ -748,7 +719,7 @@ a.gsc-button.medium:hover {
 }
 
 .tp-caption.medium_light_black.text-shadow.slide-style-1.skrollable.skrollable-between {
-  text-shadow: 1px 2px 7px rgba(0,0,0,.5) !important;
+  text-shadow: 1px 2px 7px rgba(0, 0, 0, .5) !important;
 }
 
 /*********/
@@ -984,15 +955,14 @@ a.gsc-button.medium:hover {
 }
 
 
-
 .gsc-image-content.skin-v2 .image img {
   width: 100% !important;
 }
 
 /* testimonial custom */
 .owl-carousel .owl-dots {
-  float: right!important;
-  width: 50%!important;
+  float: right !important;
+  width: 50% !important;
   margin: 0 -16% !important;
 }
 
@@ -1041,12 +1011,12 @@ a.gsc-button.medium:hover {
 }
 
 .tp-caption.medium_light_black.text-shadow.slide-style-1.skrollable.skrollable-between {
-  text-shadow: 1px 2px 7px rgba(0,0,0,.5) !important;
+  text-shadow: 1px 2px 7px rgba(0, 0, 0, .5) !important;
 }
 
 .tp-caption.text.text-black.text-center.text-shadow.slide-style-2.skrollable.skrollable-after,
 .text-shadow {
-  text-shadow: 1px 2px 7px rgba(0,0,0,.5) !important;
+  text-shadow: 1px 2px 7px rgba(0, 0, 0, .5) !important;
 }
 
 @media (max-width: 576px) {
@@ -1080,17 +1050,17 @@ a.gsc-button.medium:hover {
     background-size: inherit !important;
     -webkit-background-size: inherit;
     -moz-background-size: inherit;
-   -o-background-size: inherit;
+    -o-background-size: inherit;
   }
 
   .testimonial-content {
-    background: rgba(0,0,0, 0.4);
+    background: rgba(0, 0, 0, 0.4);
     padding: 1rem 2rem;
     margin: 3rem 0 0;
     border-radius: 20px;
   }
 
-  .testimonial-content .quote{
+  .testimonial-content .quote {
     color: #fff !important;
   }
 
@@ -1137,17 +1107,17 @@ legend {
   margin: 0 0 80px;
 }
 
-.form-item .js-form-type-radio  {
+.form-item .js-form-type-radio {
   margin: 10px;
 }
 
-.form-item .js-form-type-radio  input[type="radio"] {
+.form-item .js-form-type-radio input[type="radio"] {
   opacity: 0;
   position: fixed;
   width: 0;
 }
 
-.form-item .js-form-type-radio  label {
+.form-item .js-form-type-radio label {
   display: inline-block;
   background: #616364;
   color: #fff;
@@ -1170,7 +1140,7 @@ legend {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   text-transform: capitalize;
-  font-family: "Poppins",sans-serif;
+  font-family: "Poppins", sans-serif;
   border: none;
 }
 
@@ -1178,13 +1148,13 @@ legend {
   background-color: #208a20;
 }
 
-.form-item .js-form-type-radio  input[type="radio"]:focus + label {
+.form-item .js-form-type-radio input[type="radio"]:focus + label {
   border: 2px solid #444;
 }
 
 .form-item .js-form-type-radio input[type="radio"]:checked + label {
   display: inline-block;
-  background: #3375CB;
+  background: #3375cb;
   color: #fff;
   overflow: hidden;
   -webkit-transition: all 0.3s;
@@ -1206,7 +1176,7 @@ legend {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   text-transform: capitalize;
-  font-family: "Poppins",sans-serif;
+  font-family: "Poppins", sans-serif;
   border: none;
 }
 
@@ -1220,9 +1190,9 @@ legend {
 .webform-button--reset,
 .webform-button--reset input[type='submit'] {
   margin: 3rem 0 0 !important;
-  color: #fff!important;
-  background: #cc8500!important;
-  padding: .2rem 4rem!important;
+  color: #fff !important;
+  background: #cc8500 !important;
+  padding: .2rem 4rem !important;
 }
 
 #edit-actions-reset:hover,
@@ -1311,5 +1281,5 @@ legend {
 
 #hvac-trouble {
   border-bottom: 5px solid #ccc;
- margin: 0 0 40px;
+  margin: 0 0 40px;
 }
