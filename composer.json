@@ -44,6 +44,7 @@
         "drupal/livechat": "^3.0",
         "drupal/ludwig": "^1.7",
         "drupal/masquerade": "^2.0@beta",
+        "drupal/metatag": "^1.18",
         "drupal/pathauto": "^1.8",
         "drupal/profile": "^1.2",
         "drupal/quick_node_clone": "^1.14",

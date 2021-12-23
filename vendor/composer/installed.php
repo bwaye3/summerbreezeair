@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'e7fc803c12f463c38f0409619b334d696b4b4a36',
+        'reference' => 'ec006eae3df8d154aebbb7a74502d5004b2c4bc6',
         'name' => 'drupal/legacy-project',
         'dev' => true,
     ),
@@ -969,7 +969,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'e7fc803c12f463c38f0409619b334d696b4b4a36',
+            'reference' => 'ec006eae3df8d154aebbb7a74502d5004b2c4bc6',
             'dev_requirement' => false,
         ),
         'drupal/link' => array(
@@ -1034,6 +1034,15 @@
             'replaced' => array(
                 0 => '9.3.0',
             ),
+        ),
+        'drupal/metatag' => array(
+            'pretty_version' => '1.18.0',
+            'version' => '1.18.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/metatag',
+            'aliases' => array(),
+            'reference' => '8.x-1.18',
+            'dev_requirement' => false,
         ),
         'drupal/migrate' => array(
             'dev_requirement' => false,

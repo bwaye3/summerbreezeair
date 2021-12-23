@@ -20,10 +20,10 @@
       {% if setting_logo %}
          <img class="logo-default" src="{{ site_logo|replace({'.svg': '.png'}) }}" alt="{{ 'Home'|t }}" />
          <img class="logo-white hidden" src="{{ site_logo|replace({'logo.svg': 'logo-white.png'}) }}" alt="My Logo" />
-      {% else %}  
+      {% else %}
         <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
-      {% endif %}  
-    </a> 
+      {% endif %}
+    </a>
   {% endif %}
   {% if site_name or site_slogan %}
     <div class="site-branding__text">
