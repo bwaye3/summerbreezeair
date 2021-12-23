@@ -1308,3 +1308,8 @@ legend {
   border-radius: 0;
   margin: 0;
 }
+
+#hvac-trouble {
+  border-bottom: 5px solid #ccc;
+ margin: 0 0 40px;
+}
