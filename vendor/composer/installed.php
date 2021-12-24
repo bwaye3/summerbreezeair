@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '715fe80665ab8532ea457a9668f128e3a61600da',
+        'reference' => 'f5926df3e5418d4f696b72c83914827cbf7ae93e',
         'name' => 'drupal/legacy-project',
         'dev' => true,
     ),
@@ -933,7 +933,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '715fe80665ab8532ea457a9668f128e3a61600da',
+            'reference' => 'f5926df3e5418d4f696b72c83914827cbf7ae93e',
             'dev_requirement' => false,
         ),
         'drupal/link' => array(
@@ -1133,24 +1133,6 @@
             'replaced' => array(
                 0 => '9.3.0',
             ),
-        ),
-        'drupal/rules' => array(
-            'pretty_version' => '3.0.0-alpha7',
-            'version' => '3.0.0.0-alpha7',
-            'type' => 'drupal-module',
-            'install_path' => __DIR__ . '/../../web/modules/contrib/rules',
-            'aliases' => array(),
-            'reference' => '8.x-3.0-alpha7',
-            'dev_requirement' => false,
-        ),
-        'drupal/rules_webform' => array(
-            'pretty_version' => '3.0.1',
-            'version' => '3.0.1.0',
-            'type' => 'drupal-module',
-            'install_path' => __DIR__ . '/../../web/modules/contrib/rules_webform',
-            'aliases' => array(),
-            'reference' => '3.0.1',
-            'dev_requirement' => false,
         ),
         'drupal/search' => array(
             'dev_requirement' => false,

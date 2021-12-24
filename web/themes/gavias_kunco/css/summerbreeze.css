@@ -1307,10 +1307,12 @@ legend {
   text-align: center !important;
 }
 
+/*
 .gbb-row.gsc-equal-height > .bb-inner > .bb-container > .row > .row-wrapper .column-content-inner {
   position: relative;
   margin: 0 auto;
 }
+*/
 
 #block-gaviascontentbuilderserviceforms .col-xs-6,
 #block-gaviascontentbuilderserviceforms .col-sm-6,
@@ -1318,4 +1320,109 @@ legend {
 #block-gaviascontentbuilderserviceforms .col-lg-6  {
   padding-left: 0 !important;
   padding-right: 0 !important;
+}
+
+#block-gavias-kunco-topbar .gsc-button {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  border: 1px solid #bbb;
+  margin-bottom: 0;
+  display: inline-block;
+  clear: both;
+  font-size: .85rem !important;
+  border-radius: 15px;
+  margin: 0 .5rem 0 0;
+}
+
+.gsc-button.small.blue {
+  background: transparent;
+}
+
+.gsc-button.small.blue:hover {
+  background: #cc8500;
+}
+
+.gsc-button.small.orange {
+  background: transparent;
+}
+
+.gsc-button.small.orange:hover {
+  background: #3375cb;
+}
+
+.topbar {
+  padding: 10px 0 !important
+}
+
+.topbar .pull-left.text-left {
+  margin: 5px 0 0;
+}
+
+.topbar .pull-left.text-left span {
+  margin: 0 7px 0;
+}
+#block-gavias-kunco-topbar a {
+  color: #bbb !important;
+}
+
+#block-gavias-kunco-topbar a:hover {
+  color: #fff !important;
+}
+
+.gv-icon-92::before {
+  content: '\f002';
+  display: inline-block;
+  font-size: 2rem;
+  font-family: 'FontAwesome';
+  /* margin: 0 5px 0 0; */
+  text-rendering: auto;
+}
+
+label.js-form-required.form-required::after,
+.fieldset-legend.js-form-required.form-required::after {
+  content: '\f069';
+  display: inline-block;
+  font-size: .8rem;
+  font-family: 'FontAwesome';
+  color: #cc8500;
+  margin: 0 10px 0;
+  position: absolute;
+}
+
+header.header-v1 .quick-menu {
+  padding: 15px 10px !important;
+}
+
+.js-form-item.form-item.js-form-type-search.form-item-keys.js-form-item-keys.form-no-label {
+  display: block !important;
+}
+
+#edit-requested-service-date,
+#edit-requested-service-time {
+  margin: 0 0 0 30px;
+  font-size: 12px;
+  line-height: 2.0;
+}
+
+.node--type-coupon .gavias-blockbuilder-content {
+  display: none !important;
+}
+
+#bottom-forms {
+
+}
+
+#block-gaviascontentbuilderserviceforms .gbb-row.gsc-equal-height > .bb-inner > .bb-container > .row > .row-wrapper .column-content-inner {
+  position: relative;
+  display: flex;
+  text-align: center;
+  margin: 0 auto;
+}
+
+@media (max-width: 576px) {
+  .topbar {
+    display: none;
+  }
 }
