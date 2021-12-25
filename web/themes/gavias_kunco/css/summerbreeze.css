@@ -1317,7 +1317,7 @@ legend {
 #block-gaviascontentbuilderserviceforms .col-xs-6,
 #block-gaviascontentbuilderserviceforms .col-sm-6,
 #block-gaviascontentbuilderserviceforms .col-md-6,
-#block-gaviascontentbuilderserviceforms .col-lg-6  {
+#block-gaviascontentbuilderserviceforms .col-lg-6 {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
@@ -1363,6 +1363,7 @@ legend {
 .topbar .pull-left.text-left span {
   margin: 0 7px 0;
 }
+
 #block-gavias-kunco-topbar a {
   color: #bbb !important;
 }
@@ -1410,9 +1411,6 @@ header.header-v1 .quick-menu {
   display: none !important;
 }
 
-#bottom-forms {
-
-}
 
 #block-gaviascontentbuilderserviceforms .gbb-row.gsc-equal-height > .bb-inner > .bb-container > .row > .row-wrapper .column-content-inner {
   position: relative;
@@ -1428,21 +1426,22 @@ header.header-v1 .quick-menu {
 }
 
 
-.wrapper {
+.node--type-location .wrapper {
   display: inline-block;
   margin-top: 25px;
   position: relative;
 }
 
-.wrapper img {
+.node--type-location .wrapper img {
   display: block;
-  max-width:100%;
+  max-width: 100%;
 }
 
-.wrapper .overlay h1 {
+.node--type-location .wrapper .overlay h1 {
   color: #fff;
 }
-.wrapper .overlay {
+
+.node--type-location.wrapper .overlay {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1453,7 +1452,10 @@ header.header-v1 .quick-menu {
   padding: 2rem 0;
 }
 
-.col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+.node--type-location .col-xs-12,
+.node--type-location .col-sm-12,
+.node--type-location .col-md-12,
+.node--type-location .col-lg-12 {
   padding-left: 0 !important;;
   padding-right: 0 !important;;
 }
