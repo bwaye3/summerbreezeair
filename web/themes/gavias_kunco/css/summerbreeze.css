@@ -1426,22 +1426,22 @@ header.header-v1 .quick-menu {
 }
 
 
-.node--type-location .wrapper {
+.location-wrapper  {
   display: inline-block;
   margin-top: 25px;
   position: relative;
 }
 
-.node--type-location .wrapper img {
+.location-wrapper  img {
   display: block;
   max-width: 100%;
 }
 
-.node--type-location .wrapper .overlay h1 {
+.location-wrapper  .overlay h1 {
   color: #fff;
 }
 
-.node--type-location.wrapper .overlay {
+.location-wrapper  .overlay {
   position: absolute;
   bottom: 0;
   left: 0;
