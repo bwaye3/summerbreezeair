@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'f5926df3e5418d4f696b72c83914827cbf7ae93e',
+        'reference' => 'c0c7eac441281286dbc247710d2c13e0b0d263f4',
         'name' => 'drupal/legacy-project',
         'dev' => true,
     ),
@@ -687,6 +687,15 @@
                 0 => '9.3.0',
             ),
         ),
+        'drupal/crop' => array(
+            'pretty_version' => '2.1.0',
+            'version' => '2.1.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/crop',
+            'aliases' => array(),
+            'reference' => '8.x-2.1',
+            'dev_requirement' => false,
+        ),
         'drupal/ctools' => array(
             'pretty_version' => '3.7.0',
             'version' => '3.7.0.0',
@@ -798,6 +807,15 @@
                 0 => '9.3.0',
             ),
         ),
+        'drupal/focal_point' => array(
+            'pretty_version' => '1.5.0',
+            'version' => '1.5.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/focal_point',
+            'aliases' => array(),
+            'reference' => '8.x-1.5',
+            'dev_requirement' => false,
+        ),
         'drupal/forum' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -844,6 +862,15 @@
             'install_path' => __DIR__ . '/../../web/modules/contrib/honeypot',
             'aliases' => array(),
             'reference' => '2.0.2',
+            'dev_requirement' => false,
+        ),
+        'drupal/iframe' => array(
+            'pretty_version' => '2.12.0',
+            'version' => '2.12.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/iframe',
+            'aliases' => array(),
+            'reference' => '8.x-2.12',
             'dev_requirement' => false,
         ),
         'drupal/image' => array(
@@ -933,7 +960,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'f5926df3e5418d4f696b72c83914827cbf7ae93e',
+            'reference' => 'c0c7eac441281286dbc247710d2c13e0b0d263f4',
             'dev_requirement' => false,
         ),
         'drupal/link' => array(
@@ -1164,6 +1191,15 @@
                 0 => '9.3.0',
             ),
         ),
+        'drupal/simple_gmap' => array(
+            'pretty_version' => '3.0.1',
+            'version' => '3.0.1.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/simple_gmap',
+            'aliases' => array(),
+            'reference' => '3.0.1',
+            'dev_requirement' => false,
+        ),
         'drupal/standard' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -1298,6 +1334,15 @@
             'replaced' => array(
                 0 => '9.3.0',
             ),
+        ),
+        'drupal/views_url_path_arguments' => array(
+            'pretty_version' => '1.1.0',
+            'version' => '1.1.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/views_url_path_arguments',
+            'aliases' => array(),
+            'reference' => '8.x-1.1',
+            'dev_requirement' => false,
         ),
         'drupal/webform' => array(
             'pretty_version' => '6.1.2',
