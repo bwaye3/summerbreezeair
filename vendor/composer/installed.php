@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '57e9fb71bbf8743c37eeee40b229148ba039c6d0',
+        'reference' => 'd4f3a85214ca89ec64fe9edf4af3f586636bcf22',
         'name' => 'drupal/legacy-project',
         'dev' => true,
     ),
@@ -960,7 +960,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '57e9fb71bbf8743c37eeee40b229148ba039c6d0',
+            'reference' => 'd4f3a85214ca89ec64fe9edf4af3f586636bcf22',
             'dev_requirement' => false,
         ),
         'drupal/link' => array(
@@ -1190,15 +1190,6 @@
             'replaced' => array(
                 0 => '9.3.0',
             ),
-        ),
-        'drupal/simple_gmap' => array(
-            'pretty_version' => '3.0.1',
-            'version' => '3.0.1.0',
-            'type' => 'drupal-module',
-            'install_path' => __DIR__ . '/../../web/modules/contrib/simple_gmap',
-            'aliases' => array(),
-            'reference' => '3.0.1',
-            'dev_requirement' => false,
         ),
         'drupal/standard' => array(
             'dev_requirement' => false,

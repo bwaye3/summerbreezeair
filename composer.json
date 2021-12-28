@@ -47,7 +47,6 @@
         "drupal/profile": "^1.2",
         "drupal/recaptcha": "^3.0",
         "drupal/redirect": "^1.7",
-        "drupal/simple_gmap": "^3.0",
         "drupal/state_machine": "^1.0",
         "drupal/token": "^1.10",
         "drupal/typed_data": "^1.0@beta",
