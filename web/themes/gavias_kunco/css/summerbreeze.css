@@ -1443,7 +1443,7 @@ header.header-v1 .quick-menu {
 
 .location-wrapper  .overlay {
   position: absolute;
-  bottom: 0;
+  bottom: 5%;
   left: 0;
   width: 100%;
   background-color: #000000a6;
@@ -1472,7 +1472,6 @@ header.header-v1 .quick-menu {
 .hvac-resources a {
   border: 1px solid #000;
   margin: 0 0 1rem;
-  padding: 1rem 2rem;
   display: block;
   max-width: 250px;
 }
@@ -1480,4 +1479,8 @@ header.header-v1 .quick-menu {
 .hvac-resources a:hover {
   background: #3375cb;
   color: #fff;
+}
+
+.hvac-resources .menu-item a {
+  padding: 1rem 2rem;
 }
