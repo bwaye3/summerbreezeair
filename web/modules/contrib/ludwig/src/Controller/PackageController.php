@@ -115,42 +115,42 @@ class PackageController implements ContainerInjectionInterface {
     ];
     $missing = 0;
     foreach ($this->packageManager->getPackages() as $package_name => $package) {
-      if ($package['installed'] === FALSE) {
+      if ($package['status'] == 'Missing') {
         $missing++;
       }
 
       $guide_link = 'https://www.drupal.org/docs/contributed-modules/ludwig/ludwig-errors-warnings-and-notices';
 
-      if (($package['resource'] == 'classmap' || $package['resource'] == 'files') && empty($package['disable_warnings'])) {
+      if (($package['resource'] == 'classmap' || $package['resource'] == 'files') && $package['status'] != 'Installed') {
         $package['description'] .= $this->t('<br><strong>Warning! The @resource type libraries are not supported by Ludwig automatically. @read_more.</strong>', [
           '@resource' => strtoupper($package['resource']),
           '@read_more' => Link::fromTextAndUrl($this->t('Read more'), Url::fromUri($guide_link))->toString(),
         ]);
       }
-      elseif ($package['resource'] == 'exclude-from-classmap' && empty($package['disable_warnings'])) {
+      elseif ($package['resource'] == 'exclude-from-classmap') {
         $package['description'] .= $this->t('<br><strong>Notice! The @resource property is not supported by Ludwig.</strong> Despite this notice, the library is loaded properly and the module should work nicely. @read_more.', [
           '@resource' => strtoupper($package['resource']),
           '@read_more' => Link::fromTextAndUrl($this->t('Read more'), Url::fromUri($guide_link))->toString(),
         ]);
       }
-      elseif ($package['resource'] == 'target-dir' && empty($package['disable_warnings'])) {
+      elseif ($package['resource'] == 'target-dir') {
         $package['description'] .= $this->t('<br><strong>Warning! The @resource property is not supported by Ludwig.</strong> This module may lack some functionality. @read_more.', [
           '@resource' => strtoupper($package['resource']),
           '@read_more' => Link::fromTextAndUrl($this->t('Read more'), Url::fromUri($guide_link))->toString(),
         ]);
       }
-      elseif ($package['resource'] == 'inactive' && empty($package['disable_warnings'])) {
+      elseif ($package['resource'] == 'inactive') {
         $package['description'] .= $this->t('<br><strong>Notice! The INACTIVE library. @read_more.</strong>', [
           '@read_more' => Link::fromTextAndUrl($this->t('Read more'), Url::fromUri($guide_link))->toString(),
         ]);
       }
-      elseif (($package['resource'] == 'legacy' || $package['resource'] == 'unknown') && empty($package['disable_warnings'])) {
+      elseif ($package['resource'] == 'legacy' || $package['resource'] == 'unknown') {
         $package['description'] .= $this->t('<br><strong>Warning! The @resource library type. Not supported by Ludwig. @read_more.</strong>', [
           '@resource' => strtoupper($package['resource']),
           '@read_more' => Link::fromTextAndUrl($this->t('Read more'), Url::fromUri($guide_link))->toString(),
         ]);
       }
-      elseif (!$package['installed']) {
+      elseif ($package['status'] == 'Missing') {
         $package['description'] = $this->t('@download the library and place it in @path', [
           '@download' => Link::fromTextAndUrl($this->t('Download'), Url::fromUri($package['download_url']))->toString(),
           '@path' => $package['path'],
@@ -185,8 +185,41 @@ class PackageController implements ContainerInjectionInterface {
         $required_by = $info[$package['provider']]['name'];
       }
 
+      switch ($package['status']) {
+        case 'Installed':
+          $status = $this->t('Installed');
+          break;
+
+        case 'Missing':
+          $status = $this->t('Missing');
+          break;
+
+        case 'Not installed':
+          $status = $this->t('Not installed');
+          break;
+
+        case 'Not supported':
+          $status = $this->t('Not supported');
+          break;
+
+        case 'Overridden':
+          $status = $this->t('Overridden');
+          break;
+
+        case 'Unknown type':
+          $status = $this->t('Unknown type');
+          break;
+
+        case 'Inactive':
+          $status = $this->t('Inactive');
+          break;
+
+        default:
+          $status = $this->t('Unknown');
+      }
+
       $build['packages']['#rows'][$package_name] = [
-        'class' => $package['installed'] ? [] : ['error'],
+        'class' => $package['status'] == 'Installed' ? [] : ['error'],
         'data' => [
           'package' => [
             'data' => $package_column,
@@ -195,7 +228,7 @@ class PackageController implements ContainerInjectionInterface {
           'resource' => $package['resource'],
           'version' => $package['version'],
           'required_by' => $required_by,
-          'status' => $package['installed'] ? $this->t('Installed') : $this->t('Missing'),
+          'status' => $status,
         ],
       ];
     }
@@ -222,7 +255,7 @@ class PackageController implements ContainerInjectionInterface {
    */
   public function download() {
     $packages = array_filter($this->packageManager->getPackages(), function ($package) {
-      return empty($package['installed']);
+      return $package['status'] == 'Missing';
     });
     if (!empty($packages)) {
       $logger = \Drupal::logger('ludwig');
