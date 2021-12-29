@@ -1327,13 +1327,15 @@ legend {
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 2px;
-  border: 1px solid #bbb;
+  border: 1px solid #fff;
+  background: #cc8500;
   margin-bottom: 0;
   display: inline-block;
   clear: both;
   font-size: .85rem !important;
   border-radius: 15px;
   margin: 0 .5rem 0 0;
+  padding: .75rem 2rem;
 }
 
 .gsc-button.small.blue {
@@ -1426,22 +1428,22 @@ header.header-v1 .quick-menu {
 }
 
 
-.location-wrapper  {
+.location-wrapper {
   display: inline-block;
   margin-top: 25px;
   position: relative;
 }
 
-.location-wrapper  img {
+.location-wrapper img {
   display: block;
   max-width: 100%;
 }
 
-.location-wrapper  .overlay h1 {
+.location-wrapper .overlay h1 {
   color: #fff;
 }
 
-.location-wrapper  .overlay {
+.location-wrapper .overlay {
   position: absolute;
   bottom: 5%;
   left: 0;
@@ -1487,4 +1489,75 @@ header.header-v1 .quick-menu {
 
 p a {
   color: #3375cb;
+}
+
+#footer ul.menu > li {
+  position: relative;
+  padding: 0;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+}
+
+.cityLink:hover {
+  color: #3375cb;
+}
+
+#footer #block-views-block-coupon-block-4 .view-list-item::before {
+  content: '\f138';
+  display: inline-block;
+  font-size: inherit;
+  font-family: 'FontAwesome';
+  color: #3375cb;
+  margin: 0 5px 0;
+
+}
+
+#footer hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 0;
+  border-top: 1px solid #ffffff1f
+}
+
+.header-main .btn-theme {
+  background: transparent;
+  border: 1px solid #000;
+  border-radius: 10px;
+  color: #000;
+}
+
+header.header-v1 .header-action {
+  right: 25px !important;
+  top: 41% !important;
+
+}
+
+.topbar .gsc-button.small.blue {
+  background: #3375cb !important;
+}
+
+.topbar .gsc-button.small.blue a {
+  color: #fff !important;
+}
+
+#block-gavias-kunco-topbar .pull-right a {
+  color: #fff !important;
+}
+
+.topbar .gsc-button.small.blue:hover {
+  background: #cc8500 !important;
+}
+
+#block-gavias-kunco-topbar .gsc-button.small.orange:hover,
+.topbar .gsc-button.small.orange:hover {
+  background: #3375cb !important;
+}
+
+.gsc-button.small {
+  font-size: 10px;
+  padding: .75rem 2rem;
+}
+
+.header-action .btn-theme {
+  line-height: 30px;
 }
