@@ -1544,6 +1544,7 @@ header.header-v1 .header-action {
   color: #fff !important;
 }
 
+#block-gavias-kunco-topbar .pull-right a:hover,
 .topbar .gsc-button.small.blue:hover {
   color: #000 !important;
 }
@@ -1576,3 +1577,5 @@ header.header-v1 .header-action {
 .topbar {
   padding: 0 !important;
 }
+
+
