@@ -1484,3 +1484,7 @@ header.header-v1 .quick-menu {
 .hvac-resources .menu-item a {
   padding: 1rem 2rem;
 }
+
+p a {
+  color: #3375cb;
+}
