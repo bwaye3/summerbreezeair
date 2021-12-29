@@ -1359,7 +1359,7 @@ legend {
 }
 
 .topbar .pull-left.text-left {
-  margin: 5px 0 0;
+  margin: 1rem 0 0;
 }
 
 .topbar .pull-left.text-left span {
@@ -1545,12 +1545,12 @@ header.header-v1 .header-action {
 }
 
 .topbar .gsc-button.small.blue:hover {
-  background: #cc8500 !important;
+  color: #000 !important;
 }
 
 #block-gavias-kunco-topbar .gsc-button.small.orange:hover,
 .topbar .gsc-button.small.orange:hover {
-  background: #3375cb !important;
+  color: #000 !important;
 }
 
 .gsc-button.small {
@@ -1560,4 +1560,19 @@ header.header-v1 .header-action {
 
 .header-action .btn-theme {
   line-height: 30px;
+}
+#block-gavias-kunco-topbar .gsc-button {
+  font-size: .9rem !important;
+  border-radius: 0;
+  border: none !important;
+  margin: 0;
+  padding: 1.5rem 2rem!important;
+}
+
+#block-gavias-kunco-topbar ul.inline > li {
+  margin-left: 0;
+}
+
+.topbar {
+  padding: 0 !important;
 }
