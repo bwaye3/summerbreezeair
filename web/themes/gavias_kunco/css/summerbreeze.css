@@ -1421,9 +1421,15 @@ header.header-v1 .quick-menu {
   margin: 0 auto;
 }
 
-@media (max-width: 576px) {
-  .topbar {
-    display: none;
+@media (max-width: 991px) {
+  .topbar,
+  #footer #block-views-block-coupon-block-4 .view-list-item::before,
+  header.header-v1 .header-action{
+    display: none !important;
+  }
+
+  .location-wrapper .overlay {
+    bottom: 0;
   }
 }
 
@@ -1508,8 +1514,7 @@ p a {
   font-size: inherit;
   font-family: 'FontAwesome';
   color: #3375cb;
-  margin: 0 5px 0;
-
+  margin: 0 5px 0 -20px;
 }
 
 #footer hr {
@@ -1562,6 +1567,7 @@ header.header-v1 .header-action {
 .header-action .btn-theme {
   line-height: 30px;
 }
+
 #block-gavias-kunco-topbar .gsc-button {
   font-size: .9rem !important;
   border-radius: 0;
@@ -1578,4 +1584,13 @@ header.header-v1 .header-action {
   padding: 0 !important;
 }
 
+.remove-border,
+.remove-border a,
+.remove-border a:hover {
+  border: none !important;
+}
 
+.description {
+  font-weight: bold;
+  line-height: 1.6 !important;
+}
