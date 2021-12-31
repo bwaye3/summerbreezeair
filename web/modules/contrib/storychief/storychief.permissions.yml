@@ -1,0 +1,4 @@
+administer storychief:
+  title: 'administer storychief'
+  description: 'Access the StoryChief configuration options.'
+  restrict access: TRUE

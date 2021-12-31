@@ -48,6 +48,7 @@
         "drupal/recaptcha": "^3.0",
         "drupal/redirect": "^1.7",
         "drupal/state_machine": "^1.0",
+        "drupal/storychief": "^2.7",
         "drupal/token": "^1.10",
         "drupal/typed_data": "^1.0@beta",
         "drupal/video_embed_field": "^2.4",
@@ -55,6 +56,7 @@
         "drupal/views_url_path_arguments": "^1.1",
         "drupal/webform": "^6.1",
         "drupal/xmlsitemap": "^1.2",
+        "drupal/yoast_seo": "^1.7",
         "drush/drush": "^10.4"
     },
     "conflict": {

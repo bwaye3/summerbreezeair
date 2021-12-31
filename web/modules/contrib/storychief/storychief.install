@@ -1,0 +1,52 @@
+<?php
+
+/**
+ * @file
+ * Installation file for StoryChief module.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function storychief_schema() {
+  $schema['storychief_meta_tags'] = [
+    'description' => 'Stores meta information from StoryChief',
+    'fields' => [
+      'meta_id' => [
+        'type' => 'serial',
+        'not null' => TRUE,
+        'description' => 'Primary Key: Unique Meta ID',
+      ],
+      'nid' => [
+        'type' => 'int',
+        'not null' => TRUE,
+        'description' => 'node id.',
+      ],
+      'langcode' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'description' => 'node language code.',
+      ],
+      'render_key' => [
+        'description' => 'The render key',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'render_array' => [
+        'description' => 'The json encoded render array',
+        'type' => 'text',
+        'not null' => TRUE,
+      ],
+    ],
+    'primary key' => ['meta_id'],
+    'indexes' => [
+      'nid' => ['nid'],
+      'langcode' => ['langcode'],
+    ],
+  ];
+
+  return $schema;
+}

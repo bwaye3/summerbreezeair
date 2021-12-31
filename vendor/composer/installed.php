@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'd4f3a85214ca89ec64fe9edf4af3f586636bcf22',
+        'reference' => '992c3aa471743a46c1169307f410bbfa60ce2146',
         'name' => 'drupal/legacy-project',
         'dev' => true,
     ),
@@ -960,7 +960,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'd4f3a85214ca89ec64fe9edf4af3f586636bcf22',
+            'reference' => '992c3aa471743a46c1169307f410bbfa60ce2146',
             'dev_requirement' => false,
         ),
         'drupal/link' => array(
@@ -1218,6 +1218,15 @@
                 0 => '9.3.0',
             ),
         ),
+        'drupal/storychief' => array(
+            'pretty_version' => '2.7.0',
+            'version' => '2.7.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/storychief',
+            'aliases' => array(),
+            'reference' => '8.x-2.7',
+            'dev_requirement' => false,
+        ),
         'drupal/syslog' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -1363,6 +1372,15 @@
             'install_path' => __DIR__ . '/../../web/modules/contrib/xmlsitemap',
             'aliases' => array(),
             'reference' => '8.x-1.2',
+            'dev_requirement' => false,
+        ),
+        'drupal/yoast_seo' => array(
+            'pretty_version' => '1.7.0',
+            'version' => '1.7.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/yoast_seo',
+            'aliases' => array(),
+            'reference' => '8.x-1.7',
             'dev_requirement' => false,
         ),
         'drush/drush' => array(

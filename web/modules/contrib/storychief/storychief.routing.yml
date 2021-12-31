@@ -1,0 +1,16 @@
+storychief.admin:
+  path: '/admin/config/services/storychief'
+  defaults:
+    _form: '\Drupal\storychief\Form\StoryChiefSettingsForm'
+    _title: 'StoryChief'
+  requirements:
+    _permission: 'administer storychief'
+storychief.webhook:
+  path: '/storychief/webhook'
+  defaults:
+    _controller: '\Drupal\storychief\Controller\StoryChiefWebhookController::handle'
+    _title: 'StoryChief Webhook Endpoint'
+  methods: [ POST ]
+  requirements:
+    _is_storychief_hmac_valid: 'TRUE'
+    _format: 'json'

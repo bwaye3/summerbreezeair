@@ -1,0 +1,40 @@
+# Schema for the configuration files of the StoryChief module.
+
+storychief.settings:
+  type: config_object
+  label: 'StoryChief configuration'
+  mapping:
+    api_key:
+      type: string
+      label: 'Encryption key shared with your StoryChief destination'
+    node_type:
+      type: string
+      label: 'The node type where StoryChief content is published'
+    default_owner:
+      type: string
+      label: 'The fallback owner of content published from StoryChief in case mapping was unsuccessful'
+    save_unpublished:
+      type: boolean
+      label: 'Whether or not content pushed from StoryChief is saved as Published or Unpublished'
+    mapping:
+      type: config_object
+      label: 'Field mapping'
+      mapping:
+        field_content:
+          type: string
+          label: 'Content field mapping key'
+        field_featured_image:
+          type: string
+          label: 'Featured image field mapping key'
+        field_tags:
+          type: string
+          label: 'Tags field mapping key'
+        field_category:
+          type: string
+          label: 'Categories field mapping key'
+    custom_field_mapping:
+      type: config_object
+      label: 'Custom Field mapping'
+      mapping:
+        custom_field_*:
+          type: string
