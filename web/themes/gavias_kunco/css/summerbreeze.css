@@ -1594,3 +1594,19 @@ header.header-v1 .header-action {
   font-weight: bold;
   line-height: 1.6 !important;
 }
+
+#footer .navigation .gva_menu > li {
+  display: inline flow-root list-item !important;
+}
+
+#footer .navigation .gva_menu > li > a {
+  padding: 0 !important;
+}
+
+#footer .menu-item {
+  margin: 0 1rem 0 !important;
+}
+
+#footer #block-mainnavigation-2 .gva-navigation {
+  margin: 0 0 0 5px;
+}
