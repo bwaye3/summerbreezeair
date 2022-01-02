@@ -1624,6 +1624,48 @@ header.header-v1 .header-action {
   position: relative;
 }
 
-.map-background {
-  xbackground: #2b2e2c;
+.side-card {
+  border: none !important;
+  border-radius: 0;
+  margin: 0 0 2rem;
+}
+
+.side-card-view h5 {
+  font-size: 2rem !important;
+}
+
+.widget.gsc-heading .title-desc {
+  max-width: 800px!important;
+  line-height: 1.85!important;
+  font-size: 1.6rem!important;
+  color: #5e5c5c!important;
+}
+
+.widget.gsc-icon-box.text-light .desc {
+  color: #fff;
+}
+.widget.gsc-icon-box.text-light .desc p {
+  padding: 0 0 2rem;
+}
+
+
+.action a.link {
+  border-radius: 10px;
+  padding: 1rem 2rem !important;
+}
+
+.action a.link:hover {
+  color: #3375cb !important;
+  background: #fff !important;
+}
+
+.owl-carousel .owl-nav > div {
+  background: #3375CB;
+}
+.owl-carousel .owl-nav > div:hover {
+  background:  #cc8500;
+}
+
+.img-width-300 img {
+  max-width: 300px;
 }

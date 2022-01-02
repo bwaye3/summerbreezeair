@@ -8300,7 +8300,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
   color: #3375CB;
 }
 .widget.gsc-icon-box.text-light .desc {
-  color: rgba(255, 255, 255, 0.8);
+  color: #fff;
 }
 .widget.gsc-icon-box.box-background {
   padding: 30px 30px 30px;
