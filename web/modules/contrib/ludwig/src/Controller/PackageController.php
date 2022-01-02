@@ -11,9 +11,8 @@ use Drupal\Core\StringTranslation\TranslationInterface;
 use Drupal\Core\Extension\ModuleExtensionList;
 use Drupal\Core\Url;
 use Drupal\Core\FileTransfer\FileTransferException;
+use Drupal\Core\Path\CurrentPathStack;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Symfony\Component\HttpFoundation\RequestStack;
-use Symfony\Component\HttpFoundation\RedirectResponse;
 
 /**
  * Displays the Packages report.
@@ -44,11 +43,11 @@ class PackageController implements ContainerInjectionInterface {
   protected $moduleExtensionList;
 
   /**
-   * The RequestStack object.
+   * The current path stack.
    *
-   * @var Symfony\Component\HttpFoundation\RequestStack
+   * @var \Drupal\Core\Path\CurrentPathStack
    */
-  private $requestStack;
+  protected $currentPathStack;
 
   /**
    * Constructs a new PackageController object.
@@ -61,15 +60,15 @@ class PackageController implements ContainerInjectionInterface {
    *   The string translation service.
    * @param \Drupal\Core\Extension\ModuleExtensionList $module_extension_list
    *   The module extension list.
-   * @param Symfony\Component\HttpFoundation\RequestStack $request_stack
-   *   The RequestStack object.
+   * @param \Drupal\Core\Path\CurrentPathStack $currentPathStack
+   *   The current path stack.
    */
-  public function __construct(PackageManagerInterface $package_manager, PackageDownloaderInterface $package_downloader, TranslationInterface $string_translation, ModuleExtensionList $module_extension_list, RequestStack $request_stack) {
+  public function __construct(PackageManagerInterface $package_manager, PackageDownloaderInterface $package_downloader, TranslationInterface $string_translation, ModuleExtensionList $module_extension_list, CurrentPathStack $currentPathStack) {
     $this->packageManager = $package_manager;
     $this->packageDownloader = $package_downloader;
     $this->setStringTranslation($string_translation);
     $this->moduleExtensionList = $module_extension_list;
-    $this->requestStack = $request_stack;
+    $this->currentPathStack = $currentPathStack;
   }
 
   /**
@@ -81,7 +80,7 @@ class PackageController implements ContainerInjectionInterface {
       $container->get('ludwig.package_downloader'),
       $container->get('string_translation'),
       $container->get('extension.list.module'),
-      $container->get('request_stack')
+      $container->get('path.current'),
     );
   }
 
@@ -93,9 +92,10 @@ class PackageController implements ContainerInjectionInterface {
    */
   public function page() {
     // If requested, download the missing packages first.
-    if ($this->requestStack->getCurrentRequest()->query->get('missing') == 'download') {
+    $current_path = $this->currentPathStack->getPath();
+    $skip_path = Url::fromRoute('ludwig.packages_skip')->toString();
+    if ($current_path != $skip_path) {
       $this->download();
-      return new RedirectResponse(Url::fromRoute('ludwig.packages')->toString());
     }
     $info = $this->moduleExtensionList->getAllInstalledInfo();
     $build = [];
@@ -233,19 +233,8 @@ class PackageController implements ContainerInjectionInterface {
       ];
     }
 
-    if (!empty($missing)) {
-      // There are some missing packages, so render the
-      // "Download all missing packages" clickable button.
-      $build['#markup'] = $this->t('<div class="button"><a href="@packages-url">Download and unpack all missing packages (@missing)</a></div><div>&nbsp;</div>', [
-        '@packages-url' => Url::fromRoute('ludwig.packages')->toString() . '?missing=download',
-        '@missing' => $missing,
-      ]);
-    }
-    else {
-      // There are no missing packages. For the UX consistency
-      // purpose render the button again, but as disabled one.
-      $build['#markup'] = $this->t('<div class="button is-disabled">Download and unpack missing packages (0)</div><div>&nbsp;</div>');
-    }
+    // Render the 'Download missing packages' action button.
+    $build['#markup'] = '<div class="action-links"><div class="button button--small"><a href="' . Url::fromRoute('ludwig.packages')->toString() . '">' . $this->t('Download missing packages') . ' (' . $missing . ')</a></div></div>';
 
     return $build;
   }
