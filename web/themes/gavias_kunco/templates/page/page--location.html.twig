@@ -1,0 +1,42 @@
+{#
+/**
+ * @file
+ * Gavias's theme implementation to display a single Drupal page.
+ */
+#}
+
+<div id="service-area" class="body-page gva-body-page">
+  {% include header_skin %}
+</div>
+
+{% if page.help %}
+  <div class="help gav-help-region">
+    <div class="container">
+      <div class="content-inner">
+        {{ page.help }}
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+<div class="clearfix"></div>
+
+{% if page.content %}
+  <div class="content-main">
+    {{ page.content }}
+  </div>
+{% endif %}
+
+<div class="clearfix"></div>
+
+{% if page.after_content %}
+  <div class="area after-content">
+    <div class="container-fluid">
+      {{ page.after_content }}
+    </div>
+  </div>
+{% endif %}
+
+
+
+{% include directory ~ '/templates/page/footer.html.twig' %}

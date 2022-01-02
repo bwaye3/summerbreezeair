@@ -1610,3 +1610,20 @@ header.header-v1 .header-action {
 #footer #block-mainnavigation-2 .gva-navigation {
   margin: 0 0 0 5px;
 }
+
+#service-area .container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.location-wrapper {
+  display: inline-block;
+  margin-top: 10px;
+  position: relative;
+}
+
+.map-background {
+  xbackground: #2b2e2c;
+}

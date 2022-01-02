@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'c03753ecaa479ec10be4a76e59bef7e5f4523df8',
+        'reference' => '9a33a509b0a3e29fab42257260ca61ba2d3ace53',
         'name' => 'drupal/legacy-project',
         'dev' => true,
     ),
@@ -969,7 +969,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'c03753ecaa479ec10be4a76e59bef7e5f4523df8',
+            'reference' => '9a33a509b0a3e29fab42257260ca61ba2d3ace53',
             'dev_requirement' => false,
         ),
         'drupal/link' => array(
@@ -1337,6 +1337,15 @@
             'replaced' => array(
                 0 => '9.3.0',
             ),
+        ),
+        'drupal/views_block_area' => array(
+            'pretty_version' => '1.0.0-beta3',
+            'version' => '1.0.0.0-beta3',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/views_block_area',
+            'aliases' => array(),
+            'reference' => '8.x-1.0-beta3',
+            'dev_requirement' => false,
         ),
         'drupal/views_infinite_scroll' => array(
             'pretty_version' => '1.9.0',
