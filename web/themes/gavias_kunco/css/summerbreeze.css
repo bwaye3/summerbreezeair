@@ -1662,10 +1662,83 @@ header.header-v1 .header-action {
 .owl-carousel .owl-nav > div {
   background: #3375CB;
 }
+
 .owl-carousel .owl-nav > div:hover {
   background:  #cc8500;
 }
 
 .img-width-300 img {
   max-width: 300px;
+}
+
+.node--type-hvac-101 h1, .path-helpful-tips h1 {
+  border-bottom: 5px solid #cccccc3b;
+  margin: 3rem 0 3rem 0;
+  padding: 0 0 1rem;
+}
+
+.sidebar .block-menu ul li.menu-item--active-trail > a {
+  color: #3375CB !important;
+}
+
+.node--type-hvac-101 .sidebar .block-menu ul li.menu-item--active-trail > a::after,
+.path-helpful-tips .sidebar .block-menu ul li.menu-item--active-trail > a::after {
+  font-family: 'FontAwesome';
+  content: '\f054';
+  display: inline-block;
+  color: #000 !important;
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+
+.node--type-hvac-101 .sidebar .block-menu ul li a,
+.path-helpful-tips .sidebar .block-menu ul li a {
+  padding: 8px 10px 8px 15px;
+  display: block;
+  border: none;
+  text-transform: none;
+  font-size: 1.6rem;
+  overflow: hidden;
+  -webkit-transition: all 0.35s;
+  -o-transition: all 0.35s;
+  transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  -ms-transition: all 0.35s;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.node--type-hvac-101 .sidebar .block-menu ul li.menu-item--active-trail > a:hover,
+.path-helpful-tips .sidebar .block-menu ul li.menu-item--active-trail > a:hover {
+  background: transparent;
+}
+
+.node--type-hvac-101 .sidebar .block-menu ul li.menu-item--active-trail > a,
+.path-helpful-tips .sidebar .block-menu ul li.menu-item--active-trail > a{
+  color: #0A0A0A !important;
+}
+
+.node--type-hvac-101 .menu-item.menu-item--active-trail,
+.path-helpful-tips .menu-item.menu-item--active-trail {
+  position: absolute !important;
+  top: -60px;
+  left: 0;
+}
+
+.node--type-hvac-101 nav#block-mainnavigation-3,
+.path-helpful-tips nav#block-mainnavigation-3 {
+  margin: 4rem 0 0;
+}
+
+.node--type-hvac-101 ul.clearfix.gva_menu.gva_menu_main,
+.path-helpful-tips ul.clearfix.gva_menu.gva_menu_main {
+  margin: 3rem 0 0;
+}
+
+.node--type-hvac-101 nav#block-mainnavigation-3,
+.path-helpful-tips nav#block-mainnavigation-3 {
+  margin: 2rem 0 0;
 }

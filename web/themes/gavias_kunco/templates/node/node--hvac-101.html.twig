@@ -1,0 +1,32 @@
+{%
+  set classes = [
+  'node',
+  'node--type-' ~ node.bundle|clean_class,
+  node.isPromoted() ? 'node--promoted',
+  node.isSticky() ? 'node--sticky',
+  not node.isPublished() ? 'node--unpublished',
+  view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  'clearfix',
+]
+%}
+
+<article{{ attributes.addClass(classes)}}>
+  <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
+
+    <div class="col">
+    {{ content.field_image }}
+      {{ content.field_video }}
+    </div>
+
+    <div class="col mt-4">
+      {{ title_prefix }}
+      <h2{{ title_attributes.addClass('post-title') }}>{{ label }}</h2>
+      {{ title_suffix }}
+    </div>
+
+    <div class="col mt-4">
+      {{ content.body  }}
+    </div>
+
+  </div>
+</article>
