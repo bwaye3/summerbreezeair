@@ -1383,16 +1383,7 @@ legend {
   text-rendering: auto;
 }
 
-label.js-form-required.form-required::after,
-.fieldset-legend.js-form-required.form-required::after {
-  content: '\f069';
-  display: inline-block;
-  font-size: .8rem;
-  font-family: 'FontAwesome';
-  color: #cc8500;
-  margin: 0 10px 0;
-  position: absolute;
-}
+
 
 header.header-v1 .quick-menu {
   padding: 15px 10px !important;
@@ -1734,3 +1725,63 @@ header.header-v1 .header-action {
 .header-action {
   margin: 2.2rem 0 0;
 }
+
+#bg {
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+}
+#bg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+  z-index: 1;
+}
+
+.handy-dan {
+  max-width: 250px;
+}
+
+#search-form .form-wrapper {
+  background: transparent !important;
+  border: 0 solid #ccc!important;
+  border-radius: 0!important;
+  margin: 0 0 3rem!important;
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+  border: 1px solid #ccc;
+  line-height: 2.4;
+  border-radius: 5px;
+}
+
+.js-form-item.form-item.js-form-type-select.form-item-general.js-form-item-general {
+  display: inline-grid;
+  margin: 1rem 0;
+  width: 98%;
+}
+
+.js-form-item .form-required::before,
+.fieldset-legend.js-form-required.form-required::after {
+  content: '\f069';
+  display: inline-block;
+  font-size: .6rem;
+  font-family: 'FontAwesome';
+  color: #cc8500;
+  margin: 0 .5rem 0 -10px;
+  position: absolute;
+}
+
+.webform-confirmation h5,
+.node--view-mode-full .webform-confirmation p,
+.webform-confirmation .node--view-mode-full p {
+  line-height: 1.4 !important;
+}
+

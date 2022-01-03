@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'd95ce214ad101b27fc1e8b82e4e64b0e0a36dff2',
+        'reference' => 'e2df9a146776669726c05a57ae673c25e8edcd7b',
         'name' => 'drupal/legacy-project',
         'dev' => true,
     ),
@@ -969,7 +969,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'd95ce214ad101b27fc1e8b82e4e64b0e0a36dff2',
+            'reference' => 'e2df9a146776669726c05a57ae673c25e8edcd7b',
             'dev_requirement' => false,
         ),
         'drupal/link' => array(
@@ -1016,6 +1016,15 @@
             'replaced' => array(
                 0 => '9.3.0',
             ),
+        ),
+        'drupal/media_entity_file_replace' => array(
+            'pretty_version' => '1.0.0',
+            'version' => '1.0.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/media_entity_file_replace',
+            'aliases' => array(),
+            'reference' => '8.x-1.0',
+            'dev_requirement' => false,
         ),
         'drupal/media_library' => array(
             'dev_requirement' => false,
