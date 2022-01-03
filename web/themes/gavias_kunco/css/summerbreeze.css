@@ -1721,24 +1721,16 @@ header.header-v1 .header-action {
   color: #0A0A0A !important;
 }
 
-.node--type-hvac-101 .menu-item.menu-item--active-trail,
-.path-helpful-tips .menu-item.menu-item--active-trail {
-  position: absolute !important;
-  top: -60px;
-  left: 0;
+.custom-h1-header h1 {
+  border-bottom: 5px solid #cccccc3b;
+  margin: 3rem 0 3rem 0;
+  padding: 0 0 1rem;
 }
 
-.node--type-hvac-101 nav#block-mainnavigation-3,
-.path-helpful-tips nav#block-mainnavigation-3 {
-  margin: 4rem 0 0;
+.main-menu {
+  margin: 2.5rem 0 0;
 }
 
-.node--type-hvac-101 ul.clearfix.gva_menu.gva_menu_main,
-.path-helpful-tips ul.clearfix.gva_menu.gva_menu_main {
-  margin: 3rem 0 0;
-}
-
-.node--type-hvac-101 nav#block-mainnavigation-3,
-.path-helpful-tips nav#block-mainnavigation-3 {
-  margin: 2rem 0 0;
+.header-action {
+  margin: 2.2rem 0 0;
 }
