@@ -1785,3 +1785,6 @@ input[type="search"] {
   line-height: 1.4 !important;
 }
 
+.js-form-item .form-item  label {
+  display: block !important;
+}
