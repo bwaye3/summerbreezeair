@@ -1668,12 +1668,16 @@ header.header-v1 .header-action {
   padding: 0 0 1rem;
 }
 
-.sidebar .block-menu ul li.menu-item--active-trail > a {
+
+
+.sidebar .block-menu ul li.menu-item--active-trail > a,
+#block-mainnavigation-4 .block-menu ul li.menu-item--active-trail > a{
   color: #3375CB !important;
 }
 
 .node--type-hvac-101 .sidebar .block-menu ul li.menu-item--active-trail > a::after,
-.path-helpful-tips .sidebar .block-menu ul li.menu-item--active-trail > a::after {
+.path-helpful-tips .sidebar .block-menu ul li.menu-item--active-trail > a::after,
+#block-mainnavigation-4 .block-menu ul li.menu-item--active-trail > a::after {
   font-family: 'FontAwesome';
   content: '\f054';
   display: inline-block;
@@ -1684,7 +1688,8 @@ header.header-v1 .header-action {
 }
 
 .node--type-hvac-101 .sidebar .block-menu ul li a,
-.path-helpful-tips .sidebar .block-menu ul li a {
+.path-helpful-tips .sidebar .block-menu ul li a,
+#block-mainnavigation-4 .block-menu ul li a {
   padding: 8px 10px 8px 15px;
   display: block;
   border: none;
@@ -1703,12 +1708,14 @@ header.header-v1 .header-action {
 }
 
 .node--type-hvac-101 .sidebar .block-menu ul li.menu-item--active-trail > a:hover,
-.path-helpful-tips .sidebar .block-menu ul li.menu-item--active-trail > a:hover {
+.path-helpful-tips .sidebar .block-menu ul li.menu-item--active-trail > a:hover,
+#block-mainnavigation-4 .block-menu ul li.menu-item--active-trail > a:hover {
   background: transparent;
 }
 
 .node--type-hvac-101 .sidebar .block-menu ul li.menu-item--active-trail > a,
-.path-helpful-tips .sidebar .block-menu ul li.menu-item--active-trail > a{
+.path-helpful-tips .sidebar .block-menu ul li.menu-item--active-trail > a,
+#block-mainnavigation-4 .block-menu ul li.menu-item--active-trail > a{
   color: #0A0A0A !important;
 }
 
@@ -1787,4 +1794,55 @@ input[type="search"] {
 
 .js-form-item .form-item  label {
   display: block !important;
+}
+
+
+.TRANE.navigation .gva_menu > li > a {
+  padding: 8px 10px 8px 15px !important;
+  display: block !important;
+  border: none !important;
+  text-transform: none!important;
+  font-size: 1.6rem !important;
+  overflow: hidden !important;
+  -webkit-transition: all 0.35s !important;
+  -o-transition: all 0.35s !important;
+  transition: all 0.35s !important;
+  -moz-transition: all 0.35s !important;
+  position: relative !important;
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 500 !important;
+  line-height: 2 !important;
+  width: 290px;
+}
+
+.TRANE .block-content ul li.menu-item--active-trail > a:hover {
+  background: transparent !important;
+}
+
+.TRANE .block-content ul li.menu-item--active-trail > a {
+  color: #0A0A0A !important;
+}
+
+.TRANE .block-content ul li.menu-item--active-trail > a::after {
+  font-family: 'FontAwesome';
+  content: '\f054';
+  display: inline-block;
+  color: #000 !important;
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+
+.TRANE .block-content .block-menu ul li {
+  border: none;
+  margin: 0 0 10px !important;
+  padding: 0 !important;
+  border: none !important;
+  float: left;
+  width: 100%;
+}
+
+.TRANE .navigation .gva_menu > li {
+  display: inline-block;
+  width: 100%;
 }
