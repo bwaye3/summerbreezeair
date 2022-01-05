@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'e2df9a146776669726c05a57ae673c25e8edcd7b',
+        'reference' => 'bea51c38e503a6c827e7ded30fa17fcddc20eefc',
         'name' => 'drupal/legacy-project',
         'dev' => true,
     ),
@@ -969,7 +969,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'e2df9a146776669726c05a57ae673c25e8edcd7b',
+            'reference' => 'bea51c38e503a6c827e7ded30fa17fcddc20eefc',
             'dev_requirement' => false,
         ),
         'drupal/link' => array(
@@ -1157,6 +1157,15 @@
             'replaced' => array(
                 0 => '9.3.0',
             ),
+        ),
+        'drupal/rebuild_cache_access' => array(
+            'pretty_version' => '1.7.0',
+            'version' => '1.7.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/rebuild_cache_access',
+            'aliases' => array(),
+            'reference' => '8.x-1.7',
+            'dev_requirement' => false,
         ),
         'drupal/recaptcha' => array(
             'pretty_version' => '3.0.0',
