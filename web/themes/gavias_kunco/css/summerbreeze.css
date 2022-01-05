@@ -1635,10 +1635,10 @@ header.header-v1 .header-action {
 .widget.gsc-icon-box.text-light .desc {
   color: #fff;
 }
+
 .widget.gsc-icon-box.text-light .desc p {
   padding: 0 0 2rem;
 }
-
 
 .action a.link {
   border-radius: 10px;
@@ -1667,8 +1667,6 @@ header.header-v1 .header-action {
   margin: 3rem 0 3rem 0;
   padding: 0 0 1rem;
 }
-
-
 
 .sidebar .block-menu ul li.menu-item--active-trail > a,
 #block-mainnavigation-4 .block-menu ul li.menu-item--active-trail > a{
@@ -1845,4 +1843,21 @@ input[type="search"] {
 .TRANE .navigation .gva_menu > li {
   display: inline-block;
   width: 100%;
+}
+
+
+
+@media (max-width: 991px) {
+  .widget.gsc-call-to-action.button-right-v2.margin {
+    margin-top: -50px !important;
+  }
+}
+
+
+.widget.gsc-icon-box .highlight_content .title {
+  font-size: 2.3rem !important;
+  color: #000;
+  margin-bottom: 3px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
 }
