@@ -1,5 +1,4 @@
-{%
-  set classes = [
+{% set classes = [
   'node',
   'node--type-' ~ node.bundle|clean_class,
   node.isPromoted() ? 'node--promoted',
@@ -7,26 +6,49 @@
   not node.isPublished() ? 'node--unpublished',
   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
   'clearfix',
-]
-%}
+] %}
 
-<article{{ attributes.addClass(classes)}}>
-  <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
-
-    <div class="col">
-    {{ content.field_image }}
-      {{ content.field_video }}
+{% if view_mode == 'teaser' %}
+<div{{ attributes.addClass(classes) }}>
+    <div class="hvac-block">
+      <div class="hvac-image">
+        {{ content.field_image }}
+      </div>
+      <div class="hvac-content">
+        <div class="hvac-name">
+          {{ title_prefix }}
+          <h3{{ title_attributes.addClass('post-title') }}><a href="{{ url }}" rel="bookmark">{{ label }}</a></h3>
+          {{ title_suffix }}
+        </div>
+        <div class="hvac-job mt-3">
+          {{ content.body }}
+        </div>
+      </div>
+      <div class="hvac-link">
+        <a href="{{ url }}" class="chevron">More Information</a>
+      </div>
     </div>
-
-    <div class="col mt-4">
-      {{ title_prefix }}
-      <h2{{ title_attributes.addClass('post-title') }}>{{ label }}</h2>
-      {{ title_suffix }}
-    </div>
-
-    <div class="col mt-4">
-      {{ content.body  }}
-    </div>
-
   </div>
-</article>
+{% else %}
+  <article{{ attributes.addClass(classes)}}>
+    <div{{ content_attributes.addClass('node__content', 'card p-4', 'clearfix') }}>
+
+      <div class="">
+        {{ content.field_image }}
+        {{ content.field_video }}
+      </div>
+
+      <div class="mt-4 text-align-left">
+        {{ title_prefix }}
+        <h2{{ title_attributes.addClass('post-title') }}>{{ label }}</h2>
+        {{ title_suffix }}
+      </div>
+
+      <div class="mt-4 mb-5">
+        {{ content.body  }}
+      </div>
+
+    </div>
+  </article>
+  <!-- End Display article for detail page -->
+{% endif %}
