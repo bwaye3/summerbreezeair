@@ -42,7 +42,7 @@ class InstallerRouterTest extends InstallerTestBase {
     mkdir($path, 0777, TRUE);
     file_put_contents("$path/test_profile.info.yml", Yaml::encode($info));
 
-    $settings_services_file = DRUPAL_ROOT . '/sites/default/services.yml';
+    $settings_services_file = DRUPAL_ROOT . '/sites/default/default.services.yml';
     copy($settings_services_file, $this->siteDirectory . '/services.yml');
     PerformanceTestRecorder::registerService($this->siteDirectory . '/services.yml', TRUE);
   }

@@ -399,7 +399,7 @@ include __DIR__ . "/settings-custom-additions.php";',
     $this->assertScaffoldedFile($docroot . '/.eslintrc.json', $is_link, 'Test version of .eslintrc.json from drupal/core.');
     $this->assertScaffoldedFile($docroot . '/.gitattributes', $is_link, 'Test version of .gitattributes from drupal/core.');
     $this->assertScaffoldedFile($docroot . '/.ht.router.php', $is_link, 'Test version of .ht.router.php from drupal/core.');
-    $this->assertScaffoldedFile($docroot . '/sites/default/services.yml', $is_link, 'Test version of services.yml from drupal/core.');
+    $this->assertScaffoldedFile($docroot . '/sites/default/default.services.yml', $is_link, 'Test version of default.services.yml from drupal/core.');
     $this->assertScaffoldedFile($docroot . '/sites/example.settings.local.php', $is_link, 'Test version of example.settings.local.php from drupal/core.');
     $this->assertScaffoldedFile($docroot . '/sites/example.sites.php', $is_link, 'Test version of example.sites.php from drupal/core.');
     $this->assertScaffoldedFile($docroot . '/index.php', $is_link, 'Test version of index.php from drupal/core.');

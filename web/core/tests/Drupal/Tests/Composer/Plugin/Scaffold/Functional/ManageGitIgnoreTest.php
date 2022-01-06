@@ -130,7 +130,7 @@ EOT;
     // tracked, so the default in that instance is to manage .gitignore files.
     $this->assertScaffoldedFile($sut . '/docroot/.gitignore', FALSE, $expected);
     $this->assertScaffoldedFile($sut . '/docroot/sites/.gitignore', FALSE, 'example.settings.local.php');
-    $this->assertScaffoldedFile($sut . '/docroot/sites/default/.gitignore', FALSE, 'services.yml');
+    $this->assertScaffoldedFile($sut . '/docroot/sites/default/.gitignore', FALSE, 'default.services.yml');
     $expected = <<<EOT
 M docroot/.gitignore
 ?? docroot/sites/.gitignore
@@ -234,7 +234,7 @@ Scaffolding files for fixtures/drupal-assets-fixture:
   - Copy [web-root]/.gitattributes from assets/.gitattributes
   - Copy [web-root]/.ht.router.php from assets/.ht.router.php
   - Skip [web-root]/.htaccess: overridden in fixtures/drupal-composer-drupal-project
-  - Copy [web-root]/sites/default/services.yml from assets/services.yml
+  - Copy [web-root]/sites/default/default.services.yml from assets/default.services.yml
   - Skip [web-root]/sites/default/default.settings.php: overridden in fixtures/scaffold-override-fixture
   - Copy [web-root]/sites/example.settings.local.php from assets/example.settings.local.php
   - Copy [web-root]/sites/example.sites.php from assets/example.sites.php

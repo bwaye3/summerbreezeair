@@ -75,7 +75,7 @@ class HtmlRenderer implements MainContentRendererInterface {
   /**
    * The renderer configuration array.
    *
-   * @see sites/default/services.yml
+   * @see sites/default/default.services.yml
    *
    * @var array
    */

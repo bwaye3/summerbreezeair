@@ -26,10 +26,10 @@ class ScaffoldFileCollectionTest extends TestCase {
         '[web-root]/index.php' => $fixtures->replaceOp('drupal-assets-fixture', 'index.php'),
         '[web-root]/.htaccess' => $fixtures->replaceOp('drupal-assets-fixture', '.htaccess'),
         '[web-root]/robots.txt' => $fixtures->replaceOp('drupal-assets-fixture', 'robots.txt'),
-        '[web-root]/sites/default/services.yml' => $fixtures->replaceOp('drupal-assets-fixture', 'services.yml'),
+        '[web-root]/sites/default/default.services.yml' => $fixtures->replaceOp('drupal-assets-fixture', 'default.services.yml'),
       ],
       'fixtures/drupal-profile' => [
-        '[web-root]/sites/default/services.yml' => $fixtures->replaceOp('drupal-profile', 'profile.services.yml'),
+        '[web-root]/sites/default/default.services.yml' => $fixtures->replaceOp('drupal-profile', 'profile.default.services.yml'),
       ],
       'fixtures/drupal-drupal' => [
         '[web-root]/.htaccess' => new SkipOp(),
@@ -47,12 +47,12 @@ class ScaffoldFileCollectionTest extends TestCase {
       '[web-root]/index.php',
       '[web-root]/.htaccess',
       '[web-root]/robots.txt',
-      '[web-root]/sites/default/services.yml',
+      '[web-root]/sites/default/default.services.yml',
     ], array_keys($resolved_file_mappings['fixtures/drupal-assets-fixture']));
     $this->assertInstanceOf(SkipOp::class, $resolved_file_mappings['fixtures/drupal-assets-fixture']['[web-root]/robots.txt']->op());
 
     $this->assertEquals([
-      '[web-root]/sites/default/services.yml',
+      '[web-root]/sites/default/default.services.yml',
     ], array_keys($resolved_file_mappings['fixtures/drupal-profile']));
 
     $this->assertEquals([

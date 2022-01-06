@@ -64,7 +64,7 @@ class InstallerTest extends InstallerTestBase {
    * {@inheritdoc}
    */
   protected function setUpProfile() {
-    $settings_services_file = DRUPAL_ROOT . '/sites/default/services.yml';
+    $settings_services_file = DRUPAL_ROOT . '/sites/default/default.services.yml';
     // Copy the testing-specific service overrides in place.
     copy($settings_services_file, $this->siteDirectory . '/services.yml');
     PerformanceTestRecorder::registerService($this->siteDirectory . '/services.yml', TRUE);

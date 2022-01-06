@@ -14,7 +14,7 @@ use Symfony\Component\HttpFoundation\RequestStack;
  * bubble either max-age=0 or high-cardinality cache contexts (such as 'user'
  * and 'session') are considered poorly cacheable.
  *
- * @see sites/default/services.yml
+ * @see sites/default/default.services.yml
  *
  * Automatic placeholdering is performed only on elements whose subtree was
  * generated using a #lazy_builder callback and whose bubbled cacheability meets

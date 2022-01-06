@@ -8,7 +8,7 @@ use Drupal\Tests\BrowserTestBase;
 /**
  * Tests CORS provided by Drupal.
  *
- * @see sites/default/services.yml
+ * @see sites/default/default.services.yml
  * @see \Asm89\Stack\Cors
  * @see \Asm89\Stack\CorsService
  *
