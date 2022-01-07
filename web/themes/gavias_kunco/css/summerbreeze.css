@@ -2086,3 +2086,98 @@ a.list-unstyled {
 .call-box .button.text-center:hover {
   background: #cc8500 !important;
 }
+
+
+.trane-card {
+  text-align: left;
+  margin-top: 15px;
+  margin-bottom: 3rem;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 18px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #fff;
+  min-height: 350px;
+}
+
+
+.trane-status.Most.Energy.Efficient  {
+  background-color: #5CAF00;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #5CAF00;
+}
+
+.green  {
+  color: #5CAF00;
+}
+
+.trane-status.Most.Energy.Efficient h4::before  {
+  content: '\f06c';
+  display: inline-block;
+  font-size: inherit;
+  font-family: 'FontAwesome';
+  margin: 0 10px 0;
+}
+
+.trane-status.Quietest {
+  background-color: #4883B5;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #4883B5;
+}
+
+.trane-status.Quietest h4::before  {
+  content: '\f027';
+  display: inline-block;
+  font-size: inherit;
+  font-family: 'FontAwesome';
+  margin: 0 10px 0;
+}
+
+.trane-status.Best.Value {
+  background-color: #01998E;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #01998E;
+}
+
+.trane-status.Best.Value h4::before  {
+  content: '\f155';
+  display: inline-block;
+  font-size: inherit;
+  font-family: 'FontAwesome';
+  margin: 0 10px 0;
+}
+
+.trane-status {
+  border-radius: 10px 10px 0 0;
+}
+
+.trane-status h4 {
+  line-height: 10px !important;
+  color: #fff;
+}
+
+.trane.blue.uppercase {
+  color: #2a5eaa;
+  font-weight: 500 !important;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 2px
+}
+
+.trane h6,
+h6.trane {
+  line-height: 1px !important;
+  margin: 2rem 0 0 !important;
+}
+.trane-logged-in {
+  display: none;
+}
+.logged-in .trane-logged-in {
+  display: block;
+}
