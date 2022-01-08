@@ -1383,8 +1383,6 @@ legend {
   text-rendering: auto;
 }
 
-
-
 header.header-v1 .quick-menu {
   padding: 15px 10px !important;
 }
@@ -1404,7 +1402,6 @@ header.header-v1 .quick-menu {
   display: none !important;
 }
 
-
 #block-gaviascontentbuilderserviceforms .gbb-row.gsc-equal-height > .bb-inner > .bb-container > .row > .row-wrapper .column-content-inner {
   position: relative;
   display: flex;
@@ -1415,7 +1412,7 @@ header.header-v1 .quick-menu {
 @media (max-width: 991px) {
   .topbar,
   #footer #block-views-block-coupon-block-4 .view-list-item::before,
-  header.header-v1 .header-action{
+  header.header-v1 .header-action {
     display: none !important;
   }
 
@@ -1423,7 +1420,6 @@ header.header-v1 .quick-menu {
     bottom: 0;
   }
 }
-
 
 .location-wrapper {
   display: inline-block;
@@ -1525,7 +1521,6 @@ p a {
 header.header-v1 .header-action {
   right: 25px !important;
   top: 41% !important;
-
 }
 
 .topbar .gsc-button.small.blue {
@@ -1564,7 +1559,7 @@ header.header-v1 .header-action {
   border-radius: 0;
   border: none !important;
   margin: 0;
-  padding: 1.5rem 2rem!important;
+  padding: 1.5rem 2rem !important;
 }
 
 #block-gavias-kunco-topbar ul.inline > li {
@@ -1626,10 +1621,10 @@ header.header-v1 .header-action {
 }
 
 .widget.gsc-heading .title-desc {
-  max-width: 800px!important;
-  line-height: 1.85!important;
-  font-size: 1.6rem!important;
-  color: #5e5c5c!important;
+  max-width: 800px !important;
+  line-height: 1.85 !important;
+  font-size: 1.6rem !important;
+  color: #5e5c5c !important;
 }
 
 .widget.gsc-icon-box.text-light .desc {
@@ -1651,11 +1646,11 @@ header.header-v1 .header-action {
 }
 
 .owl-carousel .owl-nav > div {
-  background: #3375CB;
+  background: #3375cb;
 }
 
 .owl-carousel .owl-nav > div:hover {
-  background:  #cc8500;
+  background: #cc8500;
 }
 
 .img-width-300 img {
@@ -1669,8 +1664,8 @@ header.header-v1 .header-action {
 }
 
 .sidebar .block-menu ul li.menu-item--active-trail > a,
-#block-mainnavigation-4 .block-menu ul li.menu-item--active-trail > a{
-  color: #CC8500 !important;
+#block-mainnavigation-4 .block-menu ul li.menu-item--active-trail > a {
+  color: #cc8500 !important;
 }
 
 .node--type-hvac-101 .sidebar .block-menu ul li.menu-item--active-trail > a::after,
@@ -1679,7 +1674,7 @@ header.header-v1 .header-action {
   font-family: 'FontAwesome';
   content: '\f054';
   display: inline-block;
-  color: #CC8500 !important;
+  color: #cc8500 !important;
   position: absolute;
   right: 0;
   top: 10px;
@@ -1713,8 +1708,8 @@ header.header-v1 .header-action {
 
 .node--type-hvac-101 .sidebar .block-menu ul li.menu-item--active-trail > a,
 .path-helpful-tips .sidebar .block-menu ul li.menu-item--active-trail > a,
-#block-mainnavigation-4 .block-menu ul li.menu-item--active-trail > a{
-  color: #CC8500 !important;
+#block-mainnavigation-4 .block-menu ul li.menu-item--active-trail > a {
+  color: #cc8500 !important;
 }
 
 .custom-h1-header h1 {
@@ -1755,9 +1750,9 @@ header.header-v1 .header-action {
 
 #search-form .form-wrapper {
   background: transparent !important;
-  border: 0 solid #ccc!important;
-  border-radius: 0!important;
-  margin: 0 0 3rem!important;
+  border: 0 solid #ccc !important;
+  border-radius: 0 !important;
+  margin: 0 0 3rem !important;
 }
 
 input[type="search"] {
@@ -1790,16 +1785,15 @@ input[type="search"] {
   line-height: 1.4 !important;
 }
 
-.js-form-item .form-item  label {
+.js-form-item .form-item label {
   display: block !important;
 }
-
 
 .TRANE.navigation .gva_menu > li > a {
   padding: 8px 10px 8px 15px !important;
   display: block !important;
   border: none !important;
-  text-transform: none!important;
+  text-transform: none !important;
   font-size: 1.6rem !important;
   overflow: hidden !important;
   -webkit-transition: all 0.35s !important;
@@ -1818,7 +1812,7 @@ input[type="search"] {
 }
 
 .TRANE .block-content ul li.menu-item--active-trail > a {
-  color:  #cc8500 !important;
+  color: #cc8500 !important;
 }
 
 .TRANE .block-content ul li.menu-item--active-trail > a::after {
@@ -1860,7 +1854,6 @@ input[type="search"] {
   }
 }
 
-
 .widget.gsc-icon-box .highlight_content .title {
   font-size: 2.3rem !important;
   color: #000;
@@ -1868,7 +1861,6 @@ input[type="search"] {
   font-weight: 500;
   font-family: "Poppins", sans-serif;
 }
-
 
 .hvac-block {
   text-align: left;
@@ -1888,6 +1880,7 @@ input[type="search"] {
   background: #fff;
   min-height: 450px;
 }
+
 .hvac-block .hvac-image {
   position: relative;
   border-radius: 6px;
@@ -1897,9 +1890,11 @@ input[type="search"] {
   -o-border-radius: 6px;
   background: #fff;
 }
+
 .hvac-block .hvac-image .item-image {
   position: relative;
 }
+
 .hvac-block .hvac-image .item-image:after {
   content: "";
   position: absolute;
@@ -1917,6 +1912,7 @@ input[type="search"] {
   -moz-transition: all 0.35s;
   -ms-transition: all 0.35s;
 }
+
 .hvac-block .hvac-content {
   background: #fff;
   width: 100%;
@@ -1927,6 +1923,7 @@ input[type="search"] {
   -moz-transition: all 0.45s;
   -ms-transition: all 0.45s;
 }
+
 .hvac-block .hvac-content .hvac-name {
   font-size: 16px;
   font-weight: 600;
@@ -1935,11 +1932,13 @@ input[type="search"] {
   font-family: "Poppins", sans-serif;
   padding: 20px 20px 0;
 }
+
 .hvac-block .hvac-content .hvac-job {
   font-size: 13px;
   color: #808080;
   padding: 0 20px 15px;
 }
+
 .hvac-block .hvac-content .socials-team {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   z-index: 9;
@@ -1953,24 +1952,29 @@ input[type="search"] {
   -moz-transition: all 0.15s;
   -ms-transition: all 0.15s;
   text-align: center;
-  background: #026BB0;
+  background: #026bb0;
 }
+
 .hvac-block .hvac-content .socials-team a {
   text-align: center;
   color: #fff;
   font-size: 18px;
   margin: 0 8px;
 }
+
 .hvac-block .hvac-content .socials-team a:hover, .hvac-block .hvac-content .socials-team a:focus, .hvac-block .hvac-content .socials-team a:active {
-  color: #3375CB;
+  color: #3375cb;
 }
+
 .hvac-block:hover .hvac-image .item-image:after {
   opacity: 1;
   filter: alpha(opacity=100);
 }
+
 .hvac-block:hover .hvac-content {
   bottom: 0;
 }
+
 .hvac-block:hover .hvac-content .socials-team {
   opacity: 1;
   filter: alpha(opacity=100);
@@ -1980,11 +1984,13 @@ input[type="search"] {
   width: 35%;
   float: left;
 }
+
 .hvac-list .hvac-block .hvac-content {
   padding-left: 30px;
   width: 65%;
   float: left;
 }
+
 .hvac-list .hvac-block .hvac-content .hvac-body {
   display: block !important;
   visibility: visible !important;
@@ -2040,7 +2046,6 @@ input[type="search"] {
   min-height: 350px;
 }
 
-
 .widget.gsc-icon-box.top-center .title {
   line-height: 1.2;
 }
@@ -2087,7 +2092,6 @@ a.list-unstyled {
   background: #cc8500 !important;
 }
 
-
 .trane-card {
   text-align: left;
   margin-top: 15px;
@@ -2104,18 +2108,18 @@ a.list-unstyled {
 }
 
 
-.trane-status.Most.Energy.Efficient  {
-  background-color: #5CAF00;
+.trane-status.Most.Energy.Efficient {
+  background-color: #5caf00;
   border-width: 1px;
   border-style: solid;
-  border-color: #5CAF00;
+  border-color: #5caf00;
 }
 
-.green  {
-  color: #5CAF00;
+.green {
+  color: #5caf00;
 }
 
-.trane-status.Most.Energy.Efficient h4::before  {
+.trane-status.Most.Energy.Efficient h4::before {
   content: '\f06c';
   display: inline-block;
   font-size: inherit;
@@ -2124,13 +2128,13 @@ a.list-unstyled {
 }
 
 .trane-status.Quietest {
-  background-color: #4883B5;
+  background-color: #4883b5;
   border-width: 1px;
   border-style: solid;
-  border-color: #4883B5;
+  border-color: #4883b5;
 }
 
-.trane-status.Quietest h4::before  {
+.trane-status.Quietest h4::before {
   content: '\f027';
   display: inline-block;
   font-size: inherit;
@@ -2139,13 +2143,13 @@ a.list-unstyled {
 }
 
 .trane-status.Best.Value {
-  background-color: #01998E;
+  background-color: #01998e;
   border-width: 1px;
   border-style: solid;
-  border-color: #01998E;
+  border-color: #01998e;
 }
 
-.trane-status.Best.Value h4::before  {
+.trane-status.Best.Value h4::before {
   content: '\f155';
   display: inline-block;
   font-size: inherit;
@@ -2178,6 +2182,7 @@ h6.trane {
 .trane-logged-in {
   display: none;
 }
+
 .logged-in .trane-logged-in {
   display: block;
 }
