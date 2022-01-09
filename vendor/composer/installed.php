@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '878e96780e0d5255405e11ead9e78942a30ed6e7',
+        'reference' => '821b545f86b7d1c25a7035b8eb9e8a488f0775ed',
         'name' => 'drupal/legacy-project',
         'dev' => true,
     ),
@@ -969,7 +969,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '878e96780e0d5255405e11ead9e78942a30ed6e7',
+            'reference' => '821b545f86b7d1c25a7035b8eb9e8a488f0775ed',
             'dev_requirement' => false,
         ),
         'drupal/link' => array(
@@ -1157,6 +1157,15 @@
             'replaced' => array(
                 0 => '9.3.2',
             ),
+        ),
+        'drupal/read_more_field' => array(
+            'pretty_version' => '1.1.0',
+            'version' => '1.1.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/read_more_field',
+            'aliases' => array(),
+            'reference' => '8.x-1.1',
+            'dev_requirement' => false,
         ),
         'drupal/rebuild_cache_access' => array(
             'pretty_version' => '1.7.0',
