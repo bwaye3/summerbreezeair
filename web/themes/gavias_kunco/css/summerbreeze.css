@@ -2055,7 +2055,7 @@ a.list-unstyled {
 }
 
 .call-box {
-  background: #0a65aa;
+  background: #3375cb;
   padding: 1rem 2rem;
   border-radius: 10px;
   text-align: center;
@@ -2467,8 +2467,30 @@ h3, .h3 {
 }
 
 .call-box h3 {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 35px;
+}
+
+.call-box h3::before {
+  content: "";
+  background-image: url('/sites/default/files/2022-01/150px-Trane_logo.png');
+  background-size: 100% 100%;
+  display: block;
+  height: 25px;
+  width: 75px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.call-box h4 {
   margin-bottom: 0 !important;
   margin-top: 0 !important;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  letter-spacing: 3px;
+  font-weight: normal;
+  padding: 0 0 .5rem 0;
 }
 
 .call-box h2 {
@@ -2477,4 +2499,21 @@ h3, .h3 {
 
 .call-box {
   padding: 2rem 2rem;
+}
+
+.path-node .node--type-trane-products .layout.layout--twocol-section.layout--twocol-section--33-67,
+.path-taxonomy .trane-taxo .node--type-trane-products .layout.layout--twocol-section.layout--twocol-section--33-67 {
+  border-top: 10px solid #ff2b00 !important;
+}
+
+.call-box-link-livechat {
+  background: #fff;
+  border-radius: 5px;
+  width: 120px;
+  margin: 0 auto;
+  padding: 6px 10px;
+}
+
+.call-box h2 {
+  font-size: 2.4rem;
 }
