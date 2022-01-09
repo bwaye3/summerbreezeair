@@ -1677,7 +1677,7 @@ header.header-v1 .header-action {
   color: #cc8500 !important;
   position: absolute;
   right: 0;
-  top: 10px;
+  top: 0;
 }
 
 .node--type-hvac-101 .sidebar .block-menu ul li a,
@@ -2516,4 +2516,24 @@ h3, .h3 {
 
 .call-box h2 {
   font-size: 2.4rem;
+}
+
+.node--type-hvac-101 .sidebar .block-menu ul li a,
+.path-helpful-tips .sidebar .block-menu ul li a,
+#block-mainnavigation-4 .block-menu ul li a {
+  padding: 8px 10px 8px 15px;
+  display: block;
+  border: none !important;
+  text-transform: none;
+  font-size: 1.6rem;
+  overflow: hidden;
+  -webkit-transition: all 0.35s;
+  -o-transition: all 0.35s;
+  transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  -ms-transition: all 0.35s;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  line-height: 36px;
 }
