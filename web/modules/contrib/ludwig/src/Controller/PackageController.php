@@ -103,6 +103,7 @@ class PackageController implements ContainerInjectionInterface {
       '#theme' => 'table',
       '#header' => [
         'package' => $this->t('Package'),
+        'namespace' => $this->t('Namespace'),
         'paths' => $this->t('Paths'),
         'resource' => $this->t('Resource'),
         'version' => $this->t('Version'),
@@ -224,6 +225,7 @@ class PackageController implements ContainerInjectionInterface {
           'package' => [
             'data' => $package_column,
           ],
+          'namespace' => $package['resource'] == 'psr-4' || $package['resource'] == 'psr-0' ? $package['namespace'] : '',
           'paths' => implode(', ', $package['paths']),
           'resource' => $package['resource'],
           'version' => $package['version'],

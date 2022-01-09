@@ -153,7 +153,10 @@ class PackageManager implements PackageManagerInterface {
                 }
                 $status = !empty($status) ? $status : 'Installed';
                 // Iterate through all the records inside single autoload type.
-                foreach ($package_namespaces as $namespace) {
+                foreach ($package_namespaces as $namespace_key => $namespace) {
+                  // Making the package name unique for multi-namespaced
+                  // resources.
+                  $extension_package_resource_namespace_name = $extension_package_resource_name . '_' . $namespace_key;
                   $paths_raw = $autoload[$namespace];
                   // Support for both single path (string) and multiple
                   // paths (array) inside one resource.
@@ -186,7 +189,7 @@ class PackageManager implements PackageManagerInterface {
                     'status' => $status,
                     'resource' => $resource,
                   ];
-                  $packages[$extension_package_resource_name] = array_merge($package_base, $package_append);
+                  $packages[$extension_package_resource_namespace_name] = array_merge($package_base, $package_append);
                 }
               }
             }

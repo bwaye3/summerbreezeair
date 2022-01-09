@@ -3859,17 +3859,17 @@
         },
         {
             "name": "drupal/iframe",
-            "version": "2.12.0",
+            "version": "2.15.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/iframe.git",
-                "reference": "8.x-2.12"
+                "reference": "8.x-2.15"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/iframe-8.x-2.12.zip",
-                "reference": "8.x-2.12",
-                "shasum": "e4b97db485e6a9c90c528f551d83ab1e9b60ebe8"
+                "url": "https://ftp.drupal.org/files/projects/iframe-8.x-2.15.zip",
+                "reference": "8.x-2.15",
+                "shasum": "bbba3b90cb78fed355c3b2bb11684e7feec082bc"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9"
@@ -3880,8 +3880,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.12",
-                    "datestamp": "1630873445",
+                    "version": "8.x-2.15",
+                    "datestamp": "1641659575",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4278,17 +4278,17 @@
         },
         {
             "name": "drupal/ludwig",
-            "version": "1.11.0",
+            "version": "1.12.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ludwig.git",
-                "reference": "8.x-1.11"
+                "reference": "8.x-1.12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/ludwig-8.x-1.11.zip",
-                "reference": "8.x-1.11",
-                "shasum": "54391663ab3cc6cd419bff7a985b8628d6fbbf63"
+                "url": "https://ftp.drupal.org/files/projects/ludwig-8.x-1.12.zip",
+                "reference": "8.x-1.12",
+                "shasum": "c23d37efde14a86546ee90c3b06211d68f09e028"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
@@ -4296,8 +4296,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.11",
-                    "datestamp": "1641058256",
+                    "version": "8.x-1.12",
+                    "datestamp": "1641658500",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"

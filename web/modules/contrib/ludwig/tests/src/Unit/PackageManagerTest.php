@@ -330,7 +330,7 @@ namespace Drupal\Tests\ludwig\Unit {
           'status' => 'Missing',
           'resource' => '',
         ],
-        'test2_symfony/config_psr-4' => [
+        'test2_symfony/config_psr-4_0' => [
           'name' => 'symfony/config',
           'version' => 'v3.2.8',
           'description' => 'Symfony Config Component',
@@ -344,7 +344,7 @@ namespace Drupal\Tests\ludwig\Unit {
           'status' => 'Installed',
           'resource' => 'psr-4',
         ],
-        'test3a_html2text/html2text_psr-4' => [
+        'test3a_html2text/html2text_psr-4_0' => [
           'name' => 'html2text/html2text',
           'version' => '4.3.1',
           'description' => 'Converts HTML to formatted plain text',
@@ -358,7 +358,7 @@ namespace Drupal\Tests\ludwig\Unit {
           'status' => 'Installed',
           'resource' => 'psr-4',
         ],
-        'test3b_html2text/html2text_psr-4' => [
+        'test3b_html2text/html2text_psr-4_0' => [
           'name' => 'html2text/html2text',
           'version' => 'v4.0.1',
           'description' => 'Converts HTML to formatted plain text',
@@ -372,7 +372,7 @@ namespace Drupal\Tests\ludwig\Unit {
           'status' => 'Overridden',
           'resource' => 'psr-4',
         ],
-        'test3c_html2text/html2text_psr-4' => [
+        'test3c_html2text/html2text_psr-4_0' => [
           'name' => 'html2text/html2text',
           'version' => '^4.3.1',
           'description' => 'Converts HTML to formatted plain text',
@@ -386,7 +386,7 @@ namespace Drupal\Tests\ludwig\Unit {
           'status' => 'Installed',
           'resource' => 'psr-4',
         ],
-        'entity_print_dompdf/dompdf_psr-4' => [
+        'entity_print_dompdf/dompdf_psr-4_0' => [
           'name' => 'dompdf/dompdf',
           'version' => 'v0.8.6',
           'description' => 'DOMPDF is a CSS 2.1 compliant HTML to PDF converter',
@@ -400,7 +400,7 @@ namespace Drupal\Tests\ludwig\Unit {
           'status' => 'Installed',
           'resource' => 'psr-4',
         ],
-        'entity_print_dompdf/dompdf_classmap' => [
+        'entity_print_dompdf/dompdf_classmap_0' => [
           'name' => 'dompdf/dompdf',
           'version' => 'v0.8.6',
           'description' => 'DOMPDF is a CSS 2.1 compliant HTML to PDF converter',
@@ -414,7 +414,7 @@ namespace Drupal\Tests\ludwig\Unit {
           'status' => 'Not installed',
           'resource' => 'classmap',
         ],
-        'feeds_ex_querypath/QueryPath_psr-0' => [
+        'feeds_ex_querypath/QueryPath_psr-0_0' => [
           'name' => 'querypath/QueryPath',
           'version' => 'v3.0.5',
           'description' => 'HTML/XML querying (CSS 4 or XPath) and processing (like jQuery)',
@@ -428,7 +428,7 @@ namespace Drupal\Tests\ludwig\Unit {
           'status' => 'Installed',
           'resource' => 'psr-0',
         ],
-        'feeds_ex_querypath/QueryPath_files' => [
+        'feeds_ex_querypath/QueryPath_files_0' => [
           'name' => 'querypath/QueryPath',
           'version' => 'v3.0.5',
           'description' => 'HTML/XML querying (CSS 4 or XPath) and processing (like jQuery)',
@@ -442,7 +442,7 @@ namespace Drupal\Tests\ludwig\Unit {
           'status' => 'Installed',
           'resource' => 'files',
         ],
-        'geoip_maxmind/web-service-common_psr-4' => [
+        'geoip_maxmind/web-service-common_psr-4_0' => [
           'name' => 'maxmind/web-service-common',
           'version' => 'v0.8.0',
           'description' => 'Internal MaxMind Web Service API',
@@ -456,7 +456,7 @@ namespace Drupal\Tests\ludwig\Unit {
           'status' => 'Installed',
           'resource' => 'psr-4',
         ],
-        'geoip_maxmind/web-service-common_psr-4' => [
+        'geoip_maxmind/web-service-common_psr-4_1' => [
           'name' => 'maxmind/web-service-common',
           'version' => 'v0.8.0',
           'description' => 'Internal MaxMind Web Service API',
@@ -470,7 +470,7 @@ namespace Drupal\Tests\ludwig\Unit {
           'status' => 'Installed',
           'resource' => 'psr-4',
         ],
-        'telephone_formatter_giggsey/libphonenumber-for-php_psr-4' => [
+        'telephone_formatter_giggsey/libphonenumber-for-php_psr-4_0' => [
           'name' => 'giggsey/libphonenumber-for-php',
           'version' => 'v8.12.20',
           'description' => 'PHP Port of Google\'s libphonenumber',
@@ -484,7 +484,7 @@ namespace Drupal\Tests\ludwig\Unit {
           'status' => 'Installed',
           'resource' => 'psr-4',
         ],
-        'telephone_formatter_giggsey/libphonenumber-for-php_exclude-from-classmap' => [
+        'telephone_formatter_giggsey/libphonenumber-for-php_exclude-from-classmap_0' => [
           'name' => 'giggsey/libphonenumber-for-php',
           'version' => 'v8.12.20',
           'description' => 'PHP Port of Google\'s libphonenumber',
@@ -508,7 +508,7 @@ namespace Drupal\Tests\ludwig\Unit {
       // We need the main drupal version for the compatibility check.
       $drupal_main_version = 'd' . explode('.', \Drupal::VERSION, 2)[0];
       if ($drupal_main_version == 'd8') {
-        $expected_packages['test2_symfony/config_psr-4'] = [
+        $expected_packages['test2_symfony/config_psr-4_0'] = [
           'name' => 'symfony/config',
           'version' => 'v3.2.6',
           'description' => 'Symfony Config Component',
