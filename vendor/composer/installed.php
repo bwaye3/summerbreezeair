@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'dac3925bfa53c5541509043ef3ad5a894abbef0d',
+        'reference' => '01ef4bf540b75c5f5efc0045572e1c34e7a08af9',
         'name' => 'drupal/legacy-project',
         'dev' => true,
     ),
@@ -969,7 +969,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'dac3925bfa53c5541509043ef3ad5a894abbef0d',
+            'reference' => '01ef4bf540b75c5f5efc0045572e1c34e7a08af9',
             'dev_requirement' => false,
         ),
         'drupal/link' => array(
@@ -1235,6 +1235,15 @@
             'replaced' => array(
                 0 => '9.3.2',
             ),
+        ),
+        'drupal/simple_popup_blocks' => array(
+            'pretty_version' => '2.8.0',
+            'version' => '2.8.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/simple_popup_blocks',
+            'aliases' => array(),
+            'reference' => '8.x-2.8',
+            'dev_requirement' => false,
         ),
         'drupal/standard' => array(
             'dev_requirement' => false,

@@ -52,6 +52,7 @@
         "drupal/rebuild_cache_access": "^1.7",
         "drupal/recaptcha": "^3.0",
         "drupal/redirect": "^1.7",
+        "drupal/simple_popup_blocks": "^2.8",
         "drupal/state_machine": "^1.0",
         "drupal/storychief": "^2.7",
         "drupal/token": "^1.10",
