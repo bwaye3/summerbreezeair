@@ -2176,7 +2176,7 @@ a.list-unstyled {
 
 .trane-status.Trane h4::before {
   content: "";
-  background-image:url('/sites/default/files/2022-01/150px-Trane_logo.png');
+  background-image: url('/sites/default/files/2022-01/150px-Trane_logo.png');
   background-size: 100% 100%;
   display: inline-block;
   height: 25px;
@@ -2263,7 +2263,7 @@ h6.trane {
 }
 
 .ui-button.ui-button--red.ui-button--small.mt-2 {
-  background: #3375CB;
+  background: #3375cb;
   color: #fff;
   overflow: hidden;
   -webkit-transition: all 0.3s;
@@ -2305,7 +2305,7 @@ h6.trane {
 }
 
 .product-detail__specifications a {
-  color: #3375CB !important;
+  color: #3375cb !important;
 }
 
 .product-detail__specifications a:hover {
@@ -2398,7 +2398,7 @@ table > tbody > tr > td {
 
 .sidebar .block-menu ul li a {
   border: none !important;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1)!important;;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;;
   line-height: 1.2;
   font-size: 14px;
   padding: 0 10px 0 !important;
@@ -2593,7 +2593,7 @@ h3, .h3 {
   margin: 0 0 0 40px;
 }
 
-.google-card.google-footer  h3,
+.google-card.google-footer h3,
 .google-card.google-footer p,
 .google-card.google-footer a {
   color: #fff !important;
@@ -2601,8 +2601,8 @@ h3, .h3 {
 
 
 .google-card.google-footer p {
-  line-height: 1.8!important;
-  font-size: 14px!important;
+  line-height: 1.8 !important;
+  font-size: 14px !important;
   margin: 0 0 0 40px;
 }
 
@@ -2663,7 +2663,7 @@ h3, .h3 {
 }
 
 .article__main .columns p span {
-  font-size: 16px!important;
+  font-size: 16px !important;
 }
 
 .node--type-trane-topics {
@@ -2689,8 +2689,6 @@ h3, .h3 {
   display: none;
 }
 
-
-
 #spb-block-giveusacall .spb-popup-main-wrapper {
   background: #3375cbe6;
   box-shadow: rgba(0, 0, 0, 0.3) 0 4px 12px;
@@ -2699,7 +2697,7 @@ h3, .h3 {
   margin: 0 0 20px 20px;
 }
 
-#spb-block-giveusacall  .call-box {
+#spb-block-giveusacall .call-box {
   background: transparent !important;
   padding: 0 !important;
   margin: 2rem !important;
@@ -2714,7 +2712,6 @@ h3, .h3 {
   color: #fff;
   background: transparent;
   border-radius: 50%;
-  padding: 0 7px !important;
 }
 
 .call-box h3::before {
@@ -2753,6 +2750,7 @@ h3, .h3 {
 .trane-products .call-box {
   margin: 0 0 0 30px !important;
 }
+
 .path-node .node--type-trane-products .call-box,
 .path-node .node--type-trane-products .layout.layout--twocol-section.layout--twocol-section--33-67, .path-taxonomy .trane-taxo .node--type-trane-products .layout.layout--twocol-section.layout--twocol-section--33-67 {
   margin: 0 0 0 30px !important;
