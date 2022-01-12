@@ -2420,10 +2420,11 @@ h3, .h3 {
 
 .trane-taxo .call-box {
   border-radius: 0 0 10px 10px;
-  margin: 0 2rem;
+  margin: 0;
   overflow: hidden;
-  -webkit-box-shadow: 0 0 18px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 18px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 18px rgba(0,0,0,0.1);
+  box-shadow: 0 0 18px rgba(0,0,0,0.1);
+  margin-left: 30px;
 }
 
 .path-taxonomy .node--type-trane-products .layout.layout--twocol-section.layout--twocol-section--33-67 {
@@ -2783,4 +2784,99 @@ h3.text-uppercase{
   margin-left: 1rem !important;
   text-transform: uppercase !important;
   color: rgb(51, 117, 203) !important;
+}
+
+
+/************** Tool Tip Styles ********************************/
+
+#hover-button section {
+  display: block;
+}
+
+#hover-button span {
+  font-family: inherit;
+  white-space: nowrap;
+  background: transparent;
+  border: 1px solid #d2d1d1;
+  padding: 5px 20px;
+  border-radius: 50px;
+  font-size: 12px;
+}
+
+#hover-button span:after {
+  font-family: inherit;
+  text-align: left;
+  white-space: normal;
+}
+
+#hover-button span:focus {
+  outline: none;
+}
+
+/*== start of code for tooltips ==*/
+#hover-button .tool {
+  cursor: help;
+  position: relative;
+}
+
+/*== common styles for both parts of tool tip ==*/
+#hover-button .tool::before,
+#hover-button .tool::after {
+  left: 50%;
+  opacity: 0;
+  position: absolute;
+  z-index: -100;
+}
+
+#hover-button .tool:hover::before,
+#hover-button .tool:focus::before,
+#hover-button .tool:hover::after,
+#hover-button .tool:focus::after {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  z-index: 100;
+}
+
+/*== pointer tip ==*/
+#hover-button .tool::before {
+  border-style: solid;
+  border-width: 1em 0.75em 0 0.75em;
+  border-color: #3E474F transparent transparent transparent;
+  bottom: 136%;
+  content: "";
+  margin-left: -0.5em;
+  transition: all .65s cubic-bezier(.84,-0.18,.31,1.26), opacity .65s .5s;
+  transform:  scale(.6) translateY(-90%);
+}
+
+#hover-button .tool:hover::before,
+#hover-button .tool:focus::before {
+  transition: all .65s cubic-bezier(.84,-0.18,.31,1.26) .2s;
+}
+
+/*== speech bubble ==*/
+#hover-button .tool::after {
+  background: #3E474F;
+  border-radius: .25em;
+  bottom: 180%;
+  color: #EDEFF0;
+  content: attr(data-tip);
+  margin-left: -1em;
+  padding: 1em;
+  transition: all .65s cubic-bezier(.84,-0.18,.31,1.26) .2s;
+  transform:  scale(.6) translateY(50%);
+  width: 17.5em;
+}
+
+#hover-button .tool:hover::after,
+#hover-button .tool:focus::after  {
+  transition: all .65s cubic-bezier(.84,-0.18,.31,1.26);
+}
+
+@media (max-width: 760px) {
+  #hover-button .tool::after {
+    font-size: .75em;
+    margin-left: -5em;
+    width: 10em;
+  }
 }
