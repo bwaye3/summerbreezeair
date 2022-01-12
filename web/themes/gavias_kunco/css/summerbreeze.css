@@ -2667,11 +2667,12 @@ h3, .h3 {
   font-size: 16px !important;
 }
 
-.node--type-trane-topics {
+
+.node.node--type-trane-topics.node--view-mode-full.clearfix {
   text-align: left;
   margin-top: 15px;
   margin-bottom: 3rem;
-  padding: 0;
+  padding: 2rem 3rem;
   position: relative;
   overflow: hidden;
   -webkit-box-shadow: 0 0 18px rgba(0, 0, 0, 0.1);
@@ -2682,7 +2683,9 @@ h3, .h3 {
   min-height: 350px;
 }
 
-.node--type-trane-topics .node__content.clearfix {
+
+
+article .node--type-trane-topics .node__content.clearfix {
   padding: 3rem 5rem;
 }
 
@@ -2744,7 +2747,7 @@ h3, .h3 {
   padding: 0 0 15px;
 }
 
-.node--type-trane-topics, .trane-card, .trane-products .call-box {
+article .node--type-trane-topics, article .trane-card, article .trane-products .call-box {
   margin-left: 30px;
 }
 
@@ -3025,4 +3028,17 @@ h3.text-uppercase{
 
 #trane-product-wrapper .trane.blue.uppercase a:hover {
   color: #fff !important;
+}
+
+.footer .block .block-title span {
+  font-size: 18px !important;
+}
+
+#block-mainnavigation-11 h2 span,
+.sidebar .block .block-title > span {
+  font-size: 20px !important;
+}
+
+.widget.gsc-heading.style-1 {
+  padding-bottom: 0 !important;
 }
