@@ -2755,3 +2755,32 @@ h3, .h3 {
 .path-node .node--type-trane-products .layout.layout--twocol-section.layout--twocol-section--33-67, .path-taxonomy .trane-taxo .node--type-trane-products .layout.layout--twocol-section.layout--twocol-section--33-67 {
   margin: 0 0 0 30px !important;
 }
+
+.clr-tamarillo.h6.font-weight-bold.letter-spacing-1.mb-3 {
+  font-size:20px !important;
+  color: rgb(51, 117, 203) !important;
+  color: #2a5eaa !important;
+}
+
+
+.clr-tamarillo.h5.font-weight-bold.letter-spacing-1.mb-3 {
+  font-size: 18px !important;
+  color: rgb(51, 117, 203) !important;
+  color: #2a5eaa !important;
+}
+
+.clr-tamarillo.h5.text-uppercase.font-weight-extrabold.letter-spacing-1.mb-3 {
+  font-size: 2rem !important;
+}
+
+h3.text-uppercase{
+  box-sizing: border-box;
+  margin-top: 0px;
+  margin-bottom: 0px !important;
+  font-weight: 700 !important;
+  line-height: 1.2;
+  font-size: 3rem;
+  margin-left: 1rem !important;
+  text-transform: uppercase !important;
+  color: rgb(51, 117, 203) !important;
+}
