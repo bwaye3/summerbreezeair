@@ -5641,7 +5641,7 @@ div.resizable-textarea textarea {
 }
 .block .block-title > span {
   display: inline-block;
-  font-size: 20px;
+  font-size: 3rem;
   font-weight: 500;
   position: relative;
   color: #000;
