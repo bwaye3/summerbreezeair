@@ -2932,6 +2932,7 @@ h3.text-uppercase{
 
 #trane-fullwidth a {
   color: #fff !important;
+  max-width: 350px;
 }
 
 #trane-fullwidth .trane-link::after {
@@ -2996,7 +2997,7 @@ h3.text-uppercase{
   box-shadow: rgba(0, 0, 0, 1) 0 4px 12px;
   border: 1px solid rgba(0, 0, 0, 1);
   padding: 1rem 3rem;
-  background: rgba(0,0,0,0.65) !important;
+  background: rgba(0,0,0,0.55) !important;
 }
 
 #trane-product-wrapper .node--view-mode-full p,
@@ -3042,3 +3043,96 @@ h3.text-uppercase{
 .widget.gsc-heading.style-1 {
   padding-bottom: 0 !important;
 }
+
+#trane-fullwidth .trane-button a,
+#trane-fullwidth a.trane-button {
+  margin-left: 124px !important;
+}
+
+.gsc-image-content.skin-v2 .box-content {
+  background: inherit !important;
+}
+
+#block-views-block-coupon-block-5 {
+  display: none;
+}
+
+#block-giveusacall {
+  display: none;
+}
+
+.menu-bar {
+  top: -25px !important;
+}
+
+.gva-navigation ul li {
+  list-style: none;
+}
+
+@media (max-width: 760px) {
+  #trane-fullwidth .trane-topic {
+    margin: 5rem 0 5rem 0 !important;
+  }
+
+  #trane-fullwidth .trane-button a,
+  #trane-fullwidth a.trane-button {
+    margin-left: 30px !important;
+  }
+
+  #trane-fullwidth .trane-card img {
+    width: 60%;
+    margin: 0 0 0 2rem;
+  }
+
+  .trane-card-right h4 {
+    font-size: 2rem;
+  }
+
+  #trane-fullwidth .trane-topic {
+    margin: 5rem 0 1rem 0 !important;
+  }
+
+  article .trane-card {
+    margin-left: 0;
+  }
+
+  #trane-product-wrapper .trane-card {
+    background: rgba(0,0,0,0.0) !important;
+  }
+
+  .TRANE.navigation .gva_menu > li > a {
+    padding: 8px 10px 8px 0 !important;
+  }
+
+  .trane-products .call-box {
+    margin: 0 !important;
+  }
+
+  .path-taxonomy .trane-taxo .node--type-trane-products .layout.layout--twocol-section.layout--twocol-section--33-67 {
+    margin: 0 !important;
+  }
+
+  .trane-taxo .call-box {
+    margin-left: 0;
+  }
+
+  .path-node .node--type-trane-products .call-box, .path-node .node--type-trane-products .layout.layout--twocol-section.layout--twocol-section--33-67, .path-taxonomy .trane-taxo .node--type-trane-products .layout.layout--twocol-section.layout--twocol-section--33-67 {
+    margin: 0 !important;
+  }
+
+  .sidebar .block-menu ul li a {
+    border-bottom: none !important;
+    max-width: 75%;
+  }
+
+  .gbb-row.gsc-equal-height.bg-size-cover .gsc-box-color .box-content {
+    margin: 0 30px;
+  }
+
+  .TRANE .block-content ul li.menu-item--active-trail > a::after {
+    top: 0;
+  }
+}
+
+
+

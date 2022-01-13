@@ -10345,7 +10345,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
   cursor: pointer;
   margin-top: 30px;
   float: right;
-  top: -5px;
+  top: -25px;
   right: -5px;
 }
 .menu-bar:hover {
