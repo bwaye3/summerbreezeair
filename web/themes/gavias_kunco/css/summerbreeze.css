@@ -3053,14 +3053,6 @@ h3.text-uppercase{
   background: inherit !important;
 }
 
-#block-views-block-coupon-block-5 {
-  display: none;
-}
-
-#block-giveusacall {
-  display: none;
-}
-
 .menu-bar {
   top: -25px !important;
 }
@@ -3136,3 +3128,12 @@ h3.text-uppercase{
 
 
 
+
+/*#block-views-block-coupon-block-5 {
+  display: none;
+}
+
+#block-giveusacall {
+  display: none;
+}
+*/
