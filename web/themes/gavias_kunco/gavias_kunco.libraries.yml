@@ -18,6 +18,7 @@ global-styling:
       vendor/popup-gallery/css/lg-transitions.min.css: {}
       css/summerbreeze.css: {}
       css/bs-spacing.css: {}
+      css/summerbreeze-responsive.css: {}
   js:
     vendor/jquery-migrate.min.js: {}
     js/bootstrap.js: {}
