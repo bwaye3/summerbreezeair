@@ -46,25 +46,25 @@
 <div class="breadcrumb-content-inner">
   <div class="gva-breadcrumb-content">
     <div{{ attributes.addClass(classes) }}>
-      <div class="breadcrumb-style gva-parallax-background" style="{{ custom_style }}">
+      <div class="breadcrumb-style gva-parallax-background">
         <div class="container">
           <div class="breadcrumb-content-main">
             <h2 class="page-title">{{ breadcrumb_title }} </h2>
-            {{ title_prefix }} 
+            {{ title_prefix }}
               {% if label %}
                 <h2 class="block-title" {{ title_attributes }}><span>{{ label }}</span></h2>
               {% endif %}
             {{ title_suffix }}
             {% block content %}
-              <div class="{{ custom_classes }}">
+              <div class="hidden">
                 <div{{ content_attributes.addClass('content block-content') }}>{{ content }}</div>
-              </div>  
+              </div>
             {% endblock %}
-          </div> 
-        </div> 
-        <div class="gva-parallax-inner skrollable skrollable-between" data-bottom-top="top: -80%;" data-top-bottom="top: 0%;"></div>    
-      </div> 
-    </div>  
-  </div>  
-</div>  
+          </div>
+        </div>
+        <div class="gva-parallax-inner skrollable skrollable-between" data-bottom-top="top: -80%;" data-top-bottom="top: 0%;"></div>
+      </div>
+    </div>
+  </div>
+</div>
 
