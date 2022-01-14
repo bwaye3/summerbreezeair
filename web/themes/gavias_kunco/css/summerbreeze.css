@@ -3317,7 +3317,11 @@ h2.align-center.mb-3 {
   text-align: center;
 }
 
+.container.card-dotted-line {
+  background: #fff;
+  margin-top: 40px;
+}
 
- body.node--type-coupon div.body-page {
-  background-color: #fff !important;
+.node--type-coupon .layout.layout--twocol-section.layout--twocol-section--33-67 {
+  background: #fff;
 }
