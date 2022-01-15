@@ -3088,7 +3088,7 @@ h2.align-center.mb-3 {
 }
 
 div#content {
-  background: #f2f2f2;
+  background: transparent;
 }
 
 .node--type-coupon .layout.layout--twocol-section.layout--twocol-section--33-67 {
@@ -3240,4 +3240,8 @@ input[type=number]{
 
 .fieldset-legend.js-form-required.form-required::after {
   display: none;
+}
+
+.path-node .node--type-coupon div#content body div.body-page {
+  background-color: #fff !important;
 }
