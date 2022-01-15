@@ -1076,10 +1076,11 @@ legend {
   text-transform: capitalize;
   font-family: "Poppins", sans-serif;
   border: none;
+  cursor: pointer;
 }
 
 .form-item .js-form-type-radio label:hover {
-  background-color: #208a20;
+  background-color: #b05b0b;
 }
 
 .form-item .js-form-type-radio input[type="radio"]:focus + label {
@@ -1088,7 +1089,7 @@ legend {
 
 .form-item .js-form-type-radio input[type="radio"]:checked + label {
   display: inline-block;
-  background: #295aa8;
+  background: #325faa;
   color: #fff;
   overflow: hidden;
   -webkit-transition: all 0.3s;
@@ -1234,7 +1235,7 @@ legend {
 #block-gaviascontentbuilderserviceforms .column-style-1 {
   max-width: 700px;
   margin: 0 auto;
-  padding: 5rem 0 3rem 2rem;
+  padding: 5rem 0;
 }
 
 .center-button a {
@@ -1700,7 +1701,7 @@ input[type="search"] {
   font-size: .6rem;
   font-family: 'FontAwesome';
   color: #3375CB;
-  margin: 0 .5rem 0 -10px;
+  margin: 0 .5rem 0 -15px;
   position: absolute;
 }
 
@@ -3084,7 +3085,6 @@ h2.align-center.mb-3 {
 
 .container.card-dotted-line {
   background: #fff;
-  margin-top: 40px;
 }
 
 div#content {
@@ -3171,7 +3171,7 @@ p {
   padding: 0 0 0 1rem;
   font-size:1.5rem;
   font-weight: bold;
-  margin: 0 0 0 10px;
+  margin:0;
   max-width: 100px;
   color: #d1294e;
 }
@@ -3187,4 +3187,57 @@ p {
 
 #repair-replace .js-form-item .form-item label {
   display: inline-block !important;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  transform: rotate(90deg);
+  height: 80px;
+  opacity: 0;
+}
+
+.webform-element--title-inline  {
+  position: relative;
+}
+
+.webform-element--title-inline:after {
+  content: "+";
+  position: absolute;
+  right: 5px;
+  height: 100%;
+  top: 8px;
+  pointer-events: none;
+}
+
+.webform-element--title-inline :before {
+  content: "-";
+  position: absolute;
+  left: 5px;
+  height: 100%;
+  top: 8px;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number]{
+  -moz-appearance: textfield;
+}
+
+.highlighted.area {
+  position: absolute !important;
+  left: -9999px !important;
+}
+
+.btn-text-center,
+.btn-text-center a {
+  text-align: center !important;
+}
+
+.fieldset-legend.js-form-required.form-required::after {
+  display: none;
 }
