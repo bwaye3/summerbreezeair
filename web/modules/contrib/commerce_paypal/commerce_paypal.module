@@ -10,6 +10,7 @@ use Drupal\commerce_payment\Entity\PaymentGateway;
 use Drupal\commerce_paypal\Plugin\Commerce\PaymentGateway\CheckoutInterface;
 use Drupal\commerce_price\Calculator;
 use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Asset\AttachedAssetsInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Session\AccountInterface;
 
@@ -20,6 +21,11 @@ function commerce_paypal_theme() {
   $theme = [
     'commerce_paypal_checkout_custom_card_fields' => [
       'variables' => [],
+    ],
+    'commerce_paypal_credit_card_logos' => [
+      'variables' => [
+        'credit_cards' => [],
+      ],
     ],
   ];
 
@@ -202,7 +208,7 @@ function commerce_paypal_form_commerce_order_item_add_to_cart_form_alter(&$form,
 /**
  * Implements hook_js_alter().
  */
-function commerce_paypal_js_alter(&$javascript, \Drupal\Core\Asset\AttachedAssetsInterface $assets) {
+function commerce_paypal_js_alter(&$javascript, AttachedAssetsInterface $assets) {
   $client_id = \Drupal::config('commerce_paypal.credit_messaging_settings')->get('client_id');
   if (!$client_id) {
     return;

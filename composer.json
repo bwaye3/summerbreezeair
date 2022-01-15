@@ -40,6 +40,7 @@
         "drupal/image_url_formatter": "^1.0",
         "drupal/imce": "^2.4",
         "drupal/inline_entity_form": "1.0.0-rc9",
+        "drupal/jquery_ui_datepicker": "^1.1",
         "drupal/livechat": "^3.0",
         "drupal/ludwig": "^1.7",
         "drupal/masquerade": "^2.0@beta",

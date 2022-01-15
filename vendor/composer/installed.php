@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '4639a6b34d35eb004c1ec7d76ff4db9d0a3dc2ab',
+        'reference' => '823e819541ad3a510d1e211fc3a3b424ed58caa6',
         'name' => 'drupal/legacy-project',
         'dev' => true,
     ),
@@ -435,7 +435,7 @@
             'aliases' => array(
                 0 => '1.x-dev',
             ),
-            'reference' => 'c743b196e6541b15d7bcde162305185fe748837e',
+            'reference' => '8f77f7291c5b825bc9407fe86ef7aadb0147370b',
             'dev_requirement' => false,
         ),
         'drupal/commerce_price' => array(
@@ -930,6 +930,15 @@
             'reference' => '8.x-1.4',
             'dev_requirement' => false,
         ),
+        'drupal/jquery_ui_datepicker' => array(
+            'pretty_version' => '1.1.0',
+            'version' => '1.1.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/jquery_ui_datepicker',
+            'aliases' => array(),
+            'reference' => '8.x-1.1',
+            'dev_requirement' => false,
+        ),
         'drupal/jquery_ui_effects' => array(
             'pretty_version' => '1.2.0',
             'version' => '1.2.0.0',
@@ -969,7 +978,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '4639a6b34d35eb004c1ec7d76ff4db9d0a3dc2ab',
+            'reference' => '823e819541ad3a510d1e211fc3a3b424ed58caa6',
             'dev_requirement' => false,
         ),
         'drupal/link' => array(

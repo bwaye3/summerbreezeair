@@ -22,3 +22,9 @@ paypal_checkout_custom_card_fields:
     - core/drupal
     - core/jquery
     - core/jquery.once
+
+credit_card_icons:
+  version: VERSION
+  css:
+    theme:
+      css/commerce_paypal.credit_card_icons.css: {}
