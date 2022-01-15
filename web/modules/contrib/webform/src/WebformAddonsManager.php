@@ -433,9 +433,9 @@ class WebformAddonsManager implements WebformAddonsManagerInterface {
       'category' => 'enhancement',
     ];
 
-    // Enhancement: Webform Calculation.
+    // Enhancement: Webform calculation.
     $projects['webform_calculation'] = [
-      'title' => $this->t('Webform Calculation'),
+      'title' => $this->t('Webform calculation'),
       'description' => $this->t('Provides ability to make dynamic calculations using Webform.'),
       'url' => Url::fromUri('https://www.drupal.org/project/webform_calculation'),
       'category' => 'enhancement',

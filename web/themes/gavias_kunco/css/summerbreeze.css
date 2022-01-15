@@ -2615,6 +2615,7 @@ h3, .h3 {
   border: 1px solid rgba(0, 0, 0, 0.1);
   background: #fff;
   min-height: 350px;
+  font-family: "Poppins", sans-serif !important;
 }
 
 article .node--type-trane-topics .node__content.clearfix {
@@ -3104,4 +3105,86 @@ div#finbox\ our-rebates .gsc-box-color .box-content .content-inner {
 
 .trane-card.trane-card-right .item-image {
   background: #fff;
+}
+
+p {
+  font-family: "Poppins", sans-serif  !important;
+}
+
+.block.block-layout-builder.block-field-blocknodetrane-topicsfield-body-copy p {
+  font-size: 14px !important;
+  line-height: 1.8;
+  color: #262626;
+}
+
+.field.field--name-field-body-copy.field--type-text-with-summary.field--label-hidden.field__item h2 {
+  font-family: "Poppins", sans-serif !important;
+  color: #29499b !important;
+  font-size: 2.5rem;
+}
+
+.post-block {
+  background: #f2f2f2 !important;
+}
+
+.page-user-login .main-page, .page-user-register .main-page, .page-user-pass .main-page {
+  background: #f2f2f2;
+}
+
+#repair-replace .form-wrapper {
+  background: transparent!important;
+  border: none!important;
+  border-radius: 0!important;
+  margin: 0!important;
+}
+
+#repair-replace .fieldset-legend {
+  color: #fff;
+}
+#repair-replace .js-form-type-processed-text p {
+  color: #fff !important;
+  margin: 1.2rem 0 0;
+}
+
+#repair-replace #edit-captcha {
+  display: none;
+}
+
+#repair-replace .widget.gsc-block-drupal.text-light div {
+  margin: 0 0 2rem;
+  font-size: 1.5rem;
+}
+
+#repair-replace fieldset {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+#repair-replace legend {
+  padding: 0 0 1rem;
+}
+
+#edit-units-age,
+#edit-cost-of-repairs {
+  background: #202020;
+  border: 1px solid #716d6d;
+  padding: 0 0 0 1rem;
+  font-size:1.5rem;
+  font-weight: bold;
+  margin: 0 0 0 10px;
+  max-width: 100px;
+  color: #d1294e;
+}
+
+.text-light .title {
+  color:  #d1294e; !important;
+}
+#repair-replace #edit-submit,
+.hideme .alert-warning {
+  position: absolute !important;
+  left: -9999px !important;
+}
+
+#repair-replace .js-form-item .form-item label {
+  display: inline-block !important;
 }
