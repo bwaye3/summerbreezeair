@@ -2622,10 +2622,6 @@ article .node--type-trane-topics .node__content.clearfix {
   padding: 3rem 5rem;
 }
 
-.path-taxonomy .trane-taxo h2 {
-  display: none;
-}
-
 #spb-block-giveusacall .spb-popup-main-wrapper {
   background: #295aa8e6;
   box-shadow: rgba(0, 0, 0, 0.3) 0 4px 12px;
@@ -2639,6 +2635,7 @@ article .node--type-trane-topics .node__content.clearfix {
   padding: 0 !important;
   margin: 2rem !important;
 }
+
 
 #spb-block-giveusacall .spb-controls {
   left: 5px;
@@ -3254,10 +3251,6 @@ body.node--type-coupon div.body-page {
   background-color: transparent !important;
 }
 
-.video-embed-field-provider-youtube.video-embed-field-responsive-video {
-  margin: 0 0 2rem;
-}
-
 #repair-replace .gsc-button {
   width: 85% !important;
 }
@@ -3269,4 +3262,15 @@ body.node--type-coupon div.body-page {
 
 body div.body-page {
   background-color: #f2f2f2;
+}
+
+.path-taxonomy .trane-taxo header h2 {
+  display: none;
+}
+
+.card {
+  box-sizing: border-box;
+  margin-bottom: 1.5rem !important;
+  padding: 2.5rem !important;
+  box-shadow: rgb(0 0 0 / 20%) 0px 1px 4px 0px;
 }

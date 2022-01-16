@@ -6371,9 +6371,8 @@ nav.breadcrumb ol > li span {
   }
   .navigation .gva_menu .sub-menu > li > a {
     display: block;
-    line-height: 20px;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 400;
     text-transform: none;
     -webkit-transition: all 0.2s ease-out;
@@ -6383,7 +6382,7 @@ nav.breadcrumb ol > li span {
     -ms-transition: all 0.2s ease-out;
     position: relative;
     font-family: "Poppins", sans-serif;
-    line-height: 1.3;
+    line-height: 24px;
   }
   .navigation .gva_menu .sub-menu > li > a:hover, .navigation .gva_menu .sub-menu > li > a:focus, .navigation .gva_menu .sub-menu > li > a:active {
     color: #3375CB;

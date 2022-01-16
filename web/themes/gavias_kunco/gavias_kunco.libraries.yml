@@ -6,7 +6,7 @@ global-styling:
       //fonts.googleapis.com/css?family=Poppins:400,500,600,700: { type: external }
       //fonts.googleapis.com/css?family=Open+Sans:400,600,700: { type: external }
       css/sliderlayer.css: {}
-      css/font-awesome/css/font-awesome.min.css: {}
+      //stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css: { type: external }
       css/icon.css: {}
       css/animate.css: {}
       vendor/owl-carousel/assets/owl.carousel.min.css: {}
