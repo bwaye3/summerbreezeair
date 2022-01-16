@@ -3266,3 +3266,7 @@ body.node--type-coupon div.body-page {
   padding: 0 !important;
   margin-bottom: 0 !important;
 }
+
+body div.body-page {
+  background-color: #f2f2f2;
+}

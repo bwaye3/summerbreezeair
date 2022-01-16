@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '823e819541ad3a510d1e211fc3a3b424ed58caa6',
+        'reference' => 'db657a05d098eb7e7e213ce5c5cce7f350cd24bc',
         'name' => 'drupal/legacy-project',
         'dev' => true,
     ),
@@ -474,15 +474,6 @@
                 0 => '9.3.2',
             ),
         ),
-        'drupal/contact_block' => array(
-            'pretty_version' => '1.6.0',
-            'version' => '1.6.0.0',
-            'type' => 'drupal-module',
-            'install_path' => __DIR__ . '/../../web/modules/contrib/contact_block',
-            'aliases' => array(),
-            'reference' => '8.x-1.6',
-            'dev_requirement' => false,
-        ),
         'drupal/content_moderation' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -831,15 +822,6 @@
                 0 => '9.3.2',
             ),
         ),
-        'drupal/google_analytics' => array(
-            'pretty_version' => '4.0.0',
-            'version' => '4.0.0.0',
-            'type' => 'drupal-module',
-            'install_path' => __DIR__ . '/../../web/modules/contrib/google_analytics',
-            'aliases' => array(),
-            'reference' => '4.0.0',
-            'dev_requirement' => false,
-        ),
         'drupal/hal' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -978,7 +960,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '823e819541ad3a510d1e211fc3a3b424ed58caa6',
+            'reference' => 'db657a05d098eb7e7e213ce5c5cce7f350cd24bc',
             'dev_requirement' => false,
         ),
         'drupal/link' => array(
@@ -1280,15 +1262,6 @@
             'replaced' => array(
                 0 => '9.3.2',
             ),
-        ),
-        'drupal/storychief' => array(
-            'pretty_version' => '2.7.0',
-            'version' => '2.7.0.0',
-            'type' => 'drupal-module',
-            'install_path' => __DIR__ . '/../../web/modules/contrib/storychief',
-            'aliases' => array(),
-            'reference' => '8.x-2.7',
-            'dev_requirement' => false,
         ),
         'drupal/syslog' => array(
             'dev_requirement' => false,

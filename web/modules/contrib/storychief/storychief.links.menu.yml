@@ -1,5 +1,0 @@
-storychief.admin:
-  route_name: storychief.admin
-  title: 'StoryChief'
-  description: 'Manage StoryChief Settings'
-  parent: system.admin_config_services
