@@ -3242,6 +3242,14 @@ input[type=number]{
   display: none;
 }
 
-.path-node .node--type-coupon div#content body div.body-page {
-  background-color: #fff !important;
+.hwc {
+  color: #3375cb;
+}
+
+.regc {
+  color: #ff7700;
+}
+
+body.node--type-coupon div.body-page {
+  background-color: transparent !important;
 }
