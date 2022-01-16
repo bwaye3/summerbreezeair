@@ -6191,10 +6191,11 @@ nav.breadcrumb ol > li span {
   .navigation .gva_menu > li > a {
     display: block;
     position: relative;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 400;
     text-transform: capitalize;
-    padding: 25px 10px;
+    padding: 10px;
+    margin: 12px 0 0;
     -webkit-transition: all 0.35s;
     -o-transition: all 0.35s;
     transition: all 0.35s;
@@ -6370,11 +6371,10 @@ nav.breadcrumb ol > li span {
   }
   .navigation .gva_menu .sub-menu > li > a {
     display: block;
-    line-height: 26px;
+    line-height: 20px;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
-    letter-spacing: 0.5;
     text-transform: none;
     -webkit-transition: all 0.2s ease-out;
     -o-transition: all 0.2s ease-out;
@@ -6383,6 +6383,7 @@ nav.breadcrumb ol > li span {
     -ms-transition: all 0.2s ease-out;
     position: relative;
     font-family: "Poppins", sans-serif;
+    line-height: 1.2;
   }
   .navigation .gva_menu .sub-menu > li > a:hover, .navigation .gva_menu .sub-menu > li > a:focus, .navigation .gva_menu .sub-menu > li > a:active {
     color: #3375CB;

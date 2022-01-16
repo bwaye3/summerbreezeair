@@ -23,6 +23,12 @@
   .location-wrapper .overlay {
     bottom: 0;
   }
+
+  .navigation .gva_menu > li > a {
+    font-size: 13px;
+    padding: 10px;
+    margin: 12px 0 0;
+  }
 }
 
 @media (max-width: 760px) {
@@ -98,6 +104,31 @@
 
   #block-views-block-coupon-block-5 {
     display: none;
+  }
+
+  #block-gaviascontentbuilderserviceforms .gsc-button {
+    border-color: rgba(255,255,255, 0.0) !important;
+  }
+  #block-gaviascontentbuilderserviceforms .column-style-1 {
+    margin: 1rem 0 0;
+  }
+
+  #block-gaviascontentbuilderserviceforms .gsc-button.extra-large {
+    font-size: 12px;
+    padding: 0;
+  }
+
+  #block-gaviascontentbuilderserviceforms .gsc-button {
+    margin-bottom: 0;
+  }
+  .card-dotted-line {
+    min-height: 400px;
+  }
+
+  .navigation .gva_menu > li > a {
+    font-size: 13px;
+    padding: 10px;
+    margin: 12px 0 0;
   }
 }
 

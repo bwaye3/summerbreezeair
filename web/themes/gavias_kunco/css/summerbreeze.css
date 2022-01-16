@@ -149,7 +149,6 @@ span.a2a_svg.a2a_s__default.a2a_s_print {
 
 .coupon .card, .card-dotted-line {
   border: 2px dashed #ccc;
-  min-height: 790px;
 }
 
 .coupon-promoted .card-dotted-line {
@@ -1716,20 +1715,20 @@ input[type="search"] {
 }
 
 .TRANE.navigation .gva_menu > li > a {
-  padding: 8px 10px 8px 15px !important;
+  padding: 7px 0;
   display: block !important;
   border: none !important;
   text-transform: none !important;
-  font-size: 1.6rem !important;
+  font-size: 15px !important;
   overflow: hidden !important;
   -webkit-transition: all 0.35s !important;
   -o-transition: all 0.35s !important;
   transition: all 0.35s !important;
   -moz-transition: all 0.35s !important;
   position: relative !important;
-  font-family: "Poppins", sans-serif !important;
+  font-family: "Poppins",sans-serif !important;
   font-weight: 500 !important;
-  line-height: 1.5 !important;
+  line-height: 1.7 !important;
   width: 290px;
 }
 
@@ -2559,7 +2558,7 @@ h3, .h3 {
 
 .trane-topic {
   text-align: left;
-  margin-top: 15px;
+  margin-top: 0;
   margin-bottom: 3rem;
   padding: 0;
   position: relative;
@@ -2569,7 +2568,7 @@ h3, .h3 {
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background: #fff;
-  min-height: 350px;
+  min-height: 370px;
 }
 
 .node--type-trane-topics .field.field--name-field-topic.field--type-entity-reference a {
@@ -3104,7 +3103,7 @@ div#finbox\ our-rebates .gsc-box-color .box-content .content-inner {
 }
 
 .trane-card.trane-card-right .item-image {
-  background: #fff;
+  background: transparent;
 }
 
 p {
@@ -3243,13 +3242,27 @@ input[type=number]{
 }
 
 .hwc {
-  color: #3375cb;
+  color:  #ff7700;
+  font-size: 90%;
 }
 
 .regc {
-  color: #ff7700;
+  color: #3375cb;
 }
 
 body.node--type-coupon div.body-page {
   background-color: transparent !important;
+}
+
+.video-embed-field-provider-youtube.video-embed-field-responsive-video {
+  margin: 0 0 2rem;
+}
+
+#repair-replace .gsc-button {
+  width: 85% !important;
+}
+
+.breadcrumb-content-inner .gva-breadcrumb-content .gva-block-breadcrumb .breadcrumb-style {
+  padding: 0 !important;
+  margin-bottom: 0 !important;
 }
