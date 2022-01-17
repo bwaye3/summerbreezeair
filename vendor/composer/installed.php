@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'db657a05d098eb7e7e213ce5c5cce7f350cd24bc',
+        'reference' => 'd57ff48592637a5ce9cf05a871336841a102e6a6',
         'name' => 'drupal/legacy-project',
         'dev' => true,
     ),
@@ -777,6 +777,15 @@
             'reference' => '8.x-1.9',
             'dev_requirement' => false,
         ),
+        'drupal/extlink' => array(
+            'pretty_version' => '1.6.0',
+            'version' => '1.6.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/extlink',
+            'aliases' => array(),
+            'reference' => '8.x-1.6',
+            'dev_requirement' => false,
+        ),
         'drupal/field' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -960,7 +969,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'db657a05d098eb7e7e213ce5c5cce7f350cd24bc',
+            'reference' => 'd57ff48592637a5ce9cf05a871336841a102e6a6',
             'dev_requirement' => false,
         ),
         'drupal/link' => array(
