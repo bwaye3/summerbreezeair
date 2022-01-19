@@ -34,6 +34,7 @@
         "drupal/entity_reference_revisions": "^1.9",
         "drupal/extlink": "^1.6",
         "drupal/focal_point": "^1.5",
+        "drupal/fontawesome_menu_icons": "^1.9",
         "drupal/honeypot": "^2.0",
         "drupal/iframe": "^2.12",
         "drupal/image_url_formatter": "^1.0",
