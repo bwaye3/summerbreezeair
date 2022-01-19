@@ -3386,20 +3386,20 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover {
 }
 
 .btn-product a {
-  border: 1px solid #c6c6c6;
-  padding: .75rem 2rem;
-  border-radius: 10px;
-  color: #5e5d5d;
-  background: #fff;
-  text-transform: uppercase;
+  /* border: 1px solid #c6c6c6; */
+  /* padding: 0.75rem 2rem; */
+  /* border-radius: 10px; */
+  color: #295aa8;
+  /* background: #fff; */
+  /* text-transform: uppercase; */
   font-size: 12px;
   letter-spacing: 1px;
   font-weight: 600;
+  margin: 1rem 0 2rem;
+  display: block;
 }
-
 .btn-product a:hover {
-  background: #3375cb;
-  color: #fff;
+  color:  #3375cb;
 }
 
 .trane-card.rounded {
@@ -3408,4 +3408,8 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover {
 
 .sidebar {
   margin: 1rem 0 0;
+}
+
+.trane.blue.uppercase {
+  line-height: 1.2 !important;
 }
