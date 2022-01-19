@@ -39,16 +39,16 @@
   {% if options.columns == '1' %}
     {% set xclass = ['col-lg-12 col-md-12 col-sm-12 col-xs-12'] %}
   {% elseif options.columns == '2' %}
-    {% set xclass = ['col-lg-6 col-md-6 col-sm-6 col-xs-12'] %}
+    {% set xclass = ['col-lg-6 col-md-6 col-sm-12 col-xs-12'] %}
   {% elseif options.columns == '3' %}
-    {% set xclass = ['col-lg-4 col-md-4 col-sm-4 col-xs-12'] %}
+    {% set xclass = ['col-lg-4 col-md-4 col-sm-12 col-xs-12'] %}
   {% elseif options.columns == '4' %}
-    {% set xclass = ['col-lg-3 col-md-3 col-sm-6 col-xs-12'] %}
+    {% set xclass = ['col-lg-3 col-md-3 col-sm-12 col-xs-12'] %}
   {% elseif options.columns == '6' %}
-    {% set xclass = ['col-lg-2 col-md-2 col-sm-6 col-xs-6'] %}
+    {% set xclass = ['col-lg-2 col-md-2 col-sm-12 col-xs-6'] %}
   {% else %}
-    {% set xclass = ['col-lg-4 col-md-4 col-sm-4 col-xs-12'] %}
-  {% endif %}    
+    {% set xclass = ['col-lg-4 col-md-4 col-sm-12 col-xs-12'] %}
+  {% endif %}
 
 {% if options.row_class_default %}
   {%
@@ -72,20 +72,20 @@
 <div{{ attributes.addClass(classes) }}>
   {% if options.alignment == 'horizontal' %}
     {% for row in items %}
-      
+
       {% if gva_masonry.class == '' %}
         <div{{ row.attributes.addClass(row_classes, options.row_class_default ? 'row-' ~ loop.index) }}>
-      {% endif %}  
+      {% endif %}
 
         {% for column in row.content %}
           <div{{ column.attributes.addClass(col_classes, options.col_class_default ? 'col-' ~ loop.index, xclass, gva_masonry.class_item) }}>
             {{ column.content }}
           </div>
         {% endfor %}
-      
+
       {% if gva_masonry.class == '' %}
         </div>
-      {% endif %}  
+      {% endif %}
 
     {% endfor %}
   {% else %}

@@ -2606,7 +2606,7 @@ h3, .h3 {
 .node.node--type-trane-topics.node--view-mode-full.clearfix {
   text-align: left;
   margin-top: 15px;
-  margin-bottom: 3rem;
+  margin-bottom: 80px;
   padding: 2rem 3rem;
   position: relative;
   overflow: hidden;
@@ -3215,7 +3215,6 @@ input[type="number"]::-webkit-inner-spin-button {
   top: 8px;
 }
 
-
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -3333,11 +3332,80 @@ body div.body-page {
   text-shadow: 1px 2px 5px rgba(0,0,0,0.9);
 }
 
-.call-box {
+.call-box,
+.path-node .node--type-trane-products .call-box {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#207cca+38,1e5799+95,1e5799+98,29499b+98,1e5799+98 */
   background: rgb(32,124,202); /* Old browsers */
   background: -moz-linear-gradient(top,  rgba(32,124,202,1) 38%, rgba(30,87,153,1) 95%, rgba(30,87,153,1) 98%, rgba(41,73,155,1) 98%, rgba(30,87,153,1) 98%); /* FF3.6-15 */
   background: -webkit-linear-gradient(top,  rgba(32,124,202,1) 38%,rgba(30,87,153,1) 95%,rgba(30,87,153,1) 98%,rgba(41,73,155,1) 98%,rgba(30,87,153,1) 98%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom,  rgba(32,124,202,1) 38%,rgba(30,87,153,1) 95%,rgba(30,87,153,1) 98%,rgba(41,73,155,1) 98%,rgba(30,87,153,1) 98%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#207cca', endColorstr='#1e5799',GradientType=0 ); /* IE6-9 */
+}
+
+
+.gsc-button.extra-large {
+  font-size: 1.5rem !important;
+}
+
+.google-reviews .google-card.google-footer {
+  background: #fff;
+  color: #262626;
+  box-shadow: none;
+  border-radius: 10px;
+  border: 0 solid rgba(0,0,0,0.1);
+}
+
+.google-body {
+  margin: 0 4rem;
+}
+
+ul[data-drupal-views-infinite-scroll-pager].pager a {
+  font-size: 1.2rem !important;
+  border: 1px solid #f70 !important;
+  background: #f70 !important;
+  color: #000 !important;
+  margin: 0 0 4rem !important;
+  font-weight: 600 !important;
+  padding: .75rem 4rem !important;
+}
+
+ul[data-drupal-views-infinite-scroll-pager].pager a:hover {
+  border: 1px solid #3375cb !important;
+  background: #3375cb !important;
+  color: #fff !important;
+}
+
+.trane-banner {
+  box-shadow: -3px 1px 15px 2px rgba(0, 0, 0, 0.28);
+  -webkit-box-shadow: -3px 1px 15px 2px rgba(0, 0, 0, 0.28);
+  -moz-box-shadow: -3px 1px 15px 2px rgba(0, 0, 0, 0.28);
+}
+
+#trane-fullwidth a:hover {
+  color: #3375cb !important;
+}
+
+.btn-product a {
+  border: 1px solid #c6c6c6;
+  padding: .75rem 2rem;
+  border-radius: 10px;
+  color: #5e5d5d;
+  background: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.btn-product a:hover {
+  background: #3375cb;
+  color: #fff;
+}
+
+.trane-card.rounded {
+  border-radius: 10px;
+}
+
+.sidebar {
+  margin: 1rem 0 0;
 }

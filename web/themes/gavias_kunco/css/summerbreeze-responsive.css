@@ -130,6 +130,9 @@
     padding: 10px;
     margin: 12px 0 0;
   }
+  .gsc-button.extra-large {
+    font-size: 1rem !important;
+  }
 }
 
 @media (max-width: 576px) {
@@ -292,4 +295,7 @@
     padding: 1rem 0;
   }
 
+  .gsc-button.extra-large {
+    font-size: 1rem !important;
+  }
 }
