@@ -3273,7 +3273,7 @@ body div.body-page {
 .card {
   box-sizing: border-box;
   margin-bottom: 1.5rem !important;
-  padding: 2.5rem !important;
+  padding: 0 !important;
   box-shadow: rgb(0 0 0 / 20%) 0 1px 4px 0;
 }
 
@@ -3456,6 +3456,6 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover {
   padding: .5rem 1rem;
   border-radius: 5px;
   font-size: 10px;
-  text-transform: uppercase;
+  text-transform:none;
   font-weight: bold;
 }
