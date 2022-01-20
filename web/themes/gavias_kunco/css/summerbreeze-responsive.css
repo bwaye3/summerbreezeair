@@ -133,6 +133,21 @@
   .gsc-button.extra-large {
     font-size: 1rem !important;
   }
+
+  table {
+    font-size: 1rem !important;
+    line-height: 1.2;
+  }
+
+  table > thead > tr > th,
+  table > thead > tr > td,
+  table > tbody > tr > th,
+  table > tbody > tr > td,
+  table > tfoot > tr > th,
+  table > tfoot > tr > td {
+    display: inline-flex;
+  }
+
 }
 
 @media (max-width: 576px) {
@@ -298,4 +313,19 @@
   .gsc-button.extra-large {
     font-size: 1rem !important;
   }
+
+  table {
+    font-size: 1rem !important;
+    line-height: 1.2;
+  }
+
+  table > thead > tr > th,
+  table > thead > tr > td,
+  table > tbody > tr > th,
+  table > tbody > tr > td,
+  table > tfoot > tr > th,
+  table > tfoot > tr > td {
+    display: inline-flex;
+  }
+
 }
