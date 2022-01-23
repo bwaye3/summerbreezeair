@@ -3591,7 +3591,7 @@ table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table
 }
 
 body div.body-page {
-  background-color: #f2f2f2;
+  background-color: #f2f2f2 !important;
 }
 
 #footer .menu-item {
