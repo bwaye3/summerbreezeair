@@ -328,4 +328,8 @@
     display: inline-flex;
   }
 
+  .pricing-table.platinum-ext-pricing {
+    margin: 0 0 80px;
+  }
+
 }

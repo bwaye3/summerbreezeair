@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'd550088cc681fe74b0dabe4957356fd70ae82701',
+        'reference' => '24567e09ede93e62ed0521c3a875ae62bf378e44',
         'name' => 'drupal/legacy-project',
         'dev' => true,
     ),
@@ -987,7 +987,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'd550088cc681fe74b0dabe4957356fd70ae82701',
+            'reference' => '24567e09ede93e62ed0521c3a875ae62bf378e44',
             'dev_requirement' => false,
         ),
         'drupal/link' => array(
@@ -1423,15 +1423,6 @@
             'install_path' => __DIR__ . '/../../web/modules/contrib/webform',
             'aliases' => array(),
             'reference' => '6.1.2',
-            'dev_requirement' => false,
-        ),
-        'drupal/webform_calculation' => array(
-            'pretty_version' => '2.0.1',
-            'version' => '2.0.1.0',
-            'type' => 'drupal-module',
-            'install_path' => __DIR__ . '/../../web/modules/contrib/webform_calculation',
-            'aliases' => array(),
-            'reference' => '2.0.1',
             'dev_requirement' => false,
         ),
         'drupal/workflows' => array(

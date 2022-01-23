@@ -3589,3 +3589,18 @@ table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table
 .background-white {
   background: #fff !important;
 }
+
+body div.body-page {
+  background-color: #f2f2f2;
+}
+
+#footer .menu-item {
+  margin: 0 1rem !important;
+  line-height: 1.1;
+}
+
+#footer .navigation .gva_menu > li > a {
+  padding: 9px;
+  margin: 5px 2px;
+}
+

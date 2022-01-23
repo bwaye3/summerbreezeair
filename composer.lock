@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6358157aff2dae5c3b582e75ea5037c6",
+    "content-hash": "90d890c3b4cfca04626a45f6a8ce3e21",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5639,55 +5639,6 @@
                 "issues": "https://www.drupal.org/project/issues/webform?version=8.x",
                 "docs": "https://www.drupal.org/docs/8/modules/webform",
                 "forum": "https://drupal.stackexchange.com/questions/tagged/webform"
-            }
-        },
-        {
-            "name": "drupal/webform_calculation",
-            "version": "2.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/webform_calculation.git",
-                "reference": "2.0.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/webform_calculation-2.0.1.zip",
-                "reference": "2.0.1",
-                "shasum": "1513ab66252c299c41ba35943b08cb8ec4ac37ad"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9",
-                "drupal/webform": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "2.0.1",
-                    "datestamp": "1633800850",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "aprogs",
-                    "homepage": "https://www.drupal.org/user/2281272"
-                },
-                {
-                    "name": "culfin",
-                    "homepage": "https://www.drupal.org/user/312644"
-                }
-            ],
-            "description": "Provides ability to make dynamic calculations using Webform.",
-            "homepage": "https://www.drupal.org/project/webform_calculation",
-            "support": {
-                "source": "https://git.drupalcode.org/project/webform_calculation"
             }
         },
         {
