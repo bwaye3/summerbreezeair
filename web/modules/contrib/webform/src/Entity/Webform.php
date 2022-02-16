@@ -740,39 +740,29 @@ class Webform extends ConfigEntityBundleBase implements WebformInterface {
   /**
    * {@inheritdoc}
    */
-  public function getTranslationLanguages() {
+  public function hasTranslations() {
+    if (isset($this->hasTranslations)) {
+      return $this->hasTranslations;
+    }
+
+    // Make sure the config translation module is enabled.
+    if (!\Drupal::moduleHandler()->moduleExists('config_translation')) {
+      $this->hasTranslations = FALSE;
+      return $this->hasTranslations;
+    }
+
+    /** @var \Drupal\locale\LocaleConfigManager $local_config_manager */
+    $local_config_manager = \Drupal::service('locale.config_manager');
     $languages = \Drupal::languageManager()->getLanguages();
     foreach ($languages as $langcode => $language) {
-      if (!$this->hasTranslation($langcode)) {
-        unset($languages[$langcode]);
+      if ($local_config_manager->hasTranslation('webform.webform.' . $this->id(), $langcode)) {
+        $this->hasTranslations = TRUE;
+        return $this->hasTranslations;
       }
     }
-    return $languages;
-  }
 
-  /**
-   * {@inheritdoc}
-   */
-  public function hasTranslation($langcode) {
-    if ($this->getLangcode() === $langcode) {
-      return TRUE;
-    }
-    elseif (\Drupal::moduleHandler()->moduleExists('config_translation')) {
-      /** @var \Drupal\locale\LocaleConfigManager $local_config_manager */
-      $local_config_manager = \Drupal::service('locale.config_manager');
-      return $local_config_manager->hasTranslation($this->getConfigDependencyName(), $langcode);
-    }
-    else {
-      return FALSE;
-    }
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function hasTranslations() {
-    return (\Drupal::moduleHandler()->moduleExists('config_translation')
-      && count($this->getTranslationLanguages()) > 1);
+    $this->hasTranslations = FALSE;
+    return $this->hasTranslations;
   }
 
   /**

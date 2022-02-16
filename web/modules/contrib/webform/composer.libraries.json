@@ -29,7 +29,6 @@
         "forum": "https://drupal.stackexchange.com/questions/tagged/webform"
     },
     "require": {
-        "composer/installers": "*",
         "algolia/places": "*",
         "choices/choices": "*",
         "ckeditor/autogrow": "*",
@@ -237,7 +236,7 @@
                     "installer-name": "jquery.icheck"
                 },
                 "dist": {
-                    "url": "https://github.com/dargullin/icheck/archive/refs/tags/1.0.2.zip",
+                    "url": "https://github.com/fronteed/icheck/archive/1.0.2.zip",
                     "type": "zip"
                 }
             }
@@ -366,13 +365,13 @@
             "type": "package",
             "package": {
                 "name": "progress-tracker/progress-tracker",
-                "version": "2.0.7",
+                "version": "2.0.6",
                 "type": "drupal-library",
                 "extra": {
                     "installer-name": "progress-tracker"
                 },
                 "dist": {
-                    "url": "https://github.com/NigelOToole/progress-tracker/archive/2.0.7.zip",
+                    "url": "https://github.com/NigelOToole/progress-tracker/archive/2.0.6.zip",
                     "type": "zip"
                 }
             }

@@ -16,8 +16,6 @@ class WebformSubmissionGenerateTest extends WebformBrowserTestBase {
    * Tests webform submission entity.
    */
   public function testWebformSubmissionGenerate() {
-    $assert_session = $this->assertSession();
-
     $this->drupalLogin($this->rootUser);
 
     $webform = Webform::load('contact');
@@ -35,14 +33,14 @@ class WebformSubmissionGenerateTest extends WebformBrowserTestBase {
       'subject' => 'Testing contact webform from Drupal',
     ];
     $data = $webform_submission->getData();
-    $this->assertEquals($data['message'], $test_data['message']);
-    $this->assertEquals($data['subject'], $test_data['subject']);
+    $this->assertEqual($data['message'], $test_data['message']);
+    $this->assertEqual($data['subject'], $test_data['subject']);
 
     // Check test form classes and values.
     $this->drupalGet('/webform/contact/test');
     $this->assertCssSelect('.webform-submission-form.webform-submission-test-form.webform-submission-contact-form.webform-submission-contact-test-form');
     foreach ($test_data as $name => $value) {
-      $assert_session->fieldValueEquals($name, $value);
+      $this->assertFieldByName($name, $value);
     }
 
     /* ********************************************************************** */
@@ -53,14 +51,14 @@ class WebformSubmissionGenerateTest extends WebformBrowserTestBase {
     $this->drupalGet('/webform/contact');
     $this->assertCssSelect('.webform-submission-form.webform-submission-add-form.webform-submission-contact-form.webform-submission-contact-add-form');
     foreach ($test_data as $name => $value) {
-      $assert_session->fieldValueNotEquals($name, $value);
+      $this->assertNoFieldByName($name, $value);
     }
 
     // Check add form classes and values with querystring parameter.
     $this->drupalGet('/webform/contact', ['query' => ['_webform_test' => 'contact']]);
     $this->assertCssSelect('.webform-submission-form.webform-submission-test-form.webform-submission-contact-form.webform-submission-contact-test-form');
     foreach ($test_data as $name => $value) {
-      $assert_session->fieldValueEquals($name, $value);
+      $this->assertFieldByName($name, $value);
     }
   }
 

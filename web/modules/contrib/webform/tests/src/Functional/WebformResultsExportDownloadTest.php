@@ -75,14 +75,13 @@ class WebformResultsExportDownloadTest extends WebformBrowserTestBase {
       /* Download CSV */
 
       // Download archive with CSV (delimited).
-      $this->drupalGet('/admin/structure/webform/manage/test_exporter_archive/results/download');
       $edit = [
         'exporter' => 'delimited',
         'archive_type' => $test['archive_type'],
         'files' => $test['files'],
         'attachments' => $test['attachments'],
       ];
-      $this->submitForm($edit, 'Download');
+      $this->drupalPostForm('/admin/structure/webform/manage/test_exporter_archive/results/download', $edit, 'Download');
 
       // Load the archive and get a list of files.
       $files = $this->getArchiveContents($submission_exporter->getArchiveFilePath());
@@ -107,14 +106,13 @@ class WebformResultsExportDownloadTest extends WebformBrowserTestBase {
       /* Download YAML */
 
       // Download archive with YAML documents.
-      $this->drupalGet('/admin/structure/webform/manage/test_exporter_archive/results/download');
       $edit = [
         'exporter' => 'yaml',
         'archive_type' => $test['archive_type'],
         'files' => $test['files'],
         'attachments' => $test['attachments'],
       ];
-      $this->submitForm($edit, 'Download');
+      $this->drupalPostForm('/admin/structure/webform/manage/test_exporter_archive/results/download', $edit, 'Download');
 
       // Load the archive and get a list of files.
       $files = $this->getArchiveContents($submission_exporter->getArchiveFilePath());

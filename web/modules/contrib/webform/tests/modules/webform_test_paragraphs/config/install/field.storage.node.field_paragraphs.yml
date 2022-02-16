@@ -3,13 +3,11 @@ status: true
 dependencies:
   module:
     - entity_reference_revisions
+    - node
     - paragraphs
-  enforced:
-    module:
-      - webform_test_paragraphs
-id: paragraph.field_webform_test_nesting
-field_name: field_webform_test_nesting
-entity_type: paragraph
+id: node.field_paragraphs
+field_name: field_paragraphs
+entity_type: node
 type: entity_reference_revisions
 settings:
   target_type: paragraph

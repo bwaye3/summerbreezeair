@@ -106,14 +106,12 @@ class WebformTableRow extends WebformElementBase {
           }
 
           $column_element_plugin = $this->elementManager->getElementInstance($column_element);
-          if (!$column_element_plugin->isInput($column_element)) {
-            // Ensure that table row elements are always displayed by setting
-            // '#display_on' to 'both'.
-            if ($column_element_plugin->hasProperty('display_on')) {
-              $column_element['#display_on'] = 'both';
-            }
+          if ($column_element_plugin->isContainer($column_element)) {
             $column_build = $column_element_plugin->buildHtml($column_element, $webform_submission, $options);
             $element[$column_key] = ['data' => $column_build];
+          }
+          elseif (!$column_element_plugin->isInput($column_element)) {
+            $element[$column_key] = ['data' => $column_element];
           }
           else {
             $column_value = $column_element_plugin->format('html', $column_element, $webform_submission, $options);

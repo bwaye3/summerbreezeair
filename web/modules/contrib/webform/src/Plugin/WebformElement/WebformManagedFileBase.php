@@ -20,7 +20,6 @@ use Drupal\file\FileInterface;
 use Drupal\webform\Element\WebformHtmlEditor;
 use Drupal\webform\Entity\WebformSubmission;
 use Drupal\webform\Plugin\WebformElementAttachmentInterface;
-use Drupal\webform\Plugin\WebformElementFileDownloadAccessInterface;
 use Drupal\webform\Plugin\WebformElementBase;
 use Drupal\webform\Utility\WebformOptionsHelper;
 use Drupal\webform\WebformInterface;
@@ -32,7 +31,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 /**
  * Provides a base class webform 'managed_file' elements.
  */
-abstract class WebformManagedFileBase extends WebformElementBase implements WebformElementAttachmentInterface, WebformElementEntityReferenceInterface, WebformElementFileDownloadAccessInterface {
+abstract class WebformManagedFileBase extends WebformElementBase implements WebformElementAttachmentInterface, WebformElementEntityReferenceInterface {
 
   /**
    * List of blacklisted mime types that must be downloaded.
@@ -566,7 +565,7 @@ abstract class WebformManagedFileBase extends WebformElementBase implements Webf
     }
 
     // Copy sample file or generate a new temp file that can be uploaded.
-    $sample_file = __DIR__ . '/../../../tests/files/sample.' . $file_extension;
+    $sample_file = drupal_get_path('module', 'webform') . '/tests/files/sample.' . $file_extension;
     if (file_exists($sample_file)) {
       $file_uri = $this->fileSystem->copy($sample_file, $file_destination);
     }
@@ -1340,14 +1339,20 @@ abstract class WebformManagedFileBase extends WebformElementBase implements Webf
   }
 
   /**
-   * {@inheritdoc}
+   * Control access to webform submission private file downloads.
+   *
+   * @param string $uri
+   *   The URI of the file.
+   *
+   * @return mixed
+   *   Returns NULL if the file is not attached to a webform submission.
+   *   Returns -1 if the user does not have permission to access a webform.
+   *   Returns an associative array of headers.
+   *
+   * @see hook_file_download()
+   * @see webform_file_download()
    */
   public static function accessFileDownload($uri) {
-    // Make sure the file.module is installed.
-    if (!\Drupal::moduleHandler()->moduleExists('file')) {
-      return NULL;
-    }
-
     $files = \Drupal::entityTypeManager()
       ->getStorage('file')
       ->loadByProperties(['uri' => $uri]);
@@ -1390,9 +1395,7 @@ abstract class WebformManagedFileBase extends WebformElementBase implements Webf
    *   An associative array of visible stream wrappers keyed by type.
    */
   public static function getVisibleStreamWrappers() {
-    /** @var \Drupal\Core\StreamWrapper\StreamWrapperManagerInterface $stream_wrapper_manager */
-    $stream_wrapper_manager = \Drupal::service('stream_wrapper_manager');
-    $stream_wrappers = $stream_wrapper_manager->getNames(StreamWrapperInterface::WRITE_VISIBLE);
+    $stream_wrappers = \Drupal::service('stream_wrapper_manager')->getNames(StreamWrapperInterface::WRITE_VISIBLE);
     if (!\Drupal::config('webform.settings')->get('file.file_public')) {
       unset($stream_wrappers['public']);
     }

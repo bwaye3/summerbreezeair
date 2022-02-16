@@ -435,18 +435,8 @@ webform.settings:
           type: boolean
           label: 'Immediately deleted temporary managed webform submission files'
     format:
-      type: sequence
+      type: ignore
       label: 'Format default settings'
-      sequence:
-        type: mapping
-        label: 'Element type'
-        mapping:
-          item:
-            type: string
-            label: 'Default item format'
-          items:
-            type: string
-            label: 'Default items format'
     mail:
       type: mapping
       label: 'Email default settings'

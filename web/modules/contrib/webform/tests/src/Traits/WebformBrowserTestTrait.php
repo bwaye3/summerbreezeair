@@ -10,7 +10,6 @@ use Drupal\Core\Serialization\Yaml;
 use Drupal\filter\Entity\FilterFormat;
 use Drupal\taxonomy\Entity\Term;
 use Drupal\taxonomy\Entity\Vocabulary;
-use Drupal\webform\Entity\WebformSubmission;
 use Drupal\webform\WebformInterface;
 use Drupal\webform\Entity\Webform;
 
@@ -40,7 +39,7 @@ trait WebformBrowserTestTrait {
    *   Test module name.
    */
   protected function placeWebformBlocks($module_name) {
-    $config_directory = __DIR__ . '/../../modules/' . $module_name . '/config';
+    $config_directory = drupal_get_path('module', 'webform') . '/tests/modules/' . $module_name . '/config';
     $config_files = \Drupal::service('file_system')->scanDirectory($config_directory, '/block\..*/');
     foreach ($config_files as $config_file) {
       $data = Yaml::decode(file_get_contents($config_file->uri));
@@ -165,13 +164,13 @@ trait WebformBrowserTestTrait {
     else {
       $config_name = 'webform.webform.' . $id;
       if (strpos($id, 'test_') === 0) {
-        $config_directory = __DIR__ . '/../../modules/webform_test/config/install';
+        $config_directory = drupal_get_path('module', 'webform') . '/tests/modules/webform_test/config/install';
       }
       elseif (strpos($id, 'example_') === 0) {
-        $config_directory = __DIR__ . '/../../../modules/webform_examples/config/install';
+        $config_directory = drupal_get_path('module', 'webform') . '/modules/webform_examples/config/install';
       }
       elseif (strpos($id, 'template_') === 0) {
-        $config_directory = __DIR__ . '/../../../modules/webform_templates/config/install';
+        $config_directory = drupal_get_path('module', 'webform') . '/modules/webform_templates/config/install';
       }
       else {
         throw new \Exception("Webform $id not valid");
@@ -268,8 +267,7 @@ trait WebformBrowserTestTrait {
    */
   protected function postSubmission(WebformInterface $webform, array $edit = [], $submit = NULL, array $options = []) {
     $submit = $this->getWebformSubmitButtonLabel($webform, $submit);
-    $this->drupalGet('/webform/' . $webform->id(), $options);
-    $this->submitForm($edit, $submit);
+    $this->drupalPostForm('/webform/' . $webform->id(), $edit, $submit, $options);
     return $this->getLastSubmissionId($webform);
   }
 
@@ -290,8 +288,7 @@ trait WebformBrowserTestTrait {
    */
   protected function postSubmissionTest(WebformInterface $webform, array $edit = [], $submit = NULL, array $options = []) {
     $submit = $this->getWebformSubmitButtonLabel($webform, $submit);
-    $this->drupalGet('/webform/' . $webform->id() . '/test', $options);
-    $this->submitForm($edit, $submit);
+    $this->drupalPostForm('/webform/' . $webform->id() . '/test', $edit, $submit, $options);
     return $this->getLastSubmissionId($webform);
   }
 
@@ -375,20 +372,6 @@ trait WebformBrowserTestTrait {
     }
   }
 
-  /**
-   * Get the last submission.
-   *
-   * @param \Drupal\webform\WebformInterface $webform
-   *   A webform.
-   *
-   * @return \Drupal\webform\Entity\WebformSubmission|null
-   *   The last submission. NULL if saving of results is disabled.
-   */
-  protected function getLastSubmission(WebformInterface $webform) {
-    $sid = $this->getLastSubmissionId($webform);
-    return $sid ? WebformSubmission::load($sid) : NULL;
-  }
-
   /* ************************************************************************ */
   // Export.
   /* ************************************************************************ */
@@ -452,7 +435,7 @@ trait WebformBrowserTestTrait {
   /**
    * Passes if the CSS selector IS found on the loaded page, fail otherwise.
    */
-  protected function assertCssSelect($selector, $message = ''): void {
+  protected function assertCssSelect($selector, $message = '') {
     $element = $this->cssSelect($selector);
     if (!$message) {
       $message = new FormattableMarkup('Found @selector', ['@selector' => $selector]);
@@ -463,7 +446,7 @@ trait WebformBrowserTestTrait {
   /**
    * Passes if the CSS selector IS NOT found on the loaded page, fail otherwise.
    */
-  protected function assertNoCssSelect($selector, $message = ''): void {
+  protected function assertNoCssSelect($selector, $message = '') {
     $element = $this->cssSelect($selector);
     $this->assertEmpty($element, $message);
   }
@@ -476,7 +459,7 @@ trait WebformBrowserTestTrait {
    * @param string $message
    *   Optional message to show alongside the assertion.
    */
-  protected function assertElementVisible($css_selector, $message = ''): void {
+  protected function assertElementVisible($css_selector, $message = '') {
     $this->assertTrue($this->getSession()->getDriver()->isVisible($this->cssSelectToXpath($css_selector)), $message);
   }
 
@@ -488,30 +471,13 @@ trait WebformBrowserTestTrait {
    * @param string $message
    *   Optional message to show alongside the assertion.
    */
-  protected function assertElementNotVisible($css_selector, $message = ''): void {
+  protected function assertElementNotVisible($css_selector, $message = '') {
     $this->assertFalse($this->getSession()->getDriver()->isVisible($this->cssSelectToXpath($css_selector)), $message);
   }
 
   /* ************************************************************************ */
   // Debug.
   /* ************************************************************************ */
-
-  /**
-   * Logs a verbose message in a text file.
-   *
-   * The link to the verbose message will be placed in the test results as a
-   * passing assertion with the text '[verbose message]'.
-   *
-   * @param string $message
-   *   The verbose message to be stored.
-   */
-  protected function verbose($message) {
-    if (in_array('--debug', $_SERVER['argv'], TRUE)) {
-      // Write directly to STDOUT to not produce unexpected test output.
-      // The STDOUT stream does not obey output buffering.
-      fwrite(STDOUT, $message . "\n");
-    }
-  }
 
   /**
    * Logs verbose (debug) message in a text file.

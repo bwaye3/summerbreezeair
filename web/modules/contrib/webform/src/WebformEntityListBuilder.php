@@ -85,7 +85,9 @@ class WebformEntityListBuilder extends ConfigEntityListBuilder {
   protected $database;
 
   /**
-   * {@inheritdoc}
+   * The webform submission storage.
+   *
+   * @var \Drupal\webform\WebformSubmissionStorageInterface
    */
   public static function createInstance(ContainerInterface $container, EntityTypeInterface $entity_type) {
     /** @var \Drupal\webform\WebformEntityListBuilder $instance */

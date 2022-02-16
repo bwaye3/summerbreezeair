@@ -60,12 +60,11 @@ class WebformUiElementPropertiesTest extends WebformBrowserTestBase {
       $original_elements = $webform_elements->getElementsDecodedAndFlattened();
       foreach ($original_elements as $key => $original_element) {
         // Update the element via element edit form.
-        $this->drupalGet('/admin/structure/webform/manage/' . $webform_elements->id() . '/element/' . $key . '/edit');
-        $this->submitForm([], 'Save');
+        $this->drupalPostForm('/admin/structure/webform/manage/' . $webform_elements->id() . '/element/' . $key . '/edit', [], 'Save');
 
         // Check that the original and updated element are equal.
         $updated_element = $this->reloadWebform($webform_id)->getElementDecoded($key);
-        $this->assertEquals($original_element, $updated_element, "'$key'' properties is equal.");
+        $this->assertEqual($original_element, $updated_element, "'$key'' properties is equal.");
       }
     }
   }

@@ -401,14 +401,6 @@ class WebformAddonsManager implements WebformAddonsManagerInterface {
     // Enhancement.
     /* ********************************************************************** */
 
-    // Enhancement: Config Entity Reference Selection.
-    $projects['config_entity_reference_selection'] = [
-      'title' => $this->t('Config Entity Reference Selection'),
-      'description' => $this->t('Provides an entity reference selection plugin for limiting allowed (webform) onfig entity choices.'),
-      'url' => Url::fromUri('https://www.drupal.org/project/config_entity_reference_selection'),
-      'category' => 'enhancement',
-    ];
-
     // Enhancement: Dopup.
     $projects['dopup'] = [
       'title' => $this->t('Dopup'),
@@ -441,9 +433,9 @@ class WebformAddonsManager implements WebformAddonsManagerInterface {
       'category' => 'enhancement',
     ];
 
-    // Enhancement: Webform Calculation.
+    // Enhancement: Webform calculation.
     $projects['webform_calculation'] = [
-      'title' => $this->t('Webform Calculation'),
+      'title' => $this->t('Webform calculation'),
       'description' => $this->t('Provides ability to make dynamic calculations using Webform.'),
       'url' => Url::fromUri('https://www.drupal.org/project/webform_calculation'),
       'category' => 'enhancement',
@@ -470,14 +462,6 @@ class WebformAddonsManager implements WebformAddonsManagerInterface {
       'title' => $this->t('Webform Counter'),
       'description' => $this->t('Provides Submissions Counter feature for webforms.'),
       'url' => Url::fromUri('https://www.drupal.org/project/webform_counter'),
-      'category' => 'enhancement',
-    ];
-
-    // Enhancement: Webform Creation Date.
-    $projects['webform_creation_date'] = [
-      'title' => $this->t('Webform Creation Date'),
-      'description' => $this->t('Allows to store information about creation/update dates for webforms.'),
-      'url' => Url::fromUri('https://www.drupal.org/project/webform_creation_date'),
       'category' => 'enhancement',
     ];
 
@@ -810,14 +794,6 @@ class WebformAddonsManager implements WebformAddonsManagerInterface {
       'category' => 'integration',
     ];
 
-    // Integrations: Maropost Subscription Webform Handler.
-    $projects['maropost_sub_webform_handler'] = [
-      'title' => $this->t('Maropost Subscription Webform Handler'),
-      'description' => $this->t('A simple Webform handler that allows site builders and developers to easily submit new leads to Maropost Subscriptions.'),
-      'url' => Url::fromUri('https://www.drupal.org/project/maropost_sub_webform_handler'),
-      'category' => 'integration',
-    ];
-
     // Integrations: Micro Webform.
     $projects['micro_webform'] = [
       'title' => $this->t('Micro Webform'),
@@ -1034,14 +1010,6 @@ class WebformAddonsManager implements WebformAddonsManagerInterface {
       'title' => $this->t('Webform Jira Integration'),
       'description' => $this->t('Provides integration for webform submission with Jira.'),
       'url' => Url::fromUri('https://www.drupal.org/project/webform_jira'),
-      'category' => 'integration',
-    ];
-
-    // Integration: Webform JIRA service desk integration.
-    $projects['webform_jira_service_desk'] = [
-      'title' => $this->t('Webform JIRA service desk integration'),
-      'description' => $this->t('Enables the user to map Webform elements to Jira Service Desk fields and create an issue on Jira by using the REST API.'),
-      'url' => Url::fromUri('https://www.drupal.org/project/webform_jira_service_desk'),
       'category' => 'integration',
     ];
 
@@ -1404,15 +1372,6 @@ class WebformAddonsManager implements WebformAddonsManagerInterface {
       'recommended' => TRUE,
     ];
 
-    // Spam: reCAPTCHA.
-    $projects['recaptcha'] = [
-      'title' => $this->t('reCAPTCHA'),
-      'description' => $this->t('Uses the Google <a href=":href">reCAPTCHA</a> web service to improve the CAPTCHA system.', [':href' => 'https://www.google.com/recaptcha/about/']),
-      'url' => Url::fromUri('https://www.drupal.org/project/recaptcha'),
-      'category' => 'spam',
-      'recommended' => TRUE,
-    ];
-
     // Spam: Honeypot.
     $projects['honeypot'] = [
       'title' => $this->t('Honeypot'),
@@ -1616,14 +1575,6 @@ class WebformAddonsManager implements WebformAddonsManagerInterface {
       'title' => $this->t('Webform Submissions Delete'),
       'description' => $this->t('Used to delete webform submissions using start date, end date all at once.'),
       'url' => Url::fromUri('https://www.drupal.org/project/webform_submissions_delete'),
-      'category' => 'submission',
-    ];
-
-    // Submissions: Timely Webform Reporting.
-    $projects['timely_webform_reporting'] = [
-      'title' => $this->t('Timely Webform Reporting'),
-      'description' => $this->t('Create reports from Webform Submissions on a timely basis.'),
-      'url' => Url::fromUri('https://www.drupal.org/project/timely_webform_reporting'),
       'category' => 'submission',
     ];
 
@@ -1906,7 +1857,7 @@ class WebformAddonsManager implements WebformAddonsManagerInterface {
     ];
 
     // Devel: Webform Submissions List Decorator.
-    $projects['webform_list_decorator'] = [
+    $projects['maillog'] = [
       'title' => $this->t('Webform Submissions List Decorator'),
       'description' => $this->t('Override submissions list and allows user hide columns of webform submissions in submissions list.'),
       'url' => Url::fromUri('https://www.drupal.org/sandbox/antonkerbel/3098999'),
@@ -1915,7 +1866,7 @@ class WebformAddonsManager implements WebformAddonsManagerInterface {
 
     // Add logos.
     global $base_url;
-    $addon_paths = \Drupal::service('extension.list.module')->getPath('webform') . '/images/addons';
+    $addon_paths = drupal_get_path('module', 'webform') . '/images/addons';
     $addon_extensions = ['png', 'svg'];
     foreach ($projects as $project_name => $project) {
       foreach ($addon_extensions as $addon_extension) {

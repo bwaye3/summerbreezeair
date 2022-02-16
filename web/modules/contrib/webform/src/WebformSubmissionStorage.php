@@ -513,7 +513,6 @@ class WebformSubmissionStorage extends SqlContentEntityStorage implements Webfor
       ->fields('s', ['entity_id'])
       ->condition('s.webform_id', $webform->id())
       ->condition('s.entity_type', $entity_type)
-      ->distinct()
       ->execute()
       ->fetchCol();
     // Limit the number of source entities loaded to 100.

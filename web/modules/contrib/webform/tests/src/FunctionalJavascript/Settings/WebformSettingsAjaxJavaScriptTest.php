@@ -41,24 +41,21 @@ class WebformSettingsAjaxJavaScriptTest extends WebformWebDriverTestBase {
     $webform_ajax = Webform::load('test_ajax');
 
     // Validate form.
-    $this->drupalGet($webform_ajax->toUrl());
-    $this->submitForm(['textfield' => ''], 'Submit');
+    $this->drupalPostForm($webform_ajax->toUrl(), ['textfield' => ''], 'Submit');
     $assert_session->waitForElement('css', '.messages--error');
 
     // Check validation message.
     $assert_session->responseContains('textfield field is required.');
 
     // Preview form.
-    $this->drupalGet($webform_ajax->toUrl());
-    $this->submitForm(['textfield' => 'test value'], 'Preview');
+    $this->drupalPostForm($webform_ajax->toUrl(), ['textfield' => 'test value'], 'Preview');
     $assert_session->waitForElement('css', '.messages--warning');
 
     // Check preview message.
     $assert_session->responseContains('Please review your submission. Your submission is not complete until you press the "Submit" button!');
 
     // Submit form.
-    $this->drupalGet($webform_ajax->toUrl());
-    $this->submitForm(['textfield' => 'test value'], 'Submit');
+    $this->drupalPostForm($webform_ajax->toUrl(), ['textfield' => 'test value'], 'Submit');
     $assert_session->waitForElement('css', '.messages--status');
 
     // Check submit message.
@@ -78,8 +75,7 @@ class WebformSettingsAjaxJavaScriptTest extends WebformWebDriverTestBase {
     $webform_ajax_confirmation_inline = Webform::load('test_ajax_confirmation_inline');
 
     // Submit form.
-    $this->drupalGet($webform_ajax_confirmation_inline->toUrl());
-    $this->submitForm([], 'Submit');
+    $this->drupalPostForm($webform_ajax_confirmation_inline->toUrl(), [], 'Submit');
     $assert_session->waitForElement('css', '.messages--status');
     $assert_session->waitForText('This is a custom inline confirmation message.');
 
@@ -101,8 +97,7 @@ class WebformSettingsAjaxJavaScriptTest extends WebformWebDriverTestBase {
     $webform_ajax_confirmation_message = Webform::load('test_ajax_confirmation_message');
 
     // Submit form.
-    $this->drupalGet($webform_ajax_confirmation_message->toUrl());
-    $this->submitForm([], 'Submit');
+    $this->drupalPostForm($webform_ajax_confirmation_message->toUrl(), [], 'Submit');
     $assert_session->waitForElement('css', '.messages--status');
 
     // Check confirmation message.
@@ -116,8 +111,7 @@ class WebformSettingsAjaxJavaScriptTest extends WebformWebDriverTestBase {
     $webform_ajax_confirmation_modal = Webform::load('test_ajax_confirmation_modal');
 
     // Submit form.
-    $this->drupalGet($webform_ajax_confirmation_modal->toUrl());
-    $this->submitForm([], 'Submit');
+    $this->drupalPostForm($webform_ajax_confirmation_modal->toUrl(), [], 'Submit');
     $assert_session->waitForElementVisible('css', '.ui-dialog.webform-confirmation-modal');
 
     // Check confirmation modal.
@@ -130,8 +124,7 @@ class WebformSettingsAjaxJavaScriptTest extends WebformWebDriverTestBase {
     $webform_ajax_confirmation_page = Webform::load('test_ajax_confirmation_page');
 
     // Submit form.
-    $this->drupalGet($webform_ajax_confirmation_page->toUrl());
-    $this->submitForm([], 'Submit');
+    $this->drupalPostForm($webform_ajax_confirmation_page->toUrl(), [], 'Submit');
     $assert_session->waitForLink('Back to form');
 
     // Check confirmation page message.
@@ -144,12 +137,11 @@ class WebformSettingsAjaxJavaScriptTest extends WebformWebDriverTestBase {
     $webform_ajax_confirmation_url = Webform::load('test_ajax_confirmation_url');
 
     // Submit form.
-    $this->drupalGet($webform_ajax_confirmation_url->toUrl());
-    $this->submitForm([], 'Submit');
+    $this->drupalPostForm($webform_ajax_confirmation_url->toUrl(), [], 'Submit');
     $assert_session->waitForElement('css', '.path-front');
 
     // Check current page is <front>.
-    $assert_session->addressEquals('/');
+    $this->assertSession()->addressEquals('/');
 
     /* ********************************************************************** */
     // Test Ajax confirmation url with message. (test_ajax_confirmation_url_msg)
@@ -158,12 +150,11 @@ class WebformSettingsAjaxJavaScriptTest extends WebformWebDriverTestBase {
     $webform_ajax_confirmation_url_msg = Webform::load('test_ajax_confirmation_url_msg');
 
     // Submit form.
-    $this->drupalGet($webform_ajax_confirmation_url_msg->toUrl());
-    $this->submitForm([], 'Submit');
+    $this->drupalPostForm($webform_ajax_confirmation_url_msg->toUrl(), [], 'Submit');
     $assert_session->waitForElement('css', '.path-front');
 
     // Check current page is <front>.
-    $assert_session->addressEquals('/');
+    $this->assertSession()->addressEquals('/');
 
     // Check confirmation message.
     $assert_session->responseContains('This is a custom confirmation message.');

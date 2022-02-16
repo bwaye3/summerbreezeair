@@ -46,7 +46,7 @@ function webform_theme() {
       'render element' => 'element',
     ],
     'webform_access_denied' => [
-      'variables' => ['message' => '', 'attributes' => [], 'webform' => NULL],
+      'variables' => ['message' => '', 'attributes' => []],
     ],
 
     'webform_handler_action_summary' => [
@@ -724,9 +724,7 @@ function webform_preprocess_file_link(&$variables) {
  */
 function webform_preprocess_image(&$variables) {
   global $base_url;
-  if (isset($variables['attributes']['class'])
-    && in_array('webform-image-file', (array) $variables['attributes']['class'])
-    && !preg_match('#^https?://#', $variables['attributes']['src'])) {
+  if (isset($variables['attributes']['class']) && in_array('webform-image-file', (array) $variables['attributes']['class'])) {
     $variables['attributes']['src'] = $base_url . preg_replace('/^' . preg_quote(base_path(), '/') . '/', '/', $variables['attributes']['src']);
   }
 }
