@@ -2806,17 +2806,17 @@
         },
         {
             "name": "drupal/core",
-            "version": "9.3.12",
-            "version_normalized": "9.3.12.0",
+            "version": "9.3.13",
+            "version_normalized": "9.3.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "ed6af33093f66a9c5048d02f9f2c326ad0e7e90c"
+                "reference": "02ba7a3a42612a04124ac5131df0726e1e5097c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/ed6af33093f66a9c5048d02f9f2c326ad0e7e90c",
-                "reference": "ed6af33093f66a9c5048d02f9f2c326ad0e7e90c",
+                "url": "https://api.github.com/repos/drupal/core/zipball/02ba7a3a42612a04124ac5131df0726e1e5097c6",
+                "reference": "02ba7a3a42612a04124ac5131df0726e1e5097c6",
                 "shasum": ""
             },
             "require": {
@@ -2983,7 +2983,7 @@
                 "drupal/workflows": "self.version",
                 "drupal/workspaces": "self.version"
             },
-            "time": "2022-04-20T14:25:27+00:00",
+            "time": "2022-05-11T09:20:58+00:00",
             "type": "drupal-core",
             "extra": {
                 "drupal-scaffold": {
@@ -3060,14 +3060,14 @@
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "support": {
-                "source": "https://github.com/drupal/core/tree/9.3.12"
+                "source": "https://github.com/drupal/core/tree/9.3.13"
             },
             "install-path": "../../web/core"
         },
         {
             "name": "drupal/core-composer-scaffold",
-            "version": "9.3.12",
-            "version_normalized": "9.3.12.0",
+            "version": "9.3.13",
+            "version_normalized": "9.3.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-composer-scaffold.git",
@@ -3113,14 +3113,14 @@
                 "drupal"
             ],
             "support": {
-                "source": "https://github.com/drupal/core-composer-scaffold/tree/9.3.12"
+                "source": "https://github.com/drupal/core-composer-scaffold/tree/9.3.13"
             },
             "install-path": "../drupal/core-composer-scaffold"
         },
         {
             "name": "drupal/core-project-message",
-            "version": "9.3.12",
-            "version_normalized": "9.3.12.0",
+            "version": "9.3.13",
+            "version_normalized": "9.3.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-project-message.git",
@@ -3157,23 +3157,23 @@
                 "drupal"
             ],
             "support": {
-                "source": "https://github.com/drupal/core-project-message/tree/9.3.12"
+                "source": "https://github.com/drupal/core-project-message/tree/9.3.13"
             },
             "install-path": "../drupal/core-project-message"
         },
         {
             "name": "drupal/core-recommended",
-            "version": "9.3.12",
-            "version_normalized": "9.3.12.0",
+            "version": "9.3.13",
+            "version_normalized": "9.3.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "a8fa50016c1aa1eb7f4e54f590e6343d286c418f"
+                "reference": "0fe76c7af47fafcff37d8cb6053014e52e0f4a69"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/a8fa50016c1aa1eb7f4e54f590e6343d286c418f",
-                "reference": "a8fa50016c1aa1eb7f4e54f590e6343d286c418f",
+                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/0fe76c7af47fafcff37d8cb6053014e52e0f4a69",
+                "reference": "0fe76c7af47fafcff37d8cb6053014e52e0f4a69",
                 "shasum": ""
             },
             "require": {
@@ -3182,7 +3182,7 @@
                 "doctrine/annotations": "1.13.2",
                 "doctrine/lexer": "1.2.1",
                 "doctrine/reflection": "1.2.2",
-                "drupal/core": "9.3.12",
+                "drupal/core": "9.3.13",
                 "egulias/email-validator": "3.1.2",
                 "guzzlehttp/guzzle": "6.5.5",
                 "guzzlehttp/promises": "1.5.1",
@@ -3237,7 +3237,7 @@
             "conflict": {
                 "webflo/drupal-core-strict": "*"
             },
-            "time": "2022-04-20T14:25:27+00:00",
+            "time": "2022-05-11T09:20:58+00:00",
             "type": "metapackage",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -3245,7 +3245,7 @@
             ],
             "description": "Locked core dependencies; require this project INSTEAD OF drupal/core.",
             "support": {
-                "source": "https://github.com/drupal/core-recommended/tree/9.3.12"
+                "source": "https://github.com/drupal/core-recommended/tree/9.3.13"
             },
             "install-path": null
         },
@@ -5014,6 +5014,63 @@
                 "source": "https://git.drupalcode.org/project/profile"
             },
             "install-path": "../../web/modules/contrib/profile"
+        },
+        {
+            "name": "drupal/quick_node_clone",
+            "version": "1.15.0",
+            "version_normalized": "1.15.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/quick_node_clone.git",
+                "reference": "8.x-1.15"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/quick_node_clone-8.x-1.15.zip",
+                "reference": "8.x-1.15",
+                "shasum": "bac562133cfab05c207d4e45daa95cd36a7fad51"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9"
+            },
+            "require-dev": {
+                "drupal/paragraphs": "1.x-dev"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.15",
+                    "datestamp": "1651684801",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "vilepickle",
+                    "homepage": "https://www.drupal.org/u/vilepickle",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Neslee Canil Pinto",
+                    "homepage": "https://www.drupal.org/u/neslee-canil-pinto",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Quickly clone a node with regular fields.",
+            "homepage": "https://www.drupal.org/project/quick_node_clone",
+            "support": {
+                "source": "https://git.drupalcode.org/project/quick_node_clone",
+                "issues": "https://www.drupal.org/project/issues/quick_node_clone"
+            },
+            "install-path": "../../web/modules/contrib/quick_node_clone"
         },
         {
             "name": "drupal/read_more_field",
