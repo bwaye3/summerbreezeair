@@ -200,6 +200,7 @@ class Checkout extends OffsitePaymentGatewayBase implements CheckoutInterface {
         'sepa' => $this->t('SEPA-Lastschrift'),
         'sofort' => $this->t('Sofort'),
         'mybank' => $this->t('MyBank'),
+        'giropay' => $this->t('Giropay'),
       ],
       '#default_value' => $this->configuration['disable_funding'],
       '#states' => $spb_states,

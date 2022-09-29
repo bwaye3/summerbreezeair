@@ -368,7 +368,7 @@ class CheckoutSdk implements CheckoutSdkInterface {
         ],
       ],
       'application_context' => [
-        'brand_name' => mb_substr($order->getStore()->label(), 0, 127),
+        'brand_name' => mb_substr($order->getStore()->label() ?? '', 0, 127),
       ],
     ];
 
@@ -461,9 +461,9 @@ class CheckoutSdk implements CheckoutSdkInterface {
       'address' => [
         'address_line_1' => $address->getAddressLine1(),
         'address_line_2' => $address->getAddressLine2(),
-        'admin_area_2' => mb_substr($address->getLocality(), 0, 120),
+        'admin_area_2' => mb_substr($address->getLocality() ?? '', 0, 120),
         'admin_area_1' => $address->getAdministrativeArea(),
-        'postal_code' => mb_substr($address->getPostalCode(), 0, 60),
+        'postal_code' => mb_substr($address->getPostalCode() ?? '', 0, 60),
         'country_code' => $address->getCountryCode(),
       ],
     ];
