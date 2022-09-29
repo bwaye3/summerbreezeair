@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'd5d323b83176abe850435b30350ce9b653e0eccd',
+        'reference' => '1af65d1c15d7ea619ae58e77581137672a59bfdf',
         'name' => 'drupal/legacy-project',
         'dev' => true,
     ),
@@ -726,7 +726,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'd5d323b83176abe850435b30350ce9b653e0eccd',
+            'reference' => '1af65d1c15d7ea619ae58e77581137672a59bfdf',
             'dev_requirement' => false,
         ),
         'drupal/livechat' => array(
