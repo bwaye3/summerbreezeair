@@ -86,7 +86,7 @@ h5, h6, .h5, .h6 {
 .list-menu ul li {
   list-style: none;
   padding: 15px 2px;
-  font-size: 14px;
+  font-size: 16px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 .list-menu ul li:last-child {
@@ -257,7 +257,7 @@ a.disable {
   display: inline-block;
 }
 .breadcrumb-content-inner .gva-breadcrumb-content .breadcrumb-links nav.breadcrumb li {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   color: #bbbbbb;
   text-transform: capitalize;
@@ -343,7 +343,7 @@ body.bg-dark .gva-body-page {
 }
 .topbar i {
   color: #3375CB;
-  font-size: 14px;
+  font-size: 16px;
 }
 .topbar i:hover {
   color: #3375CB;
@@ -2661,7 +2661,7 @@ body.maintenance-page {
   min-height: 80px;
 }
 .post-block.v3 .post-content .post-title a {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .gallery-post {
@@ -2816,7 +2816,7 @@ body.maintenance-page {
   margin-right: 10px;
   font-weight: 400;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 16px;
 }
 .node-detail .field--name-field-tags .field__item a {
   background: #f5f5f5;
@@ -3094,7 +3094,7 @@ body.maintenance-page {
   margin-bottom: 0;
 }
 .post-style-list.small .post-title a {
-  font-size: 14px;
+  font-size: 16px;
   margin-top: -8px;
   font-family: "Poppins", sans-serif;
   text-transform: none;
@@ -3223,7 +3223,7 @@ body.maintenance-page {
   color: #bbbbbb;
 }
 .testimonial-node-v2 .content .info .title {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   color: #3375CB;
   text-transform: none;
@@ -3969,7 +3969,7 @@ body.maintenance-page {
   -moz-transition: all 0.5s ease 0s;
   -ms-transition: all 0.5s ease 0s;
   margin-right: 12px;
-  font-size: 14px;
+  font-size: 16px;
 }
 .socials a:last-child {
   margin-right: 0;
@@ -4403,7 +4403,7 @@ div.error {
   transition: all 0.3s;
   -moz-transition: all 0.3s;
   -ms-transition: all 0.3s;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   padding: 0 18px;
   position: relative;
@@ -4462,7 +4462,7 @@ div.error {
   transition: all 0.3s;
   -moz-transition: all 0.3s;
   -ms-transition: all 0.3s;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   padding: 0 18px;
   position: relative;
@@ -4536,7 +4536,7 @@ div.error {
 
 /*************** Progress Bars ***************/
 .progress-label {
-  font-size: 14px;
+  font-size: 16px;
   color: #000;
   font-weight: 600;
   text-transform: uppercase;
@@ -4564,7 +4564,7 @@ div.error {
 }
 .progress .progress-bar .percentage {
   position: relative;
-  font-size: 14px !important;
+  font-size: 16px !important;
   text-align: center;
   position: absolute;
   font-family: "Open Sans", sans-serif;
@@ -4674,7 +4674,7 @@ div.error {
 }
 .pricing-table .content-wrap .plan-price .interval {
   margin-top: 18px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 22px;
   font-weight: 600;
   position: relative;
@@ -4691,7 +4691,7 @@ div.error {
 }
 .pricing-table .plan-list ul li {
   padding: 5px 0 5px 20px;
-  font-size: 14px;
+  font-size: 16px;
   list-style: none;
   position: relative;
 }
@@ -4766,7 +4766,7 @@ div.error {
   padding: 0 !important;
 }
 .panel .panel-heading .panel-title {
-  font-size: 14px;
+  font-size: 16px;
   padding-right: 20px;
 }
 .panel .panel-heading .panel-title > a {
@@ -5318,7 +5318,7 @@ div.resizable-textarea textarea {
   display: inline-block;
   font-weight: 600;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 #search-block-form {
@@ -5343,7 +5343,7 @@ div.resizable-textarea textarea {
   right: 0;
   top: 0;
   display: inline-block;
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 1px;
   background: #3375CB;
   border: none;
@@ -5563,11 +5563,11 @@ div.resizable-textarea textarea {
   line-height: 25px;
 }
 #forum td.forum .description {
-  font-size: 14px;
+  font-size: 16px;
   padding-left: 30px;
 }
 #forum td.title .submitted {
-  font-size: 14px;
+  font-size: 16px;
 }
 #forum td.icon {
   width: 5%;
@@ -5641,7 +5641,7 @@ div.resizable-textarea textarea {
 }
 .block .block-title > span {
   display: inline-block;
-  font-size: 20px;
+  font-size: 3rem;
   font-weight: 500;
   position: relative;
   color: #000;
@@ -5767,7 +5767,7 @@ div.resizable-textarea textarea {
 }
 .block.block-blocktabs .ui-widget {
   font-family: "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
 }
 .block.block-blocktabs .ui-tabs-nav {
   padding: 0;
@@ -5788,7 +5788,7 @@ div.resizable-textarea textarea {
   position: relative;
 }
 .block.block-blocktabs .ui-tabs-nav > li > a {
-  font-size: 14px;
+  font-size: 16px;
   text-transform: none;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
@@ -5875,7 +5875,7 @@ div.resizable-textarea textarea {
 }
 .sidebar .block-menu ul li {
   border: none;
-  margin: 0 0 10px !important;
+  margin: 0 !important;
   padding: 0 !important;
   border: none !important;
   float: left;
@@ -5886,7 +5886,7 @@ div.resizable-textarea textarea {
   display: block;
   border: 1px solid rgba(0, 0, 0, 0.1);
   text-transform: none;
-  font-size: 14px;
+  font-size: 16px;
   overflow: hidden;
   -webkit-transition: all 0.35s;
   -o-transition: all 0.35s;
@@ -5901,7 +5901,7 @@ div.resizable-textarea textarea {
   color: #3375CB;
 }
 .sidebar .block-menu ul li.menu-item--active-trail > a {
-  color: #3375CB !important;
+  color: #3375CB;
 }
 
 .recent-comment-block .views-field-picture {
@@ -6191,10 +6191,11 @@ nav.breadcrumb ol > li span {
   .navigation .gva_menu > li > a {
     display: block;
     position: relative;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 400;
     text-transform: capitalize;
-    padding: 25px 10px;
+    padding: 9px;
+    margin: 13px 0 0;
     -webkit-transition: all 0.35s;
     -o-transition: all 0.35s;
     transition: all 0.35s;
@@ -6312,7 +6313,6 @@ nav.breadcrumb ol > li span {
   }
   .navigation .gva_menu .megamenu > .sub-menu > li > a {
     display: block;
-    font-size: 14px;
     color: #000;
     font-weight: 600;
     text-transform: none;
@@ -6370,11 +6370,9 @@ nav.breadcrumb ol > li span {
   }
   .navigation .gva_menu .sub-menu > li > a {
     display: block;
-    line-height: 26px;
     text-decoration: none;
     font-size: 14px;
     font-weight: 400;
-    letter-spacing: 0.5;
     text-transform: none;
     -webkit-transition: all 0.2s ease-out;
     -o-transition: all 0.2s ease-out;
@@ -6383,6 +6381,7 @@ nav.breadcrumb ol > li span {
     -ms-transition: all 0.2s ease-out;
     position: relative;
     font-family: "Poppins", sans-serif;
+    line-height: 24px;
   }
   .navigation .gva_menu .sub-menu > li > a:hover, .navigation .gva_menu .sub-menu > li > a:focus, .navigation .gva_menu .sub-menu > li > a:active {
     color: #3375CB;
@@ -6421,7 +6420,7 @@ body.header-absolute .navigation ul.gva_menu > li > a {
 }
 .gva-mega-menu .block-blocktabs .ui-widget {
   font-family: "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
 }
 .gva-mega-menu .block-blocktabs .ui-tabs-nav {
   padding: 0;
@@ -6585,7 +6584,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
   display: block;
   border: 1px solid rgba(0, 0, 0, 0.1);
   text-transform: none;
-  font-size: 14px;
+  font-size: 16px;
   overflow: hidden;
   -webkit-transition: all 0.35s;
   -o-transition: all 0.35s;
@@ -7502,7 +7501,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 }
 @media (max-width: 991px) {
   .widget.gsc-call-to-action.button-right-v2 .content-inner .desc {
-    font-size: 14px;
+    font-size: 16px;
     margin-top: 10px;
   }
 }
@@ -7570,7 +7569,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
   position: absolute;
 }
 .widget.gsc-call-to-action.button-bottom .desc {
-  font-size: 14px;
+  font-size: 16px;
 }
 .widget.gsc-call-to-action.button-bottom .button-action {
   margin-top: 30px;
@@ -7708,7 +7707,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
 }
 .widget.gsc-team .team-name {
-  font-size: 14px;
+  font-size: 16px;
   text-transform: uppercase;
   padding: 0 0 15px;
   position: relative;
@@ -7787,7 +7786,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
   color: #3375CB !important;
 }
 .widget.gsc-team.team-horizontal .team-name {
-  font-size: 14px;
+  font-size: 16px;
   margin: 0 0 12px 0;
   text-transform: uppercase;
   padding: 0 0 12px;
@@ -8757,7 +8756,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
   }
 }
 .gsc-box-parallax .content-inner .subtitle {
-  font-size: 14px;
+  font-size: 16px;
   text-transform: uppercase;
   color: #000;
   font-family: "Poppins", sans-serif;
@@ -8941,7 +8940,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
   color: #fff;
   padding: 10px 30px;
   vertical-align: middle;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   display: inline-block;
@@ -9188,11 +9187,11 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
   padding: 12px 35px;
 }
 .gsc-button.large {
-  font-size: 14px;
+  font-size: 1rem;
   padding: 18px 60px;
 }
 .gsc-button.extra-large {
-  font-size: 14px;
+  font-size: 1rem;
   padding: 20px 60px;
 }
 
@@ -9307,7 +9306,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 .gsc-image-content.skin-v2 .box-content .read-more a {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
   color: #3375CB;
 }
 .gsc-image-content.skin-v2 .box-content .read-more a i {
@@ -9711,7 +9710,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
   -moz-transition: all 0.5s ease 0s;
   -ms-transition: all 0.5s ease 0s;
   margin-right: 12px;
-  font-size: 14px;
+  font-size: 16px;
 }
 .gsc-socials.style-2 a:last-child {
   margin-right: 0;
@@ -10201,7 +10200,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
     display: block;
     width: 100%;
     line-height: 32px;
-    font-size: 14px;
+    font-size: 16px;
     padding: 0 !important;
     font-weight: 600;
     color: #000 !important;
@@ -10249,7 +10248,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
     padding: 0;
     border: 0;
     margin: 0;
-    font-size: 14px;
+    font-size: 16px;
   }
   .gva-offcanvas-mobile .gva-navigation .gva_menu > li.megamenu .sub-menu > li.block-image {
     display: none;
@@ -10315,7 +10314,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
     border-width: 0;
     padding-left: 0;
     padding-right: 0;
-    font-size: 14px;
+    font-size: 16px;
     font-family: "Poppins", sans-serif;
   }
   .gva-offcanvas-mobile .gva-navigation .gva_menu .sub-menu li a:before, .gva-offcanvas-mobile .gva-navigation .gva_menu .sub-menu li a:after {
@@ -10345,7 +10344,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
   cursor: pointer;
   margin-top: 30px;
   float: right;
-  top: -5px;
+  top: -25px;
   right: -5px;
 }
 .menu-bar:hover {
@@ -10635,12 +10634,12 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 .event-block-list .event-title a {
   font-weight: 600;
   font-family: "Poppins", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   display: inline-block;
   line-height: 24px;
 }
 .event-block-list .event-address {
-  font-size: 14px;
+  font-size: 16px;
 }
 .event-block-list .event-address i {
   font-size: 16px;
@@ -10817,7 +10816,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
   clear: both;
 }
 .portfolio-v2 .content-inner .title {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   color: #000;
   line-height: 24px;
@@ -11005,7 +11004,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 }
 .campaign-block .campaign-content .days {
   position: relative;
-  font-size: 14px;
+  font-size: 16px;
 }
 .campaign-block .campaign-content .content-action {
   padding: 10px 0;
@@ -11166,7 +11165,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
   transition: all 0.35s;
   -moz-transition: all 0.35s;
   -ms-transition: all 0.35s;
-  font-size: 14px;
+  font-size: 16px;
   z-index: 99;
 }
 .campaign-block-2 .campaign-content {
@@ -11210,7 +11209,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 }
 .campaign-block-2 .campaign-content .days {
   position: relative;
-  font-size: 14px;
+  font-size: 16px;
 }
 .campaign-block-2 .campaign-content .content-action {
   margin: 0;
@@ -11594,7 +11593,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
   box-shadow: -2px 0px 2px 1px rgba(0, 0, 0, 0.1);
   font-size: 18px;
   background: #3375CB;
-  font-size: 14px;
+  font-size: 16px;
 }
 .quick-cart .title .icon {
   margin-right: 6px;
@@ -11951,7 +11950,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
   padding-bottom: 0;
 }
 .gavias-skins-panel .panel-skins-content .title {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   padding-bottom: 10px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);

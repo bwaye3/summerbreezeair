@@ -127,12 +127,12 @@ abstract class MetaNameBase extends PluginBase {
     $this->id = $plugin_definition['id'];
     $this->name = $plugin_definition['name'];
     $this->label = $plugin_definition['label'];
-    $this->description = $plugin_definition['description'];
+    $this->description = $plugin_definition['description'] ?? '';
     $this->group = $plugin_definition['group'];
     $this->weight = $plugin_definition['weight'];
     $this->type = $plugin_definition['type'];
-    $this->secure = $plugin_definition['secure'];
-    $this->multiple = $plugin_definition['multiple'];
+    $this->secure = !empty($plugin_definition['secure']);
+    $this->multiple = !empty($plugin_definition['multiple']);
     $this->trimmable = !empty($plugin_definition['trimmable']);
     $this->long = !empty($plugin_definition['long']);
     $this->absoluteUrl = !empty($plugin_definition['absolute_url']);
@@ -162,7 +162,7 @@ abstract class MetaNameBase extends PluginBase {
   /**
    * The meta tag's description.
    *
-   * @return bool
+   * @return string
    *   This meta tag's description.
    */
   public function description() {
@@ -274,7 +274,7 @@ abstract class MetaNameBase extends PluginBase {
       '#title' => $this->label(),
       '#default_value' => $this->value(),
       '#maxlength' => 1024,
-      '#required' => isset($element['#required']) ? $element['#required'] : FALSE,
+      '#required' => $element['#required'] ?? FALSE,
       '#description' => $this->description(),
       '#element_validate' => [[get_class($this), 'validateTag']],
     ];
@@ -482,7 +482,7 @@ abstract class MetaNameBase extends PluginBase {
       }
       $currentMaxValue = 0;
       foreach ($trimMaxlengthArray as $metaTagName => $maxValue) {
-        if ($metaTagName == 'metatag_maxlength_' . $this->name) {
+        if ($metaTagName == 'metatag_maxlength_' . $this->id) {
           $currentMaxValue = $maxValue;
         }
       }

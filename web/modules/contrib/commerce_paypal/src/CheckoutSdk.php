@@ -257,7 +257,6 @@ class CheckoutSdk implements CheckoutSdkInterface {
   protected function prepareOrderRequest(OrderInterface $order, AddressInterface $billing_address = NULL) {
     $items = [];
     $item_total = NULL;
-    $tax_total = NULL;
     foreach ($order->getItems() as $order_item) {
       $item_total = $item_total ? $item_total->add($order_item->getTotalPrice()) : $order_item->getTotalPrice();
       $item = [
@@ -276,6 +275,13 @@ class CheckoutSdk implements CheckoutSdkInterface {
       $items[] = $item;
     }
 
+    $skipped_adjustment_types = [
+      'tax',
+      'shipping',
+      'promotion',
+      'commerce_giftcard',
+      'shipping_promotion',
+    ];
     // Now, pass adjustments that are not "supported" by PayPal such as fees
     // and "custom" adjustments.
     // We could pass fees under "handling", but we can't make that assumption.
@@ -285,7 +291,7 @@ class CheckoutSdk implements CheckoutSdkInterface {
       // Skip included adjustments and the adjustment types we're handling
       // below such as "shipping" and "tax".
       if ($adjustment->isIncluded() ||
-        in_array($adjustment->getType(), ['tax', 'shipping', 'promotion', 'commerce_giftcard'])) {
+        in_array($adjustment->getType(), $skipped_adjustment_types, TRUE)) {
         continue;
       }
       $item_total = $item_total ? $item_total->add($adjustment->getAmount()) : $adjustment->getAmount();
@@ -322,7 +328,7 @@ class CheckoutSdk implements CheckoutSdkInterface {
       ];
     }
 
-    $promotion_total = $this->getAdjustmentsTotal($adjustments, ['promotion', 'commerce_giftcard']);
+    $promotion_total = $this->getAdjustmentsTotal($adjustments, ['promotion', 'commerce_giftcard', 'shipping_promotion']);
     if (!empty($promotion_total)) {
       $breakdown['discount'] = [
         'currency_code' => $promotion_total->getCurrencyCode(),
@@ -362,7 +368,7 @@ class CheckoutSdk implements CheckoutSdkInterface {
         ],
       ],
       'application_context' => [
-        'brand_name' => mb_substr($order->getStore()->label(), 0, 127),
+        'brand_name' => mb_substr($order->getStore()->label() ?? '', 0, 127),
       ],
     ];
 
@@ -455,9 +461,9 @@ class CheckoutSdk implements CheckoutSdkInterface {
       'address' => [
         'address_line_1' => $address->getAddressLine1(),
         'address_line_2' => $address->getAddressLine2(),
-        'admin_area_2' => mb_substr($address->getLocality(), 0, 120),
+        'admin_area_2' => mb_substr($address->getLocality() ?? '', 0, 120),
         'admin_area_1' => $address->getAdministrativeArea(),
-        'postal_code' => mb_substr($address->getPostalCode(), 0, 60),
+        'postal_code' => mb_substr($address->getPostalCode() ?? '', 0, 60),
         'country_code' => $address->getCountryCode(),
       ],
     ];

@@ -5,6 +5,8 @@ namespace Drupal\commerce_paypal\PluginForm;
 use Drupal\commerce_payment\Exception\PaymentGatewayException;
 use Drupal\commerce_payment\PluginForm\PaymentOffsiteForm as BasePaymentOffsiteForm;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Link;
+use Drupal\Core\Render\Markup;
 use Drupal\Core\Routing\TrustedRedirectResponse;
 
 /**
@@ -86,6 +88,20 @@ class PayflowLinkForm extends BasePaymentOffsiteForm {
             }
           }
           break;
+
+        case 'iframe':
+          $iframe = $this->plugin->createHostedCheckoutIframe($order);
+          $form['iframe'] = [
+            '#markup' => Markup::create($iframe),
+          ];
+          if ($configuration['cancel_link']) {
+            $cancel_link = Link::createFromRoute($this->t('Cancel payment and go back'), 'commerce_payment.checkout.cancel', [
+              'commerce_order' => $order->id(),
+              'step' => 'payment',
+            ])->toString();
+            $form['iframe']['#suffix'] = '<div class="commerce-payflow-cancel">' . $cancel_link . '</div>';
+          }
+          return $form;
       }
     }
     else {

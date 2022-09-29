@@ -27,6 +27,7 @@ class IframeDefaultFormatter extends FormatterBase {
     return [
       'url' => '',
       'title' => '',
+      'headerlevel' => '3',
       'width' => '',
       'height' => '',
       'class' => '',
@@ -43,19 +44,26 @@ class IframeDefaultFormatter extends FormatterBase {
    */
   public function viewElements(FieldItemListInterface $items, $langcode) {
     $elements = [];
-    $field_settings = $this->getFieldSettings();
+    // settings from type
     $settings = $this->getSettings();
-    $entity = $items->getEntity();
-    \iframe_debug(3, __METHOD__, $field_settings);
-    \iframe_debug(3, __METHOD__, $settings);
-    \iframe_debug(3, __METHOD__, $entity);
-    // \iframe_debug(3, __METHOD__, $items->getValue());
+    // field_settings on concrete field
+    $field_settings = $this->getFieldSettings();
+    //\iframe_debug(3, __METHOD__, $settings);
+    //\iframe_debug(3, __METHOD__, $field_settings);
+    //\iframe_debug(3, __METHOD__, $items->getValue());
+    $allow_attributes = [ 'url', 'width', 'height', 'title' ];
     foreach ($items as $delta => $item) {
       if (empty($item->url)) {
         continue;
       }
-      if (!(property_exists($item, 'title') && $item->title !== null)) {
+      if (!isset($item->title)) {
         $item->title = '';
+      }
+      foreach($field_settings as $field_key => $field_val) {
+        if (in_array($field_key, $allow_attributes)) {
+          continue;
+        }
+        $item->{$field_key} = $field_val;
       }
       $elements[$delta] = self::iframeIframe($item->title, $item->url, $item);
       // Tokens can be dynamic, so its not cacheable.
@@ -121,20 +129,25 @@ class IframeDefaultFormatter extends FormatterBase {
     if (!empty($options['title']) && strpos($options['title'], '<') !== FALSE) {
       $options['title'] = strip_tags($options['title']);
     }
+    $headerlevel = 3; #default h3
+    if (isset($item->headerlevel) && $item->headerlevel >= 1 && $item->headerlevel <= 6) {
+      $headerlevel = (int)$item->headerlevel;
+    }
 
     // Policy attribute.
-    if (!empty($item->allowfullscreen) && $item->allowfullscreen) {
-      $allow[] = 'fullscreen';
-    }
+    $allow[] = 'accelerometer';
     $allow[] = 'autoplay';
     $allow[] = 'camera';
+    $allow[] = 'encrypted-media';
+    $allow[] = 'geolocation';
+    $allow[] = 'gyroscope';
     $allow[] = 'microphone';
     $allow[] = 'payment';
-    $allow[] = 'accelerometer';
-    $allow[] = 'geolocation';
-    $allow[] = 'encrypted-media';
-    $allow[] = 'gyroscope';
+    $allow[] = 'picture-in-picture';
     $options['allow'] = implode(';', $allow);
+    if (!empty($item->allowfullscreen) && $item->allowfullscreen) {
+      $options['allowfullscreen'] = 'allowfullscreen';
+    }
 
     if (\Drupal::moduleHandler()->moduleExists('token')) {
       // Token Support for field "url" and "title".
@@ -165,6 +178,7 @@ class IframeDefaultFormatter extends FormatterBase {
         '#attributes' => $drupal_attributes,
         '#text' => (isset($options['html']) && $options['html'] ? $text : new HtmlEscapedText($text)),
         '#style' => 'iframe#' . $htmlid . ' {' . $style . '}',
+        '#headerlevel' => $headerlevel,
       ];
       return $element;
     } catch (\Exception $excep) {

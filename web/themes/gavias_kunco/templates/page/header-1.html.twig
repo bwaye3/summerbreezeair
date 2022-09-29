@@ -1,19 +1,19 @@
 <header id="header" class="header-v1">
-  
+
   {% if page.topbar %}
     <div class="topbar">
       <div class="topbar-inner">
         <div class="container">
           <div class="row">
             {% if page.language %}<div class="col-lg-11">{% else %}<div class="col-lg-12">{% endif %}
-              <div class="topbar-content">{{ page.topbar }}</div> 
+              <div class="topbar-content">{{ page.topbar }}</div>
             </div>
             {% if page.language %}
               <div class="col-lg-1">
                 <div class="language-box">{{page.language}}</div>
               </div>
-            {% endif %}   
-          </div>   
+            {% endif %}
+          </div>
         </div>
       </div>
     </div>
@@ -22,7 +22,7 @@
   {% set class_sticky = '' %}
   {% if sticky_menu == 1 %}
     {% set class_sticky = 'gv-sticky-menu' %}
-  {% endif %}  
+  {% endif %}
 
    <div class="header-main {{ class_sticky }}{% if link_donation is not empty %} has-link-donate{% endif %}">
       <div class="container header-content-layout">
@@ -51,7 +51,7 @@
                               <div class="icon"><a><span class="gv-icon-92"></span></a></div>
                               <div class="content-inner">
                                 {{ page.quick_menu }}
-                              </div>  
+                              </div>
                             </div>
                           {% endif %}
 
@@ -60,9 +60,9 @@
                               {{ page.offcanvas }}
                             </div>
                           {% endif %}
-                         
+
                         </div>
-                        
+
                         <div id="menu-bar" class="menu-bar hidden-lg hidden-md">
                           <span class="one"></span>
                           <span class="two"></span>
@@ -77,8 +77,8 @@
 
                       </div>
                     </div>
-                  </div>  
-                </div> 
+                  </div>
+                </div>
               </div>
 
             </div>

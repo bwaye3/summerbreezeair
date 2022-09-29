@@ -91,6 +91,7 @@ function metatag_update_8109(&$sandbox) {
     $field_counter = 0;
 
     // Get all of the field storage entities of type metatag.
+    /** @var \Drupal\field\FieldStorageConfigInterface[] $field_storage_configs */
     $field_storage_configs = \Drupal::entityTypeManager()
       ->getStorage('field_storage_config')
       ->loadByProperties(['type' => 'metatag']);
@@ -101,7 +102,10 @@ function metatag_update_8109(&$sandbox) {
       // Get the individual fields (field instances) associated with bundles.
       $fields = \Drupal::entityTypeManager()
         ->getStorage('field_config')
-        ->loadByProperties(['field_name' => $field_name]);
+        ->loadByProperties([
+          'field_name' => $field_name,
+          'entity_type' => $field_storage->getTargetEntityTypeId(),
+        ]);
 
       foreach ($fields as $field) {
         // Get the bundle this field is attached to.
@@ -123,6 +127,10 @@ function metatag_update_8109(&$sandbox) {
         $query->condition('bundle', $bundle, '=');
         $result = $query->execute();
         $records = $result->fetchAll();
+
+        if (empty($records)) {
+          continue;
+        }
 
         // Fill in all the sandbox information so we can batch the individual
         // record comparing and updating.
@@ -153,10 +161,12 @@ function metatag_update_8109(&$sandbox) {
     $field_value_field = $sandbox['fields'][$current_field]['field_value_field'];
 
     // Loop through the field(s) and update the mask_icon values if necessary.
-    while ($counter <= $max_per_batch && $record = $current_field_records[$current_record]) {
+    while ($counter <= $max_per_batch && isset($current_field_records[$current_record])) {
+      $record = $current_field_records[$current_record];
+
       // Strip any empty tags or ones matching the field's defaults and leave
       // only the overridden tags in $new_tags.
-      $tags = unserialize($record->$field_value_field);
+      $tags = unserialize($record->$field_value_field, ['allowed_classes' => FALSE]);
       if (isset($tags['mask-icon'])) {
         $tags['mask_icon'] = [
           'href' => $tags['mask-icon'],
@@ -172,7 +182,6 @@ function metatag_update_8109(&$sandbox) {
           ->condition('langcode', $record->langcode)
           ->execute();
       }
-
       $counter++;
       $current_record++;
     }

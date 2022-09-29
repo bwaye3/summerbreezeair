@@ -106,6 +106,7 @@ class Checkout extends OffsitePaymentGatewayBase implements CheckoutInterface {
       'enable_on_cart' => TRUE,
       'collect_billing_information' => FALSE,
       'webhook_id' => '',
+      'enable_credit_card_icons' => TRUE,
     ] + parent::defaultConfiguration();
   }
 
@@ -199,6 +200,7 @@ class Checkout extends OffsitePaymentGatewayBase implements CheckoutInterface {
         'sepa' => $this->t('SEPA-Lastschrift'),
         'sofort' => $this->t('Sofort'),
         'mybank' => $this->t('MyBank'),
+        'giropay' => $this->t('Giropay'),
       ],
       '#default_value' => $this->configuration['disable_funding'],
       '#states' => $spb_states,
@@ -243,6 +245,12 @@ class Checkout extends OffsitePaymentGatewayBase implements CheckoutInterface {
       '#default_value' => $this->configuration['update_shipping_profile'],
       '#access' => $shipping_enabled,
       '#states' => $spb_states,
+    ];
+    $form['enable_credit_card_icons'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Credit Card Icons'),
+      '#description' => $this->t('Enabling this setting will display credit card icons in the payment section during checkout.'),
+      '#default_value' => $this->configuration['enable_credit_card_icons'],
     ];
     $form['customize_buttons'] = [
       '#type' => 'checkbox',
@@ -373,6 +381,7 @@ class Checkout extends OffsitePaymentGatewayBase implements CheckoutInterface {
       'update_shipping_profile',
       'enable_on_cart',
       'webhook_id',
+      'enable_credit_card_icons',
     ];
 
     // Only save the style settings if the customize buttons checkbox is checked.
