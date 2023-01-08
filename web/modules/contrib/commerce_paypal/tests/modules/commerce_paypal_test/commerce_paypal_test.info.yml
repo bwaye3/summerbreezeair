@@ -3,4 +3,4 @@ type: module
 description: 'Test module that provides a sample Event subscriber to alter the PayPal EC request.'
 package: Testing
 dependencies:
-  - commerce:commerce_paypal
+  - commerce_paypal:commerce_paypal

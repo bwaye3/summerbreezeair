@@ -2,15 +2,84 @@
 
 namespace Drupal\iframe\Plugin\Field\FieldWidget;
 
+use Drupal\Core\Extension\ModuleHandlerInterface;
+use Drupal\Core\Field\FieldDefinitionInterface;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Field\WidgetBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Component\Utility\UrlHelper;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\Core\Utility\Token;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Plugin implementation base functions.
  */
 class IframeWidgetBase extends WidgetBase {
+
+  /**
+   * The current active user.
+   *
+   * @var \Drupal\Core\Session\AccountInterface
+   */
+  protected $currentUser;
+
+  /**
+   * The module handler.
+   *
+   * @var \Drupal\Core\Extension\ModuleHandlerInterface
+   */
+  protected $moduleHandler;
+
+  /**
+   * The token replacement instance.
+   *
+   * @var \Drupal\Core\Utility\Token
+   */
+  protected $token;
+
+  /**
+   * Constructs a MediaLibraryWidget widget.
+   *
+   * @param string $plugin_id
+   *   The plugin_id for the plugin instance.
+   * @param mixed $plugin_definition
+   *   The plugin implementation definition.
+   * @param \Drupal\Core\Field\FieldDefinitionInterface $field_definition
+   *   The definition of the field to which the widget is associated.
+   * @param array $settings
+   *   The widget settings.
+   * @param array $third_party_settings
+   *   Any third party settings.
+   * @param \Drupal\Core\Session\AccountInterface $current_user
+   *   The current active user.
+   * @param \Drupal\Core\Extension\ModuleHandlerInterface $module_handler
+   *   The module handler.
+   * @param \Drupal\Core\Utility\Token $token
+   *   The token replacement instance.
+   */
+  public function __construct($plugin_id, $plugin_definition, FieldDefinitionInterface $field_definition, array $settings, array $third_party_settings, AccountInterface $current_user, ModuleHandlerInterface $module_handler, Token $token) {
+    parent::__construct($plugin_id, $plugin_definition, $field_definition, $settings, $third_party_settings);
+    $this->currentUser = $current_user;
+    $this->moduleHandler = $module_handler;
+    $this->token = $token;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+    return new static(
+      $plugin_id,
+      $plugin_definition,
+      $configuration['field_definition'],
+      $configuration['settings'],
+      $configuration['third_party_settings'],
+      $container->get('current_user'),
+      $container->get('module_handler'),
+      $container->get('token'),
+    );
+  }
 
   /**
    * Allowed editable attributes of iframe field on node-edit.
@@ -31,16 +100,16 @@ class IframeWidgetBase extends WidgetBase {
    */
   public static function defaultSettings() {
     return [
-        'width' => '',
-        'height' => '',
-        'headerlevel' => '3',
-        'class' => '',
-        'expose_class' => 0,
-        'frameborder' => '0',
-        'scrolling' => 'auto',
-        'transparency' => '0',
-        'tokensupport' => '0',
-        'allowfullscreen' => '0',
+      'width' => '',
+      'height' => '',
+      'headerlevel' => '3',
+      'class' => '',
+      'expose_class' => 0,
+      'frameborder' => '0',
+      'scrolling' => 'auto',
+      'transparency' => '0',
+      'tokensupport' => '0',
+      'allowfullscreen' => '0',
     ] + parent::defaultSettings();
   }
 
@@ -60,11 +129,11 @@ class IframeWidgetBase extends WidgetBase {
     /* Settings form after "manage form display" page, valid for one content type */
     $field_settings = $this->getFieldSettings();
     $widget_settings = $this->getSettings();
-    // \iframe_debug(0, 'manage settingsForm widget_settings', $widget_settings);
+    // \iframe_debug
+    // (0, 'manage settingsForm widget_settings', $widget_settings);
     // \iframe_debug(0, 'manage settingsForm field_settings', $field_settings);
-
     $settings = [];
-    foreach($widget_settings as $wkey => $wvalue) {
+    foreach ($widget_settings as $wkey => $wvalue) {
       if (empty($wvalue) && isset($field_settings[$wkey])) {
         $settings[$wkey] = $field_settings[$wkey];
       }
@@ -76,7 +145,8 @@ class IframeWidgetBase extends WidgetBase {
     // \iframe_debug(0, 'manage settingsForm settings', $settings);
     /* NOW all values have their default values at minimum */
 
-    // widget width/heigth wins, only if empty, then field-width/height are taken
+    // Widget width/heigth wins, only if empty,
+    // then field-width/height are taken.
     $element['width'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Iframe Width'),
@@ -125,7 +195,10 @@ class IframeWidgetBase extends WidgetBase {
     $element['frameborder'] = [
       '#type' => 'select',
       '#title' => $this->t('Frameborder'),
-      '#options' => ['0' => $this->t('No frameborder'), '1' => $this->t('Show frameborder')],
+      '#options' => [
+        '0' => $this->t('No frameborder'),
+        '1' => $this->t('Show frameborder'),
+      ],
       // 0
       '#default_value' => $settings['frameborder'],
       '#description' => $this->t('Frameborder is the border around the iframe. Most people want it removed, so the default value for frameborder is zero (0), or no border.'),
@@ -165,7 +238,7 @@ class IframeWidgetBase extends WidgetBase {
       '#description' => $this->t('Allow fullscreen for iframe. The iframe can activate fullscreen mode by calling the requestFullscreen() method.'),
     ];
 
-    if (!\Drupal::moduleHandler()->moduleExists('token')) {
+    if (!$this->moduleHandler->moduleExists('token')) {
       $element['tokensupport']['#description'] .= ' ' . $this->t('Attention: Token module is not currently enabled!');
     }
     return $element;
@@ -179,9 +252,8 @@ class IframeWidgetBase extends WidgetBase {
     $field_settings = $this->getFieldSettings();
     // \iframe_debug(0, 'settingsSummary widget_settings', $widget_settings);
     // \iframe_debug(0, 'settingsSummary field_settings', $field_settings);
-
     $settings = [];
-    foreach($widget_settings as $wkey => $wvalue) {
+    foreach ($widget_settings as $wkey => $wvalue) {
       if (empty($wvalue) && isset($field_settings[$wkey])) {
         $settings[$wkey] = $field_settings[$wkey];
       }
@@ -214,28 +286,32 @@ class IframeWidgetBase extends WidgetBase {
     // -- (on_admin_page = true).
     // 2) Edit-fields on the article-edit-page (on_admin_page = false).
     // Global settings.
-    // getSettings from manage form display after work-symbol (admin/structure/types/manage/test/form-display and wheel behind iframe-field)
+    // getSettings from manage form display after work-symbol
+    // (admin/structure/types/manage/test/form-display
+    // and wheel behind iframe-field)
     $widget_settings = $this->getSettings();
-    // getFieldSettings from field edit page on admin/structure/types/manage/test/fields/node.test.field_iframe
+    // getFieldSettings from field edit page on
+    // admin/structure/types/manage/test/fields/node.test.field_iframe.
     $field_settings = $this->getFieldSettings();
     // \iframe_debug(0, 'formElement widget_settings', $widget_settings);
     // \iframe_debug(0, 'formElement field_settings', $field_settings);
-    // \iframe_debug(0, 'formElement defaultSettings', self::defaultSettings());
-
+    // \iframe_debug
+    // (0, 'formElement defaultSettings', self::defaultSettings());
     /** @var \Drupal\iframe\Plugin\Field\FieldType\IframeItem $item */
     $item =& $items[$delta];
     $field_definition = $item->getFieldDefinition();
     /* on_admin_page TRUE only if on field edit page, not on widget-edit */
     $on_admin_page = isset($element['#field_parents'][0]) && ('default_value_input' == $element['#field_parents'][0]);
     $is_new = $item->getEntity()->isNew();
-    // \iframe_debug(0, 'formElement onAdminPage', $on_admin_page ? "TRUE" : "false");
+    // \iframe_debug
+    // (0, 'formElement onAdminPage', $on_admin_page ? "TRUE" : "false");
     // \iframe_debug(0, 'formElement isNew', $is_new ? "TRUE" : "false");
     $values = $item->toArray();
 
     $settings = [];
     /* take widget_settings only if NOT on_admin_page (so not on field-edit-page, where we edit the field_settings) */
     if (!$on_admin_page) {
-      foreach($widget_settings as $wkey => $wvalue) {
+      foreach ($widget_settings as $wkey => $wvalue) {
         if (empty($wvalue) && isset($field_settings[$wkey])) {
           $settings[$wkey] = $field_settings[$wkey];
         }
@@ -298,7 +374,7 @@ class IframeWidgetBase extends WidgetBase {
       '#type' => 'textfield',
       '#title' => $this->t('Iframe URL'),
       '#placeholder' => 'https://',
-      '#default_value' => isset($settings['url']) ? $settings['url'] : '',
+      '#default_value' => $settings['url'] ?? '',
       '#size' => 80,
       '#maxlength' => 1024,
       '#weight' => 1,
@@ -308,7 +384,7 @@ class IframeWidgetBase extends WidgetBase {
     $element['width'] = [
       '#title' => $this->t('Iframe Width'),
       '#type' => 'textfield',
-      '#default_value' => isset($settings['width']) ? $settings['width'] : '',
+      '#default_value' => $settings['width'] ?? '',
       '#description' => self::getSizedescription(),
       '#maxlength' => 7,
       '#size' => 7,
@@ -318,7 +394,7 @@ class IframeWidgetBase extends WidgetBase {
     $element['height'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Iframe Height'),
-      '#default_value' => isset($settings['height']) ? $settings['height'] : '',
+      '#default_value' => $settings['height'] ?? '',
       '#description' => self::getSizedescription(),
       '#maxlength' => 7,
       '#size' => 7,
@@ -344,8 +420,7 @@ class IframeWidgetBase extends WidgetBase {
    * @see \Drupal\Core\Form\FormValidator
    */
   public function validateWidth(&$form, FormStateInterface &$form_state) {
-    // get settings for this field
-    $settings = $this->getFieldSettings();
+    // Get settings for this field.
     $me = $this->getField($form, $form_state);
 
     // \iframe_debug(0, 'validateWidth', $me);
@@ -362,8 +437,7 @@ class IframeWidgetBase extends WidgetBase {
    * @see \Drupal\Core\Form\FormValidator
    */
   public function validateHeight(&$form, FormStateInterface &$form_state) {
-    // get settings for this field
-    $settings = $this->getFieldSettings();
+    // Get settings for this field.
     $me = $this->getField($form, $form_state);
 
     // \iframe_debug(0, 'validateHeight', $me);
@@ -380,7 +454,7 @@ class IframeWidgetBase extends WidgetBase {
    * @see \Drupal\Core\Form\FormValidator
    */
   public function validateUrl(&$form, FormStateInterface &$form_state) {
-    // get settings for this field
+    // Get settings for this field.
     $settings = $this->getFieldSettings();
     $me = $this->getField($form, $form_state);
     if (isset($settings['tokensupport'])) {
@@ -390,21 +464,21 @@ class IframeWidgetBase extends WidgetBase {
       $tokensupport = 0;
     }
     if ($tokensupport == 2) {
-      $tokencontext = ['user' => \Drupal::currentUser()];
-      $me['url'] = \Drupal::token()->replace($me['url'], $tokencontext);
+      $tokencontext = ['user' => $this->currentUser];
+      $me['url'] = $this->token->replace($me['url'], $tokencontext);
     }
 
-    $testabsolute = true;
+    $testabsolute = TRUE;
     // \iframe_debug(0, 'validateUrl', $me);
     if (!empty($me['url'])) {
       if (preg_match('#^/($|[^/])#', $me['url'])) {
-        $testabsolute = false;
+        $testabsolute = FALSE;
       }
       if (!UrlHelper::isValid($me['url'], $testabsolute)) {
-        $form_state->setError($form, t('Invalid syntax for "Iframe URL".'));
+        $form_state->setError($form, $this->t('Invalid syntax for "Iframe URL".'));
       }
       elseif (strpos($me['url'], '//') === 0) {
-        $form_state->setError($form, t('Drupal does not accept scheme-less URLs. Please add "https:" to your URL, this works on http-parent-pages too.'));
+        $form_state->setError($form, $this->t('Drupal does not accept scheme-less URLs. Please add "https:" to your URL, this works on http-parent-pages too.'));
       }
     }
   }
@@ -419,8 +493,9 @@ class IframeWidgetBase extends WidgetBase {
    *   The current state of the form.
    *
    * @return array
+   *   The field.
    */
-  private function getField(&$form, FormStateInterface &$form_state) {
+  private function getField(array &$form, FormStateInterface &$form_state) {
     $parents = $form['#parents'];
     $node = $form_state->getUserInput();
 
@@ -429,7 +504,7 @@ class IframeWidgetBase extends WidgetBase {
 
     // Starting from the node drill down to the field.
     $field = $node;
-    for($i = 0; $i < count($parents); $i++) {
+    for ($i = 0; $i < count($parents); $i++) {
       $field = $field[$parents[$i]];
     }
 
@@ -473,7 +548,10 @@ class IframeWidgetBase extends WidgetBase {
         }
       }
       if (!empty($settings['class']) && !strstr($newvalue['class'], $settings['class'])) {
-        $newvalue['class'] = trim(implode(" ", [$settings['class'], $newvalue['class']]));
+        $newvalue['class'] = trim(implode(" ", [
+          $settings['class'],
+          $newvalue['class'],
+        ]));
       }
       $new_values[$delta] = $newvalue;
     }

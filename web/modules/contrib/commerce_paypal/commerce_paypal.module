@@ -228,7 +228,6 @@ function commerce_paypal_form_commerce_order_item_add_to_cart_form_alter(&$form,
     return;
   }
   // Add Credit Messaging JS to the form.
-  // @todo ensure messaging reapplies after an Ajax refresh.
   $form['#attached']['library'][] = 'commerce_paypal/credit_messaging';
 
   $form['paypal_credit_messaging_product'] = [
@@ -251,7 +250,9 @@ function commerce_paypal_js_alter(&$javascript, AttachedAssetsInterface $assets)
   if (!$client_id) {
     return;
   }
-  $paypal_checkout_js = drupal_get_path('module', 'commerce_paypal') . '/js/paypal-checkout.js';
+  /** @var \Drupal\Core\Extension\ExtensionPathResolver $extension_path_resolver */
+  $extension_path_resolver = \Drupal::service('extension.path.resolver');
+  $paypal_checkout_js = $extension_path_resolver->getPath('module', 'commerce_paypal') . '/js/paypal-checkout.js';
   // The paypal-checkout JS file isn't present, no need to do anything.
   if (!isset($javascript[$paypal_checkout_js])) {
     return;
@@ -261,6 +262,82 @@ function commerce_paypal_js_alter(&$javascript, AttachedAssetsInterface $assets)
     if (strpos($key, 'https://www.paypal.com/sdk/js') === 0) {
       unset($javascript[$key]);
       break;
+    }
+  }
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+function commerce_paypal_form_commerce_payment_method_add_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // The current PayPal checkout implementation doesn't support tokenization.
+  unset($form["payment_method"]["#options"]["new--paypal_checkout--paypal"]);
+}
+
+/**
+ * Returns the list of funding sources to be enabled or disabled.
+ *
+ * The full list can be found at:
+ * https://developer.paypal.com/sdk/js/configuration/#enable-funding.
+ *
+ * @return array
+ *   Machine name as key and translated label as value.
+ */
+function commerce_paypal_get_funding_sources() {
+  return [
+    'paypal' => t('PayPal'),
+    'card' => t('Credit or debit card'),
+    'credit' => t('PayPal Credit'),
+    'paylater' => t('Pay Later'),
+    'bancontact' => t('Bancontact'),
+    'blik' => t('BLIK'),
+    'eps' => t('eps'),
+    'giropay' => t('giropay'),
+    'ideal' => t('iDEAL'),
+    'mercadopago' => t('Mercado Pago'),
+    'mybank' => t('MyBank'),
+    'p24' => t('Przelewy24'),
+    'sepa' => t('SEPA-Lastschrift'),
+    'sofort' => t('Sofort'),
+    'venmo' => t('Venmo'),
+  ];
+}
+
+/**
+ * Returns the label to use for a PayPal funding source.
+ *
+ * @param string $funding_source
+ *   The machine-name of the funding source returned by PayPal.
+ *
+ * @return string
+ *   The label to show a customer for the funding source.
+ */
+function commerce_paypal_funding_source_label($funding_source) {
+  $funding_sources = commerce_paypal_get_funding_sources();
+
+  return $funding_sources[$funding_source] ?? '';
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * To facilitate the display of the funding source in order templates, this
+ * function looks for an order with a PayPal Checkout funding source set and
+ * adds its label to the array of available template variables.
+ *
+ * @see https://developer.paypal.com/docs/checkout/standard/customize/display-funding-source/
+ */
+function commerce_paypal_preprocess_commerce_order(&$variables) {
+  if (!empty($variables['elements']['#commerce_order'])) {
+    /** @var Drupal\commerce_order\Entity\OrderInterface $order */
+    $order = $variables['elements']['#commerce_order'];
+
+    // Check for a PayPal Checkout funding source.
+    $data = $order->getData('commerce_paypal_checkout', []);
+
+    // If we found a funding source, add its label to the template variables.
+    if (!empty($data['funding_source'])) {
+      $variables['order']['funding_source'] = commerce_paypal_funding_source_label($data['funding_source']);
     }
   }
 }

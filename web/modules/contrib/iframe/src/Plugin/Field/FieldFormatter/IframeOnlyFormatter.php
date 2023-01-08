@@ -3,10 +3,9 @@
 namespace Drupal\iframe\Plugin\Field\FieldFormatter;
 
 use Drupal\Core\Field\FieldItemListInterface;
-use Drupal\Core\Render\Markup;
 
 /**
- * Class IframeOnlyFormatter.
+ * The Class IframeOnlyFormatter.
  *
  * @FieldFormatter(
  *  id = "iframe_only",
@@ -21,12 +20,12 @@ class IframeOnlyFormatter extends IframeDefaultFormatter {
    */
   public function viewElements(FieldItemListInterface $items, $langcode) {
     $elements = [];
-    // settings from type
+    // Settings from type.
     $settings = $this->getSettings();
-    // field_settings on concrete field
+    // field_settings on concrete field.
     $field_settings = $this->getFieldSettings();
 
-    $allow_attributes = [ 'url', 'width', 'height', 'title' ];
+    $allow_attributes = ['url', 'width', 'height', 'title'];
     foreach ($items as $delta => $item) {
       if (empty($item->url)) {
         continue;
@@ -34,14 +33,15 @@ class IframeOnlyFormatter extends IframeDefaultFormatter {
       if (!isset($item->title)) {
         $item->title = '';
       }
-      foreach($field_settings as $field_key => $field_val) {
+      foreach ($field_settings as $field_key => $field_val) {
         if (in_array($field_key, $allow_attributes)) {
           continue;
         }
         $item->{$field_key} = $field_val;
       }
-      // KEEP title-attribute in item->title for Accessibility title-attribute in iframe tag //$item->title = '';
-      // no visible header, but title-attr in item as options
+      // KEEP title-attribute in item->title for Accessibility title-attribute
+      // in iframe tag //$item->title = '';
+      // no visible header, but title-attr in item as options.
       $elements[$delta] = self::iframeIframe('', $item->url, $item);
       // Tokens can be dynamic, so its not cacheable.
       if (isset($settings['tokensupport']) && $settings['tokensupport']) {

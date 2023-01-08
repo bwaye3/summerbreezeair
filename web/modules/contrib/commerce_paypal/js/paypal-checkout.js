@@ -53,6 +53,12 @@
             }
           });
         },
+        onClick: function (data) {
+          // Set the fundingSource in the cookie for retrieval post-checkout.
+          if (data.hasOwnProperty('fundingSource')) {
+            document.cookie = 'lastFundingSource = ' + data.fundingSource + ';path=/';
+          }
+        },
         style: settings['style']
       }).render('#' + settings['elementId']);
     },

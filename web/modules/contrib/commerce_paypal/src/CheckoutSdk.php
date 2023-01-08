@@ -115,7 +115,7 @@ class CheckoutSdk implements CheckoutSdkInterface {
   public function createOrder(OrderInterface $order, AddressInterface $billing_address = NULL) {
     $params = $this->prepareOrderRequest($order, $billing_address);
     $event = new CheckoutOrderRequestEvent($order, $params);
-    $this->eventDispatcher->dispatch(PayPalEvents::CHECKOUT_CREATE_ORDER_REQUEST, $event);
+    $this->eventDispatcher->dispatch($event, PayPalEvents::CHECKOUT_CREATE_ORDER_REQUEST);
     return $this->client->post('/v2/checkout/orders', ['json' => $event->getRequestBody()]);
   }
 
@@ -139,7 +139,7 @@ class CheckoutSdk implements CheckoutSdkInterface {
       ],
     ];
     $event = new CheckoutOrderRequestEvent($order, $update_params);
-    $this->eventDispatcher->dispatch(PayPalEvents::CHECKOUT_UPDATE_ORDER_REQUEST, $event);
+    $this->eventDispatcher->dispatch($event, PayPalEvents::CHECKOUT_UPDATE_ORDER_REQUEST);
     return $this->client->patch(sprintf('/v2/checkout/orders/%s', $remote_id), ['json' => $event->getRequestBody()]);
   }
 
@@ -335,6 +335,19 @@ class CheckoutSdk implements CheckoutSdkInterface {
         'value' => Calculator::trim($promotion_total->multiply(-1)->getNumber()),
       ];
     }
+
+    // If an order was partially paid, add paid amount as discount.
+    if ($order->getTotalPrice()->greaterThan($order->getBalance())) {
+      $discount_total = $order->getTotalPrice()->subtract($order->getBalance());
+      if (!empty($promotion_total)) {
+        $discount_total = $discount_total->add($promotion_total->multiply(-1));
+      }
+      $breakdown['discount'] = [
+        'currency_code' => $discount_total->getCurrencyCode(),
+        'value' => Calculator::trim($discount_total->getNumber()),
+      ];
+    }
+
     $payer = [];
 
     if (!empty($order->getEmail())) {
@@ -360,8 +373,8 @@ class CheckoutSdk implements CheckoutSdkInterface {
           'custom_id' => $order->id(),
           'invoice_id' => $order->id() . '-' . $this->time->getRequestTime(),
           'amount' => [
-            'currency_code' => $order->getTotalPrice()->getCurrencyCode(),
-            'value' => Calculator::trim($order->getTotalPrice()->getNumber()),
+            'currency_code' => $order->getBalance()->getCurrencyCode(),
+            'value' => Calculator::trim($order->getBalance()->getNumber()),
             'breakdown' => $breakdown,
           ],
           'items' => $items,
