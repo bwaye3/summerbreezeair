@@ -55,7 +55,7 @@ class SimplenewsPersonalizationFormsTest extends SimplenewsTestBase {
 
     // Assert fields are updated.
     $this->drupalGet("user/$uid");
-    $this->assertText(Html::escape($new_value));
+    $this->assertSession()->pageTextContains($new_value);
 
     // Assert subscription remains unconfirmed.
     $subscriber = $this->getLatestSubscriber();
@@ -63,7 +63,7 @@ class SimplenewsPersonalizationFormsTest extends SimplenewsTestBase {
   }
 
   /**
-   * Register then subscribe: require login, fields updated.
+   * Register then subscribe: fields updated.
    */
   public function testSynchronizeRegisterSubscribe() {
     $email = $this->randomEmail();
@@ -72,38 +72,26 @@ class SimplenewsPersonalizationFormsTest extends SimplenewsTestBase {
     $uid = $this->registerUser($email, ['field_shared[0][value]' => $this->randomString(10)]);
     $user = User::load($uid);
 
-    // Attempt subscribe and assert login message.
-    $this->subscribe('default', $email);
-    $this->assertRaw(t('There is an account registered for the e-mail address %mail. Please log in to manage your newsletter subscriptions', ['%mail' => $email]));
-
-    // Login.
-    $this->resetPassLogin($user);
-
-    // Subscribe.
+    // Subscribe anonymous with verification disabled.
+    $this->config('simplenews.settings')
+      ->set('subscription.skip_verification', TRUE)
+      ->save();
     $new_value = $this->randomString(20);
-    $this->subscribe('default', NULL, ['field_shared[0][value]' => $new_value], t('Update'));
+    $this->subscribe('default', $email, ['field_shared[0][value]' => $new_value]);
 
     // Assert fields are updated.
+    $this->resetPassLogin($user);
     $this->drupalGet("user/$uid");
-    $this->assertText(Html::escape($new_value));
+    $this->assertSession()->pageTextContains($new_value);
   }
 
   /**
-   * Subscribe, request password: "name is not recognized".
+   * Subscribe, check no user is created.
    */
   public function testSubscribeRequestPassword() {
     $email = $this->randomEmail();
-
-    // Subscribe.
-    $this->subscribe('default', $email);
-
-    // Request new password.
-    $this->drupalPostForm('user/password', [
-      'name' => $email,
-    ], t('Submit'));
-
-    // Assert the email is not recognized as an account.
-    $this->assertRaw(t('%name is not recognized as a username or an email address.', ['%name' => $email]));
+    $this->subscribe([], $email);
+    $this->assertFalse(user_load_by_mail($email));
   }
 
   /**
@@ -117,12 +105,20 @@ class SimplenewsPersonalizationFormsTest extends SimplenewsTestBase {
 
     // Subscribe.
     $this->resetPassLogin(User::load($uid));
-    $this->subscribe('default', NULL, [], t('Update'));
+    $this->subscribe('default', NULL, [], $uid);
     $this->drupalLogout();
 
     // Disable account.
     $this->drupalLogin($this->admin);
-    $this->drupalPostForm("user/$uid/cancel", [], t('Cancel account'));
+    $this->drupalGet("user/$uid/cancel");
+    // @todo Remove version_compare() condition when Drupal 9.3.0 becomes the
+    // lowest-supported version of core.
+    if (version_compare(\Drupal::VERSION, '9.3', '>=')) {
+      $this->submitForm([], 'Confirm');
+    }
+    else {
+      $this->submitForm([], 'Cancel account');
+    }
 
     // Assert subscriber is inactive.
     $subscriber = $this->getLatestSubscriber();
@@ -143,7 +139,15 @@ class SimplenewsPersonalizationFormsTest extends SimplenewsTestBase {
 
     // Delete account.
     $this->drupalLogin($this->admin);
-    $this->drupalPostForm("user/$uid/cancel", ['user_cancel_method' => 'user_cancel_reassign'], t('Cancel account'));
+    $this->drupalGet("user/$uid/cancel");
+    // @todo Remove version_compare() condition when Drupal 9.3.0 becomes the
+    // lowest-supported version of core.
+    if (version_compare(\Drupal::VERSION, '9.3', '>=')) {
+      $this->submitForm(['user_cancel_method' => 'user_cancel_reassign'], 'Confirm');
+    }
+    else {
+      $this->submitForm(['user_cancel_method' => 'user_cancel_reassign'], 'Cancel account');
+    }
 
     // Assert subscriptions are deleted.
     $subscriber = $this->getLatestSubscriber();
@@ -161,12 +165,13 @@ class SimplenewsPersonalizationFormsTest extends SimplenewsTestBase {
 
     // Block account.
     $this->drupalLogin($this->admin);
-    $this->drupalPostForm("user/$uid/edit", ['status' => 0], t('Save'));
+    $this->drupalGet("user/$uid/edit");
+    $this->submitForm(['status' => 0], 'Save');
     $this->drupalLogout();
 
     // Attempt subscribe and assert "blocked" message.
     $this->subscribe('default', $email);
-    $this->assertRaw(t('The email address %mail belongs to a blocked user.', ['%mail' => $email]));
+    $this->assertSession()->responseContains("The email address <em class=\"placeholder\">$email</em> belongs to a blocked user.");
   }
 
 }

@@ -6,11 +6,37 @@ use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\simplenews\Entity\Subscriber;
 use Drupal\simplenews\SubscriberInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\Core\Entity\EntityTypeManagerInterface;
 
 /**
  * Do a mass subscription for a list of email addresses.
  */
 class SubscriberExportForm extends FormBase {
+
+  /**
+   * The entity type manager.
+   *
+   * @var \Drupal\Core\Entity\EntityTypeManagerInterface
+   */
+  protected $entityTypeManager;
+
+  /**
+   * Constructs a \Drupal\simplenews\Form\SubscriberExportForm object.
+   *
+   * @param \Drupal\Core\Entity\Query\EntityTypeManagerInterface $entity_manager
+   *   The entity manager.
+   */
+  public function __construct(EntityTypeManagerInterface $entity_manager) {
+    $this->entityTypeManager = $entity_manager;
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  public static function create(ContainerInterface $container) {
+    return new static($container->get('entity_type.manager'));
+  }
 
   /**
    * {@inheritdoc}
@@ -42,7 +68,7 @@ class SubscriberExportForm extends FormBase {
     }
 
     // Get emails from the database.
-    $query = \Drupal::entityQuery('simplenews_subscriber')
+    $query = $this->entityTypeManager->getStorage('simplenews_subscriber')->getQuery()
       ->condition('status', $condition_active, 'IN')
       ->condition('subscriptions.status', $condition_subscribed, 'IN')
       ->condition('subscriptions.target_id', (array) $newsletters, 'IN');
@@ -66,9 +92,10 @@ class SubscriberExportForm extends FormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
     // Get sensible default values for the form elements in this form.
-    $default['states'] = isset($_GET['states']) ? $_GET['states'] : ['active' => 'active'];
-    $default['subscribed'] = isset($_GET['subscribed']) ? $_GET['subscribed'] : ['subscribed' => 'subscribed'];
-    $default['newsletters'] = isset($_GET['newsletters']) ? $_GET['newsletters'] : [];
+    $query = $this->getRequest()->query;
+    $default['states'] = $query->get('states') ?: ['active' => 'active'];
+    $default['subscribed'] = $query->get('subscribed') ?: ['subscribed' => 'subscribed'];
+    $default['newsletters'] = $query->get('newsletters') ?: [];
 
     $form['states'] = [
       '#type' => 'checkboxes',
@@ -108,13 +135,13 @@ class SubscriberExportForm extends FormBase {
     // Get export results and display them in a text area. Only get the results
     // if the form is build after redirect, not after submit.
     $input = $form_state->getUserInput();
-    if (isset($_GET['states']) && empty($input)) {
+    if ($query->has('states') && empty($input)) {
       $form['emails'] = [
         '#type' => 'textarea',
         '#title' => $this->t('Export results'),
         '#cols' => 60,
         '#rows' => 5,
-        '#value' => $this->getEmails($_GET['states'], $_GET['subscribed'], $_GET['newsletters']),
+        '#value' => $this->getEmails($query->get('states'), $query->get('subscribed'), $query->get('newsletters')),
       ];
     }
 

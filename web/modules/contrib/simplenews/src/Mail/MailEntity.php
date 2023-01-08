@@ -104,37 +104,32 @@ class MailEntity implements MailInterface {
       case SIMPLENEWS_PRIORITY_HIGHEST:
         $headers['Priority'] = 'High';
         $headers['X-Priority'] = '1';
-        $headers['X-MSMail-Priority'] = 'Highest';
         break;
 
       case SIMPLENEWS_PRIORITY_HIGH:
         $headers['Priority'] = 'urgent';
         $headers['X-Priority'] = '2';
-        $headers['X-MSMail-Priority'] = 'High';
         break;
 
       case SIMPLENEWS_PRIORITY_NORMAL:
         $headers['Priority'] = 'normal';
         $headers['X-Priority'] = '3';
-        $headers['X-MSMail-Priority'] = 'Normal';
         break;
 
       case SIMPLENEWS_PRIORITY_LOW:
         $headers['Priority'] = 'non-urgent';
         $headers['X-Priority'] = '4';
-        $headers['X-MSMail-Priority'] = 'Low';
         break;
 
       case SIMPLENEWS_PRIORITY_LOWEST:
         $headers['Priority'] = 'non-urgent';
         $headers['X-Priority'] = '5';
-        $headers['X-MSMail-Priority'] = 'Lowest';
         break;
     }
 
     // Add user specific header data.
     $headers['From'] = $this->getFromFormatted();
-    $headers['List-Unsubscribe'] = '<' . \Drupal::token()->replace('[simplenews-subscriber:unsubscribe-url]', $this->getTokenContext(), ['sanitize' => FALSE]) . '>';
+    $headers['List-Unsubscribe'] = '<' . \Drupal::token()->replace('[simplenews-subscriber:unsubscribe-url]', $this->getTokenContext()) . '>';
 
     // Add general headers.
     $headers['Precedence'] = 'bulk';
@@ -219,11 +214,11 @@ class MailEntity implements MailInterface {
     // Build email subject and perform some sanitizing.
     // Use the requested language if enabled.
     $langcode = $this->getLanguage();
-    $subject = \Drupal::token()->replace($this->getNewsletter()->subject, $this->getTokenContext(), ['sanitize' => FALSE, 'langcode' => $langcode]);
+    $subject = simplenews_token_replace_subject($this->getNewsletter()->subject, $this->getTokenContext(), ['langcode' => $langcode]);
 
     // Line breaks are removed from the email subject to prevent injection of
     // malicious data into the email header.
-    $subject = str_replace(["\r", "\n"], '', $subject);
+    $subject = Markup::create(str_replace(["\r", "\n"], '', $subject));
     return $subject;
   }
 
@@ -290,7 +285,7 @@ class MailEntity implements MailInterface {
     }
 
     // Build message body
-    // Supported view modes: 'email_plain', 'email_html', 'email_textalt'.
+    // Supported view modes: 'email_plain', 'email_html'.
     $build = \Drupal::entityTypeManager()->getViewBuilder($this->getIssue()->getEntityTypeId())->view($this->getIssue(), 'email_' . $format, $this->getLanguage());
     $build['#entity_type'] = $this->getIssue()->getEntityTypeId();
     // @todo: Consider using render caching.
@@ -371,13 +366,11 @@ class MailEntity implements MailInterface {
 
     // Build message body, replace tokens.
     $body = \Drupal::token()->replace($body, $this->getTokenContext(), ['langcode' => $this->getLanguage()]);
-    if ($format == 'plain') {
-      // Convert HTML to text if requested to do so.
-      $body = MailFormatHelper::htmlToText($body, $this->getNewsletter()->hyperlinks);
+    if (($format == 'plain') && $this->getNewsletter()->hyperlinks) {
+      $body = MailFormatHelper::inlineHyperlinks($body);
     }
-    else {
-      $body = Markup::create($body);
-    }
+
+    $body = Markup::create($body);
     $this->cache->set($this, 'final', 'body:' . $format, $body);
     $this->resetContext();
     return $body;

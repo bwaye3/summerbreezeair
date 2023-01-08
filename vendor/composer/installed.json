@@ -1230,108 +1230,6 @@
             "install-path": "../doctrine/annotations"
         },
         {
-            "name": "doctrine/cache",
-            "version": "1.13.0",
-            "version_normalized": "1.13.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/cache.git",
-                "reference": "56cd022adb5514472cb144c087393c1821911d09"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/56cd022adb5514472cb144c087393c1821911d09",
-                "reference": "56cd022adb5514472cb144c087393c1821911d09",
-                "shasum": ""
-            },
-            "require": {
-                "php": "~7.1 || ^8.0"
-            },
-            "conflict": {
-                "doctrine/common": ">2.2,<2.4"
-            },
-            "require-dev": {
-                "alcaeus/mongo-php-adapter": "^1.1",
-                "cache/integration-tests": "dev-master",
-                "doctrine/coding-standard": "^9",
-                "mongodb/mongodb": "^1.1",
-                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5",
-                "predis/predis": "~1.0",
-                "psr/cache": "^1.0 || ^2.0 || ^3.0",
-                "symfony/cache": "^4.4 || ^5.4 || ^6",
-                "symfony/var-exporter": "^4.4 || ^5.4 || ^6"
-            },
-            "suggest": {
-                "alcaeus/mongo-php-adapter": "Required to use legacy MongoDB driver"
-            },
-            "time": "2022-05-20T20:06:54+00:00",
-            "type": "library",
-            "installation-source": "dist",
-            "autoload": {
-                "psr-4": {
-                    "Doctrine\\Common\\Cache\\": "lib/Doctrine/Common/Cache"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com"
-                },
-                {
-                    "name": "Roman Borschel",
-                    "email": "roman@code-factory.org"
-                },
-                {
-                    "name": "Benjamin Eberlei",
-                    "email": "kontakt@beberlei.de"
-                },
-                {
-                    "name": "Jonathan Wage",
-                    "email": "jonwage@gmail.com"
-                },
-                {
-                    "name": "Johannes Schmitt",
-                    "email": "schmittjoh@gmail.com"
-                }
-            ],
-            "description": "PHP Doctrine Cache library is a popular cache implementation that supports many different drivers such as redis, memcache, apc, mongodb and others.",
-            "homepage": "https://www.doctrine-project.org/projects/cache.html",
-            "keywords": [
-                "abstraction",
-                "apcu",
-                "cache",
-                "caching",
-                "couchdb",
-                "memcached",
-                "php",
-                "redis",
-                "xcache"
-            ],
-            "support": {
-                "issues": "https://github.com/doctrine/cache/issues",
-                "source": "https://github.com/doctrine/cache/tree/1.13.0"
-            },
-            "funding": [
-                {
-                    "url": "https://www.doctrine-project.org/sponsorship.html",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.patreon.com/phpdoctrine",
-                    "type": "patreon"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fcache",
-                    "type": "tidelift"
-                }
-            ],
-            "install-path": "../doctrine/cache"
-        },
-        {
             "name": "doctrine/collections",
             "version": "1.8.0",
             "version_normalized": "1.8.0.0",
@@ -1405,110 +1303,6 @@
             "install-path": "../doctrine/collections"
         },
         {
-            "name": "doctrine/common",
-            "version": "2.13.3",
-            "version_normalized": "2.13.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/common.git",
-                "reference": "f3812c026e557892c34ef37f6ab808a6b567da7f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/common/zipball/f3812c026e557892c34ef37f6ab808a6b567da7f",
-                "reference": "f3812c026e557892c34ef37f6ab808a6b567da7f",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/annotations": "^1.0",
-                "doctrine/cache": "^1.0",
-                "doctrine/collections": "^1.0",
-                "doctrine/event-manager": "^1.0",
-                "doctrine/inflector": "^1.0",
-                "doctrine/lexer": "^1.0",
-                "doctrine/persistence": "^1.3.3",
-                "doctrine/reflection": "^1.0",
-                "php": "^7.1 || ^8.0"
-            },
-            "require-dev": {
-                "doctrine/coding-standard": "^1.0",
-                "phpstan/phpstan": "^0.11",
-                "phpstan/phpstan-phpunit": "^0.11",
-                "phpunit/phpunit": "^7.0",
-                "squizlabs/php_codesniffer": "^3.0",
-                "symfony/phpunit-bridge": "^4.0.5"
-            },
-            "time": "2020-06-05T16:46:05+00:00",
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.11.x-dev"
-                }
-            },
-            "installation-source": "dist",
-            "autoload": {
-                "psr-4": {
-                    "Doctrine\\Common\\": "lib/Doctrine/Common"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com"
-                },
-                {
-                    "name": "Roman Borschel",
-                    "email": "roman@code-factory.org"
-                },
-                {
-                    "name": "Benjamin Eberlei",
-                    "email": "kontakt@beberlei.de"
-                },
-                {
-                    "name": "Jonathan Wage",
-                    "email": "jonwage@gmail.com"
-                },
-                {
-                    "name": "Johannes Schmitt",
-                    "email": "schmittjoh@gmail.com"
-                },
-                {
-                    "name": "Marco Pivetta",
-                    "email": "ocramius@gmail.com"
-                }
-            ],
-            "description": "PHP Doctrine Common project is a library that provides additional functionality that other Doctrine projects depend on such as better reflection support, persistence interfaces, proxies, event system and much more.",
-            "homepage": "https://www.doctrine-project.org/projects/common.html",
-            "keywords": [
-                "common",
-                "doctrine",
-                "php"
-            ],
-            "support": {
-                "issues": "https://github.com/doctrine/common/issues",
-                "source": "https://github.com/doctrine/common/tree/2.13.x"
-            },
-            "funding": [
-                {
-                    "url": "https://www.doctrine-project.org/sponsorship.html",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.patreon.com/phpdoctrine",
-                    "type": "patreon"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fcommon",
-                    "type": "tidelift"
-                }
-            ],
-            "install-path": "../doctrine/common"
-        },
-        {
             "name": "doctrine/deprecations",
             "version": "v1.0.0",
             "version_normalized": "1.0.0.0",
@@ -1553,200 +1347,6 @@
                 "source": "https://github.com/doctrine/deprecations/tree/v1.0.0"
             },
             "install-path": "../doctrine/deprecations"
-        },
-        {
-            "name": "doctrine/event-manager",
-            "version": "1.2.0",
-            "version_normalized": "1.2.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/event-manager.git",
-                "reference": "95aa4cb529f1e96576f3fda9f5705ada4056a520"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/event-manager/zipball/95aa4cb529f1e96576f3fda9f5705ada4056a520",
-                "reference": "95aa4cb529f1e96576f3fda9f5705ada4056a520",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/deprecations": "^0.5.3 || ^1",
-                "php": "^7.1 || ^8.0"
-            },
-            "conflict": {
-                "doctrine/common": "<2.9"
-            },
-            "require-dev": {
-                "doctrine/coding-standard": "^9 || ^10",
-                "phpstan/phpstan": "~1.4.10 || ^1.8.8",
-                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5",
-                "vimeo/psalm": "^4.24"
-            },
-            "time": "2022-10-12T20:51:15+00:00",
-            "type": "library",
-            "installation-source": "dist",
-            "autoload": {
-                "psr-4": {
-                    "Doctrine\\Common\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com"
-                },
-                {
-                    "name": "Roman Borschel",
-                    "email": "roman@code-factory.org"
-                },
-                {
-                    "name": "Benjamin Eberlei",
-                    "email": "kontakt@beberlei.de"
-                },
-                {
-                    "name": "Jonathan Wage",
-                    "email": "jonwage@gmail.com"
-                },
-                {
-                    "name": "Johannes Schmitt",
-                    "email": "schmittjoh@gmail.com"
-                },
-                {
-                    "name": "Marco Pivetta",
-                    "email": "ocramius@gmail.com"
-                }
-            ],
-            "description": "The Doctrine Event Manager is a simple PHP event system that was built to be used with the various Doctrine projects.",
-            "homepage": "https://www.doctrine-project.org/projects/event-manager.html",
-            "keywords": [
-                "event",
-                "event dispatcher",
-                "event manager",
-                "event system",
-                "events"
-            ],
-            "support": {
-                "issues": "https://github.com/doctrine/event-manager/issues",
-                "source": "https://github.com/doctrine/event-manager/tree/1.2.0"
-            },
-            "funding": [
-                {
-                    "url": "https://www.doctrine-project.org/sponsorship.html",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.patreon.com/phpdoctrine",
-                    "type": "patreon"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fevent-manager",
-                    "type": "tidelift"
-                }
-            ],
-            "install-path": "../doctrine/event-manager"
-        },
-        {
-            "name": "doctrine/inflector",
-            "version": "1.4.4",
-            "version_normalized": "1.4.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/inflector.git",
-                "reference": "4bd5c1cdfcd00e9e2d8c484f79150f67e5d355d9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/inflector/zipball/4bd5c1cdfcd00e9e2d8c484f79150f67e5d355d9",
-                "reference": "4bd5c1cdfcd00e9e2d8c484f79150f67e5d355d9",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1 || ^8.0"
-            },
-            "require-dev": {
-                "doctrine/coding-standard": "^8.0",
-                "phpstan/phpstan": "^0.12",
-                "phpstan/phpstan-phpunit": "^0.12",
-                "phpstan/phpstan-strict-rules": "^0.12",
-                "phpunit/phpunit": "^7.0 || ^8.0 || ^9.0"
-            },
-            "time": "2021-04-16T17:34:40+00:00",
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                }
-            },
-            "installation-source": "dist",
-            "autoload": {
-                "psr-4": {
-                    "Doctrine\\Common\\Inflector\\": "lib/Doctrine/Common/Inflector",
-                    "Doctrine\\Inflector\\": "lib/Doctrine/Inflector"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com"
-                },
-                {
-                    "name": "Roman Borschel",
-                    "email": "roman@code-factory.org"
-                },
-                {
-                    "name": "Benjamin Eberlei",
-                    "email": "kontakt@beberlei.de"
-                },
-                {
-                    "name": "Jonathan Wage",
-                    "email": "jonwage@gmail.com"
-                },
-                {
-                    "name": "Johannes Schmitt",
-                    "email": "schmittjoh@gmail.com"
-                }
-            ],
-            "description": "PHP Doctrine Inflector is a small library that can perform string manipulations with regard to upper/lowercase and singular/plural forms of words.",
-            "homepage": "https://www.doctrine-project.org/projects/inflector.html",
-            "keywords": [
-                "inflection",
-                "inflector",
-                "lowercase",
-                "manipulation",
-                "php",
-                "plural",
-                "singular",
-                "strings",
-                "uppercase",
-                "words"
-            ],
-            "support": {
-                "issues": "https://github.com/doctrine/inflector/issues",
-                "source": "https://github.com/doctrine/inflector/tree/1.4.4"
-            },
-            "funding": [
-                {
-                    "url": "https://www.doctrine-project.org/sponsorship.html",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.patreon.com/phpdoctrine",
-                    "type": "patreon"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Finflector",
-                    "type": "tidelift"
-                }
-            ],
-            "install-path": "../doctrine/inflector"
         },
         {
             "name": "doctrine/lexer",
@@ -1826,111 +1426,6 @@
                 }
             ],
             "install-path": "../doctrine/lexer"
-        },
-        {
-            "name": "doctrine/persistence",
-            "version": "1.3.8",
-            "version_normalized": "1.3.8.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/persistence.git",
-                "reference": "7a6eac9fb6f61bba91328f15aa7547f4806ca288"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/persistence/zipball/7a6eac9fb6f61bba91328f15aa7547f4806ca288",
-                "reference": "7a6eac9fb6f61bba91328f15aa7547f4806ca288",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/annotations": "^1.0",
-                "doctrine/cache": "^1.0",
-                "doctrine/collections": "^1.0",
-                "doctrine/event-manager": "^1.0",
-                "doctrine/reflection": "^1.2",
-                "php": "^7.1 || ^8.0"
-            },
-            "conflict": {
-                "doctrine/common": "<2.10@dev"
-            },
-            "require-dev": {
-                "doctrine/coding-standard": "^6.0",
-                "phpstan/phpstan": "^0.11",
-                "phpunit/phpunit": "^7.0 || ^8.0 || ^9.0",
-                "vimeo/psalm": "^3.11"
-            },
-            "time": "2020-06-20T12:56:16+00:00",
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.3.x-dev"
-                }
-            },
-            "installation-source": "dist",
-            "autoload": {
-                "psr-4": {
-                    "Doctrine\\Common\\": "lib/Doctrine/Common",
-                    "Doctrine\\Persistence\\": "lib/Doctrine/Persistence"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com"
-                },
-                {
-                    "name": "Roman Borschel",
-                    "email": "roman@code-factory.org"
-                },
-                {
-                    "name": "Benjamin Eberlei",
-                    "email": "kontakt@beberlei.de"
-                },
-                {
-                    "name": "Jonathan Wage",
-                    "email": "jonwage@gmail.com"
-                },
-                {
-                    "name": "Johannes Schmitt",
-                    "email": "schmittjoh@gmail.com"
-                },
-                {
-                    "name": "Marco Pivetta",
-                    "email": "ocramius@gmail.com"
-                }
-            ],
-            "description": "The Doctrine Persistence project is a set of shared interfaces and functionality that the different Doctrine object mappers share.",
-            "homepage": "https://doctrine-project.org/projects/persistence.html",
-            "keywords": [
-                "mapper",
-                "object",
-                "odm",
-                "orm",
-                "persistence"
-            ],
-            "support": {
-                "issues": "https://github.com/doctrine/persistence/issues",
-                "source": "https://github.com/doctrine/persistence/tree/1.3.x"
-            },
-            "funding": [
-                {
-                    "url": "https://www.doctrine-project.org/sponsorship.html",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.patreon.com/phpdoctrine",
-                    "type": "patreon"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fpersistence",
-                    "type": "tidelift"
-                }
-            ],
-            "install-path": "../doctrine/persistence"
         },
         {
             "name": "doctrine/reflection",
@@ -3326,18 +2821,18 @@
         },
         {
             "name": "drupal/ctools",
-            "version": "3.13.0",
-            "version_normalized": "3.13.0.0",
+            "version": "4.0.3",
+            "version_normalized": "4.0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ctools.git",
-                "reference": "8.x-3.13"
+                "reference": "4.0.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/ctools-8.x-3.13.zip",
-                "reference": "8.x-3.13",
-                "shasum": "b84176544265d4c6aa17917d66335527c9498c5a"
+                "url": "https://ftp.drupal.org/files/projects/ctools-4.0.3.zip",
+                "reference": "4.0.3",
+                "shasum": "4f389b14bd2120069386c2f28f8c4cd49bd2ebfc"
             },
             "require": {
                 "drupal/core": "^9.3 || ^10"
@@ -3345,8 +2840,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.13",
-                    "datestamp": "1668631846",
+                    "version": "4.0.3",
+                    "datestamp": "1668631947",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3419,75 +2914,6 @@
                 "issues": "https://www.drupal.org/project/issues/ctools"
             },
             "install-path": "../../web/modules/contrib/ctools"
-        },
-        {
-            "name": "drupal/devel",
-            "version": "4.2.1",
-            "version_normalized": "4.2.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/devel.git",
-                "reference": "4.2.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/devel-4.2.1.zip",
-                "reference": "4.2.1",
-                "shasum": "aa08379bad81cb2e604ee9a0b9e2aabd86fae13f"
-            },
-            "require": {
-                "doctrine/common": "^2.7",
-                "drupal/core": "^8.8 || ^9",
-                "symfony/var-dumper": "^4 || ^5"
-            },
-            "conflict": {
-                "kint-php/kint": "<3"
-            },
-            "require-dev": {
-                "drush/drush": "^10"
-            },
-            "suggest": {
-                "kint-php/kint": "Kint provides an informative display of arrays/objects. Useful for debugging and developing."
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "4.2.1",
-                    "datestamp": "1664317444",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                },
-                "drush": {
-                    "services": {
-                        "drush.services.yml": "^9 || ^10"
-                    }
-                }
-            },
-            "installation-source": "dist",
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "drupalspoons",
-                    "homepage": "https://www.drupal.org/user/3647684"
-                },
-                {
-                    "name": "moshe weitzman",
-                    "homepage": "https://www.drupal.org/user/23"
-                }
-            ],
-            "description": "Various blocks, pages, and functions for developers.",
-            "homepage": "https://www.drupal.org/project/devel",
-            "support": {
-                "source": "https://gitlab.com/drupalspoons/devel",
-                "issues": "https://gitlab.com/drupalspoons/devel/-/issues",
-                "slack": "https://drupal.slack.com/archives/C012WAW1MH6"
-            },
-            "install-path": "../../web/modules/contrib/devel"
         },
         {
             "name": "drupal/draggableviews",
@@ -3951,28 +3377,28 @@
         },
         {
             "name": "drupal/fontawesome_menu_icons",
-            "version": "1.9.0",
-            "version_normalized": "1.9.0.0",
+            "version": "2.0.0",
+            "version_normalized": "2.0.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/fontawesome_menu_icons.git",
-                "reference": "8.x-1.9"
+                "reference": "8.x-2.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/fontawesome_menu_icons-8.x-1.9.zip",
-                "reference": "8.x-1.9",
-                "shasum": "53972471ed75dc907dac327daf80af5339f7085c"
+                "url": "https://ftp.drupal.org/files/projects/fontawesome_menu_icons-8.x-2.0.zip",
+                "reference": "8.x-2.0",
+                "shasum": "b06f1e93cf6d02c8a69772dafc8b5c7c45031264"
             },
             "require": {
-                "drupal/core": "^8 || ^9",
+                "drupal/core": "^9.2 || ^10",
                 "drupal/fontawesome": "*"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.9",
-                    "datestamp": "1601802966",
+                    "version": "8.x-2.0",
+                    "datestamp": "1671730072",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4176,27 +3602,27 @@
         },
         {
             "name": "drupal/imce",
-            "version": "2.5.0",
-            "version_normalized": "2.5.0.0",
+            "version": "3.0.6",
+            "version_normalized": "3.0.6.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/imce.git",
-                "reference": "8.x-2.5"
+                "reference": "3.0.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/imce-8.x-2.5.zip",
-                "reference": "8.x-2.5",
-                "shasum": "0326482a1d6cb5f52ed00473bc5693e192149fdb"
+                "url": "https://ftp.drupal.org/files/projects/imce-3.0.6.zip",
+                "reference": "3.0.6",
+                "shasum": "b615357f34d2e331c32ba96d9b11a4ac9038214c"
             },
             "require": {
-                "drupal/core": "^8.8 || ^9"
+                "drupal/core": "^9.3 || ^10"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.5",
-                    "datestamp": "1664293755",
+                    "version": "3.0.6",
+                    "datestamp": "1672264652",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4223,7 +3649,7 @@
             "homepage": "https://drupal.org/project/imce",
             "support": {
                 "source": "https://git.drupalcode.org/project/imce",
-                "issues": "https://www.drupal.org/project/issues/imce?version=8.x"
+                "issues": "https://www.drupal.org/project/issues/imce"
             },
             "install-path": "../../web/modules/contrib/imce"
         },
@@ -4423,28 +3849,28 @@
         },
         {
             "name": "drupal/jquery_ui_datepicker",
-            "version": "1.4.0",
-            "version_normalized": "1.4.0.0",
+            "version": "2.0.0",
+            "version_normalized": "2.0.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/jquery_ui_datepicker.git",
-                "reference": "8.x-1.4"
+                "reference": "2.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/jquery_ui_datepicker-8.x-1.4.zip",
-                "reference": "8.x-1.4",
-                "shasum": "6d0e9463006d94ba21ee7547dc92ade6c9f96c8e"
+                "url": "https://ftp.drupal.org/files/projects/jquery_ui_datepicker-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "ce40cf8ab400866bffda1ac3f7e4a5ac20bb3ae5"
             },
             "require": {
-                "drupal/core": "^8 || ^9 || ^10",
-                "drupal/jquery_ui": "*"
+                "drupal/core": "^9.2 || ^10",
+                "drupal/jquery_ui": "^1.6"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.4",
-                    "datestamp": "1665821291",
+                    "version": "2.0.0",
+                    "datestamp": "1670871494",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4458,9 +3884,8 @@
             ],
             "authors": [
                 {
-                    "name": "Andrei Ivnitskii",
-                    "homepage": "https://www.drupal.org/u/ivnish",
-                    "role": "Maintainer"
+                    "name": "bnjmnm",
+                    "homepage": "https://www.drupal.org/user/2369194"
                 },
                 {
                     "name": "ivnish",
@@ -4490,8 +3915,7 @@
             "description": "Provides jQuery UI Datepicker library.",
             "homepage": "https://www.drupal.org/project/jquery_ui_datepicker",
             "support": {
-                "source": "https://git.drupalcode.org/project/jquery_ui_datepicker",
-                "issues": "https://www.drupal.org/project/issues/jquery_ui_datepicker"
+                "source": "https://git.drupalcode.org/project/jquery_ui_datepicker"
             },
             "install-path": "../../web/modules/contrib/jquery_ui_datepicker"
         },
@@ -5364,27 +4788,27 @@
         },
         {
             "name": "drupal/simple_popup_blocks",
-            "version": "2.8.0",
-            "version_normalized": "2.8.0.0",
+            "version": "3.1.0",
+            "version_normalized": "3.1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/simple_popup_blocks.git",
-                "reference": "8.x-2.8"
+                "reference": "8.x-3.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/simple_popup_blocks-8.x-2.8.zip",
-                "reference": "8.x-2.8",
-                "shasum": "b40b14fe4226327a933d3672d08f434136e27a3b"
+                "url": "https://ftp.drupal.org/files/projects/simple_popup_blocks-8.x-3.1.zip",
+                "reference": "8.x-3.1",
+                "shasum": "06f0c0f7125401465f47aa85259fe38f233a1e4a"
             },
             "require": {
-                "drupal/core": "^8 || ^9"
+                "drupal/core": "^9.4 || ^10"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.8",
-                    "datestamp": "1622660240",
+                    "version": "8.x-3.1",
+                    "datestamp": "1667858049",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5416,6 +4840,76 @@
                 "source": "https://git.drupalcode.org/project/simple_popup_blocks"
             },
             "install-path": "../../web/modules/contrib/simple_popup_blocks"
+        },
+        {
+            "name": "drupal/simplenews",
+            "version": "3.0.0-beta4",
+            "version_normalized": "3.0.0.0-beta4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/simplenews.git",
+                "reference": "3.0.0-beta4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/simplenews-3.0.0-beta4.zip",
+                "reference": "3.0.0-beta4",
+                "shasum": "1c36c3b0e2d934c7b3c4f76498a9330a9d76b16e"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9"
+            },
+            "require-dev": {
+                "drupal/monitoring": "^1.10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.0-beta4",
+                    "datestamp": "1666544250",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "AdamPS",
+                    "homepage": "https://www.drupal.org/user/2650563"
+                },
+                {
+                    "name": "AlexisWilke",
+                    "homepage": "https://www.drupal.org/user/356197"
+                },
+                {
+                    "name": "Berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                },
+                {
+                    "name": "miro_dietiker",
+                    "homepage": "https://www.drupal.org/user/227761"
+                },
+                {
+                    "name": "Simon Georges",
+                    "homepage": "https://www.drupal.org/user/172312"
+                },
+                {
+                    "name": "Sutharsan",
+                    "homepage": "https://www.drupal.org/user/73854"
+                }
+            ],
+            "description": "Simplenews publishes and sends newsletters to lists of subscribers",
+            "homepage": "https://www.drupal.org/project/simplenews",
+            "support": {
+                "source": "https://git.drupalcode.org/project/simplenews"
+            },
+            "install-path": "../../web/modules/contrib/simplenews"
         },
         {
             "name": "drupal/state_machine",
@@ -5767,27 +5261,27 @@
         },
         {
             "name": "drupal/views_infinite_scroll",
-            "version": "1.9.0",
-            "version_normalized": "1.9.0.0",
+            "version": "2.0.1",
+            "version_normalized": "2.0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/views_infinite_scroll.git",
-                "reference": "8.x-1.9"
+                "reference": "2.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/views_infinite_scroll-8.x-1.9.zip",
-                "reference": "8.x-1.9",
-                "shasum": "875d58d317d48036ed1d9ef538bc8a76bc3dcb5b"
+                "url": "https://ftp.drupal.org/files/projects/views_infinite_scroll-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "c57a2c63f00c53a9ee7e741c7f37df21eb9e76de"
             },
             "require": {
-                "drupal/core": "^8.8 || ^9"
+                "drupal/core": "^9.2 || ^10"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.9",
-                    "datestamp": "1632421809",
+                    "version": "2.0.1",
+                    "datestamp": "1664716655",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5801,7 +5295,7 @@
             ],
             "authors": [
                 {
-                    "name": "Bobík",
+                    "name": "Honza Pobořil",
                     "homepage": "https://www.drupal.org/user/123612"
                 },
                 {
