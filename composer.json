@@ -21,6 +21,7 @@
         "drupal/admin_toolbar": "^3.3",
         "drupal/back_to_top": "^2.0",
         "drupal/block_visibility_groups": "^1.4",
+        "drupal/color": "^1.0",
         "drupal/commerce": "^2.24",
         "drupal/commerce_paypal": "^1.x-dev",
         "drupal/core-composer-scaffold": "^9.1",

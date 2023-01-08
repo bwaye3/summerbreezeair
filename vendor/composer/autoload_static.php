@@ -478,9 +478,9 @@ class ComposerStaticInita5ecc8855f40fed0d639d737c6f979a3
         'Doctrine\\Common\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/common/lib/Doctrine/Common',
-            1 => __DIR__ . '/..' . '/doctrine/persistence/lib/Doctrine/Common',
-            2 => __DIR__ . '/..' . '/doctrine/reflection/lib/Doctrine/Common',
-            3 => __DIR__ . '/..' . '/doctrine/event-manager/src',
+            1 => __DIR__ . '/..' . '/doctrine/event-manager/src',
+            2 => __DIR__ . '/..' . '/doctrine/persistence/lib/Doctrine/Common',
+            3 => __DIR__ . '/..' . '/doctrine/reflection/lib/Doctrine/Common',
         ),
         'Consolidation\\SiteProcess\\' => 
         array (
@@ -4376,7 +4376,7 @@ class ComposerStaticInita5ecc8855f40fed0d639d737c6f979a3
         'SelfUpdate\\SelfUpdateCommand' => __DIR__ . '/..' . '/consolidation/self-update/src/SelfUpdateCommand.php',
         'Stack\\Builder' => __DIR__ . '/..' . '/stack/builder/src/Stack/Builder.php',
         'Stack\\StackedHttpKernel' => __DIR__ . '/..' . '/stack/builder/src/Stack/StackedHttpKernel.php',
-        'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
+        'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable 2.php',
         'Symfony\\Bridge\\PsrHttpMessage\\ArgumentValueResolver\\PsrServerRequestResolver' => __DIR__ . '/..' . '/symfony/psr-http-message-bridge/ArgumentValueResolver/PsrServerRequestResolver.php',
         'Symfony\\Bridge\\PsrHttpMessage\\EventListener\\PsrResponseListener' => __DIR__ . '/..' . '/symfony/psr-http-message-bridge/EventListener/PsrResponseListener.php',
         'Symfony\\Bridge\\PsrHttpMessage\\Factory\\HttpFoundationFactory' => __DIR__ . '/..' . '/symfony/psr-http-message-bridge/Factory/HttpFoundationFactory.php',
@@ -5112,7 +5112,6 @@ class ComposerStaticInita5ecc8855f40fed0d639d737c6f979a3
         'Symfony\\Component\\Routing\\Router' => __DIR__ . '/..' . '/symfony/routing/Router.php',
         'Symfony\\Component\\Routing\\RouterInterface' => __DIR__ . '/..' . '/symfony/routing/RouterInterface.php',
         'Symfony\\Component\\Serializer\\Annotation\\DiscriminatorMap' => __DIR__ . '/..' . '/symfony/serializer/Annotation/DiscriminatorMap.php',
-        'Symfony\\Component\\Serializer\\Annotation\\Groups' => __DIR__ . '/..' . '/symfony/serializer/Annotation/Groups.php',
         'Symfony\\Component\\Serializer\\Annotation\\MaxDepth' => __DIR__ . '/..' . '/symfony/serializer/Annotation/MaxDepth.php',
         'Symfony\\Component\\Serializer\\Annotation\\SerializedName' => __DIR__ . '/..' . '/symfony/serializer/Annotation/SerializedName.php',
         'Symfony\\Component\\Serializer\\DependencyInjection\\SerializerPass' => __DIR__ . '/..' . '/symfony/serializer/DependencyInjection/SerializerPass.php',
