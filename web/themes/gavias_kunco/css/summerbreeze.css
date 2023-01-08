@@ -59,16 +59,11 @@ body div.body-page {
   float: left;
   width: 100%;
 }
+
 .path-user .order-information > .field {
   float: left;
   margin-right: 20px;
   width: 30%;
-}
-
-@media (max-width: 300px) {
-  .path-user .order-information > .field {
-    width: 100%;
-  }
 }
 
 .path-user .order-information > .field .field__label {
@@ -128,7 +123,6 @@ a.tabledrag-handle .handle {
   border: 1px solid #262626 !important;
   padding: .5rem 3rem !important;
 }
-
 
 #custom-heading .widget.gsc-heading.style-1 {
   padding-bottom: 60px;
