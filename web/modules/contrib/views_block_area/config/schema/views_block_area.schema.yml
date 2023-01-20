@@ -1,0 +1,10 @@
+views.area.views_block_area:
+  type: views_handler
+  label: 'Views block area'
+  mapping:
+    block_id:
+      type: string
+      label: 'The block ID'
+    empty:
+      type: boolean
+      label: 'Empty'  
