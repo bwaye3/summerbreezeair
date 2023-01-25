@@ -1,4 +1,9 @@
 /* Last load sheet */
+@media (max-width: 300px) {
+  .path-user .order-information > .field {
+    width: 100%;
+  }
+}
 
 @media (max-width: 991px) {
   .widget.gsc-call-to-action.button-right-v2.margin {
@@ -107,7 +112,7 @@
   }
 
   #block-gaviascontentbuilderserviceforms .gsc-button {
-    border-color: rgba(255,255,255, 0.0) !important;
+    border-color: rgba(255, 255, 255, 0.0) !important;
   }
   #block-gaviascontentbuilderserviceforms .column-style-1 {
     margin: 1rem 0 0;

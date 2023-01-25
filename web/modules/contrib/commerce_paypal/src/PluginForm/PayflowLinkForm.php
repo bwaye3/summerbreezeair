@@ -10,9 +10,7 @@ use Drupal\Core\Render\Markup;
 use Drupal\Core\Routing\TrustedRedirectResponse;
 
 /**
- * Class PayflowLinkForm.
- *
- * @package Drupal\commerce_paypal\PluginForm
+ * Provides an offsite payment form for Payflow link.
  */
 class PayflowLinkForm extends BasePaymentOffsiteForm {
 

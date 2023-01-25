@@ -14,7 +14,6 @@ use Drupal\commerce_paypal\Event\PayPalEvents;
 use Drupal\commerce_price\Price;
 use Drupal\Core\Form\FormStateInterface;
 use GuzzleHttp\Exception\RequestException;
-use InvalidArgumentException;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -293,7 +292,7 @@ class Payflow extends OnsitePaymentGatewayBase implements PayflowInterface {
 
     $result = [];
     foreach ($responseParts as $bodyPart) {
-      list($key, $value) = explode('=', $bodyPart, 2);
+      [$key, $value] = explode('=', $bodyPart, 2);
       $result[strtolower($key)] = $value;
     }
 
@@ -336,7 +335,7 @@ class Payflow extends OnsitePaymentGatewayBase implements PayflowInterface {
 
     $payment_method = $payment->getPaymentMethod();
     if (empty($payment_method)) {
-      throw new InvalidArgumentException('The provided payment has no payment method referenced.');
+      throw new \InvalidArgumentException('The provided payment has no payment method referenced.');
     }
 
     switch ($payment_state) {
@@ -375,7 +374,7 @@ class Payflow extends OnsitePaymentGatewayBase implements PayflowInterface {
       ];
 
       $event = new PayflowRequestEvent($payment->getOrder(), $params);
-      $this->eventDispatcher->dispatch(PayPalEvents::PAYFLOW_CREATE_PAYMENT, $event);
+      $this->eventDispatcher->dispatch($event, PayPalEvents::PAYFLOW_CREATE_PAYMENT);
 
       $data = $this->executeTransaction($event->getParams());
       if ($data['result'] !== '0') {
@@ -455,14 +454,12 @@ class Payflow extends OnsitePaymentGatewayBase implements PayflowInterface {
       $payment->save();
     }
     catch (RequestException $e) {
-      throw new InvalidArgumentException('Only payments in the "authorization" state can be voided.');
+      throw new \InvalidArgumentException('Only payments in the "authorization" state can be voided.');
     }
   }
 
   /**
    * {@inheritdoc}
-   *
-   * TODO: Find a way to store the capture ID.
    */
   public function refundPayment(PaymentInterface $payment, Price $amount = NULL) {
     $this->assertPaymentState($payment, ['completed', 'partially_refunded']);

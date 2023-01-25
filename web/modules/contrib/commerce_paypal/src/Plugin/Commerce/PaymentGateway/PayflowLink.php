@@ -909,7 +909,7 @@ class PayflowLink extends OffsitePaymentGatewayBase implements PayflowLinkInterf
     $response = [];
 
     foreach (explode('&', $result) as $nvp) {
-      list($key, $value) = explode('=', $nvp);
+      [$key, $value] = explode('=', $nvp);
       $response[urldecode($key)] = urldecode($value);
     }
 

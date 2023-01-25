@@ -36,6 +36,7 @@ use Drupal\user\UserInterface;
  *   base_table = "simplenews_subscriber",
  *   entity_keys = {
  *     "id" = "id",
+ *     "uuid" = "uuid",
  *     "label" = "mail"
  *   },
  *   field_ui_base_route = "simplenews.settings_subscriber",
@@ -306,6 +307,19 @@ class Subscriber extends ContentEntityBase implements SubscriberInterface {
   }
 
   /**
+   * {@inheritdoc}
+   */
+  public function preSave(EntityStorageInterface $storage) {
+    parent::preSave($storage);
+
+    // If there is not already a linked user, fill from an account with
+    // matching uid or email.
+    if (!$this->isNew() && !$this->getUserId() && $user = $this->getUser()) {
+      $this->fillFromAccount($user);
+    }
+  }
+
+  /**
    * Identifies configurable fields shared with a user.
    *
    * @param \Drupal\user\UserInterface $user
@@ -358,6 +372,7 @@ class Subscriber extends ContentEntityBase implements SubscriberInterface {
       ->setDescription(t("The subscriber's email address."))
       ->setSetting('default_value', '')
       ->setRequired(TRUE)
+      ->addConstraint('UniqueField', [])
       ->setDisplayOptions('form', [
         'type' => 'email_default',
         'settings' => [],
@@ -385,6 +400,7 @@ class Subscriber extends ContentEntityBase implements SubscriberInterface {
     $fields['subscriptions'] = BaseFieldDefinition::create('simplenews_subscription')
       ->setCardinality(FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED)
       ->setLabel(t('Subscriptions'))
+      ->setDescription(t('Check the newsletters you want to subscribe to. Uncheck the ones you want to unsubscribe from.'))
       ->setSetting('target_type', 'simplenews_newsletter')
       ->setDisplayOptions('form', [
         'type' => 'simplenews_subscription_select',

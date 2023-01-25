@@ -1,13 +1,12 @@
 name: Views block area
 type: module
 description: Exposes all blocks as a views area.
-core: 8.x
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^8 || ^9 || ^10
 package: Views
 dependencies:
   - views
 
-# Information added by Drupal.org packaging script on 2020-06-15
-version: '8.x-1.0-beta3'
+# Information added by Drupal.org packaging script on 2023-01-19
+version: '8.x-1.0-beta4'
 project: 'views_block_area'
-datestamp: 1592206690
+datestamp: 1674121542

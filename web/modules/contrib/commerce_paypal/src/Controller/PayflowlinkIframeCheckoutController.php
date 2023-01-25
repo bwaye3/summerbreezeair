@@ -13,8 +13,8 @@ use Symfony\Component\HttpFoundation\Request;
 class PayflowlinkIframeCheckoutController extends PaymentCheckoutController {
 
   /**
-    * {@inheritdoc}
-    */
+   * {@inheritdoc}
+   */
   public function returnPage(Request $request, RouteMatchInterface $route_match) {
     /** @var \Drupal\commerce_order\Entity\OrderInterface $order */
     $order = $route_match->getParameter('commerce_order');

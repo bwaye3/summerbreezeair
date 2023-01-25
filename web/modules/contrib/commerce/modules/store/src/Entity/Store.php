@@ -111,6 +111,15 @@ class Store extends ContentEntityBase implements StoreInterface {
   /**
    * {@inheritdoc}
    */
+  public function getEmailFromHeader() {
+    // Ensure "," and ";" are removed from the store name.
+    $name = str_replace([',', ';'], '', $this->getName());
+    return sprintf('%s <%s>', $name, $this->getEmail());
+  }
+
+  /**
+   * {@inheritdoc}
+   */
   public function setEmail($mail) {
     $this->set('mail', $mail);
     return $this;

@@ -2,8 +2,6 @@
 
 namespace Drupal\simplenews\Subscription;
 
-use Drupal\simplenews\SubscriberInterface;
-
 /**
  * Subscription management; subscribe, unsubscribe and get subscription status.
  */
@@ -24,7 +22,7 @@ interface SubscriptionManagerInterface {
    *   The newsletter ID.
    * @param bool|null $confirm
    *   TRUE = send confirmation mail; FALSE = subscribe immediate to the
-   *   newsletter; NULL means the default from the chosen newsletter is used.
+   *   newsletter; NULL means the default is used.
    * @param string $source
    *   Indication for source of subscription. Simplenews uses these sources:
    *    website: via any website form (with or without confirmation email)
@@ -54,7 +52,7 @@ interface SubscriptionManagerInterface {
    *   The newsletter ID.
    * @param bool|null $confirm
    *   If TRUE, send a confirmation mail; if FALSE, unsubscribe immediately.
-   *   NULL means the default from the chosen newsletter is used.
+   *   NULL means the default is used.
    * @param string $source
    *   Indicates the unsubscribe source. Simplenews uses these sources:
    *   - website: Via any website form (with or without confirmation email).
@@ -82,24 +80,6 @@ interface SubscriptionManagerInterface {
    * @todo Caching should be done in simplenews_load_user_by_mail().
    */
   public function isSubscribed($mail, $newsletter_id);
-
-  /**
-   * Converts an array of subscription changes into descriptions.
-   *
-   * @param \Drupal\simplenews\SubscriberInterface $subscriber
-   *   Simplenews subscriber object.
-   * @param array $changes
-   *   (Optional) Array of changes, each is an array with the keys action and
-   *   newsletter_id. Defaults to $subscriber->getChanges(), which contains the
-   *   currently saved changes for the subscriber.
-   * @param string $langcode
-   *   (Optional) Specify the language of the description strings, defaults to
-   *   the current language.
-   *
-   * @return string[]
-   *   Array of description strings describing the changes.
-   */
-  public function getChangesList(SubscriberInterface $subscriber, array $changes = NULL, $langcode = NULL);
 
   /**
    * Send confirmations for previous subscription and unsubscription requests.

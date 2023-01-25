@@ -2,15 +2,15 @@
 
 namespace Drupal\commerce_paypal\Event;
 
+use Drupal\commerce\EventBase;
 use Drupal\commerce_order\Entity\OrderInterface;
-use Drupal\Component\EventDispatcher\Event;
 
 /**
  * Defines the Payflow request event.
  *
  * @see \Drupal\commerce_paypal\Event\CommercePaypalEvents
  */
-class PayflowRequestEvent extends Event {
+class PayflowRequestEvent extends EventBase {
 
   /**
    * The order.
