@@ -3,7 +3,7 @@
         'name' => 'drupal/legacy-project',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => 'ca450169d8311e33ec1d6beb5dee3ec32a819daf',
+        'reference' => '744f16c9f9b31a5f5b7bf044ccd1a2cd997865f0',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -567,6 +567,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'drupal/entity_type_clone' => array(
+            'pretty_version' => '2.2.0',
+            'version' => '2.2.0.0',
+            'reference' => '8.x-2.2',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/entity_type_clone',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'drupal/extlink' => array(
             'pretty_version' => '1.7.0',
             'version' => '1.7.0.0',
@@ -678,7 +687,7 @@
         'drupal/legacy-project' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'ca450169d8311e33ec1d6beb5dee3ec32a819daf',
+            'reference' => '744f16c9f9b31a5f5b7bf044ccd1a2cd997865f0',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
