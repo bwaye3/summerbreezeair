@@ -4031,66 +4031,6 @@
             "install-path": "../../web/modules/contrib/jquery_ui_effects"
         },
         {
-            "name": "drupal/livechat",
-            "version": "3.0.0",
-            "version_normalized": "3.0.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/livechat.git",
-                "reference": "8.x-3.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/livechat-8.x-3.0.zip",
-                "reference": "8.x-3.0",
-                "shasum": "ac9e98b0a20eb7b180ef5b43ab0213f81ef567a9"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-3.0",
-                    "datestamp": "1639155517",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "installation-source": "dist",
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "TimelessDomain",
-                    "homepage": "https://www.drupal.org/user/521674"
-                },
-                {
-                    "name": "markie",
-                    "homepage": "https://www.drupal.org/user/206687"
-                },
-                {
-                    "name": "michael_wojcik",
-                    "homepage": "https://www.drupal.org/user/3024393"
-                },
-                {
-                    "name": "ximo",
-                    "homepage": "https://www.drupal.org/user/88701"
-                }
-            ],
-            "description": "LiveChat integration.",
-            "homepage": "https://www.drupal.org/project/livechat",
-            "support": {
-                "source": "https://git.drupalcode.org/project/livechat",
-                "issues": "https://www.drupal.org/project/issues/livechat"
-            },
-            "install-path": "../../web/modules/contrib/livechat"
-        },
-        {
             "name": "drupal/ludwig",
             "version": "2.0.6",
             "version_normalized": "2.0.6.0",

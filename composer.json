@@ -42,7 +42,6 @@
         "drupal/imce": "^3.0",
         "drupal/inline_entity_form": "^1.0@RC",
         "drupal/jquery_ui_datepicker": "^2.0",
-        "drupal/livechat": "^3.0",
         "drupal/ludwig": "^2.0",
         "drupal/masquerade": "^2.0@beta",
         "drupal/media_entity_file_replace": "^1.0",
