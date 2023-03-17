@@ -9,7 +9,7 @@ dependencies:
   - drupal:node
   - drupal:taxonomy
 
-# Information added by Drupal.org packaging script on 2023-01-25
-version: '8.x-2.2'
+# Information added by Drupal.org packaging script on 2023-02-05
+version: '8.x-2.3'
 project: 'entity_type_clone'
-datestamp: 1674677911
+datestamp: 1675596613
