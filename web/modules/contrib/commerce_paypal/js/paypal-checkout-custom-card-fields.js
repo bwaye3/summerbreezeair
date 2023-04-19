@@ -162,11 +162,12 @@
       }
 
       // Extract the billing information from the selected profile.
-      $form.find(':input[name^="payment_information[add_payment_method][billing_information][address][0][address]"]').each(() => {
+      $form.find(':input[name^="payment_information[add_payment_method][billing_information][address][0][address]"]').each((index, element) => {
         // Extract the address field name.
-        let name = jQuery(this).attr('name').split('[');
+        let $input = $(element);
+        let name = $input.attr('name').split('[');
         name = name[name.length - 1];
-        billingInfo.address[name.substring(0, name.length - 1)] = $(this).val();
+        billingInfo.address[name.substring(0, name.length - 1)] = $input.val();
       });
 
       // Fallback to the entered address, if the address fields are present.
@@ -183,11 +184,12 @@
         address: {}
       };
 
-      $form.find(':input[name^="shipping_information[shipping_profile][address][0][address]"]').each(() => {
+      $form.find(':input[name^="shipping_information[shipping_profile][address][0][address]"]').each((index, element) => {
         // Extract the address field name.
-        let name = jQuery(this).attr('name').split('[');
+        let $input = $(element);
+        let name = $input.attr('name').split('[');
         name = name[name.length - 1];
-        shippingInfo.address[name.substring(0, name.length - 1)] = $(this).val();
+        shippingInfo.address[name.substring(0, name.length - 1)] = $input.val();
       });
 
       const $addressSelector = $('select[name="shipping_information[shipping_profile][select_address]"]', $form);

@@ -12,17 +12,17 @@ class SimplenewsRecipientHandlerTest extends SimplenewsTestBase {
   /**
    * {@inheritdoc}
    */
-  public static $modules = ['simplenews_demo'];
+  protected static $modules = ['simplenews_demo'];
 
   /**
    * {@inheritdoc}
    */
-  protected function setUp() {
+  protected function setUp(): void {
     parent::setUp();
 
     // We install the demo module to get the recipient handlers. It creates
     // users and sends some mails so clear those first.
-    $ids = \Drupal::entityQuery('user')->condition('uid', 0, '>')->execute();
+    $ids = \Drupal::entityQuery('user')->condition('uid', 0, '>')->accessCheck(FALSE)->execute();
     $storage = \Drupal::entityTypeManager()->getStorage('user');
     $entities = $storage->loadMultiple($ids);
     $storage->delete($entities);
@@ -140,7 +140,7 @@ class SimplenewsRecipientHandlerTest extends SimplenewsTestBase {
   protected function checkRecipients(array $expected) {
     simplenews_cron();
     $mails = $this->getMails();
-    $this->assertEqual(count($expected), count($mails), t('All mails were sent.'));
+    $this->assertEquals(count($expected), count($mails), t('All mails were sent.'));
     foreach ($mails as $mail) {
       $this->assertArrayHasKey($mail['to'], $expected, t('Found valid recipient @recip', ['@recip' => $mail['to']]));
       unset($expected[$mail['to']]);

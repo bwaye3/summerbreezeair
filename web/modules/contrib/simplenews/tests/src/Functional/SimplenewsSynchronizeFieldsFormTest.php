@@ -17,7 +17,7 @@ class SimplenewsSynchronizeFieldsFormTest extends SimplenewsTestBase {
    *
    * @var array
    */
-  public static $modules = ['field', 'simplenews'];
+  protected static $modules = ['field', 'simplenews'];
 
   /**
    * User.
@@ -29,7 +29,7 @@ class SimplenewsSynchronizeFieldsFormTest extends SimplenewsTestBase {
   /**
    * {@inheritdoc}
    */
-  protected function setUp() {
+  protected function setUp(): void {
     parent::setUp();
 
     // Add a field to both entities.
@@ -60,7 +60,7 @@ class SimplenewsSynchronizeFieldsFormTest extends SimplenewsTestBase {
     // Edit subscriber field and assert user field is changed accordingly.
     $this->drupalLogin($this->user);
     $this->drupalGet('admin/people/simplenews/edit/' . $subscriber->id());
-    $this->assertField('field_shared[0][value]');
+    $this->assertSession()->fieldExists('field_shared[0][value]');
     $this->assertSession()->responseContains($this->user->field_shared->value);
 
     $new_value = $this->randomMachineName();
@@ -69,7 +69,7 @@ class SimplenewsSynchronizeFieldsFormTest extends SimplenewsTestBase {
     $this->assertSession()->responseContains($new_value);
 
     $this->user = User::load($this->user->id());
-    $this->assertEqual($this->user->field_shared->value, $new_value);
+    $this->assertEquals($new_value, $this->user->field_shared->value);
 
     // Unset the sync setting and assert field is not synced.
     $this->drupalGet('admin/config/people/simplenews/settings/subscriber');
@@ -82,8 +82,8 @@ class SimplenewsSynchronizeFieldsFormTest extends SimplenewsTestBase {
     $this->assertSession()->responseContains($unsynced_value);
 
     $this->user = User::load($this->user->id());
-    $this->assertEqual($this->user->field_shared->value, $new_value);
-    $this->assertNotEqual($this->user->field_shared->value, $unsynced_value);
+    $this->assertEquals($new_value, $this->user->field_shared->value);
+    $this->assertNotEquals($unsynced_value, $this->user->field_shared->value);
   }
 
 }
