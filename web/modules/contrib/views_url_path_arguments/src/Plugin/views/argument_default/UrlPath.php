@@ -87,7 +87,7 @@ class UrlPath extends ArgumentDefaultPluginBase implements CacheableDependencyIn
   public function buildOptionsForm(&$form, FormStateInterface $formState) {
     $form['provide_static_segments'] = [
       '#type' => 'checkbox',
-      '#title' => $this->t('Provide a static url segment(s) to prefix aliases?'),
+      '#title' => $this->t('Provide a static URL segment(s) to prefix aliases?'),
       '#default_value' => $this->options['provide_static_segments'],
     ];
     $form['segments'] = [
@@ -101,6 +101,16 @@ class UrlPath extends ArgumentDefaultPluginBase implements CacheableDependencyIn
         ],
       ],
     ];
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function validateOptionsForm(&$form, FormStateInterface $form_state) {
+    $values = $form_state->getValue($form['#parents']);
+    if (isset($values['segments']) && $values['segments'] !== trim($values['segments'], '/')) {
+      $form_state->setError($form['segments'], t('The URL segments must not contain a leading or trailing slash (/).'));
+    }
   }
 
   /**
@@ -148,6 +158,15 @@ class UrlPath extends ArgumentDefaultPluginBase implements CacheableDependencyIn
    */
   public function getCacheContexts() {
     return ['url'];
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function calculateDependencies() {
+    $dependencies = parent::calculateDependencies();
+    $dependencies['module'][] = 'views_url_path_arguments';
+    return $dependencies;
   }
 
 }

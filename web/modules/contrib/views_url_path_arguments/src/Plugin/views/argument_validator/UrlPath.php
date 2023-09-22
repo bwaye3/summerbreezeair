@@ -85,7 +85,7 @@ class UrlPath extends ArgumentValidatorPluginBase {
   public function buildOptionsForm(&$form, FormStateInterface $formState) {
     $form['provide_static_segments'] = [
       '#type' => 'checkbox',
-      '#title' => $this->t('Provide a static url segment as the prefix to the alias?'),
+      '#title' => $this->t('Provide a static URL segment as the prefix to the alias?'),
       '#default_value' => $this->options['provide_static_segments'],
     ];
     $form['segments'] = [
@@ -95,7 +95,7 @@ class UrlPath extends ArgumentValidatorPluginBase {
       '#default_value' => $this->options['segments'],
       '#states' => [
         'visible' => [
-          ':input[name="options[argument_default][views_url_path][provide_static_segments]"]' => ['checked' => TRUE],
+          ':input[name="options[validate][options][views_url_path][provide_static_segments]"]' => ['checked' => TRUE],
         ],
       ],
     ];
@@ -104,14 +104,17 @@ class UrlPath extends ArgumentValidatorPluginBase {
   /**
    * {@inheritdoc}
    */
-  public function validateArgument($argument) {
-
-    // Is it already the entity id?
-    if (ctype_digit($argument)) {
-      $this->argument->argument = $argument;
-      return TRUE;
+  public function validateOptionsForm(&$form, FormStateInterface $form_state) {
+    $values = $form_state->getValue($form['#parents']);
+    if (isset($values['segments']) && $values['segments'] !== trim($values['segments'], '/')) {
+      $form_state->setError($form['segments'], t('The URL segments must not contain a leading or trailing slash (/).'));
     }
+  }
 
+  /**
+   * {@inheritdoc}
+   */
+  public function validateArgument($argument) {
     $alias = '/';
     if ($this->options['provide_static_segments']) {
       $alias .= $this->options['segments'] . '/';
@@ -135,9 +138,23 @@ class UrlPath extends ArgumentValidatorPluginBase {
       $this->argument->argument = $entity_id;
       return TRUE;
     }
-    else {
-      return FALSE;
+
+    // Is it already the entity id?
+    if (ctype_digit($argument)) {
+      $this->argument->argument = $argument;
+      return TRUE;
     }
+
+    return FALSE;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function calculateDependencies() {
+    $dependencies = parent::calculateDependencies();
+    $dependencies['module'][] = 'views_url_path_arguments';
+    return $dependencies;
   }
 
 }
