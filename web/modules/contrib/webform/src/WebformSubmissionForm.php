@@ -1749,6 +1749,13 @@ class WebformSubmissionForm extends ContentEntityForm {
    *   The current state of the form.
    */
   public function autosave(array &$form, FormStateInterface $form_state) {
+    // Make sure the submission exists before validating it.
+    /** @var \Drupal\webform\WebformSubmissionInterface $webform_submission */
+    $webform_submission = $this->getEntity();
+    if ($webform_submission->id() && !WebformSubmission::load($webform_submission->id())) {
+      return;
+    }
+
     if ($form_state->hasAnyErrors()) {
       if ($this->draftEnabled() && $this->getWebformSetting('draft_auto_save') && !$this->entity->isCompleted()) {
         $form_state->set('in_draft', TRUE);
@@ -1847,6 +1854,14 @@ class WebformSubmissionForm extends ContentEntityForm {
    * {@inheritdoc}
    */
   public function validateForm(array &$form, FormStateInterface $form_state) {
+    // Make sure the submission exists before validating it.
+    /** @var \Drupal\webform\WebformSubmissionInterface $webform_submission */
+    $webform_submission = $this->getEntity();
+    if ($webform_submission->id() && !WebformSubmission::load($webform_submission->id())) {
+      $form_state->setErrorByName(NULL, $this->t('An error occurred while trying to validate the submission. Please save your work and reload this page.'));
+      return;
+    }
+
     parent::validateForm($form, $form_state);
 
     // Disable inline form error when performing validation via the API.
@@ -2645,13 +2660,10 @@ class WebformSubmissionForm extends ContentEntityForm {
       $prepopulate_data = $this->getRequest()->query->all();
     }
     else {
-      $prepopulate_data = [];
-      $elements = $this->getWebform()->getElementsPrepopulate();
-      foreach ($elements as $element_key) {
-        if ($this->getRequest()->query->has($element_key)) {
-          $prepopulate_data[$element_key] = $this->getRequest()->query->get($element_key);
-        }
-      }
+      $prepopulate_data = array_intersect_key(
+        $this->getRequest()->query->all(),
+        $this->getWebform()->getElementsPrepopulate()
+      );
     }
 
     // Validate prepopulate data.

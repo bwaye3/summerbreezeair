@@ -40,8 +40,6 @@ use Drupal\Core\Config\Entity\ConfigEntityBase;
  *     "allow_other_conditions",
  *   },
  *   links = {
- *     "canonical" =
- *     "/admin/structure/block/block-visibility-group/{block_visibility_group}",
  *     "edit-form" =
  *     "/admin/structure/block/block-visibility-group/{block_visibility_group}/edit",
  *     "delete-form" =
@@ -185,7 +183,32 @@ class BlockVisibilityGroup extends ConfigEntityBase implements BlockVisibilityGr
    */
   public function getCacheTags() {
     $tags = parent::getCacheTags();
+    foreach ($this->getConditions() as $condition) {
+      $tags = Cache::mergeTags($tags, $condition->getCacheTags());
+    }
     return Cache::mergeTags($tags, ['block_visibility_group:' . $this->id]);
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getCacheContexts() {
+    $contexts = parent::getCacheContexts();
+    foreach ($this->getConditions() as $condition) {
+      $contexts = Cache::mergeContexts($contexts, $condition->getCacheContexts());
+    }
+    return $contexts;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getCacheMaxAge() {
+    $age = parent::getCacheMaxAge();
+    foreach ($this->getConditions() as $condition) {
+      $age = Cache::mergeMaxAges($age, $condition->getCacheMaxAge());
+    }
+    return $age;
   }
 
 }

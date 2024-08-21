@@ -88,7 +88,6 @@ class ComposerStaticInita5ecc8855f40fed0d639d737c6f979a3
             'Symfony\\Cmf\\Component\\Routing\\' => 30,
             'Symfony\\Bridge\\PsrHttpMessage\\' => 30,
             'SelfUpdate\\' => 11,
-            'Sainsburys\\Guzzle\\Oauth2\\' => 25,
         ),
         'R' => 
         array (
@@ -123,10 +122,6 @@ class ComposerStaticInita5ecc8855f40fed0d639d737c6f979a3
             'GuzzleHttp\\' => 11,
             'Grasmash\\YamlExpander\\' => 22,
             'Grasmash\\Expander\\' => 18,
-        ),
-        'F' => 
-        array (
-            'Firebase\\JWT\\' => 13,
         ),
         'E' => 
         array (
@@ -314,10 +309,6 @@ class ComposerStaticInita5ecc8855f40fed0d639d737c6f979a3
         array (
             0 => __DIR__ . '/..' . '/consolidation/self-update/src',
         ),
-        'Sainsburys\\Guzzle\\Oauth2\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/sainsburys/guzzle-oauth2-plugin/src',
-        ),
         'Robo\\' => 
         array (
             0 => __DIR__ . '/..' . '/consolidation/robo/src',
@@ -394,10 +385,6 @@ class ComposerStaticInita5ecc8855f40fed0d639d737c6f979a3
         'Grasmash\\Expander\\' => 
         array (
             0 => __DIR__ . '/..' . '/grasmash/expander/src',
-        ),
-        'Firebase\\JWT\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
         ),
         'Enlightn\\SecurityChecker\\' => 
         array (
@@ -545,10 +532,6 @@ class ComposerStaticInita5ecc8855f40fed0d639d737c6f979a3
                 0 => __DIR__ . '/..' . '/pear/archive_tar',
             ),
         ),
-    );
-
-    public static $fallbackDirsPsr0 = array (
-        0 => __DIR__ . '/..' . '/pear/pear-core-minimal/src',
     );
 
     public static $classMap = array (
@@ -3197,13 +3180,6 @@ class ComposerStaticInita5ecc8855f40fed0d639d737c6f979a3
         'Enlightn\\SecurityChecker\\SecurityChecker' => __DIR__ . '/..' . '/enlightn/security-checker/src/SecurityChecker.php',
         'Enlightn\\SecurityChecker\\SecurityCheckerCommand' => __DIR__ . '/..' . '/enlightn/security-checker/src/SecurityCheckerCommand.php',
         'Enlightn\\SecurityChecker\\ZipExtractor' => __DIR__ . '/..' . '/enlightn/security-checker/src/ZipExtractor.php',
-        'Firebase\\JWT\\BeforeValidException' => __DIR__ . '/..' . '/firebase/php-jwt/src/BeforeValidException.php',
-        'Firebase\\JWT\\CachedKeySet' => __DIR__ . '/..' . '/firebase/php-jwt/src/CachedKeySet.php',
-        'Firebase\\JWT\\ExpiredException' => __DIR__ . '/..' . '/firebase/php-jwt/src/ExpiredException.php',
-        'Firebase\\JWT\\JWK' => __DIR__ . '/..' . '/firebase/php-jwt/src/JWK.php',
-        'Firebase\\JWT\\JWT' => __DIR__ . '/..' . '/firebase/php-jwt/src/JWT.php',
-        'Firebase\\JWT\\Key' => __DIR__ . '/..' . '/firebase/php-jwt/src/Key.php',
-        'Firebase\\JWT\\SignatureInvalidException' => __DIR__ . '/..' . '/firebase/php-jwt/src/SignatureInvalidException.php',
         'Grasmash\\Expander\\Expander' => __DIR__ . '/..' . '/grasmash/expander/src/Expander.php',
         'Grasmash\\Expander\\Stringifier' => __DIR__ . '/..' . '/grasmash/expander/src/Stringifier.php',
         'Grasmash\\Expander\\StringifierInterface' => __DIR__ . '/..' . '/grasmash/expander/src/StringifierInterface.php',
@@ -3564,6 +3540,7 @@ class ComposerStaticInita5ecc8855f40fed0d639d737c6f979a3
         'Normalizer' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php',
         'OS_Guess' => __DIR__ . '/..' . '/pear/pear-core-minimal/src/OS/Guess.php',
         'PEAR' => __DIR__ . '/..' . '/pear/pear-core-minimal/src/PEAR.php',
+        'PEAR_Error' => __DIR__ . '/..' . '/pear/pear-core-minimal/src/PEAR.php',
         'PEAR_ErrorStack' => __DIR__ . '/..' . '/pear/pear-core-minimal/src/PEAR/ErrorStack.php',
         'PEAR_Exception' => __DIR__ . '/..' . '/pear/pear_exception/PEAR/Exception.php',
         'PhpParser\\Builder' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Builder.php',
@@ -4181,16 +4158,6 @@ class ComposerStaticInita5ecc8855f40fed0d639d737c6f979a3
         'Robo\\Task\\Vcs\\SvnStack' => __DIR__ . '/..' . '/consolidation/robo/src/Task/Vcs/SvnStack.php',
         'Robo\\Task\\Vcs\\Tasks' => __DIR__ . '/..' . '/consolidation/robo/src/Task/Vcs/Tasks.php',
         'Robo\\Tasks' => __DIR__ . '/..' . '/consolidation/robo/src/Tasks.php',
-        'Sainsburys\\Guzzle\\Oauth2\\AccessToken' => __DIR__ . '/..' . '/sainsburys/guzzle-oauth2-plugin/src/AccessToken.php',
-        'Sainsburys\\Guzzle\\Oauth2\\GrantType\\AuthorizationCode' => __DIR__ . '/..' . '/sainsburys/guzzle-oauth2-plugin/src/GrantType/AuthorizationCode.php',
-        'Sainsburys\\Guzzle\\Oauth2\\GrantType\\ClientCredentials' => __DIR__ . '/..' . '/sainsburys/guzzle-oauth2-plugin/src/GrantType/ClientCredentials.php',
-        'Sainsburys\\Guzzle\\Oauth2\\GrantType\\GrantTypeBase' => __DIR__ . '/..' . '/sainsburys/guzzle-oauth2-plugin/src/GrantType/GrantTypeBase.php',
-        'Sainsburys\\Guzzle\\Oauth2\\GrantType\\GrantTypeInterface' => __DIR__ . '/..' . '/sainsburys/guzzle-oauth2-plugin/src/GrantType/GrantTypeInterface.php',
-        'Sainsburys\\Guzzle\\Oauth2\\GrantType\\JwtBearer' => __DIR__ . '/..' . '/sainsburys/guzzle-oauth2-plugin/src/GrantType/JwtBearer.php',
-        'Sainsburys\\Guzzle\\Oauth2\\GrantType\\PasswordCredentials' => __DIR__ . '/..' . '/sainsburys/guzzle-oauth2-plugin/src/GrantType/PasswordCredentials.php',
-        'Sainsburys\\Guzzle\\Oauth2\\GrantType\\RefreshToken' => __DIR__ . '/..' . '/sainsburys/guzzle-oauth2-plugin/src/GrantType/RefreshToken.php',
-        'Sainsburys\\Guzzle\\Oauth2\\GrantType\\RefreshTokenGrantTypeInterface' => __DIR__ . '/..' . '/sainsburys/guzzle-oauth2-plugin/src/GrantType/RefreshTokenGrantTypeInterface.php',
-        'Sainsburys\\Guzzle\\Oauth2\\Middleware\\OAuthMiddleware' => __DIR__ . '/..' . '/sainsburys/guzzle-oauth2-plugin/src/Middleware/OAuthMiddleware.php',
         'SelfUpdate\\SelfUpdateCommand' => __DIR__ . '/..' . '/consolidation/self-update/src/SelfUpdateCommand.php',
         'Stack\\Builder' => __DIR__ . '/..' . '/stack/builder/src/Stack/Builder.php',
         'Stack\\StackedHttpKernel' => __DIR__ . '/..' . '/stack/builder/src/Stack/StackedHttpKernel.php',
@@ -5376,6 +5343,7 @@ class ComposerStaticInita5ecc8855f40fed0d639d737c6f979a3
         'Symfony\\Contracts\\Service\\ServiceSubscriberInterface' => __DIR__ . '/..' . '/symfony/service-contracts/ServiceSubscriberInterface.php',
         'Symfony\\Contracts\\Service\\ServiceSubscriberTrait' => __DIR__ . '/..' . '/symfony/service-contracts/ServiceSubscriberTrait.php',
         'Symfony\\Contracts\\Service\\Test\\ServiceLocatorTest' => __DIR__ . '/..' . '/symfony/service-contracts/Test/ServiceLocatorTest.php',
+        'Symfony\\Contracts\\Service\\Test\\ServiceLocatorTestCase' => __DIR__ . '/..' . '/symfony/service-contracts/Test/ServiceLocatorTestCase.php',
         'Symfony\\Contracts\\Translation\\LocaleAwareInterface' => __DIR__ . '/..' . '/symfony/translation-contracts/LocaleAwareInterface.php',
         'Symfony\\Contracts\\Translation\\Test\\TranslatorTest' => __DIR__ . '/..' . '/symfony/translation-contracts/Test/TranslatorTest.php',
         'Symfony\\Contracts\\Translation\\TranslatableInterface' => __DIR__ . '/..' . '/symfony/translation-contracts/TranslatableInterface.php',
@@ -5785,7 +5753,6 @@ class ComposerStaticInita5ecc8855f40fed0d639d737c6f979a3
             $loader->prefixLengthsPsr4 = ComposerStaticInita5ecc8855f40fed0d639d737c6f979a3::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInita5ecc8855f40fed0d639d737c6f979a3::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInita5ecc8855f40fed0d639d737c6f979a3::$prefixesPsr0;
-            $loader->fallbackDirsPsr0 = ComposerStaticInita5ecc8855f40fed0d639d737c6f979a3::$fallbackDirsPsr0;
             $loader->classMap = ComposerStaticInita5ecc8855f40fed0d639d737c6f979a3::$classMap;
 
         }, null, ClassLoader::class);

@@ -42,6 +42,7 @@ The module has no menu or modifiable settings. There is no configuration.
 
 ## Maintainers
 
+[//]: # cspell:disable
 - Pravin Gaikwad - [Rajeshreeputra](https://www.drupal.org/u/rajeshreeputra)
 - Colan Schwartz - [colan](https://www.drupal.org/u/colan)
 - Nick Dickinson-Wilde - [NickDickinsonWilde](https://www.drupal.org/u/nickdickinsonwilde)

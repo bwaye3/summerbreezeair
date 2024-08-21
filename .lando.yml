@@ -1,0 +1,21 @@
+name: summerbreeze
+recipe: drupal9
+config:
+  php: '8.2'
+  webroot: web
+
+# Services
+services:
+  database:
+    portforward: 56767
+    creds:
+      user: drupal9
+      password: drupal9
+      database: drupal9
+  summerbreeze-phpmyadmin:
+    type: phpmyadmin
+
+# Proxy
+proxy:
+  cyber-phpmyadmin:
+    - summerbreeze-phpmyadmin.lndo.site

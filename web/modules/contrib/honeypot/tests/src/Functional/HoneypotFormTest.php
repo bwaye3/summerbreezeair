@@ -2,8 +2,8 @@
 
 namespace Drupal\Tests\honeypot\Functional;
 
-use Drupal\comment\Tests\CommentTestTrait;
 use Drupal\comment\Plugin\Field\FieldType\CommentItemInterface;
+use Drupal\comment\Tests\CommentTestTrait;
 use Drupal\contact\Entity\ContactForm;
 use Drupal\Tests\BrowserTestBase;
 use Drupal\user\UserInterface;
@@ -175,7 +175,7 @@ class HoneypotFormTest extends BrowserTestBase {
    * Test that any (not-strict-empty) value triggers protection.
    */
   public function testStrictEmptinessOnHoneypotField(): void {
-    // Initialise the form values.
+    // Initialize the form values.
     $edit['name'] = $this->randomMachineName();
     $edit['mail'] = $edit['name'] . '@example.com';
 
