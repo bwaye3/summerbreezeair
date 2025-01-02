@@ -7,6 +7,6 @@
     "drupal/token": "^1.0"
   },
   "require-dev": {
-    "drupal/webform": "^6.2"
+    "drupal/webform": "*"
   }
 }

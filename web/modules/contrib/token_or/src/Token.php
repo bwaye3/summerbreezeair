@@ -2,18 +2,19 @@
 
 namespace Drupal\token_or;
 
+use Drupal\Component\Utility\NestedArray;
 use Drupal\Core\Render\BubbleableMetadata;
 use Drupal\token\Token as OriginalToken;
 
 /**
- * Overrride class for tokens.
+ * Override class for tokens.
  */
 class Token extends OriginalToken {
 
   /**
    * {@inheritdoc}
    */
-  public function replace($text, array $data = [], array $options = [], BubbleableMetadata $bubbleable_metadata = NULL) {
+  public function replace($text, array $data = [], array $options = [], ?BubbleableMetadata $bubbleable_metadata = NULL) {
     $this->moduleHandler->alter('tokens_pre', $text, $data, $options);
     return parent::replace($text, $data, $options, $bubbleable_metadata);
   }
@@ -61,7 +62,7 @@ class Token extends OriginalToken {
       }
     }
 
-    return array_merge_recursive($results, parent::scan(implode(' ', $sub_tokens)));
+    return NestedArray::mergeDeep($results, parent::scan(implode(' ', $sub_tokens)));
   }
 
 }

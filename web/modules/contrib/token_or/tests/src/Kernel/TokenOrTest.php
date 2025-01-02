@@ -103,4 +103,17 @@ class TokenOrTest extends KernelTestBase {
     $this->assertEquals(NULL, $value);
   }
 
+  /**
+   * Tests that scan() returns strings.
+   */
+  public function testScanReturnsStrings() {
+    $value = $this->tokenService->scan('/[node:field_dummy]/dummy?type:[node:field_test|node:field_dummy]');
+    $this->assertEquals([
+      'node' => [
+        'field_test' => '[node:field_test]',
+        'field_dummy' => '[node:field_dummy]',
+      ],
+    ], $value);
+  }
+
 }

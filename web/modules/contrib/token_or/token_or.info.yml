@@ -1,11 +1,11 @@
 name: Token Or
 description: Token Or
 type: module
-core_version_requirement: ^8.8 || ^9 || ^10
+core_version_requirement: ^9.2 || ^10 || ^11
 dependencies:
   - token:token
 
-# Information added by Drupal.org packaging script on 2023-12-12
-version: '2.2.0'
+# Information added by Drupal.org packaging script on 2024-11-05
+version: '2.3.0'
 project: 'token_or'
-datestamp: 1702402758
+datestamp: 1730828438

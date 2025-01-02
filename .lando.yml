@@ -7,7 +7,7 @@ config:
 # Services
 services:
   database:
-    portforward: 56767
+    portforward: 52981
     creds:
       user: drupal9
       password: drupal9
@@ -17,5 +17,5 @@ services:
 
 # Proxy
 proxy:
-  cyber-phpmyadmin:
+  summerbreeze-phpmyadmin:
     - summerbreeze-phpmyadmin.lndo.site
