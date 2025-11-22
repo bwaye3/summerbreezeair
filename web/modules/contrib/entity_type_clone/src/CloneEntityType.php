@@ -3,6 +3,7 @@
 namespace Drupal\entity_type_clone;
 
 use Drupal\block_content\Entity\BlockContentType;
+use Drupal\Core\Entity\EntityDisplayRepositoryInterface;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\entity_type_clone\Controller\EntityTypeCloneController;
 use Drupal\node\Entity\NodeType;
@@ -11,6 +12,7 @@ use Drupal\profile\Entity\ProfileType;
 use Drupal\storage\Entity\StorageType;
 use Drupal\taxonomy\Entity\Vocabulary;
 use Symfony\Component\HttpFoundation\RedirectResponse;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
 
 /**
  * Class for cloning entity type data form.
@@ -34,10 +36,14 @@ class CloneEntityType {
     // Only create a duplicate of an entity if the field implements,
     // EntityInterface (as this is not guaranteed e.g. for Content moderation).
     if ($data['field'] instanceof EntityInterface) {
-      $targetFieldConfig = $data['field']->createDuplicate();
-      $targetFieldConfig->set('entity_type', $data['values']['show']['entity_type']);
-      $targetFieldConfig->set('bundle', $data['values']['clone_bundle_machine']);
-      $targetFieldConfig->save();
+      // Double check if the field has not already been added by another module (e.g. Domain).
+      $existing_fields = \Drupal::service('entity_field.manager')->getFieldDefinitions($data['values']['show']['entity_type'], $data['values']['clone_bundle_machine']);
+      if (!array_key_exists($sourceFieldName, $existing_fields)) {
+        $targetFieldConfig = $data['field']->createDuplicate();
+        $targetFieldConfig->set('entity_type', $data['values']['show']['entity_type']);
+        $targetFieldConfig->set('bundle', $data['values']['clone_bundle_machine']);
+        $targetFieldConfig->save();
+      }
     }
     // Copy the form display.
     $form_mode_displays = \Drupal::service('entity_display.repository')
@@ -157,6 +163,11 @@ class CloneEntityType {
         $storageTypeSave->save();
       }
     }
+
+    // Clone extra fields for view modes.
+    // @todo the same for extra fields in form modes.
+    self::setInitExtraFields($values);
+
     // Update the progress information.
     $context['sandbox']['progress'];
     $context['sandbox']['current_item'] = $values['show']['type'];
@@ -195,5 +206,92 @@ class CloneEntityType {
     $response = new RedirectResponse('admin/config/entity-type-clone');
     $response->send();
   }
+
+  /**
+   * Clone extra fields for view modes.
+   *
+   * @param array $values
+   *   Contains the values of the form submitted via $form_state.
+   */
+  private static function setInitExtraFields(array $values): void {
+    $config_factory = \Drupal::configFactory();
+    $entity_display = \Drupal::service('entity_display.repository');
+    $entity_field = \Drupal::service('entity_field.manager');
+
+    // Get active view modes from source entity.
+    $modes = $config_factory->listAll('core.entity_view_display' . '.' . $values['show']['entity_type'] . '.' . $values['show']['type']);
+    $extra_fields = $entity_field->getExtraFields($values['show']['entity_type'], $values['show']['type']);
+    if ($modes) {
+      // Loop through each view mode configuration.
+      foreach ($modes as $mode) {
+        // Extract the view mode from the configuration name.
+        $view_mode = self::extractViewMode($mode);
+        // Get the source content for the specific view mode.
+        $source_content = self::getSourceContent($entity_display, $values['show']['entity_type'], $values['show']['type'], $view_mode);
+        // Get the target display object for the cloned entity type and view mode.
+        $target_cloned_display = $entity_display->getViewDisplay($values['show']['entity_type'], $values['clone_bundle_machine'], $view_mode);
+        // Clone the extra fields from the source to the target display.
+        self::cloneExtraFields($target_cloned_display, $extra_fields, $source_content);
+        // Save the updated target display configuration.
+        $target_cloned_display->save();
+      }
+    }
+  }
+
+  /**
+   * Extract the view mode from the configuration name.
+   *
+   * @param string $mode
+   *   The configuration name for the view mode.
+   *
+   * @return string
+   *   The extracted view mode.
+   */
+  private static function extractViewMode(string $mode): string {
+    $mode_explode = explode('.', $mode);
+    return $mode_explode[4];
+  }
+
+  /**
+   * Get the source content for a given view mode.
+   *
+   * @param EntityDisplayRepositoryInterface $entity_display
+   *   The entity display repository service.
+   * @param string $entity_type
+   *   The entity type.
+   * @param string $bundle_type
+   *   The bundle type.
+   * @param string $view_mode
+   *
+   * @return array
+   *   The source content array.
+   */
+  private static function getSourceContent(EntityDisplayRepositoryInterface $entity_display, string $entity_type, string $bundle_type, string $view_mode): array {
+    return $entity_display->getViewDisplay($entity_type, $bundle_type, $view_mode)->get('content');
+  }
+
+  /**
+   * Clone the extra fields from source to target display.
+   *
+   * @param EntityViewDisplayInterface $target_cloned_display
+   *   The target cloned display object.
+   * @param array $extra_fields
+   *   The extra fields array.
+   * @param array $source_content
+   *   The source content array.
+   */
+  private static function cloneExtraFields(EntityViewDisplayInterface $target_cloned_display, array $extra_fields, array $source_content): void {
+    // Check each extra field.
+    foreach ($extra_fields['display'] as $extra_field => $extra_field_info) {
+      // Reset by deleting all extra fields.
+      $target_cloned_display->removeComponent($extra_field);
+      // Add to content (active) section to display.
+      if (isset($source_content[$extra_field])) {
+        $target_cloned_display->setComponent($extra_field, $source_content[$extra_field]);
+      }
+    }
+  }
+
+
 
 }

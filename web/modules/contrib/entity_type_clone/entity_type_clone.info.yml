@@ -1,7 +1,7 @@
 name: Entity Type Clone
 type: module
 description: This module provide option to clone entity types and role.
-core_version_requirement: ^8 || ^9 || ^10
+core_version_requirement: ^8 || ^9 || ^10 || ^11
 package: Other
 configure: entity_type_clone.type
 dependencies:
@@ -9,7 +9,7 @@ dependencies:
   - drupal:node
   - drupal:taxonomy
 
-# Information added by Drupal.org packaging script on 2023-09-05
-version: '4.0.3'
+# Information added by Drupal.org packaging script on 2025-09-20
+version: '4.0.6'
 project: 'entity_type_clone'
-datestamp: 1693947344
+datestamp: 1758390324

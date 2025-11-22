@@ -74,17 +74,16 @@ class EntityTypeCloneController extends ControllerBase {
 
         // Add support for third party configuration in view modes like
         // field_group, etc.
-        if (!isset(self::$checkThirdPartySettings[$mode])) {
-          $third_party_settings = $sourceDisplay['third_party_settings'];
-          if ($third_party_settings) {
-            // Avoid future checks.
-            self::$checkThirdPartySettings[$mode] = true;
-            foreach ($third_party_settings as $module => $third_data) {
-              if (is_array($third_data)) {
-                foreach ($third_data as $key => $third_value) {
-                  // Add to destination display.
-                  $entityDisplay->setThirdPartySetting($module, $key, $third_value);
-                }
+        if (!isset(self::$checkThirdPartySettings[$mode]) &&
+          !empty($sourceDisplay['third_party_settings']) &&
+          $third_party_settings = $sourceDisplay['third_party_settings']) {
+          // Avoid future checks.
+          self::$checkThirdPartySettings[$mode] = true;
+          foreach ($third_party_settings as $module => $third_data) {
+            if (is_array($third_data)) {
+              foreach ($third_data as $key => $third_value) {
+                // Add to the destination display.
+                $entityDisplay->setThirdPartySetting($module, $key, $third_value);
               }
             }
           }

@@ -6,6 +6,7 @@ use Drupal\Component\Serialization\Json;
 use Drupal\Core\Entity\ContentEntityType;
 use Drupal\Core\Entity\EntityFieldManagerInterface;
 use Drupal\Core\Entity\EntityTypeBundleInfoInterface;
+use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Extension\ModuleHandlerInterface;
 use Drupal\Core\Form\FormBase;
@@ -199,6 +200,7 @@ class CloneEntityTypeForm extends FormBase {
       '#type' => 'machine_name',
       '#title' => $this->t('Target bundle machine name'),
       '#required' => TRUE,
+      '#maxlength' => EntityTypeInterface::BUNDLE_MAX_LENGTH,
       '#machine_name' => [
         'exists' => $this->getEntityLookupCallback($entity_type),
         'source' => ['target', 'clone_bundle'],
@@ -270,6 +272,12 @@ class CloneEntityTypeForm extends FormBase {
     $values = $form_state->getValues();
     $entity_type = $values['show']['entity_type'];
     $operations = [];
+
+    // Limits the length of the entity bundle machine name.
+    if (isset($values['clone_bundle_machine']) && is_string($values['clone_bundle_machine']) && strlen($values['clone_bundle_machine']) > EntityTypeInterface::BUNDLE_MAX_LENGTH) {
+      $values['clone_bundle_machine'] = substr($values['clone_bundle_machine'], 0, EntityTypeInterface::BUNDLE_MAX_LENGTH);
+    }
+
     // Clone entity type operation.
     $operations[] = [
       '\Drupal\entity_type_clone\CloneEntityType::cloneEntityTypeData',
